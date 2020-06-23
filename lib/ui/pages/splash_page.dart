@@ -23,6 +23,7 @@ class _SplashPageState extends State<SplashPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  //Gambar Logo
                   Container(
                     height: 110,
                     margin: EdgeInsets.only(top: 77),
@@ -31,6 +32,7 @@ class _SplashPageState extends State<SplashPage> {
                             image: AssetImage(
                                 "assets/icons/ramadhan-mubarak/png/star-and-crescent-moon.png"))),
                   ),
+                  //Text nama aplikasi
                   Container(
                     margin: EdgeInsets.only(top: 57, bottom: 18),
                     child: Text(
@@ -39,6 +41,7 @@ class _SplashPageState extends State<SplashPage> {
                           fontSize: 24, fontWeight: FontWeight.w700),
                     ),
                   ),
+                  //Text penjelasan singkat aplikasi
                   Text(
                     "Platform asik dan lengkap\nuntuk belajar Islam",
                     style: blackTextFont.copyWith(
@@ -49,6 +52,7 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
+            //Button Bottom
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -69,6 +73,7 @@ class _SplashPageState extends State<SplashPage> {
                     }),
               ),
             ),
+            //Small Cloud
             Positioned(
               right: -MediaQuery.of(context).size.width / 4,
               child: Container(
@@ -79,11 +84,12 @@ class _SplashPageState extends State<SplashPage> {
                           image: AssetImage("assets/icons/cloud.png")))
                   ),
             ),
+            //Big Cloud
             Positioned(
               left: -MediaQuery.of(context).size.width * 4 / 9,
               child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height * 10 / 9,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("assets/icons/cloud.png")))
