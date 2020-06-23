@@ -58,7 +58,7 @@ class _SplashPageState extends State<SplashPage> {
               child: Container(
                 width: 250,
                 height: 46,
-                margin: EdgeInsets.only(top: 70, bottom: 120),
+                margin: EdgeInsets.only(top: 70, bottom: 72),
                 child: RaisedButton(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
@@ -69,7 +69,7 @@ class _SplashPageState extends State<SplashPage> {
                     ),
                     color: colorPink,
                     onPressed: () {
-//                    context.bloc<PageBloc>().add(GoToMainPage());
+                    context.bloc<PageBloc>().add(GoToMainPage());
                     }),
               ),
             ),
