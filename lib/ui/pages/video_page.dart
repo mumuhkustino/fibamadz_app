@@ -23,7 +23,7 @@ class _VideoPageState extends State<VideoPage> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 20, bottom: 54),
+                        margin: EdgeInsets.only(top: 20),
                         height: 56,
                         child: Stack(
                           children: <Widget>[
@@ -48,8 +48,12 @@ class _VideoPageState extends State<VideoPage> {
                                     fontSize: 24, fontWeight: FontWeight.w700),
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(top: 48),
+                          ],
+                        ),
+                      ),
+                      Container(
+                              // height: 50,
+                              // margin: EdgeInsets.only(top: 5),
                               alignment: Alignment.center,
                               child: Text(
                                 "Pilih Kategori Video",
@@ -57,13 +61,10 @@ class _VideoPageState extends State<VideoPage> {
                                   fontSize: 14, fontWeight: FontWeight.w700
                                 )
                               ),
-                            )
-                          ],
-                        ),
-                      ),
+                            ),
                       Container(
                         height: 70,
-                        margin: EdgeInsets.only(bottom: 48),
+                        margin: EdgeInsets.only(bottom: 48, top: 36),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
@@ -76,13 +77,13 @@ class _VideoPageState extends State<VideoPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Thaharah",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -98,13 +99,13 @@ class _VideoPageState extends State<VideoPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Sholat",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -120,13 +121,13 @@ class _VideoPageState extends State<VideoPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Puasa",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -142,13 +143,13 @@ class _VideoPageState extends State<VideoPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Zakat",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -164,13 +165,13 @@ class _VideoPageState extends State<VideoPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Jenazah",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),

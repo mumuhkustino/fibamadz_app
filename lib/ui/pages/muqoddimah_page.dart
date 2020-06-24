@@ -66,13 +66,13 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Muqoddimah Kitab",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -88,13 +88,13 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Sejarah Imam Syafii",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -110,13 +110,13 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Sejarah Imam Malik",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -132,13 +132,13 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Sejarah Imam Hanafi",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
@@ -154,13 +154,13 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                         child: RaisedButton(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(12)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Sejarah Imam Ahmad",
-                                  style: whiteTextFont.copyWith(fontSize: 24),
+                                  style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
