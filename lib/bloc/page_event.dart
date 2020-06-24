@@ -18,3 +18,8 @@ class GoToMuqoddimahPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToVideoPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
