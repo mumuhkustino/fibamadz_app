@@ -21,6 +21,8 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnQuizPage();
     } else if (event is GoToVideoPage) {
       yield OnVideoPage();
+    } else if (event is GoToMateriPage) {
+      yield OnMateriPage();
     }
   }
 

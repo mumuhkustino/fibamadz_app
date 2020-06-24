@@ -31,12 +31,16 @@ class _MainPageState extends State<MainPage> {
                               onTap: () {
                                 context.bloc<PageBloc>().add(GoToSplashPage());
                               },
+
+                              // BUTTON BACK
                               child: Container(
                                   margin: EdgeInsets.only(left: 16),
                                   child: Icon(Icons.arrow_back_ios,
                                       color: Colors.black)),
                             ),
                           ),
+
+                          // TITLE PILIH KATEGORI
                           Center(
                             child: Text(
                               "Pilih Kategori",
@@ -47,6 +51,8 @@ class _MainPageState extends State<MainPage> {
                         ],
                       ),
                     ),
+                    
+                    // BUTTON MUQODDIMAH
                     Container(
                       width: 300,
                       height: 46,
@@ -74,6 +80,8 @@ class _MainPageState extends State<MainPage> {
                             context.bloc<PageBloc>().add(GoToMuqoddimahPage());
                           }),
                     ),
+
+                    // BUTTON MATERI
                     Container(
                       width: 300,
                       height: 46,
@@ -98,9 +106,11 @@ class _MainPageState extends State<MainPage> {
                           ),
                           color: colorLightBlue,
                           onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriPage());
                           }),
                     ),
+
+                    // BUTTON QUIZ
                     Container(
                       width: 300,
                       height: 46,
@@ -128,6 +138,8 @@ class _MainPageState extends State<MainPage> {
                            context.bloc<PageBloc>().add(GoToQuizPage());
                           }),
                     ),
+
+                    // BUTTON VIDEO PRAKTIK
                     Container(
                       width: 300,
                       height: 46,

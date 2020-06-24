@@ -10,3 +10,4 @@ part 'main_page.dart';
 part 'muqoddimah_page.dart';
 part 'video_page.dart';
 part 'quiz_page.dart';
+part 'materi_page.dart';

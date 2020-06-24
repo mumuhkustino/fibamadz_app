@@ -41,6 +41,8 @@ class _QuizPageState extends State<QuizPage> {
                                         color: Colors.black)),
                               ),
                             ),
+
+                            // TITLE QUIZ
                             Center(
                               child: Text(
                                 "Quiz",
@@ -51,6 +53,8 @@ class _QuizPageState extends State<QuizPage> {
                           ],
                         ),
                       ),
+
+                      // SUBTITLE PILIH QUIZ
                       Container(
                               // height: 50,
                               // margin: EdgeInsets.only(top: 5),
@@ -62,6 +66,8 @@ class _QuizPageState extends State<QuizPage> {
                                 )
                               ),
                             ),
+
+                            // ICON UTAMA
                       Container(
                         height: 70,
                         margin: EdgeInsets.only(bottom: 48, top: 36),
@@ -70,6 +76,8 @@ class _QuizPageState extends State<QuizPage> {
                                 image: AssetImage(
                                     "assets/icons/ramadhan-mubarak/png/qibla.png"))),
                       ),
+
+                      // BUTTON THAHARAH
                       Container(
                         width: 300,
                         height: 46,
@@ -92,6 +100,8 @@ class _QuizPageState extends State<QuizPage> {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
+
+                      // BUTTON SHOLAT
                       Container(
                         width: 300,
                         height: 46,
@@ -114,6 +124,8 @@ class _QuizPageState extends State<QuizPage> {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
+
+                      // BUTTON PUASA
                       Container(
                         width: 300,
                         height: 46,
@@ -136,6 +148,8 @@ class _QuizPageState extends State<QuizPage> {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
+
+                      // BUTTON ZAKAT
                       Container(
                         width: 300,
                         height: 46,
@@ -158,6 +172,8 @@ class _QuizPageState extends State<QuizPage> {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
+
+                      // BUTTON JENAZAH
                       Container(
                         width: 300,
                         height: 46,

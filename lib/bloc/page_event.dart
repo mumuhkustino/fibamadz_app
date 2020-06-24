@@ -29,3 +29,8 @@ class GoToVideoPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToMateriPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
