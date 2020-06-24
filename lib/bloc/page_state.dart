@@ -18,3 +18,8 @@ class OnMainPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnMuqoddimahPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
