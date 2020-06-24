@@ -1,5 +1,6 @@
 part of 'page_bloc.dart';
 
+//mumuh jelasin ini apa
 abstract class PageEvent extends Equatable {
   const PageEvent();
 }
@@ -15,6 +16,11 @@ class GoToMainPage extends PageEvent {
 }
 
 class GoToMuqoddimahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuizPage extends PageEvent {
   @override
   List<Object> get props => [];
 }

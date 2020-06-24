@@ -8,6 +8,7 @@ class PageBloc extends Bloc<PageEvent, PageState> {
   @override
   PageState get initialState => OnInitialPage();
 
+  // mumuh kasih komen ini apa
   @override
   Stream<PageState> mapEventToState(PageEvent event) async* {
     if (event is GoToSplashPage) {
@@ -16,6 +17,8 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMainPage();
     } else if (event is GoToMuqoddimahPage) {
       yield OnMuqoddimahPage();
+    } else if (event is GoToQuizPage) {
+      yield OnQuizPage();
     } else if (event is GoToVideoPage) {
       yield OnVideoPage();
     }

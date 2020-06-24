@@ -23,6 +23,8 @@ class Wrapper extends StatelessWidget {
             ? MainPage() 
             : (pageState is OnMuqoddimahPage)
             ? MuqoddimahPage()
+            : (pageState is OnQuizPage)
+            ? QuizPage()
             : VideoPage());
   }
 }
@@ -34,5 +36,8 @@ else if pageState is OnMainPage
   MainPage
 else if pageState is OnMuqqodimahPage
   MuqoddimahPage
-else VideoPage
+else if pageState is OnQuizPage
+  QuizPage
+else if pageState is OnVideoPage
+  VideoPage
 */

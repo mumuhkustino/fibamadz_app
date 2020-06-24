@@ -125,7 +125,7 @@ class _MainPageState extends State<MainPage> {
                           ),
                           color: colorLightBlue,
                           onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizPage());
                           }),
                     ),
                     Container(

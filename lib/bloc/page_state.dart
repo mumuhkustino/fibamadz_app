@@ -24,7 +24,14 @@ class OnMuqoddimahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnQuizPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnVideoPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+//mumuh kasih comment ini apa
