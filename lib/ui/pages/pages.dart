@@ -7,3 +7,4 @@ import 'package:fibamadz_app/shared/shared.dart';
 part 'wrapper.dart';
 part 'splash_page.dart';
 part 'main_page.dart';
+part 'muqoddimah_page.dart';
