@@ -87,7 +87,7 @@ class _SplashPageState extends State<SplashPage> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Text(
                       "Mulai",
-                      style: whiteTextFont.copyWith(fontSize: 16),
+                      style: whiteTextFont.copyWith(fontSize: 24),
                     ),
                     color: colorPink,
                     onPressed: () {

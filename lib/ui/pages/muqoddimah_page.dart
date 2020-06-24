@@ -33,11 +33,11 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 onTap: () {
                                   context
                                       .bloc<PageBloc>()
-                                      .add(GoToSplashPage());
+                                      .add(GoToMainPage());
                                 },
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),
-                                    child: Icon(Icons.arrow_back,
+                                    child: Icon(Icons.arrow_back_ios,
                                         color: Colors.black)),
                               ),
                             ),
@@ -45,8 +45,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               child: Text(
                                 "Muqoddimah",
                                 style: blackTextFont.copyWith(
-                                  fontSize: 24,
-                                ),
+                                    fontSize: 24, fontWeight: FontWeight.w700),
                               ),
                             )
                           ],

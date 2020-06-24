@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
                               },
                               child: Container(
                                   margin: EdgeInsets.only(left: 16),
-                                  child: Icon(Icons.arrow_back,
+                                  child: Icon(Icons.arrow_back_ios,
                                       color: Colors.black)),
                             ),
                           ),
@@ -41,8 +41,7 @@ class _MainPageState extends State<MainPage> {
                             child: Text(
                               "Pilih Kategori",
                               style: blackTextFont.copyWith(
-                                fontSize: 24,
-                              ),
+                                  fontSize: 24, fontWeight: FontWeight.w700),
                             ),
                           )
                         ],
@@ -137,7 +136,7 @@ class _MainPageState extends State<MainPage> {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
-                          child:Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
