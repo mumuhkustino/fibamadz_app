@@ -1,11 +1,11 @@
 part of 'pages.dart';
 
-class MuqoddimahPage extends StatefulWidget {
+class VideoPage extends StatefulWidget {
   @override
-  _MuqoddimahPageState createState() => _MuqoddimahPageState();
+  _VideoPageState createState() => _VideoPageState();
 }
 
-class _MuqoddimahPageState extends State<MuqoddimahPage> {
+class _VideoPageState extends State<VideoPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -23,7 +23,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 20, bottom: 54),
+                        margin: EdgeInsets.only(top: 20),
                         height: 56,
                         child: Stack(
                           children: <Widget>[
@@ -43,21 +43,32 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                             ),
                             Center(
                               child: Text(
-                                "Muqoddimah",
+                                "Video Praktik",
                                 style: blackTextFont.copyWith(
                                     fontSize: 24, fontWeight: FontWeight.w700),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
                       Container(
+                              // height: 50,
+                              // margin: EdgeInsets.only(top: 5),
+                              alignment: Alignment.center,
+                              child: Text(
+                                "Pilih Kategori Video",
+                                style: blackTextFont.copyWith(
+                                  fontSize: 14, fontWeight: FontWeight.w700
+                                )
+                              ),
+                            ),
+                      Container(
                         height: 70,
-                        margin: EdgeInsets.only(bottom: 48),
+                        margin: EdgeInsets.only(bottom: 48, top: 36),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                    "assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png"))),
+                                    "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
                       ),
                       Container(
                         width: 300,
@@ -71,7 +82,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Muqoddimah Kitab",
+                                  "Thaharah",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
@@ -93,7 +104,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Sejarah Imam Syafii",
+                                  "Sholat",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
@@ -115,7 +126,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Sejarah Imam Malik",
+                                  "Puasa",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
@@ -137,7 +148,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Sejarah Imam Hanafi",
+                                  "Zakat",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
@@ -159,7 +170,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Sejarah Imam Ahmad",
+                                  "Jenazah",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],

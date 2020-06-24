@@ -23,3 +23,8 @@ class OnMuqoddimahPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnVideoPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
