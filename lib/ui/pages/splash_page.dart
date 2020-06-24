@@ -52,27 +52,6 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
-            //Button Bottom
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                width: 250,
-                height: 46,
-                margin: EdgeInsets.only(top: 70, bottom: 72),
-                child: RaisedButton(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Text(
-                      "Mulai",
-                      style: whiteTextFont.copyWith(fontSize: 16),
-                    ),
-                    color: colorPink,
-                    onPressed: () {
-                    context.bloc<PageBloc>().add(GoToMainPage());
-                    }),
-              ),
-            ),
             //Small Cloud
             Positioned(
               right: -MediaQuery.of(context).size.width / 4,
@@ -94,6 +73,27 @@ class _SplashPageState extends State<SplashPage> {
                       image: DecorationImage(
                           image: AssetImage("assets/icons/cloud.png")))
                   ),
+            ),
+            //Button Bottom
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: 250,
+                height: 46,
+                margin: EdgeInsets.only(top: 70, bottom: 72),
+                child: RaisedButton(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Text(
+                      "Mulai",
+                      style: whiteTextFont.copyWith(fontSize: 16),
+                    ),
+                    color: colorPink,
+                    onPressed: () {
+                      context.bloc<PageBloc>().add(GoToMainPage());
+                    }),
+              ),
             ),
           ],
         ));
