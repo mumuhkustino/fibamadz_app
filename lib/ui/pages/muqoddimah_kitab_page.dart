@@ -7,19 +7,9 @@ class MuqoddimahKitabPage extends StatefulWidget {
 
 class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
   bool isClickedSearch = false;
-//  TextEditingController searchController = TextEditingController();
   String searchText;
   String tempText;
-  final text =
-'''
-Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam
-di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, 
-Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan 
-sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. 
-Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang 
-empat tersebut.'''
-    .replaceAll("\n", " ")
-    .replaceAll("  ", "");
+  final text = '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +28,7 @@ empat tersebut.'''
                   Container(
                     margin: EdgeInsets.only(top: 20),
                     height: 56,
-                    child: Stack(
+                    child: Row(
                       children: <Widget>[
                         Align(
                           alignment: Alignment.centerLeft,
@@ -56,7 +46,7 @@ empat tersebut.'''
                               }
                             },
                             child: Container(
-                                margin: EdgeInsets.only(left: 16),
+                                width: MediaQuery.of(context).size.width / 8,
                                 child: Icon(
                                     (!isClickedSearch)
                                         ? Icons.arrow_back_ios
@@ -67,9 +57,10 @@ empat tersebut.'''
                         Center(
                             child: (isClickedSearch)
                                 ? Container(
-                                    width: 300,
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
                                     child: TextField(
-//                                      controller: searchController,
                                       decoration:
                                           InputDecoration(hintText: "Search"),
                                       onChanged: (t) {
@@ -77,17 +68,23 @@ empat tersebut.'''
                                       },
                                     ),
                                   )
-                                : null),
+                                : Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
+                                  )),
                         Align(
                           alignment: Alignment.centerRight,
                           child: GestureDetector(
                             onTap: () {
                               setState(() {
-                                (!isClickedSearch) ? isClickedSearch = true : searchText = tempText;
+                                (!isClickedSearch)
+                                    ? isClickedSearch = true
+                                    : searchText = tempText;
                               });
                             },
                             child: Container(
-                                margin: EdgeInsets.only(right: 16),
+                                width: MediaQuery.of(context).size.width / 8,
                                 child: Icon(Icons.search,
                                     color: Colors.black.withOpacity(0.54))),
                           ),
@@ -110,8 +107,8 @@ empat tersebut.'''
                     margin: EdgeInsets.only(top: 44, left: 24, right: 24),
                     child: SelectableText.rich(
                       searchFromText(text, searchText),
-                      textAlign: TextAlign.justify,
-                      textScaleFactor: 2,
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.2,
                       style: blackTextFont,
                     ),
                   )
