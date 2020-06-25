@@ -13,6 +13,7 @@ part 'muqoddimah_page.dart';
 part 'muqoddimah_kitab_page.dart';
 part 'muqoddimah_imam_syafii_page.dart';
 part 'muqoddimah_imam_malik_page.dart';
+part 'muqoddimah_imam_hanafi_page.dart';
 
 part 'video_page.dart';
 part 'quiz_page.dart';
