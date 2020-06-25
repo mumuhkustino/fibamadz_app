@@ -28,10 +28,8 @@ TextSpan searchFromText(String fullText, String searchText) {
   var refinedFullText = fullText.toLowerCase();
   var refinedSearchText = searchText.toLowerCase();
   if (refinedFullText.contains(refinedSearchText)) {
-    print("\nIf 1");
     if (refinedFullText.substring(0, refinedSearchText.length) ==
         refinedSearchText) {
-      print("If 2 -${fullText.substring(0, refinedSearchText.length)}-");
       return TextSpan(
         style: blackTextFont.copyWith(backgroundColor: colorLightYellow),
         text: fullText.substring(0, refinedSearchText.length),
@@ -41,10 +39,8 @@ TextSpan searchFromText(String fullText, String searchText) {
         ],
       );
     } else if (refinedFullText.length == refinedSearchText.length) {
-      print("If 3 -${fullText.substring(0, refinedSearchText.length)}");
       return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorLightYellow));
     } else {
-      print("If 4 -${fullText.substring(0, refinedFullText.indexOf(refinedSearchText)-1)}-${refinedFullText.indexOf(refinedSearchText)}");
       return TextSpan(
         style: blackTextFont,
         text: fullText.substring(
