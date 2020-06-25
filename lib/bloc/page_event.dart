@@ -45,11 +45,6 @@ class GoToMateriSholatPage extends PageEvent {
   List<Object> get props => [];
 }
 
-class GoToMateriPuasaPage extends PageEvent {
-  @override
-  List<Object> get props => [];
-}
-
 class GoToMateriZakatPage extends PageEvent {
   @override
   List<Object> get props => [];

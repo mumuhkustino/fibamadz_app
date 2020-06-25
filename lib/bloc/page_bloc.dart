@@ -25,6 +25,12 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMateriPage();
     } else if (event is GoToMateriThaharahPage) {
       yield OnMateriThaharahPage();
+    } else if (event is GoToMateriSholatPage) {
+      yield OnMateriSholatPage();
+    } else if (event is GoToMateriZakatPage) {
+      yield OnMateriZakatPage();
+    } else if (event is GoToMateriJenazahPage) {
+      yield OnMateriJenazahPage();
     }
   }
 

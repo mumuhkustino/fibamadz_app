@@ -121,7 +121,7 @@ class _MateriPageState extends State<MateriPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriSholatPage());
                             }),
                       ),
 
@@ -145,7 +145,7 @@ class _MateriPageState extends State<MateriPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                          //  context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
@@ -169,7 +169,7 @@ class _MateriPageState extends State<MateriPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriZakatPage());
                             }),
                       ),
 
@@ -193,7 +193,7 @@ class _MateriPageState extends State<MateriPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriJenazahPage());
                             }),
                       ),
                     ],

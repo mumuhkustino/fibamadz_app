@@ -29,11 +29,13 @@ class Wrapper extends StatelessWidget {
             ? VideoPage()
             : (pageState is OnMateriPage)
             ? MateriPage()
-            : MateriThaharahPage());
-            // : (pageState is OnMateriSholatPage
-            // ? MateriSholatPage()
-            // : (pageState is OnMateriPuasaPage)
-            // ? MateriPuasa);
+            : (pageState is OnMateriThaharahPage)
+            ? MateriThaharahPage()
+            : (pageState is OnMateriSholatPage)
+            ? MateriSholatPage()
+            : (pageState is OnMateriZakatPage)
+            ? MateriZakatPage()
+            : MateriJenazahPage());
   }
 }
 

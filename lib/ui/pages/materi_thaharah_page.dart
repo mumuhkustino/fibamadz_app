@@ -33,7 +33,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                                 onTap: () {
                                   context
                                       .bloc<PageBloc>()
-                                      .add(GoToMainPage());
+                                      .add(GoToMateriPage());
                                 },
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),

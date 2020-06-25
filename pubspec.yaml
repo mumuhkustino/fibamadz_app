@@ -55,6 +55,7 @@ flutter:
     - assets/icons/ramadhan-mubarak/png/islamic-friday-prayer.png
     - assets/icons/ramadhan-mubarak/png/ramadan-fasting.png
     - assets/icons/ramadhan-mubarak/png/islamic-prayer.png
+    - assets/icons/ramadhan-mubarak/png/sadaqah.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

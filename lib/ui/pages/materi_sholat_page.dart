@@ -10,7 +10,7 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        context.bloc<PageBloc>().add(GoToMainPage());
+        context.bloc<PageBloc>().add(GoToMateriPage());
         return;
       },
       child: Scaffold(
@@ -33,7 +33,7 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                                 onTap: () {
                                   context
                                       .bloc<PageBloc>()
-                                      .add(GoToMainPage());
+                                      .add(GoToMateriPage());
                                 },
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),
@@ -90,7 +90,7 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "1. Wudu",
+                                  "1. Sholat Fardu",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
@@ -114,55 +114,7 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "2. Tayamum",
-                                  style: whiteTextFont.copyWith(fontSize: 22),
-                                ),
-                              ],
-                            ),
-                            color: colorDarkGrey,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
-                      ),
-
-                      // BUTTON
-                      Container(
-                        width: 300,
-                        height: 46,
-                        margin: EdgeInsets.only(bottom: 24),
-                        child: RaisedButton(
-                            elevation: 4,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "3. Mandi Besar",
-                                  style: whiteTextFont.copyWith(fontSize: 22),
-                                ),
-                              ],
-                            ),
-                            color: colorDarkGrey,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
-                      ),
-
-                      // BUTTON ZAKAT
-                      Container(
-                        width: 300,
-                        height: 46,
-                        margin: EdgeInsets.only(bottom: 24),
-                        child: RaisedButton(
-                            elevation: 4,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "4. Menghilangkan Najis",
+                                  "2. Sholat Sunat",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
