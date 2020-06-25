@@ -1,17 +1,21 @@
 part of 'pages.dart';
 
-class MuqoddimahKitabPage extends StatefulWidget {
+class MuqoddimahImamSyafiiPage extends StatefulWidget {
   @override
-  _MuqoddimahKitabPageState createState() => _MuqoddimahKitabPageState();
+  _MuqoddimahImamSyafiiPageState createState() =>
+      _MuqoddimahImamSyafiiPageState();
 }
 
-class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
+class _MuqoddimahImamSyafiiPageState extends State<MuqoddimahImamSyafiiPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
   String searchText;
   final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+      '''Tokoh utamanya adalah Al-Imam Muhammad bin Idris As-Syafi'i Al-Quraisyi. Beliau dilahirkan di Ghuzzah pada tahun 150 H dan wafat di Mesir pada tahun 204 H.
+
+Beliau belajar kepada Imam Malik yang dikenal dengan madzhabul hadits, kemudian beliau pergi ke Irak dan belajar dari ulama Irak yang dikenal sebagai madzhabul qiyas. Beliau berikhtiar menyatukan madzhab terpadu yaitu madzhab hadits dan madzhab qiyas. Itulah keistimewaan madzhab Syafi'i. Di antara kelebihan asy-Syafi'i adalah beliau hafal Al-Qur'an umur 7 tahun, pandai diskusi dan selalu menonjol. Madzhab ini lahir di Mesir kemudian berkembang ke negeri-negeri lain.
+''';
 
   @override
   Widget build(BuildContext context) {
@@ -104,13 +108,13 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                   ),
                   Center(
                       child: Text(
-                    "Muqoddimah",
+                    "Sejarah Imam",
                     style: blackTextFont.copyWith(
                         fontSize: 24, fontWeight: FontWeight.w700),
                   )),
                   Center(
                       child: Text(
-                    "Kitab",
+                    "Syafii",
                     style: blackTextFont.copyWith(fontSize: 14),
                   )),
                   Container(

@@ -8,10 +8,14 @@ import 'package:fibamadz_app/shared/shared.dart';
 part 'wrapper.dart';
 part 'splash_page.dart';
 part 'main_page.dart';
+
 part 'muqoddimah_page.dart';
 part 'muqoddimah_kitab_page.dart';
+part 'muqoddimah_imam_syafii_page.dart';
+
 part 'video_page.dart';
 part 'quiz_page.dart';
+
 part 'materi_page.dart';
 part 'materi_thaharah_page.dart';
 part 'materi_sholat_page.dart';

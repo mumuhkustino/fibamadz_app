@@ -26,7 +26,7 @@ class Wrapper extends StatelessWidget {
             : (pageState is OnMuqoddimahKitabPage)
             ? MuqoddimahKitabPage()
             : (pageState is OnMuqoddimahImamSyafiiPage)
-            ? MuqoddimahPage()
+            ? MuqoddimahImamSyafiiPage()
             : (pageState is OnMuqoddimahImamMalikPage)
             ? MuqoddimahPage()
             : (pageState is OnMuqoddimahImamHanafiPage)
