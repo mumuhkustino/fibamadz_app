@@ -18,3 +18,6 @@ part 'materi_sholat_page.dart';
 // part 'materi_puasa_page.dart';
 part 'materi_zakat_page.dart';
 part 'materi_jenazah_page.dart';
+
+part 'quiz_thaharah_page.dart';
+

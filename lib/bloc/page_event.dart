@@ -50,6 +50,31 @@ class GoToQuizPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToQuizThaharahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuizSholatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuizPuasaPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuizZakatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuizJenazahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToVideoPage extends PageEvent {
   @override
   List<Object> get props => [];

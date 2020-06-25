@@ -33,8 +33,6 @@ class Wrapper extends StatelessWidget {
             ? MuqoddimahPage()
             : (pageState is OnMuqoddimahImamAhmadPage)
             ? MuqoddimahPage()
-            : (pageState is OnQuizPage)
-            ? QuizPage()
             : (pageState is OnVideoPage)
             ? VideoPage()
             : (pageState is OnMateriPage)
@@ -45,7 +43,12 @@ class Wrapper extends StatelessWidget {
             ? MateriSholatPage()
             : (pageState is OnMateriZakatPage)
             ? MateriZakatPage()
-            : MateriJenazahPage());
+            : (pageState is OnMateriJenazahPage)
+            ? MateriJenazahPage()
+            : (pageState is OnQuizPage)
+            ? QuizPage()
+            : QuizThaharahPage()
+            );
   }
 }
 

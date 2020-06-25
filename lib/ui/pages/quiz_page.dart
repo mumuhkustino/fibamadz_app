@@ -97,7 +97,7 @@ class _QuizPageState extends State<QuizPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizThaharahPage());
                             }),
                       ),
 

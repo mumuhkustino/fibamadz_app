@@ -29,7 +29,19 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMuqoddimahImamAhmadPage();
     } else if (event is GoToQuizPage) {
       yield OnQuizPage();
-    } else if (event is GoToVideoPage) {
+    } else if (event is GoToQuizThaharahPage) {
+      yield OnQuizThaharahPage();
+    } else if (event is GoToQuizSholatPage) {
+      yield OnQuizSholatPage();
+    } else if (event is GoToQuizPuasaPage) {
+      yield OnQuizPuasaPage();
+    } else if (event is GoToQuizZakatPage) {
+      yield OnQuizZakatPage();
+    } else if (event is GoToQuizJenazahPage) {
+      yield OnQuizJenazahPage();
+    } 
+    
+    else if (event is GoToVideoPage) {
       yield OnVideoPage();
     } else if (event is GoToMateriPage) {
       yield OnMateriPage();
