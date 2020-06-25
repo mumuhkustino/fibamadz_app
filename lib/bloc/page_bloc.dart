@@ -17,6 +17,16 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMainPage();
     } else if (event is GoToMuqoddimahPage) {
       yield OnMuqoddimahPage();
+    } else if (event is GoToMuqoddimahKitabPage) {
+      yield OnMuqoddimahKitabPage();
+    } else if (event is GoToMuqoddimahImamSyafiiPage) {
+      yield OnMuqoddimahImamSyafiiPage();
+    } else if (event is GoToMuqoddimahImamMalikPage) {
+      yield OnMuqoddimahImamMalikPage();
+    } else if (event is GoToMuqoddimahImamHanafiPage) {
+      yield OnMuqoddimahImamHanafiPage();
+    } else if (event is GoToMuqoddimahImamAhmadPage) {
+      yield OnMuqoddimahImamAhmadPage();
     } else if (event is GoToQuizPage) {
       yield OnQuizPage();
     } else if (event is GoToVideoPage) {
