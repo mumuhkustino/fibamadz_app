@@ -19,9 +19,19 @@ class Wrapper extends StatelessWidget {
     return BlocBuilder<PageBloc, PageState>(
         builder: (_, pageState) => (pageState is OnSplashPage)
             ? SplashPage()
-            : (pageState is OnMainPage) 
-            ? MainPage() 
+            : (pageState is OnMainPage)
+            ? MainPage()
             : (pageState is OnMuqoddimahPage)
+            ? MuqoddimahPage()
+            : (pageState is OnMuqoddimahKitabPage)
+            ? MuqoddimahKitabPage()
+            : (pageState is OnMuqoddimahImamSyafiiPage)
+            ? MuqoddimahPage()
+            : (pageState is OnMuqoddimahImamMalikPage)
+            ? MuqoddimahPage()
+            : (pageState is OnMuqoddimahImamHanafiPage)
+            ? MuqoddimahPage()
+            : (pageState is OnMuqoddimahImamAhmadPage)
             ? MuqoddimahPage()
             : (pageState is OnQuizPage)
             ? QuizPage()
@@ -54,5 +64,5 @@ else if pageState is OnMateriPage
   MateriPage
 else if pageState is OnMateriThaharahPage
   MateriThaharah
-else if 
+else if
 */
