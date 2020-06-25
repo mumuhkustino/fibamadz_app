@@ -2,6 +2,7 @@ import 'package:fibamadz_app/bloc/blocs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:fibamadz_app/shared/shared.dart';
 
 part 'wrapper.dart';
