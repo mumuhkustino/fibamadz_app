@@ -34,3 +34,28 @@ class GoToMateriPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToMateriThaharahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriSholatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriPuasaPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriZakatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}

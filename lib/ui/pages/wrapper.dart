@@ -27,7 +27,13 @@ class Wrapper extends StatelessWidget {
             ? QuizPage()
             : (pageState is OnVideoPage)
             ? VideoPage()
-            : MateriPage());
+            : (pageState is OnMateriPage)
+            ? MateriPage()
+            : MateriThaharahPage());
+            // : (pageState is OnMateriSholatPage
+            // ? MateriSholatPage()
+            // : (pageState is OnMateriPuasaPage)
+            // ? MateriPuasa);
   }
 }
 
@@ -42,6 +48,9 @@ else if pageState is OnQuizPage
   QuizPage
 else if pageState is OnVideoPage
   VideoPage
-else 
+else if pageState is OnMateriPage
   MateriPage
+else if pageState is OnMateriThaharahPage
+  MateriThaharah
+else if 
 */

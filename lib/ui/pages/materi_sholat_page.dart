@@ -1,11 +1,11 @@
 part of 'pages.dart';
 
-class MateriPage extends StatefulWidget {
+class MateriSholatPage extends StatefulWidget {
   @override
-  _MateriPageState createState() => _MateriPageState();
+  _MateriSholatPageState createState() => _MateriSholatPageState();
 }
 
-class _MateriPageState extends State<MateriPage> {
+class _MateriSholatPageState extends State<MateriSholatPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -60,7 +60,7 @@ class _MateriPageState extends State<MateriPage> {
                               // margin: EdgeInsets.only(top: 5),
                               alignment: Alignment.center,
                               child: Text(
-                                "Pilih Materi",
+                                "Sholat",
                                 style: blackTextFont.copyWith(
                                   fontSize: 14, fontWeight: FontWeight.w700
                                 )
@@ -74,10 +74,10 @@ class _MateriPageState extends State<MateriPage> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                    "assets/icons/ramadhan-mubarak/png/quran-book.png"))),
+                                    "assets/icons/ramadhan-mubarak/png/islamic-friday-prayer.png"))),
                       ),
 
-                      // BUTTON THAHARAH
+                      // BUTTON 
                       Container(
                         width: 300,
                         height: 46,
@@ -90,42 +90,18 @@ class _MateriPageState extends State<MateriPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Thaharah",
+                                  "1. Wudu",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
-                            onPressed: () {
-                           context.bloc<PageBloc>().add(GoToMateriThaharahPage());
-                            }),
-                      ),
-
-                      // BUTTON SHOLAT
-                      Container(
-                        width: 300,
-                        height: 46,
-                        margin: EdgeInsets.only(bottom: 24),
-                        child: RaisedButton(
-                            elevation: 4,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Sholat",
-                                  style: whiteTextFont.copyWith(fontSize: 22),
-                                ),
-                              ],
-                            ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
-                      // BUTTON PUASA
+                      // BUTTON 
                       Container(
                         width: 300,
                         height: 46,
@@ -138,12 +114,36 @@ class _MateriPageState extends State<MateriPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Puasa",
+                                  "2. Tayamum",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
+                            onPressed: () {
+//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            }),
+                      ),
+
+                      // BUTTON
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "3. Mandi Besar",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
+                            ),
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
@@ -162,36 +162,12 @@ class _MateriPageState extends State<MateriPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Zakat",
+                                  "4. Menghilangkan Najis",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
-                      ),
-
-                      // BUTTON JENAZAH
-                      Container(
-                        width: 300,
-                        height: 46,
-                        margin: EdgeInsets.only(bottom: 24),
-                        child: RaisedButton(
-                            elevation: 4,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Jenazah",
-                                  style: whiteTextFont.copyWith(fontSize: 22),
-                                ),
-                              ],
-                            ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
