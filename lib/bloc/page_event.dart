@@ -20,6 +20,31 @@ class GoToMuqoddimahPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMuqoddimahKitabPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMuqoddimahImamSyafiiPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMuqoddimahImamMalikPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMuqoddimahImamHanafiPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMuqoddimahImamAhmadPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToQuizPage extends PageEvent {
   @override
   List<Object> get props => [];

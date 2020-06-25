@@ -24,6 +24,31 @@ class OnMuqoddimahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMuqoddimahKitabPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMuqoddimahImamSyafiiPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMuqoddimahImamMalikPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMuqoddimahImamHanafiPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMuqoddimahImamAhmadPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnQuizPage extends PageState {
   @override
   List<Object> get props => [];

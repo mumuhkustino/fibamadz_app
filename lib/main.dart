@@ -15,18 +15,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (_) => PageBloc()),
-          BlocProvider(create: (_) => ThemeBloc())
-        ],
-        child: BlocBuilder<ThemeBloc, ThemeState>(
-          builder: (_, themeState) => MaterialApp(
-            theme: themeState.themeData,
-            debugShowCheckedModeBanner: false,
-            home: Wrapper(),
-          ),
-        ),
-      );
+    return BlocProvider(
+        create: (_) => PageBloc(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Wrapper(),
+        ));
   }
 }
