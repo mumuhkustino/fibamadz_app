@@ -6,10 +6,12 @@ class MuqoddimahKitabPage extends StatefulWidget {
 }
 
 class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
+  TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
+  bool isFocusSearch = false;
   String searchText;
-  String tempText;
-  final text = '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+  final text =
+      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,13 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                                     .add(GoToMuqoddimahPage());
                               } else {
                                 setState(() {
-                                  searchText = "";
-                                  isClickedSearch = false;
+                                  if (searchController.text.compareTo("") ==
+                                      0) {
+                                    isClickedSearch = false;
+                                  } else {
+                                    searchController.text = "";
+                                    searchText = searchController.text;
+                                  }
                                 });
                               }
                             },
@@ -61,11 +68,10 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                                         6 /
                                         8,
                                     child: TextField(
+                                      autofocus: (searchController.text.compareTo("") == 0),
+                                      controller: searchController,
                                       decoration:
                                           InputDecoration(hintText: "Search"),
-                                      onChanged: (t) {
-                                        setState(() => tempText = t);
-                                      },
                                     ),
                                   )
                                 : Container(
@@ -78,9 +84,13 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                           child: GestureDetector(
                             onTap: () {
                               setState(() {
-                                (!isClickedSearch)
-                                    ? isClickedSearch = true
-                                    : searchText = tempText;
+                                if (!isClickedSearch) {
+                                  isClickedSearch = true;
+                                  isFocusSearch = true;
+                                } else {
+                                  searchText = searchController.text;
+                                  isFocusSearch = false;
+                                }
                               });
                             },
                             child: Container(
