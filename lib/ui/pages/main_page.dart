@@ -31,7 +31,6 @@ class _MainPageState extends State<MainPage> {
                               onTap: () {
                                 context.bloc<PageBloc>().add(GoToSplashPage());
                               },
-
                               // BUTTON BACK
                               child: Container(
                                   margin: EdgeInsets.only(left: 16),
@@ -39,19 +38,17 @@ class _MainPageState extends State<MainPage> {
                                       color: Colors.black)),
                             ),
                           ),
-
-                          // TITLE PILIH KATEGORI
-                          Center(
-                            child: Text(
-                              "Pilih Kategori",
-                              style: blackTextFont.copyWith(
-                                  fontSize: 24, fontWeight: FontWeight.w700),
-                            ),
-                          )
                         ],
                       ),
                     ),
-                    
+                    // TITLE PILIH KATEGORI
+                    Center(
+                      child: Text(
+                        "Pilih Kategori",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      ),
+                    ),
                     // BUTTON MUQODDIMAH
                     Container(
                       width: 300,
@@ -106,7 +103,7 @@ class _MainPageState extends State<MainPage> {
                           ),
                           color: colorLightBlue,
                           onPressed: () {
-                           context.bloc<PageBloc>().add(GoToMateriPage());
+                            context.bloc<PageBloc>().add(GoToMateriPage());
                           }),
                     ),
 
@@ -135,7 +132,7 @@ class _MainPageState extends State<MainPage> {
                           ),
                           color: colorLightBlue,
                           onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizPage());
+                            context.bloc<PageBloc>().add(GoToQuizPage());
                           }),
                     ),
 
@@ -164,7 +161,7 @@ class _MainPageState extends State<MainPage> {
                           ),
                           color: colorLightBlue,
                           onPressed: () {
-                           context.bloc<PageBloc>().add(GoToVideoPage());
+                            context.bloc<PageBloc>().add(GoToVideoPage());
                           }),
                     ),
                   ],
