@@ -166,7 +166,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMuqoddimahImamAhmadPage());
                             }),
                       ),
                     ],
