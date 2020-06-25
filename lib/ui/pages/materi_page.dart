@@ -1,11 +1,11 @@
 part of 'pages.dart';
 
-class VideoPage extends StatefulWidget {
+class MateriPage extends StatefulWidget {
   @override
-  _VideoPageState createState() => _VideoPageState();
+  _MateriPageState createState() => _MateriPageState();
 }
 
-class _VideoPageState extends State<VideoPage> {
+class _MateriPageState extends State<MateriPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -35,17 +35,17 @@ class _VideoPageState extends State<VideoPage> {
                                       .bloc<PageBloc>()
                                       .add(GoToMainPage());
                                 },
-
-                                // Icon Arrow Back
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),
                                     child: Icon(Icons.arrow_back_ios,
                                         color: Colors.black)),
                               ),
                             ),
+
+                            // TITLE MATERI
                             Center(
                               child: Text(
-                                "Video Praktik",
+                                "Materi",
                                 style: blackTextFont.copyWith(
                                     fontSize: 24, fontWeight: FontWeight.w700),
                               ),
@@ -53,29 +53,31 @@ class _VideoPageState extends State<VideoPage> {
                           ],
                         ),
                       ),
-                      
-                      // Subtitle Pilih Kategori Video
+
+                      // SUBTITLE 
                       Container(
+                              // height: 50,
+                              // margin: EdgeInsets.only(top: 5),
                               alignment: Alignment.center,
                               child: Text(
-                                "Pilih Kategori Video",
+                                "Pilih Materi",
                                 style: blackTextFont.copyWith(
                                   fontSize: 14, fontWeight: FontWeight.w700
                                 )
                               ),
                             ),
 
-                      // Icon Muslim Man 
+                            // ICON UTAMA
                       Container(
                         height: 70,
                         margin: EdgeInsets.only(bottom: 48, top: 36),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                    "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
+                                    "assets/icons/ramadhan-mubarak/png/quran-book.png"))),
                       ),
 
-                      // Button "Thaharah"
+                      // BUTTON THAHARAH
                       Container(
                         width: 300,
                         height: 46,
@@ -95,11 +97,11 @@ class _VideoPageState extends State<VideoPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriThaharahPage());
                             }),
                       ),
 
-                      // Button Sholat
+                      // BUTTON SHOLAT
                       Container(
                         width: 300,
                         height: 46,
@@ -119,11 +121,11 @@ class _VideoPageState extends State<VideoPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriSholatPage());
                             }),
                       ),
 
-                      // Button Puasa
+                      // BUTTON PUASA
                       Container(
                         width: 300,
                         height: 46,
@@ -143,11 +145,11 @@ class _VideoPageState extends State<VideoPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                          //  context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
-                      // Button Zakat
+                      // BUTTON ZAKAT
                       Container(
                         width: 300,
                         height: 46,
@@ -167,11 +169,11 @@ class _VideoPageState extends State<VideoPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriZakatPage());
                             }),
                       ),
 
-                      // Button Jenazah
+                      // BUTTON JENAZAH
                       Container(
                         width: 300,
                         height: 46,
@@ -191,7 +193,7 @@ class _VideoPageState extends State<VideoPage> {
                             ),
                             color: colorLightBlue,
                             onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToMateriJenazahPage());
                             }),
                       ),
                     ],

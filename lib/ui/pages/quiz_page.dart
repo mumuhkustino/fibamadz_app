@@ -1,11 +1,11 @@
 part of 'pages.dart';
 
-class VideoPage extends StatefulWidget {
+class QuizPage extends StatefulWidget {
   @override
-  _VideoPageState createState() => _VideoPageState();
+  _QuizPageState createState() => _QuizPageState();
 }
 
-class _VideoPageState extends State<VideoPage> {
+class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -35,17 +35,17 @@ class _VideoPageState extends State<VideoPage> {
                                       .bloc<PageBloc>()
                                       .add(GoToMainPage());
                                 },
-
-                                // Icon Arrow Back
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),
                                     child: Icon(Icons.arrow_back_ios,
                                         color: Colors.black)),
                               ),
                             ),
+
+                            // TITLE QUIZ
                             Center(
                               child: Text(
-                                "Video Praktik",
+                                "Quiz",
                                 style: blackTextFont.copyWith(
                                     fontSize: 24, fontWeight: FontWeight.w700),
                               ),
@@ -53,29 +53,31 @@ class _VideoPageState extends State<VideoPage> {
                           ],
                         ),
                       ),
-                      
-                      // Subtitle Pilih Kategori Video
+
+                      // SUBTITLE PILIH QUIZ
                       Container(
+                              // height: 50,
+                              // margin: EdgeInsets.only(top: 5),
                               alignment: Alignment.center,
                               child: Text(
-                                "Pilih Kategori Video",
+                                "Pilih Quiz",
                                 style: blackTextFont.copyWith(
                                   fontSize: 14, fontWeight: FontWeight.w700
                                 )
                               ),
                             ),
 
-                      // Icon Muslim Man 
+                            // ICON UTAMA
                       Container(
                         height: 70,
                         margin: EdgeInsets.only(bottom: 48, top: 36),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                    "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
+                                    "assets/icons/ramadhan-mubarak/png/qibla.png"))),
                       ),
 
-                      // Button "Thaharah"
+                      // BUTTON THAHARAH
                       Container(
                         width: 300,
                         height: 46,
@@ -99,7 +101,7 @@ class _VideoPageState extends State<VideoPage> {
                             }),
                       ),
 
-                      // Button Sholat
+                      // BUTTON SHOLAT
                       Container(
                         width: 300,
                         height: 46,
@@ -123,7 +125,7 @@ class _VideoPageState extends State<VideoPage> {
                             }),
                       ),
 
-                      // Button Puasa
+                      // BUTTON PUASA
                       Container(
                         width: 300,
                         height: 46,
@@ -147,7 +149,7 @@ class _VideoPageState extends State<VideoPage> {
                             }),
                       ),
 
-                      // Button Zakat
+                      // BUTTON ZAKAT
                       Container(
                         width: 300,
                         height: 46,
@@ -171,7 +173,7 @@ class _VideoPageState extends State<VideoPage> {
                             }),
                       ),
 
-                      // Button Jenazah
+                      // BUTTON JENAZAH
                       Container(
                         width: 300,
                         height: 46,

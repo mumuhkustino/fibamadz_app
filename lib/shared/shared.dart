@@ -19,3 +19,6 @@ TextStyle whiteTextFont = TextStyle(
 
 TextStyle blackTextFont = TextStyle(
     color: colorTextBlack, fontFamily: "Raleway", fontWeight: FontWeight.w500);
+
+
+//file ini berisikan objek2 yang menyimpan data 

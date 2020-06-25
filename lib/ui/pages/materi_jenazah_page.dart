@@ -1,16 +1,16 @@
 part of 'pages.dart';
 
-class VideoPage extends StatefulWidget {
+class MateriJenazahPage extends StatefulWidget {
   @override
-  _VideoPageState createState() => _VideoPageState();
+  _MateriJenazahPageState createState() => _MateriJenazahPageState();
 }
 
-class _VideoPageState extends State<VideoPage> {
+class _MateriJenazahPageState extends State<MateriJenazahPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        context.bloc<PageBloc>().add(GoToMainPage());
+        context.bloc<PageBloc>().add(GoToMateriPage());
         return;
       },
       child: Scaffold(
@@ -33,19 +33,19 @@ class _VideoPageState extends State<VideoPage> {
                                 onTap: () {
                                   context
                                       .bloc<PageBloc>()
-                                      .add(GoToMainPage());
+                                      .add(GoToMateriPage());
                                 },
-
-                                // Icon Arrow Back
                                 child: Container(
                                     margin: EdgeInsets.only(left: 16),
                                     child: Icon(Icons.arrow_back_ios,
                                         color: Colors.black)),
                               ),
                             ),
+
+                            // TITLE MATERI
                             Center(
                               child: Text(
-                                "Video Praktik",
+                                "Materi",
                                 style: blackTextFont.copyWith(
                                     fontSize: 24, fontWeight: FontWeight.w700),
                               ),
@@ -53,29 +53,31 @@ class _VideoPageState extends State<VideoPage> {
                           ],
                         ),
                       ),
-                      
-                      // Subtitle Pilih Kategori Video
+
+                      // SUBTITLE 
                       Container(
+                              // height: 50,
+                              // margin: EdgeInsets.only(top: 5),
                               alignment: Alignment.center,
                               child: Text(
-                                "Pilih Kategori Video",
+                                "Jenazah",
                                 style: blackTextFont.copyWith(
                                   fontSize: 14, fontWeight: FontWeight.w700
                                 )
                               ),
                             ),
 
-                      // Icon Muslim Man 
+                            // ICON UTAMA
                       Container(
                         height: 70,
                         margin: EdgeInsets.only(bottom: 48, top: 36),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                    "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
+                                    "assets/icons/ramadhan-mubarak/png/islamic-prayer.png"))),
                       ),
 
-                      // Button "Thaharah"
+                      // BUTTON 
                       Container(
                         width: 300,
                         height: 46,
@@ -88,18 +90,18 @@ class _VideoPageState extends State<VideoPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Thaharah",
+                                  "1. Memandikan",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
-                      // Button Sholat
+                      // BUTTON 
                       Container(
                         width: 300,
                         height: 46,
@@ -112,18 +114,18 @@ class _VideoPageState extends State<VideoPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Sholat",
+                                  "2. Menyolatkan",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
-                      // Button Puasa
+                      // BUTTON
                       Container(
                         width: 300,
                         height: 46,
@@ -136,18 +138,18 @@ class _VideoPageState extends State<VideoPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Puasa",
+                                  "3. Mengkafani",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),
                       ),
 
-                      // Button Zakat
+                      // BUTTON ZAKAT
                       Container(
                         width: 300,
                         height: 46,
@@ -160,36 +162,12 @@ class _VideoPageState extends State<VideoPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Zakat",
+                                  "4. Menguburkan",
                                   style: whiteTextFont.copyWith(fontSize: 22),
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
-                      ),
-
-                      // Button Jenazah
-                      Container(
-                        width: 300,
-                        height: 46,
-                        margin: EdgeInsets.only(bottom: 24),
-                        child: RaisedButton(
-                            elevation: 4,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Jenazah",
-                                  style: whiteTextFont.copyWith(fontSize: 22),
-                                ),
-                              ],
-                            ),
-                            color: colorLightBlue,
+                            color: colorDarkGrey,
                             onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
                             }),

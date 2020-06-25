@@ -24,7 +24,39 @@ class OnMuqoddimahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnQuizPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnVideoPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnMateriPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriThaharahPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriSholatPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriZakatPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriJenazahPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+//mumuh kasih comment ini apa
