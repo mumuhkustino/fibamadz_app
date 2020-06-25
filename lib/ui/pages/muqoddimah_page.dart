@@ -23,7 +23,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 20, bottom: 54),
+                        margin: EdgeInsets.only(top: 20, bottom: 22),
                         height: 56,
                         child: Stack(
                           children: <Widget>[
@@ -41,19 +41,19 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                         color: Colors.black)),
                               ),
                             ),
-                            Center(
-                              child: Text(
-                                "Muqoddimah",
-                                style: blackTextFont.copyWith(
-                                    fontSize: 24, fontWeight: FontWeight.w700),
-                              ),
-                            )
                           ],
+                        ),
+                      ),
+                      Center(
+                        child: Text(
+                          "Muqoddimah",
+                          style: blackTextFont.copyWith(
+                              fontSize: 24, fontWeight: FontWeight.w700),
                         ),
                       ),
                       Container(
                         height: 70,
-                        margin: EdgeInsets.only(bottom: 48),
+                        margin: EdgeInsets.only(top: 24, bottom: 48),
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
