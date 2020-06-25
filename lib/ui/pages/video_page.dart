@@ -6,6 +6,58 @@ class VideoPage extends StatefulWidget {
 }
 
 class _VideoPageState extends State<VideoPage> {
+
+  // const url_thaharah = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZ5NTq9EE7uK4bTDmUkdPON';
+  // String url_sholat = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6maEYw1idb9X7NDs54QqLWRN';
+  // String url_puasa = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mY8NIdTVNy6QakPE4ApgipW';
+  // String url_zakat = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mYzCYYFgfrIidbjoCJdQeUQ';
+  // String url_jenazah = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZLFFUVnwRbe6yK-UiXwRCw';
+  
+  _launchVidThaharah() async {
+    const url = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZ5NTq9EE7uK4bTDmUkdPON';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchVidSholat() async {
+    const url = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6maEYw1idb9X7NDs54QqLWRN';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchVidPuasa() async {
+    const url = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mY8NIdTVNy6QakPE4ApgipW';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchVidZakat() async {
+    const url = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mYzCYYFgfrIidbjoCJdQeUQ';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchVidJenazah() async {
+    const url = 'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZLFFUVnwRbe6yK-UiXwRCw';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -94,9 +146,8 @@ class _VideoPageState extends State<VideoPage> {
                               ],
                             ),
                             color: colorLightBlue,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
+                            onPressed: _launchVidThaharah,
+                            ),
                       ),
 
                       // Button Sholat
@@ -118,9 +169,8 @@ class _VideoPageState extends State<VideoPage> {
                               ],
                             ),
                             color: colorLightBlue,
-                            onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
+                            onPressed: _launchVidSholat,
+                            ),
                       ),
 
                       // Button Puasa
@@ -142,9 +192,12 @@ class _VideoPageState extends State<VideoPage> {
                               ],
                             ),
                             color: colorLightBlue,
-                            onPressed: () {
+                            onPressed: _launchVidPuasa,
+
+                            // onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
+                            // }
+                            ),
                       ),
 
                       // Button Zakat
@@ -166,9 +219,11 @@ class _VideoPageState extends State<VideoPage> {
                               ],
                             ),
                             color: colorLightBlue,
-                            onPressed: () {
+                            onPressed: _launchVidZakat,
+                            // onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
+                            // }
+                            ),
                       ),
 
                       // Button Jenazah
@@ -190,9 +245,11 @@ class _VideoPageState extends State<VideoPage> {
                               ],
                             ),
                             color: colorLightBlue,
-                            onPressed: () {
+                            onPressed: _launchVidJenazah,
+                            // onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                            }),
+                            // }
+                            ),
                       ),
                     ],
                   ),
