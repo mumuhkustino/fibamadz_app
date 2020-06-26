@@ -11,32 +11,31 @@ class _MateriThaharahWudhuPageState extends State<MateriThaharahWudhuPage> {
   bool isClickedSearch = false;
   bool isFocusSearch = false;
   String searchText;
-  final text =
-      '''Dinamakan Hanbali, karena pendirinya Al-Imam Ahmad bin Hanbal As-Syaebani, lahir di Baghdad Th 164 H dan wafat Th 248 H. Beliau adalah murid Imam Syafi'i yang paling istimewa dan tidak pernah pisah sampai Imam Syafi'i pergi ke Mesir.
-
-Menurut beliau hadits dla'if dapat dipergunakan untuk perbuatan-perbuatan yang afdal (fadlailul a'mal) bukan untuk menentukan hukum. Beliau tidak mengaku adanya Ijma' setelah sahabat karena ulama sangat banyak dan tersebar luas.
-''';
   final List<Entry> data = <Entry>[
-    Entry('Pengertian Wudu',
-        'Wudu adalah salah satu cara menyucikan anggota tubuh dengan air. Seorang muslim diwajibkan bersuci setiap akan melaksanakan salat. Berwudu bisa pula menggunakan debu yang disebut dengan tayammum.'),
+    Entry('Pengertian Wudu','''
+Wudu adalah salah satu cara menyucikan anggota tubuh dengan air. Seorang muslim diwajibkan bersuci setiap akan melaksanakan salat. Berwudu bisa pula menggunakan debu yang disebut dengan tayammum.
+'''),
     Entry('Penggunaan air', '''Jenis air yang diperkenankan
-Air hujan
-Air sumur
-Air terjun, laut atau sungai,
-Air dari lelehan salju atau es batu,
-Air dari tangki besar atau kolam.
+
+- Air hujan
+- Air sumur
+- Air terjun, laut atau sungai,
+- Air dari lelehan salju atau es batu,
+- Air dari tangki besar atau kolam.
 
 Jenis air yang tidak diperkenankan
-Air yang tidak bersih atau ada najis,
-Air sari buah atau pohon,
-Air yang telah berubah warna, rasa dan bau dan menjadi pekat karena sesuatu telah direndam di dalamnya,
-Air dengan jumlah sedikit (kurang dari 1000 liter) yang terkena sesuatu yang tidak bersih seperti urin, darah atau minuman anggur atau ada seekor binatang mati di dalamnya,
-Air bekas wudu
-Air yang tersisa setelah binatang haram meminumnya seperti anjing, babi atau binatang mangsa,
-Air yang tersisa oleh seseorang yang telah mabuk karena khamr (minuman keras).
-  '''),
+
+- Air yang tidak bersih atau ada najis,
+- Air sari buah atau pohon,
+- Air yang telah berubah warna, rasa dan bau dan menjadi pekat karena sesuatu telah direndam di dalamnya,
+- Air dengan jumlah sedikit (kurang dari 1000 liter) yang terkena sesuatu yang tidak bersih seperti urin, darah atau minuman anggur atau ada seekor binatang mati di dalamnya,
+- Air bekas wudu
+- Air yang tersisa setelah binatang haram meminumnya seperti anjing, babi atau binatang mangsa,
+- Air yang tersisa oleh seseorang yang telah mabuk karena khamr (minuman keras).
+'''),
     Entry('Hukum Wudu', '''
 Wajib
+
 Pelaksanaan wudu wajib dilakukan oleh umat Muslim, ketika hendak melakukan ibadah salat, thawaf di Ka'bah, dan menyentuh al-Qur'an. Berwudu untuk menyentuh al-Qur'an menurut pendapat para ulama empat madzhab adalah wajib, berdasarkan salah satu surah dalam al-Qu'ran, yang berbunyi:
 
 "Sesungguhnya Al-Qur'an ini adalah bacaan yang sangat mulia, pada kitab yang terpelihara (Lauhul Mahfuzh), tidak menyentuhnya kecuali orang-orang yang disucikan. (Al Waaqi'ah 56:77-79)"
@@ -48,7 +47,9 @@ Pendapat kedua ini menyatakan bahwa jikalau memang benar demikian maksudnya tent
 “Tidak ada yang menyentuh Al-Qur'an kecuali orang yang suci.” Yang dimaksud oleh hadits di atas ialah: Tidak ada yang menyentuh Al-Qur'an kecuali orang mu'min, karena orang mu'min itu suci tidak najis sebagaimana sabda Muhammad. “Sesungguhnya orang mu'min itu tidak najis.”
 
 Sunnah
+
 Wudu bersifat sunnah adalah bila akan mengerjakan hal-hal berikut ini:
+
 1. Mengulangi wudu untuk tiap salat
 2. Bagi setiap Muslim untuk selalu tampil dengan wudu
 3. Ketika hendak tidur, dalam keadaan junub
@@ -61,6 +62,7 @@ Wudu bersifat sunnah adalah bila akan mengerjakan hal-hal berikut ini:
 10. Menyentuh kitab-kitab syar'i.
 
 Berikut sunah-sunah wudu yang biasa dilakukan oleh Nabi Muhammad:
+
 1. Bersiwak
 2. Mencuci kedua tangan sampai pergelangan tangan sebelum berwudu
 3. Mencuci anggota-anggota wudu sebanyak tiga kali, kecuali kepala hanya sekali
@@ -73,18 +75,22 @@ Berikut sunah-sunah wudu yang biasa dilakukan oleh Nabi Muhammad:
 '''),
     Entry('Rukun Wudu', '''
 Rukun berwudu yang disepakati ada empat:
+
 1. Mencuci wajah,
 2. Mencuci tangan,
 3. Mengusap kepala,
 4. Mencuci kedua kaki.
 
 Rukun-rukun yang diperselisihkan adalah sebagai berikut:
+
 1. Tertib,
 2. Bersambungan (Muwalah).
 '''),
     Entry('Pembatal Wudu', '''
 Disepakati
+
 Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya adalah:
+
 1. Keluar sesuatu dari lubang kelamin dan anus, berupa tinja, kencing, kentut, dan semua hadats besar seperti keluarnya air mani, madzi, jima', haid, nifas,
 2. Tidur lelap (dalam keadaan tidak sadar),
 3. Hilangnya akal karena mabuk, pingsan dan gila,
@@ -92,6 +98,7 @@ Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya 
 5. Menyentuh kawasan sekitar anus (dubur).
 
 Diperselisihkan
+
 1. Sentuhan laki-laki pada wanita yang mahram atau bukan tanpa penghalang, kemudian ada hadits yang menjelaskan bahwa bersentuhan tidak membatalkan wudu,
 2. Menyentuh kemaluan manusia dengan telapak tangan bagian dalam,
 3. Keluarnya darah istihadhah,
@@ -99,23 +106,6 @@ Diperselisihkan
 5. Mengangkat dan memandikan jenazah.
 ''')
   ];
-
-//  void filterSearchResults(String searchText) {
-//    List<Entry> dummySearchList = List<Entry>();
-//    dummySearchList.addAll(data);
-//    if (searchText.isNotEmpty) {
-//      List<Entry> dummyListData = List<Entry>();
-//      dummySearchList.forEach((element) {
-//        if (element.title.contains(searchText)) {
-//          dummyListData.add(element);
-//        }
-//        element.children.forEach((element) {
-//          if (element.title.contains(searchText)) dummyListData.add(element);
-//        });
-//      });
-//      setState(() {});
-//    }
-//  }
 
   @override
   Widget build(BuildContext context) {
@@ -226,11 +216,14 @@ Diperselisihkan
                         ExpansionTile(
                             title: Text(data[index].title),
                             children: <Widget>[
-                          SelectableText.rich(
-                            searchFromText(data[index].content, searchText),
-                            textAlign: TextAlign.left,
-                            textScaleFactor: 1.2,
-                            style: blackTextFont,
+                          Container(
+                            margin: EdgeInsets.only(left: 16, right: 16),
+                            child: SelectableText.rich(
+                              searchFromText(data[index].content, searchText),
+                              textAlign: TextAlign.left,
+                              textScaleFactor: 1.2,
+                              style: blackTextFont,
+                            ),
                           )
                         ]);
                   },
