@@ -69,4 +69,11 @@ TextSpan searchFromText(String fullText, String searchText) {
       ]);
 }
 
+class Entry {
+  Entry(this.title, this.content);
+
+  final String title;
+  final String content;
+}
+
 //file ini berisikan objek2 yang menyimpan data

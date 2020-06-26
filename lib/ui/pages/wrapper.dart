@@ -11,10 +11,6 @@ class Wrapper extends StatelessWidget {
       prevPageEvent = GoToSplashPage();
       context.bloc<PageBloc>().add(prevPageEvent);
     }
-//    else if (!(prevPageEvent is GoToMainPage)) {
-//      prevPageEvent = GoToMainPage();
-//      context.bloc<PageBloc>().add(prevPageEvent);
-//    }
 
     return BlocBuilder<PageBloc, PageState>(
         builder: (_, pageState) => (pageState is OnSplashPage)
@@ -41,6 +37,14 @@ class Wrapper extends StatelessWidget {
             ? MateriPage()
             : (pageState is OnMateriThaharahPage)
             ? MateriThaharahPage()
+            : (pageState is OnMateriThaharahWuduPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahTayamumPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahMandiPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahMenghilangkanNajisPage)
+            ? MateriThaharahWudhuPage()
             : (pageState is OnMateriSholatPage)
             ? MateriSholatPage()
             : (pageState is OnMateriZakatPage)
