@@ -11,10 +11,6 @@ class Wrapper extends StatelessWidget {
       prevPageEvent = GoToSplashPage();
       context.bloc<PageBloc>().add(prevPageEvent);
     }
-//    else if (!(prevPageEvent is GoToMainPage)) {
-//      prevPageEvent = GoToMainPage();
-//      context.bloc<PageBloc>().add(prevPageEvent);
-//    }
 
     return BlocBuilder<PageBloc, PageState>(
         builder: (_, pageState) => (pageState is OnSplashPage)
