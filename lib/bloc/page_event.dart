@@ -75,27 +75,27 @@ class GoToQuizJenazahPage extends PageEvent {
   List<Object> get props => [];
 }
 
-class GoToQuizThaharahResult extends PageEvent {
+class GoToQuizThaharahScore extends PageEvent {
   @override
   List<Object> get props => [];
 }
 
-class GoToQuizSholatResult extends PageEvent {
+class GoToQuizSholatScore extends PageEvent {
   @override
   List<Object> get props => [];
 }
 
-class GoToQuizPuasaResult extends PageEvent {
+class GoToQuizPuasaScore extends PageEvent {
   @override
   List<Object> get props => [];
 }
 
-class GoToQuizZakatResult extends PageEvent {
+class GoToQuizZakatScore extends PageEvent {
   @override
   List<Object> get props => [];
 }
 
-class GoToQuizJenazahResult extends PageEvent {
+class GoToQuizJenazahScore extends PageEvent {
   @override
   List<Object> get props => [];
 }

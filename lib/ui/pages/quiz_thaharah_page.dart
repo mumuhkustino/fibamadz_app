@@ -132,86 +132,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                         ],
                       ),
                       color: colorPink,
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return Dialog(
-                                backgroundColor:
-                                    colorTextWhite.withOpacity(0.1),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    // TEXT ARE YOU SURE
-                                    Container(
-                                      margin: EdgeInsets.only(top: 200),
-                                      child: Text(
-                                        "Are you sure ?",
-                                        style: whiteTextFont.copyWith(
-                                            fontSize: 24),
-                                      ),
-                                    ),
-
-                                    // BUTTON CONFIRMATION YES
-                                    Container(
-                                      // color: colorBluePastel,
-                                      width: 200,
-                                      height: 36,
-                                      margin: EdgeInsets.only(top: 24),
-                                      child: RaisedButton(
-                                        elevation: 4,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(6)),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              "Yes",
-                                              style: whiteTextFont.copyWith(
-                                                  fontSize: 14),
-                                            ),
-                                          ],
-                                        ),
-                                        color: colorBluePastel,
-                                        onPressed: (){
-                                          context.bloc<PageBloc>().add(GoToQuizThaharahResult());
-                                        },
-                                      ),
-                                    ),
-
-                                    // BUTTON CONFIRMATION NO
-                                    Container(
-                                      // color: colorTextWhite,
-                                      width: 200,
-                                      height: 36,
-                                      margin: EdgeInsets.only(top: 24),
-                                      child: RaisedButton(
-                                        elevation: 4,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(6)),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              "No",
-                                              style: blackTextFont.copyWith(
-                                                  fontSize: 14),
-                                            ),
-                                          ],
-                                        ),
-                                        color: colorTextWhite,
-                                        onPressed: null,
-                                      ),
-                                    ),
-                                  ],
-                                ));
-                          },
-                        );
-                      },
+                      onPressed: buildConfirmationDialog,
                     ),
                   ),
                 ],
@@ -220,6 +141,82 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
           ),
         ),
       ),
+    );
+  }
+
+  buildConfirmationDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+            backgroundColor: colorTextWhite.withOpacity(0.1),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                // TEXT ARE YOU SURE
+                Container(
+                  margin: EdgeInsets.only(top: 200),
+                  child: Text(
+                    "Are you sure ?",
+                    style: whiteTextFont.copyWith(fontSize: 24),
+                  ),
+                ),
+
+                // BUTTON CONFIRMATION YES
+                Container(
+                  // color: colorBluePastel,
+                  width: 200,
+                  height: 36,
+                  margin: EdgeInsets.only(top: 24),
+                  child: RaisedButton(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Yes",
+                          style: whiteTextFont.copyWith(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    color: colorBluePastel,
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pop(context);
+                      });
+                      context.bloc<PageBloc>().add(GoToQuizThaharahScore());
+                    },
+                  ),
+                ),
+
+                // BUTTON CONFIRMATION NO
+                Container(
+                  // color: colorTextWhite,
+                  width: 200,
+                  height: 36,
+                  margin: EdgeInsets.only(top: 24),
+                  child: RaisedButton(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "No",
+                          style: blackTextFont.copyWith(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    color: colorTextWhite,
+                    onPressed: null,
+                  ),
+                ),
+              ],
+            ));
+      },
     );
   }
 }

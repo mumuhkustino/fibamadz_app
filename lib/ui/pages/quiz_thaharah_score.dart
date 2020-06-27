@@ -1,12 +1,5 @@
 part of 'pages.dart';
 
-// // Data class
-// class MyChoice {
-//   String choice;
-//   int index;
-//   MyChoice({this.index, this.choice});
-// }
-
 class QuizThaharahScore extends StatefulWidget {
   @override
   _QuizThaharahScoreState createState() => _QuizThaharahScoreState();
@@ -90,7 +83,6 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                     ],
                   ),
 
-                 
                   // BUTTON SUBMIT
                   Container(
                     width: 200,

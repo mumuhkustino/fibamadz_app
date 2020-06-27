@@ -79,27 +79,27 @@ class OnQuizJenazahPage extends PageState {
   List<Object> get props => [];
 }
 
-class OnQuizThaharahResult extends PageState {
+class OnQuizThaharahScore extends PageState {
   @override
   List<Object> get props => [];
 }
 
-class OnQuizSholatResult extends PageState {
+class OnQuizSholatScore extends PageState {
   @override
   List<Object> get props => [];
 }
 
-class OnQuizPuasaResult extends PageState {
+class OnQuizPuasaScore extends PageState {
   @override
   List<Object> get props => [];
 }
 
-class OnQuizZakatResult extends PageState {
+class OnQuizZakatScore extends PageState {
   @override
   List<Object> get props => [];
 }
 
-class OnQuizJenazahResult extends PageState {
+class OnQuizJenazahScore extends PageState {
   @override
   List<Object> get props => [];
 }
