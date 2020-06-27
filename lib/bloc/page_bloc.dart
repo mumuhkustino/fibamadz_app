@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:bloc/bloc.dart';
+import 'package:fibamadz_app/bloc/blocs.dart';
 
 part 'page_event.dart';
 part 'page_state.dart';
@@ -47,6 +48,14 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMateriPage();
     } else if (event is GoToMateriThaharahPage) {
       yield OnMateriThaharahPage();
+    } else if (event is GoToMateriThaharahWuduPage) {
+      yield OnMateriThaharahWuduPage();
+    } else if (event is GoToMateriThaharahTayamumPage) {
+      yield OnMateriThaharahTayamumPage();
+    } else if (event is GoToMateriThaharahMandiPage) {
+      yield OnMateriThaharahMandiPage();
+    } else if (event is GoToMateriThaharahMenghilangkanNajisPage) {
+      yield OnMateriThaharahMenghilangkanNajisPage();
     } else if (event is GoToMateriSholatPage) {
       yield OnMateriSholatPage();
     } else if (event is GoToMateriZakatPage) {

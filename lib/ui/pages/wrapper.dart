@@ -11,10 +11,6 @@ class Wrapper extends StatelessWidget {
       prevPageEvent = GoToSplashPage();
       context.bloc<PageBloc>().add(prevPageEvent);
     }
-//    else if (!(prevPageEvent is GoToMainPage)) {
-//      prevPageEvent = GoToMainPage();
-//      context.bloc<PageBloc>().add(prevPageEvent);
-//    }
 
     return BlocBuilder<PageBloc, PageState>(
         builder: (_, pageState) => (pageState is OnSplashPage)
@@ -26,19 +22,29 @@ class Wrapper extends StatelessWidget {
             : (pageState is OnMuqoddimahKitabPage)
             ? MuqoddimahKitabPage()
             : (pageState is OnMuqoddimahImamSyafiiPage)
-            ? MuqoddimahPage()
+            ? MuqoddimahImamSyafiiPage()
             : (pageState is OnMuqoddimahImamMalikPage)
-            ? MuqoddimahPage()
+            ? MuqoddimahImamMalikPage()
             : (pageState is OnMuqoddimahImamHanafiPage)
-            ? MuqoddimahPage()
+            ? MuqoddimahImamHanafiPage()
             : (pageState is OnMuqoddimahImamAhmadPage)
-            ? MuqoddimahPage()
+            ? MuqoddimahImamAhmadPage()
+            : (pageState is OnQuizPage)
+            ? QuizPage()
             : (pageState is OnVideoPage)
             ? VideoPage()
             : (pageState is OnMateriPage)
             ? MateriPage()
             : (pageState is OnMateriThaharahPage)
             ? MateriThaharahPage()
+            : (pageState is OnMateriThaharahWuduPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahTayamumPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahMandiPage)
+            ? MateriThaharahWudhuPage()
+            : (pageState is OnMateriThaharahMenghilangkanNajisPage)
+            ? MateriThaharahWudhuPage()
             : (pageState is OnMateriSholatPage)
             ? MateriSholatPage()
             : (pageState is OnMateriZakatPage)

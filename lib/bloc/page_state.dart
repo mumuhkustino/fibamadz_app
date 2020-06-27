@@ -94,6 +94,26 @@ class OnMateriThaharahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMateriThaharahWuduPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriThaharahTayamumPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriThaharahMandiPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriThaharahMenghilangkanNajisPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnMateriSholatPage extends PageState {
   @override
   List<Object> get props => [];

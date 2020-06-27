@@ -1,5 +1,6 @@
 part of 'pages.dart';
 
+// Data class
 class MyChoice {
   String choice;
   int index;
@@ -12,7 +13,6 @@ class QuizThaharahPage extends StatefulWidget {
 }
 
 class _QuizThaharahPageState extends State<QuizThaharahPage> {
-
   bool isClickedSearch = false;
 
   final q1 = '''
@@ -92,12 +92,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     ),
                   ),
 
-                  // RADIO BUTTON 
+                  // ANSWER BUTTON Q1
                   Center(
-                    child: RadioGroup(),
+                    child: RadioGroup(1),
                   ),
 
-                       // QUESTION 2
+                  // QUESTION 2
                   Container(
                     margin: EdgeInsets.only(top: 24, left: 12),
                     child: Row(
@@ -107,12 +107,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     ),
                   ),
 
-                  // RADIO BUTTON 
+                  // RADIO BUTTON
                   Center(
-                    child: RadioGroup(),
+                    child: RadioGroup(2),
                   ),
 
-                  // BUTTON submit
+                  // BUTTON SUBMIT
                   Container(
                     width: 200,
                     height: 36,
@@ -132,7 +132,51 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                         ),
                         color: colorPink,
                         onPressed: () {
-                          //                            context.bloc<PageBloc>().add(GoToMainPage());
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: Text("Are you sure?"),
+                                  // content: Text("Periksa lagi jawabannya.."),
+                                  actions: <Widget>[
+                                    /*
+                                    Container(
+                                      width: 200,
+                                      height: 36,
+                                      child: RaisedButton(
+                                        elevation: 4,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(6)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "Yes",
+                                              style: whiteTextFont.copyWith(
+                                                  fontSize: 14),
+                                            ),
+                                          ],
+                                        ),
+                                        color: colorBluePastel,
+                                      ),
+                                    ),
+                                    */
+                                    RaisedButton(
+                                      onPressed: () {},
+                                      child: Text("Yes"),
+                                      color: colorBluePastel,
+                                    ),
+                                    RaisedButton(
+                                      onPressed: () {},
+                                      child: Text("No"),
+                                      color: colorBluePastel,
+                                    ),
+                                  ],
+                                );
+                              });
+                          //  context.bloc<PageBloc>().add(GoToMainPage());
                         }),
                   ),
                 ],
@@ -146,28 +190,41 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 }
 
 class RadioGroup extends StatefulWidget {
+  int Qn;
+
+  RadioGroup(int QnInput) {
+    Qn = QnInput;
+  }
+
   @override
   State<StatefulWidget> createState() {
-    return new RadioGroupState();
+    return new RadioGroupState(Qn);
   }
 }
 
 class RadioGroupState extends State<RadioGroup> {
-  String default_choice = "4";
-  int default_index = 0;
+  List<MyChoice> choices = [];
 
-  List<MyChoice> choicesQ1 = [
-    MyChoice(index: 0, choice: "2"),
-    MyChoice(index: 1, choice: "3"),
-    MyChoice(index: 2, choice: "4"),
-    MyChoice(index: 3, choice: "5"),
-  ];
-
-  List<MyChoice> choicesQ2 = [
-    MyChoice(index: 0, choice: "1"),
-    MyChoice(index: 1, choice: "2"),
-    MyChoice(index: 2, choice: "3"),
-  ];
+  // ANSWER BUTTON UNTUK SETIAP QUESTION BERBEDA2
+  // JADI PAKAI INI
+  RadioGroupState(int QnInput) {
+    if (QnInput == 1) {
+      this.choices = [
+        MyChoice(index: 0, choice: "2"),
+        MyChoice(index: 1, choice: "3"),
+        MyChoice(index: 2, choice: "4"),
+        MyChoice(index: 3, choice: "5"),
+      ];
+    } else {
+      this.choices = [
+        MyChoice(index: 0, choice: "1"),
+        MyChoice(index: 1, choice: "2"),
+        MyChoice(index: 2, choice: "3"),
+      ];
+    }
+  }
+  String default_choice = "";
+  int default_index = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -177,7 +234,7 @@ class RadioGroupState extends State<RadioGroup> {
           children: <Widget>[
             Container(
                 child: Column(
-                    children: choicesQ1
+                    children: choices
                         .map((data) => RadioListTile(
                               title: Text(
                                 '${data.choice}',
@@ -186,7 +243,7 @@ class RadioGroupState extends State<RadioGroup> {
                               value: data.index,
                               onChanged: (value) {
                                 setState(() {
-                                  default_choice = data.choice;
+                                  // default_choice = data.choice;
                                   default_index = data.index;
                                 });
                               },

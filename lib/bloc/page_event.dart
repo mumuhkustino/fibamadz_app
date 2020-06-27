@@ -90,6 +90,26 @@ class GoToMateriThaharahPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMateriThaharahWuduPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriThaharahTayamumPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriThaharahMandiPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriThaharahMenghilangkanNajisPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriSholatPage extends PageEvent {
   @override
   List<Object> get props => [];

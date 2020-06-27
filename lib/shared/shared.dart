@@ -9,6 +9,7 @@ Color colorYellow = Color(0xFFF9C22E);
 Color colorLightYellow = Color(0xFFFFFACD);
 Color colorPink = Color(0xFFE01A4F);
 Color colorLightBlue = Color(0xFF56CCF2);
+Color colorBluePastel = Color(0xF69DAC6);
 Color colorDarkGrey = Color(0xFF4F4F4F);
 Color colorCream = Color(0xFFFFFAEB);
 
@@ -31,7 +32,7 @@ TextSpan searchFromText(String fullText, String searchText) {
     if (refinedFullText.substring(0, refinedSearchText.length) ==
         refinedSearchText) {
       return TextSpan(
-        style: blackTextFont.copyWith(backgroundColor: colorLightYellow),
+        style: blackTextFont.copyWith(backgroundColor: colorYellow),
         text: fullText.substring(0, refinedSearchText.length),
         children: [
           searchFromText(
@@ -39,7 +40,7 @@ TextSpan searchFromText(String fullText, String searchText) {
         ],
       );
     } else if (refinedFullText.length == refinedSearchText.length) {
-      return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorLightYellow));
+      return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorYellow));
     } else {
       return TextSpan(
         style: blackTextFont,
@@ -67,6 +68,13 @@ TextSpan searchFromText(String fullText, String searchText) {
             fullText.substring(refinedFullText.indexOf(refinedSearchText)),
             searchText)
       ]);
+}
+
+class Entry {
+  Entry(this.title, this.content);
+
+  final String title;
+  final String content;
 }
 
 //file ini berisikan objek2 yang menyimpan data
