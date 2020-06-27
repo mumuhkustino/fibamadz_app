@@ -25,9 +25,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                 alignment: Alignment.centerLeft,
                 child: GestureDetector(
                   onTap: () {
-                    context
-                        .bloc<PageBloc>()
-                        .add(GoToMainPage());
+                    context.bloc<PageBloc>().add(GoToMainPage());
                   },
                   child: Container(
                       width: MediaQuery.of(context).size.width / 8,
@@ -36,138 +34,154 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                 ),
               ),
             ),
-            // TITLE MUQODDIMAH PAGE
-            Center(
-              child: Text(
-                "Muqoddimah",
-                style: blackTextFont.copyWith(
-                    fontSize: 24, fontWeight: FontWeight.w700),
+            Expanded(
+              child: Column(
+                children: [
+                  // TITLE MUQODDIMAH PAGE
+                  Center(
+                    child: Text(
+                      "Muqoddimah",
+                      style: blackTextFont.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  // ICON MUQODDIMAH PAGE
+                  Container(
+                    height: 70,
+                    margin: EdgeInsets.only(top: 24, bottom: 48),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png"))),
+                  ),
+                  // BUTTON KE MUQODDIMAH KITAB PAGE
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Muqoddimah Kitab",
+                              style: whiteTextFont.copyWith(fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        color: colorLightBlue,
+                        onPressed: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMuqoddimahKitabPage());
+                        }),
+                  ),
+                  // BUTTON KE MUQODDIMAH IMAM SYAFII PAGE
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sejarah Imam Syafii",
+                              style: whiteTextFont.copyWith(fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        color: colorLightBlue,
+                        onPressed: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMuqoddimahImamSyafiiPage());
+                        }),
+                  ),
+                  // BUTTON KE MUQODDIMAH IMAM MALIK PAGE
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sejarah Imam Malik",
+                              style: whiteTextFont.copyWith(fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        color: colorLightBlue,
+                        onPressed: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMuqoddimahImamMalikPage());
+                        }),
+                  ),
+                  // BUTTON KE MUQODDIMAH IMAM HANAFI PAGE
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sejarah Imam Hanafi",
+                              style: whiteTextFont.copyWith(fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        color: colorLightBlue,
+                        onPressed: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMuqoddimahImamHanafiPage());
+                        }),
+                  ),
+                  // BUTTON KE MUQODDIMAH IMAM AHMAD PAGE
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sejarah Imam Ahmad",
+                              style: whiteTextFont.copyWith(fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        color: colorLightBlue,
+                        onPressed: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMuqoddimahImamAhmadPage());
+                        }),
+                  ),
+                ],
               ),
-            ),
-            // ICON MUQODDIMAH PAGE
-            Container(
-              height: 70,
-              margin: EdgeInsets.only(top: 24, bottom: 48),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          "assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png"))),
-            ),
-            // BUTTON KE MUQODDIMAH KITAB PAGE
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Muqoddimah Kitab",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
-                  ),
-                  color: colorLightBlue,
-                  onPressed: () {
-                  context.bloc<PageBloc>().add(GoToMuqoddimahKitabPage());
-                  }),
-            ),
-            // BUTTON KE MUQODDIMAH IMAM SYAFII PAGE
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sejarah Imam Syafii",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
-                  ),
-                  color: colorLightBlue,
-                  onPressed: () {
-                  context.bloc<PageBloc>().add(GoToMuqoddimahImamSyafiiPage());
-                  }),
-            ),
-            // BUTTON KE MUQODDIMAH IMAM MALIK PAGE
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sejarah Imam Malik",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
-                  ),
-                  color: colorLightBlue,
-                  onPressed: () {
-                  context.bloc<PageBloc>().add(GoToMuqoddimahImamMalikPage());
-                  }),
-            ),
-            // BUTTON KE MUQODDIMAH IMAM HANAFI PAGE
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sejarah Imam Hanafi",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
-                  ),
-                  color: colorLightBlue,
-                  onPressed: () {
-                  context.bloc<PageBloc>().add(GoToMuqoddimahImamHanafiPage());
-                  }),
-            ),
-            // BUTTON KE MUQODDIMAH IMAM AHMAD PAGE
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sejarah Imam Ahmad",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
-                  ),
-                  color: colorLightBlue,
-                  onPressed: () {
-                  context.bloc<PageBloc>().add(GoToMuqoddimahImamAhmadPage());
-                  }),
-            ),
+            )
           ],
         ),
       ),
