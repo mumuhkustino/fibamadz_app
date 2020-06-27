@@ -11,20 +11,16 @@ class QuizThaharahPage extends StatefulWidget {
   _QuizThaharahPageState createState() => _QuizThaharahPageState();
 }
 
-enum SingingCharacter { _4, _5 }
-
 class _QuizThaharahPageState extends State<QuizThaharahPage> {
-  SingingCharacter _character = SingingCharacter._4;
 
   bool isClickedSearch = false;
-  String searchText;
-  String tempText;
-  final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
 
   final q1 = '''
   Q1 :
-  Rukun Islam ada berapa?''';
+  Rukun Wudu ada berapa?''';
+  final q2 = '''
+  Q2 :
+  Najis terbagi menjadi ? ''';
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +50,6 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                 context.bloc<PageBloc>().add(GoToQuizPage());
                               } else {
                                 setState(() {
-                                  searchText = "";
                                   isClickedSearch = false;
                                 });
                               }
@@ -87,12 +82,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     style: blackTextFont.copyWith(fontSize: 14),
                   )),
 
-                  // QUESTION
-                  Center(
-                    child: RadioGroup(),
-                  ),
-
-                  // QUESTION TEXT
+                  // QUESTION 1
                   Container(
                     margin: EdgeInsets.only(top: 24, left: 12),
                     child: Row(
@@ -102,15 +92,35 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     ),
                   ),
 
+                  // RADIO BUTTON 
+                  Center(
+                    child: RadioGroup(),
+                  ),
+
+                       // QUESTION 2
+                  Container(
+                    margin: EdgeInsets.only(top: 24, left: 12),
+                    child: Row(
+                      children: <Widget>[
+                        Text(q2, style: blackTextFont.copyWith(fontSize: 14))
+                      ],
+                    ),
+                  ),
+
+                  // RADIO BUTTON 
+                  Center(
+                    child: RadioGroup(),
+                  ),
+
                   // BUTTON submit
                   Container(
-                    width: 100,
+                    width: 200,
                     height: 36,
                     margin: EdgeInsets.only(bottom: 24),
                     child: RaisedButton(
                         elevation: 4,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
+                            borderRadius: BorderRadius.circular(6)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -146,11 +156,17 @@ class RadioGroupState extends State<RadioGroup> {
   String default_choice = "4";
   int default_index = 0;
 
-  List<MyChoice> choices = [
-    MyChoice(index: 0, choice: "4"),
-    MyChoice(index: 1, choice: "5"),
-    MyChoice(index: 2, choice: "6"),
-    MyChoice(index: 3, choice: "7"),
+  List<MyChoice> choicesQ1 = [
+    MyChoice(index: 0, choice: "2"),
+    MyChoice(index: 1, choice: "3"),
+    MyChoice(index: 2, choice: "4"),
+    MyChoice(index: 3, choice: "5"),
+  ];
+
+  List<MyChoice> choicesQ2 = [
+    MyChoice(index: 0, choice: "1"),
+    MyChoice(index: 1, choice: "2"),
+    MyChoice(index: 2, choice: "3"),
   ];
 
   @override
@@ -161,7 +177,7 @@ class RadioGroupState extends State<RadioGroup> {
           children: <Widget>[
             Container(
                 child: Column(
-                    children: choices
+                    children: choicesQ1
                         .map((data) => RadioListTile(
                               title: Text(
                                 '${data.choice}',
