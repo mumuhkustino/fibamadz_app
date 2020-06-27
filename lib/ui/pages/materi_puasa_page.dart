@@ -98,34 +98,39 @@ class _MateriPuasaPageState extends State<MateriPuasaPage> {
                   ],
                 ),
               ),
-              Column(
-                children: [
-                  Center(
-                      child: Text(
-                    "Puasa",
-                    style: blackTextFont.copyWith(
-                        fontSize: 24, fontWeight: FontWeight.w700),
-                  )),
-                ],
-              ),
               Expanded(
-                child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return ExpansionTile(
-                        title: Text(data[index].title),
-                        children: <Widget>[
-                          Container(
-                            margin: EdgeInsets.only(left: 16, right: 16),
-                            child: SelectableText.rich(
-                              searchFromText(data[index].content, searchText),
-                              textAlign: TextAlign.left,
-                              textScaleFactor: 1.2,
-                              style: blackTextFont,
-                            ),
-                          )
-                        ]);
-                  },
-                  itemCount: data.length,
+                child: Column(
+                  children: [
+                    Column(
+                      children: [
+                        Center(
+                            child: Text(
+                          "Puasa",
+                          style: blackTextFont.copyWith(
+                              fontSize: 24, fontWeight: FontWeight.w700),
+                        )),
+                      ],
+                    ),
+                    ListView.builder(
+                      itemBuilder: (context, index) {
+                        return ExpansionTile(
+                            title: Text(data[index].title),
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.only(left: 16, right: 16),
+                                child: SelectableText.rich(
+                                  searchFromText(
+                                      data[index].content, searchText),
+                                  textAlign: TextAlign.left,
+                                  textScaleFactor: 1.2,
+                                  style: blackTextFont,
+                                ),
+                              )
+                            ]);
+                      },
+                      itemCount: data.length,
+                    ),
+                  ],
                 ),
               )
             ],

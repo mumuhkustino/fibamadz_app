@@ -33,122 +33,127 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                 ),
               ),
             ),
-            // TITLE MATERI
-            Center(
-              child: Text(
-                "Materi",
-                style: blackTextFont.copyWith(
-                    fontSize: 24, fontWeight: FontWeight.w700),
-              ),
-            ),
-            // SUBTITLE
-            Container(
-              alignment: Alignment.center,
-              child: Text("Jenazah",
-                  style: blackTextFont.copyWith(
-                      fontSize: 14, fontWeight: FontWeight.w700)),
-            ),
-            // ICON UTAMA
-            Container(
-              height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          "assets/icons/ramadhan-mubarak/png/islamic-prayer.png"))),
-            ),
-            // BUTTON MEMANDIKAN
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "1. Memandikan",
-                        style: whiteTextFont.copyWith(fontSize: 22),
-                      ),
-                    ],
+            Expanded(
+                child: Column(
+              children: [
+                // TITLE MATERI
+                Center(
+                  child: Text(
+                    "Materi",
+                    style: blackTextFont.copyWith(
+                        fontSize: 24, fontWeight: FontWeight.w700),
                   ),
-                  color: colorDarkGrey,
-                  onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                  }),
-            ),
-            // BUTTON MENYOLATKAN
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "2. Menyolatkan",
-                        style: whiteTextFont.copyWith(fontSize: 22),
+                ),
+                // SUBTITLE
+                Container(
+                  alignment: Alignment.center,
+                  child: Text("Jenazah",
+                      style: blackTextFont.copyWith(
+                          fontSize: 14, fontWeight: FontWeight.w700)),
+                ),
+                // ICON UTAMA
+                Container(
+                  height: 70,
+                  margin: EdgeInsets.only(bottom: 48, top: 36),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                              "assets/icons/ramadhan-mubarak/png/islamic-prayer.png"))),
+                ),
+                // BUTTON MEMANDIKAN
+                Container(
+                  width: 300,
+                  height: 46,
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "1. Memandikan",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  color: colorDarkGrey,
-                  onPressed: () {
+                      color: colorDarkGrey,
+                      onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                  }),
-            ),
-            // BUTTON MENGKAFANI
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "3. Mengkafani",
-                        style: whiteTextFont.copyWith(fontSize: 22),
+                      }),
+                ),
+                // BUTTON MENYOLATKAN
+                Container(
+                  width: 300,
+                  height: 46,
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "2. Menyolatkan",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  color: colorDarkGrey,
-                  onPressed: () {
+                      color: colorDarkGrey,
+                      onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                  }),
-            ),
-            // BUTTON MENGUBURKAN
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "4. Menguburkan",
-                        style: whiteTextFont.copyWith(fontSize: 22),
+                      }),
+                ),
+                // BUTTON MENGKAFANI
+                Container(
+                  width: 300,
+                  height: 46,
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "3. Mengkafani",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  color: colorDarkGrey,
-                  onPressed: () {
+                      color: colorDarkGrey,
+                      onPressed: () {
 //                            context.bloc<PageBloc>().add(GoToMainPage());
-                  }),
-            ),
+                      }),
+                ),
+                // BUTTON MENGUBURKAN
+                Container(
+                  width: 300,
+                  height: 46,
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "4. Menguburkan",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorDarkGrey,
+                      onPressed: () {
+//                            context.bloc<PageBloc>().add(GoToMainPage());
+                      }),
+                ),
+              ],
+            ))
           ],
         ),
       ),
