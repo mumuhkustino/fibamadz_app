@@ -99,4 +99,90 @@ List<Widget> getChildrenWidgets(List<Entry> entries, String searchText) {
   return listWidget;
 }
 
+List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
+  List<Entry> dummySearchList = List<Entry>();
+  dummySearchList.addAll(entries);
+  if (searchText != null && searchText.isNotEmpty) {
+    List<Entry> dummyListData = List<Entry>();
+    //1
+    dummySearchList.forEach((element) {
+      if (element.title != null && element.title.isNotEmpty) {
+        if (element.title.toLowerCase().contains(searchText.toLowerCase())) {
+          dummyListData.add(element);
+        } else if (element.content != null && element.content.isNotEmpty) {
+          if(element.content.toLowerCase().contains(searchText.toLowerCase())) {
+            dummyListData.add(element);
+          }
+        } else if (element.children.isNotEmpty && element.children != null) {
+          //2
+          element.children.forEach((child) {
+            if (child.title != null && child.title.isNotEmpty) {
+              if (child.title.toLowerCase().contains(searchText.toLowerCase())) {
+                dummyListData.add(element);
+              } else if (child.content != null && child.content.isNotEmpty) {
+                if(child.content.toLowerCase().contains(searchText.toLowerCase())) {
+                  dummyListData.add(element);
+                }
+              } else if (child.children.isNotEmpty && child.children != null) {
+                //3
+                child.children.forEach((child) {
+                  if (child.title != null && child.title.isNotEmpty) {
+                    if (child.title.toLowerCase().contains(searchText.toLowerCase())) {
+                      element.children.clear();
+                      element.children.add(child);
+                      dummyListData.add(element);
+                    } else if (child.content != null && child.content.isNotEmpty) {
+                      if(child.content.toLowerCase().contains(searchText.toLowerCase())) {
+                        element.children.clear();
+                        element.children.add(child);
+                        dummyListData.add(element);
+                      }
+                    }
+                  }
+                });
+              }
+            }
+          });
+        }
+      }
+    });
+    return dummyListData;
+  } else {
+    return entries;
+  }
+}
+
+////2
+//element.children.forEach((child) {
+//if (child.title != null && child.title.isNotEmpty) {
+//if (child.title.toLowerCase().contains(searchText.toLowerCase())) {
+//element.children.clear();
+//element.children.add(child);
+//dummyListData.add(element);
+//} else if (child.content != null && child.content.isNotEmpty) {
+//if(child.content.toLowerCase().contains(searchText.toLowerCase())) {
+//dummyListData.add(element);
+//}
+//} else if (child.children.isNotEmpty && child.children != null) {
+////3
+//child.children.forEach((child2) {
+//if (child2.title != null && child2.title.isNotEmpty) {
+//if (child2.title.toLowerCase().contains(searchText.toLowerCase())) {
+//child.children.clear();
+//child.children.add(child2);
+//element.children.add(child);
+//dummyListData.add(element);
+//} else if (child2.content != null && child2.content.isNotEmpty) {
+//if(child2.content.toLowerCase().contains(searchText.toLowerCase())) {
+//child.children.clear();
+//child.children.add(child2);
+//element.children.add(child);
+//dummyListData.add(element);
+//}
+//}
+//}
+//});
+//}
+//}
+//}
 //file ini berisikan objek2 yang menyimpan data
