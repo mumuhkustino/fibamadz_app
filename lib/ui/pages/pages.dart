@@ -22,6 +22,7 @@ part 'quiz_page.dart';
 part 'materi_page.dart';
 part 'materi_thaharah_page.dart';
 part 'materi_thaharah_wudhu_page.dart';
+part 'materi_thaharah_tayamum_page.dart';
 part 'materi_sholat_page.dart';
 part 'materi_puasa_page.dart';
 part 'materi_zakat_page.dart';

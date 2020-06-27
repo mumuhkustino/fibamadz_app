@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:bloc/bloc.dart';
-import 'package:fibamadz_app/bloc/blocs.dart';
 
 part 'page_event.dart';
 part 'page_state.dart';
