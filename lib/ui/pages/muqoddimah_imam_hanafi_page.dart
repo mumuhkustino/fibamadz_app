@@ -108,27 +108,33 @@ Madzhab ini berkembang karena menjadi madzhab pemerintah pada saat Khalifah Haru
                 ],
               ),
             ),
-            // TITLE SEJARAH IMAM
-            Center(
-                child: Text(
-              "Sejarah Imam",
-              style: blackTextFont.copyWith(
-                  fontSize: 24, fontWeight: FontWeight.w700),
-            )),
-            // TITLE HANAFI
-            Center(
-                child: Text(
-              "Hanafi",
-              style: blackTextFont.copyWith(fontSize: 14),
-            )),
-            // TEXT SEJARAH IMAM HANAFI
-            Container(
-              margin: EdgeInsets.only(top: 44, left: 24, right: 24),
-              child: SelectableText.rich(
-                searchFromText(text, searchText),
-                textAlign: TextAlign.center,
-                textScaleFactor: 1.2,
-                style: blackTextFont,
+            Expanded(
+              child: ListView(
+                children: [
+                  // TITLE SEJARAH IMAM
+                  Center(
+                      child: Text(
+                        "Sejarah Imam",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  // TITLE HANAFI
+                  Center(
+                      child: Text(
+                        "Hanafi",
+                        style: blackTextFont.copyWith(fontSize: 14),
+                      )),
+                  // TEXT SEJARAH IMAM HANAFI
+                  Container(
+                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    child: SelectableText.rich(
+                      searchFromText(text, searchText),
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.2,
+                      style: blackTextFont,
+                    ),
+                  ),
+                ],
               ),
             )
           ],

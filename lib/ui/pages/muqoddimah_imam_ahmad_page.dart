@@ -107,27 +107,33 @@ Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang
                 ],
               ),
             ),
-            // TITLE SEJARAH IMAM
-            Center(
-                child: Text(
-                  "Sejarah Imam",
-                  style: blackTextFont.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.w700),
-                )),
-            // TITLE AHMAD
-            Center(
-                child: Text(
-                  "Ahmad",
-                  style: blackTextFont.copyWith(fontSize: 14),
-                )),
-            // TEXT SEJARAH IMAM AHMAD
-            Container(
-              margin: EdgeInsets.only(top: 44, left: 24, right: 24),
-              child: SelectableText.rich(
-                searchFromText(text, searchText),
-                textAlign: TextAlign.center,
-                textScaleFactor: 1.2,
-                style: blackTextFont,
+            Expanded(
+              child: ListView(
+                children: [
+                  // TITLE SEJARAH IMAM
+                  Center(
+                      child: Text(
+                        "Sejarah Imam",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  // TITLE AHMAD
+                  Center(
+                      child: Text(
+                        "Ahmad",
+                        style: blackTextFont.copyWith(fontSize: 14),
+                      )),
+                  // TEXT SEJARAH IMAM AHMAD
+                  Container(
+                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    child: SelectableText.rich(
+                      searchFromText(text, searchText),
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.2,
+                      style: blackTextFont,
+                    ),
+                  ),
+                ],
               ),
             )
           ],
