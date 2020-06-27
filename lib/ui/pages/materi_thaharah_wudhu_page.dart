@@ -124,131 +124,128 @@ Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya 
       },
       child: Scaffold(
         backgroundColor: colorCream,
-        body: Container(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 20, bottom: 22),
-                height: 56,
-                child: Row(
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: GestureDetector(
-                        onTap: () {
-                          if (!isClickedSearch) {
-                            context
-                                .bloc<PageBloc>()
-                                .add(GoToMateriThaharahPage());
-                          } else {
-                            setState(() {
-                              if (searchController.text.compareTo("") == 0) {
-                                isClickedSearch = false;
-                              } else {
-                                searchController.text = "";
-                                searchText = searchController.text;
-                                var entries =
-                                    filterSearchResults(text, searchText);
-                                data.clear();
-                                data.addAll(entries);
-                              }
-                            });
-                          }
-                        },
-                        child: Container(
-                            width: MediaQuery.of(context).size.width / 8,
-                            child: Icon(
-                                (!isClickedSearch)
-                                    ? Icons.arrow_back_ios
-                                    : Icons.clear,
-                                color: Colors.black.withOpacity(0.54))),
-                      ),
-                    ),
-                    Center(
-                        child: (isClickedSearch)
-                            ? Container(
-                                width:
-                                    MediaQuery.of(context).size.width * 6 / 8,
-                                child: TextField(
-                                  autofocus:
-                                      (searchController.text.compareTo("") ==
-                                          0),
-                                  controller: searchController,
-                                  decoration:
-                                      InputDecoration(hintText: "Search"),
-                                ),
-                              )
-                            : Container(
-                                width:
-                                    MediaQuery.of(context).size.width * 6 / 8,
-                              )),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: GestureDetector(
-                        onTap: () {
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 20, bottom: 22),
+              height: 56,
+              child: Row(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: GestureDetector(
+                      onTap: () {
+                        if (!isClickedSearch) {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMateriThaharahPage());
+                        } else {
                           setState(() {
-                            if (!isClickedSearch) {
-                              isClickedSearch = true;
-                              isFocusSearch = true;
+                            if (searchController.text.compareTo("") == 0) {
+                              isClickedSearch = false;
                             } else {
+                              searchController.text = "";
                               searchText = searchController.text;
-                              isFocusSearch = false;
                               var entries =
                                   filterSearchResults(text, searchText);
                               data.clear();
                               data.addAll(entries);
                             }
                           });
-                        },
-                        child: Container(
-                            width: MediaQuery.of(context).size.width / 8,
-                            child: Icon(Icons.search,
-                                color: Colors.black.withOpacity(0.54))),
-                      ),
+                        }
+                      },
+                      child: Container(
+                          width: MediaQuery.of(context).size.width / 8,
+                          child: Icon(
+                              (!isClickedSearch)
+                                  ? Icons.arrow_back_ios
+                                  : Icons.clear,
+                              color: Colors.black.withOpacity(0.54))),
                     ),
-                  ],
-                ),
+                  ),
+                  Center(
+                      child: (isClickedSearch)
+                          ? Container(
+                              width: MediaQuery.of(context).size.width * 6 / 8,
+                              child: TextField(
+                                autofocus:
+                                    (searchController.text.compareTo("") == 0),
+                                controller: searchController,
+                                decoration: InputDecoration(hintText: "Search"),
+                              ),
+                            )
+                          : Container(
+                              width: MediaQuery.of(context).size.width * 6 / 8,
+                            )),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          if (!isClickedSearch) {
+                            isClickedSearch = true;
+                            isFocusSearch = true;
+                          } else {
+                            searchText = searchController.text;
+                            isFocusSearch = false;
+                            var entries = filterSearchResults(text, searchText);
+                            data.clear();
+                            data.addAll(entries);
+                          }
+                        });
+                      },
+                      child: Container(
+                          width: MediaQuery.of(context).size.width / 8,
+                          child: Icon(Icons.search,
+                              color: Colors.black.withOpacity(0.54))),
+                    ),
+                  ),
+                ],
               ),
-              Column(
+            ),
+            Expanded(
+              child: Column(
                 children: [
+                  // TITLE THAHARAH
                   Center(
                       child: Text(
                     "Thaharah",
                     style: blackTextFont.copyWith(
                         fontSize: 24, fontWeight: FontWeight.w700),
                   )),
+                  // SUBTITLE WUDU
                   Center(
                       child: Text(
                     "Wudu",
                     style: blackTextFont.copyWith(fontSize: 14),
                   )),
+                  // MATERI THAHARAH WUDU
+                  ListView.builder(
+                    itemBuilder: (context, index) {
+                      return ExpansionTile(
+                          title: Text(data[index].title),
+                          children: (data[index].children.isEmpty)
+                              ? <Widget>[
+                                  Container(
+                                    margin:
+                                        EdgeInsets.only(left: 16, right: 16),
+                                    child: SelectableText.rich(
+                                      searchFromText(
+                                          data[index].content, searchText),
+                                      textScaleFactor: 1.2,
+                                      style: blackTextFont,
+                                    ),
+                                  )
+                                ]
+                              : getChildrenWidgets(
+                                  data[index].children, searchText));
+                    },
+                    itemCount: data.length,
+                  ),
                 ],
               ),
-              Expanded(
-                child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return ExpansionTile(
-                        title: Text(data[index].title),
-                        children: (data[index].children.isEmpty)
-                            ? <Widget>[
-                                Container(
-                                  margin: EdgeInsets.only(left: 16, right: 16),
-                                  child: SelectableText.rich(
-                                    searchFromText(
-                                        data[index].content, searchText),
-                                    textScaleFactor: 1.2,
-                                    style: blackTextFont,
-                                  ),
-                                )
-                              ]
-                            : getChildrenWidgets(
-                                data[index].children, searchText));
-                  },
-                  itemCount: data.length,
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
