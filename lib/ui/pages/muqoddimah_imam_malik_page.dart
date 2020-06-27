@@ -1,17 +1,18 @@
 part of 'pages.dart';
 
-class MuqoddimahKitabPage extends StatefulWidget {
+class MuqoddimahImamMalikPage extends StatefulWidget {
   @override
-  _MuqoddimahKitabPageState createState() => _MuqoddimahKitabPageState();
+  _MuqoddimahImamMalikPageState createState() =>
+      _MuqoddimahImamMalikPageState();
 }
 
-class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
+class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
   String searchText;
   final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+      '''Pendirinya adalah Al-Imam Maliki bin Anas Al-Ashbahy. Ia dilahirkan di Madinah pada tahun 93 H dan wafat pada tahun 179 H. Beliau sebagai ahli hadits di Madinah dimana Rasulullah SAW hidup di kota tersebut. Madzhab ini dikenal dengan madzhab Ahli Hadits, bahkan beliau mengutamakan perbuatan ahli Madinah daripada Khabaril Wahid (Hadits yang diriwayatkan oleh perorangan). Karena bagi beliau mustahil ahli Madinah akan berbuat sesuatu yang bertentangan dengan perbuatan Rasul, beliau lebih banyak menitikberatkan kepada hadits, karena menurut beliau perbuatan ahli Madinah termasuk hadits mutawatir. Madzhab ini lahir di Madinah kemudian berkembang ke negara lain khususnya Maroko. Beliau sangat hormat kepada Rasulullah dan cinta, sehingga beliau tidak pernah naik unta di kota Madinah karena hormat kepada makam Rasul.''';
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,9 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                                   6 /
                                   8,
                               child: TextField(
-                                autofocus: (searchController.text.compareTo("") == 0),
+                                autofocus: (searchController.text
+                                        .compareTo("") ==
+                                    0),
                                 controller: searchController,
                                 decoration:
                                     InputDecoration(hintText: "Search"),
@@ -102,20 +105,20 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                 ],
               ),
             ),
-            // TITLE MUQODDIMAH
+            // TITLE SEJARAH IMAM
             Center(
                 child: Text(
-              "Muqoddimah",
+              "Sejarah Imam",
               style: blackTextFont.copyWith(
                   fontSize: 24, fontWeight: FontWeight.w700),
             )),
-            // TITLE KITAB
+            // TITLE MALIK
             Center(
                 child: Text(
-              "Kitab",
+              "Malik",
               style: blackTextFont.copyWith(fontSize: 14),
             )),
-            // TEXT MUQODDIMAH KITAB
+            // TEXT SEJARAH IMAM MALIK
             Container(
               margin: EdgeInsets.only(top: 44, left: 24, right: 24),
               child: SelectableText.rich(

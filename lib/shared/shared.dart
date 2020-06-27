@@ -31,7 +31,7 @@ TextSpan searchFromText(String fullText, String searchText) {
     if (refinedFullText.substring(0, refinedSearchText.length) ==
         refinedSearchText) {
       return TextSpan(
-        style: blackTextFont.copyWith(backgroundColor: colorLightYellow),
+        style: blackTextFont.copyWith(backgroundColor: colorYellow),
         text: fullText.substring(0, refinedSearchText.length),
         children: [
           searchFromText(
@@ -39,7 +39,7 @@ TextSpan searchFromText(String fullText, String searchText) {
         ],
       );
     } else if (refinedFullText.length == refinedSearchText.length) {
-      return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorLightYellow));
+      return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorYellow));
     } else {
       return TextSpan(
         style: blackTextFont,
@@ -67,6 +67,13 @@ TextSpan searchFromText(String fullText, String searchText) {
             fullText.substring(refinedFullText.indexOf(refinedSearchText)),
             searchText)
       ]);
+}
+
+class Entry {
+  Entry(this.title, this.content);
+
+  final String title;
+  final String content;
 }
 
 //file ini berisikan objek2 yang menyimpan data

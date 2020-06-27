@@ -1,17 +1,21 @@
 part of 'pages.dart';
 
-class MuqoddimahKitabPage extends StatefulWidget {
+class MuqoddimahImamHanafiPage extends StatefulWidget {
   @override
-  _MuqoddimahKitabPageState createState() => _MuqoddimahKitabPageState();
+  _MuqoddimahImamHanafiPageState createState() =>
+      _MuqoddimahImamHanafiPageState();
 }
 
-class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
+class _MuqoddimahImamHanafiPageState extends State<MuqoddimahImamHanafiPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
   String searchText;
   final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+      '''Dinamakan Hanafi, karena pendirinya Imam Abu Hanifah An-Nu’man bin Tsabit. Beliau lahir pada tahun 80 H di Kufah dan wafat pada tahun 150 H. Madzhab ini dikenal madzhab Ahli Qiyas (akal) karena hadits yang sampai ke Irak sedikit, sehingga beliau banyak mempergunakan Qiyas. Beliau termasuk ulama yang cerdas, pengasih dan ahli tahajud dan fasih membaca Al-Qur’an. Beliau ditawari untuk menjadi hakim pada zaman bani Umayyah yang terakhir, tetapi beliau menolak.
+      
+Madzhab ini berkembang karena menjadi madzhab pemerintah pada saat Khalifah Harun Al-Rasyid. Kemudian pada masa pemerintahan Abu Ja’far Al-Manshur beliau diminta kembali untuk menjadi Hakim tetapi beliau menolak, dan memilih hidup berdagang, madzhab ini lahir di Kufah.
+''';
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +71,9 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                                   6 /
                                   8,
                               child: TextField(
-                                autofocus: (searchController.text.compareTo("") == 0),
+                                autofocus: (searchController.text
+                                        .compareTo("") ==
+                                    0),
                                 controller: searchController,
                                 decoration:
                                     InputDecoration(hintText: "Search"),
@@ -102,20 +108,20 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                 ],
               ),
             ),
-            // TITLE MUQODDIMAH
+            // TITLE SEJARAH IMAM
             Center(
                 child: Text(
-              "Muqoddimah",
+              "Sejarah Imam",
               style: blackTextFont.copyWith(
                   fontSize: 24, fontWeight: FontWeight.w700),
             )),
-            // TITLE KITAB
+            // TITLE HANAFI
             Center(
                 child: Text(
-              "Kitab",
+              "Hanafi",
               style: blackTextFont.copyWith(fontSize: 14),
             )),
-            // TEXT MUQODDIMAH KITAB
+            // TEXT SEJARAH IMAM HANAFI
             Container(
               margin: EdgeInsets.only(top: 44, left: 24, right: 24),
               child: SelectableText.rich(

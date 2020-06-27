@@ -1,17 +1,20 @@
 part of 'pages.dart';
 
-class MuqoddimahKitabPage extends StatefulWidget {
+class MuqoddimahImamAhmadPage extends StatefulWidget {
   @override
-  _MuqoddimahKitabPageState createState() => _MuqoddimahKitabPageState();
+  _MuqoddimahImamAhmadPageState createState() => _MuqoddimahImamAhmadPageState();
 }
 
-class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
+class _MuqoddimahImamAhmadPageState extends State<MuqoddimahImamAhmadPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
   String searchText;
   final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+  '''Dinamakan Hanbali, karena pendirinya Al-Imam Ahmad bin Hanbal As-Syaebani, lahir di Baghdad Th 164 H dan wafat Th 248 H. Beliau adalah murid Imam Syafi’i yang paling istimewa dan tidak pernah pisah sampai Imam Syafi’i pergi ke Mesir.
+
+Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang afdal (fadlailul a'mal) bukan untuk menentukan hukum. Beliau tidak mengaku adanya Ijma’ setelah sahabat karena ulama sangat banyak dan tersebar luas.
+''';
 
   @override
   Widget build(BuildContext context) {
@@ -63,21 +66,23 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                   Center(
                       child: (isClickedSearch)
                           ? Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
-                              child: TextField(
-                                autofocus: (searchController.text.compareTo("") == 0),
-                                controller: searchController,
-                                decoration:
-                                    InputDecoration(hintText: "Search"),
-                              ),
-                            )
+                        width: MediaQuery.of(context).size.width *
+                            6 /
+                            8,
+                        child: TextField(
+                          autofocus: (searchController.text
+                              .compareTo("") ==
+                              0),
+                          controller: searchController,
+                          decoration:
+                          InputDecoration(hintText: "Search"),
+                        ),
+                      )
                           : Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
-                            )),
+                        width: MediaQuery.of(context).size.width *
+                            6 /
+                            8,
+                      )),
                   // BUTTON SEARCH
                   Align(
                     alignment: Alignment.centerRight,
@@ -102,20 +107,20 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                 ],
               ),
             ),
-            // TITLE MUQODDIMAH
+            // TITLE SEJARAH IMAM
             Center(
                 child: Text(
-              "Muqoddimah",
-              style: blackTextFont.copyWith(
-                  fontSize: 24, fontWeight: FontWeight.w700),
-            )),
-            // TITLE KITAB
+                  "Sejarah Imam",
+                  style: blackTextFont.copyWith(
+                      fontSize: 24, fontWeight: FontWeight.w700),
+                )),
+            // TITLE AHMAD
             Center(
                 child: Text(
-              "Kitab",
-              style: blackTextFont.copyWith(fontSize: 14),
-            )),
-            // TEXT MUQODDIMAH KITAB
+                  "Ahmad",
+                  style: blackTextFont.copyWith(fontSize: 14),
+                )),
+            // TEXT SEJARAH IMAM AHMAD
             Container(
               margin: EdgeInsets.only(top: 44, left: 24, right: 24),
               child: SelectableText.rich(
