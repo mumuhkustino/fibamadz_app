@@ -149,10 +149,8 @@ https://id.wikipedia.org/wiki/Wudu
                             } else {
                               searchController.text = "";
                               searchText = searchController.text;
-                              var entries =
-                                  filterSearchResults(text, searchText);
                               data.clear();
-                              data.addAll(entries);
+                              data.addAll(text);
                             }
                           });
                         }
