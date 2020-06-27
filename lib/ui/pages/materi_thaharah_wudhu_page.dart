@@ -119,6 +119,8 @@ Diperselisihkan
         body: Container(
           child: Column(
             children: [
+              
+              // BUTTON SEARCH DAN PREVIOUS
               Container(
                 margin: EdgeInsets.only(top: 20),
                 height: 56,
@@ -143,6 +145,7 @@ Diperselisihkan
                             });
                           }
                         },
+
                         child: Container(
                             width: MediaQuery.of(context).size.width / 8,
                             child: Icon(
@@ -193,6 +196,8 @@ Diperselisihkan
                   ],
                 ),
               ),
+
+              // TITLE DAN SUBTITLE
               Column(
                 children: [
                   Center(
@@ -208,6 +213,7 @@ Diperselisihkan
                   )),
                 ],
               ),
+
               Expanded(
                 child: ListView.builder(
                   itemBuilder: (context, index) {

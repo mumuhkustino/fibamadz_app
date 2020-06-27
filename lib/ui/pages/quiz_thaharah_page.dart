@@ -36,7 +36,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
             children: <Widget>[
               Column(
                 children: [
-                  // BUTTON BACK
+                  // BUTTON SEARCH DAN PREVIOUS
                   Container(
                     margin: EdgeInsets.only(top: 20),
                     height: 56,
@@ -50,7 +50,13 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                 context.bloc<PageBloc>().add(GoToQuizPage());
                               } else {
                                 setState(() {
-                                  isClickedSearch = false;
+                                  // if (searchController.text.compareTo("") ==
+                                  //     0) {
+                                  //   isClickedSearch = false;
+                                  // } else {
+                                  //   searchController.text = "";
+                                  //   searchText = searchController.text;
+                                  // }
                                 });
                               }
                             },
@@ -63,24 +69,66 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                     color: Colors.black.withOpacity(0.54))),
                           ),
                         ),
+                        Center(
+                            child: (isClickedSearch)
+                                ? Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
+                                    child: TextField(
+                                      // autofocus: (searchController.text
+                                      //         .compareTo("") ==
+                                      //     0),
+                                      // controller: searchController,
+                                      decoration:
+                                          InputDecoration(hintText: "Search"),
+                                    ),
+                                  )
+                                : Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
+                                  )),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                // if (!isClickedSearch) {
+                                //   isClickedSearch = true;
+                                //   isFocusSearch = true;
+                                // } else {
+                                //   searchText = searchController.text;
+                                //   isFocusSearch = false;
+                                // }
+                              });
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(Icons.search,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
                       ],
                     ),
                   ),
 
-                  // TITLE
-                  Center(
-                      child: Text(
-                    "Quiz",
-                    style: blackTextFont.copyWith(
-                        fontSize: 24, fontWeight: FontWeight.w700),
-                  )),
-
-                  // SUBTITLE
-                  Center(
-                      child: Text(
-                    "Thaharah",
-                    style: blackTextFont.copyWith(fontSize: 14),
-                  )),
+                  // TITLE DAN SUBTITLE
+                  Column(
+                    children: [
+                      Center(
+                          child: Text(
+                        "Quiz",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                      Center(
+                          child: Text(
+                        "Thaharah",
+                        style: blackTextFont.copyWith(fontSize: 14),
+                      )),
+                    ],
+                  ),
 
                   // QUESTION 1
                   Container(
@@ -118,31 +166,45 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     height: 36,
                     margin: EdgeInsets.only(bottom: 24),
                     child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Submit",
-                              style: whiteTextFont.copyWith(fontSize: 14),
-                            ),
-                          ],
-                        ),
-                        color: colorPink,
-                        onPressed: () {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: Text("Are you sure?"),
-                                  // content: Text("Periksa lagi jawabannya.."),
-                                  actions: <Widget>[
-                                    /*
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Submit",
+                            style: whiteTextFont.copyWith(fontSize: 14),
+                          ),
+                        ],
+                      ),
+                      color: colorPink,
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return Dialog(
+                                backgroundColor:
+                                    colorTextWhite.withOpacity(0.1),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    // TEXT ARE YOU SURE
                                     Container(
+                                      margin: EdgeInsets.only(top: 200),
+                                      child: Text(
+                                        "Are you sure ?",
+                                        style: whiteTextFont.copyWith(
+                                            fontSize: 24),
+                                      ),
+                                    ),
+
+                                    // BUTTON CONFIRMATION YES
+                                    Container(
+                                      color: colorBluePastel,
                                       width: 200,
                                       height: 36,
+                                      margin: EdgeInsets.only(top: 24),
                                       child: RaisedButton(
                                         elevation: 4,
                                         shape: RoundedRectangleBorder(
@@ -159,25 +221,83 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                             ),
                                           ],
                                         ),
-                                        color: colorBluePastel,
+                                        color: colorPink,
+                                        onPressed: null,
                                       ),
                                     ),
-                                    */
-                                    RaisedButton(
-                                      onPressed: () {},
-                                      child: Text("Yes"),
-                                      color: colorBluePastel,
-                                    ),
-                                    RaisedButton(
-                                      onPressed: () {},
-                                      child: Text("No"),
-                                      color: colorBluePastel,
+
+                                    // BUTTON CONFIRMATION NO
+                                    Container(
+                                      color: colorTextWhite,
+                                      width: 200,
+                                      height: 36,
+                                      margin: EdgeInsets.only(top: 24),
+                                      child: RaisedButton(
+                                        elevation: 4,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(6)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "No",
+                                              style: blackTextFont.copyWith(
+                                                  fontSize: 14),
+                                            ),
+                                          ],
+                                        ),
+                                        color: colorBluePastel,
+                                        onPressed: null,
+                                      ),
                                     ),
                                   ],
+                                )
+                                // child: Container(
+                                //   // height: 200,
+                                //   child: Padding(
+                                //     padding: EdgeInsets.all(10),
+                                //     child: Column(
+                                //       crossAxisAlignment:
+                                //           CrossAxisAlignment.start,
+                                //       mainAxisAlignment: MainAxisAlignment.center,
+                                //       children: <Widget>[
+                                //         TextField(
+                                //           decoration: InputDecoration(
+                                //             border: InputBorder.none,
+                                //             hintText: "Are you sure ?",
+                                //             hintStyle: blackTextFont.copyWith(
+                                //                 fontSize: 26,
+                                //                 ),
+                                //           ),
+                                //         ),
+                                //         // SizedBox(
+                                //           // width: 200,
+                                //           child: Container(
+                                //             // color: Color(0xFF69DAC6),
+                                //             child: RaisedButton(
+                                //               elevation: 4,
+                                //               shape: RoundedRectangleBorder(
+                                //                   borderRadius:
+                                //                       BorderRadius.circular(6)),
+                                //               child: Text(
+                                //                 "Yes",
+                                //                 style: whiteTextFont.copyWith(
+                                //                     fontSize: 14),
+                                //               ),
+                                //             ),
+                                //           ),
+                                //         // )
+                                //       ],
+                                //     ),
+                                //   ),
+                                // ),
                                 );
-                              });
-                          //  context.bloc<PageBloc>().add(GoToMainPage());
-                        }),
+                          },
+                        );
+                      },
+                    ),
                   ),
                 ],
               )
