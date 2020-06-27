@@ -119,13 +119,11 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
       if (element.title != null && element.title.isNotEmpty) {
         if (element.title.toLowerCase().contains(searchText.toLowerCase())) {
           entry = element;
-          print("title 1 " + entry.title);
         } else if (element.content != null && element.content.isNotEmpty) {
           if (element.content
               .toLowerCase()
               .contains(searchText.toLowerCase())) {
             entry = element;
-            print("content 1 " + entry.title);
           }
         } else if (element.children.isNotEmpty && element.children != null) {
           //2
@@ -137,14 +135,12 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
                   .contains(searchText.toLowerCase())) {
                 entry = element;
                 childs.add(child);
-                print("title 2 " + child.title);
               } else if (child.content != null && child.content.isNotEmpty) {
                 if (child.content
                     .toLowerCase()
                     .contains(searchText.toLowerCase())) {
                   entry = element;
                   childs.add(child);
-                  print("content 2 " + child.title);
                 }
               } else if (child.children.isNotEmpty && child.children != null) {
                 //3
@@ -156,7 +152,6 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
                       entry = element;
                       childs.add(child);
                       childChilds.add(child2);
-                      print("title 3 " + child2.title);
                     } else if (child2.content != null &&
                         child2.content.isNotEmpty) {
                       if (child2.content
@@ -177,13 +172,15 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
 
       if (entry != null) {
         if (childs != null && childs.length > 0) {
-          entry.children = List<Entry>();
+          entry.children.clear();
           entry.children.addAll(childs);
         }
         if (childChilds != null && childChilds.length > 0) {
-          childs.clear();
-          childs.addAll(childChilds);
-          entry.children = List<Entry>();
+          childs.forEach((element) {
+            element.children.clear();
+            element.children.addAll(childChilds);
+          });
+          entry.children.clear();
           entry.children.addAll(childs);
         }
         dummyListData.add(entry);
