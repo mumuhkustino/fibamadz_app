@@ -106,7 +106,10 @@ Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya 
 4. Mimisan dan muntah,
 5. Mengangkat dan memandikan jenazah.
 ''')
-    ])
+    ]),
+    Entry('Sumber', content: '''
+https://id.wikipedia.org/wiki/Wudu
+''')
   ];
 
   @override
@@ -203,46 +206,41 @@ Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya 
                 ],
               ),
             ),
+            // TITLE THAHARAH
+            Center(
+                child: Text(
+                  "Thaharah",
+                  style: blackTextFont.copyWith(
+                      fontSize: 24, fontWeight: FontWeight.w700),
+                )),
+            // SUBTITLE WUDU
+            Center(
+                child: Text(
+                  "Wudu",
+                  style: blackTextFont.copyWith(fontSize: 14),
+                )),
             Expanded(
-              child: Column(
-                children: [
-                  // TITLE THAHARAH
-                  Center(
-                      child: Text(
-                    "Thaharah",
-                    style: blackTextFont.copyWith(
-                        fontSize: 24, fontWeight: FontWeight.w700),
-                  )),
-                  // SUBTITLE WUDU
-                  Center(
-                      child: Text(
-                    "Wudu",
-                    style: blackTextFont.copyWith(fontSize: 14),
-                  )),
-                  // MATERI THAHARAH WUDU
-                  ListView.builder(
-                    itemBuilder: (context, index) {
-                      return ExpansionTile(
-                          title: Text(data[index].title),
-                          children: (data[index].children.isEmpty)
-                              ? <Widget>[
-                                  Container(
-                                    margin:
-                                        EdgeInsets.only(left: 16, right: 16),
-                                    child: SelectableText.rich(
-                                      searchFromText(
-                                          data[index].content, searchText),
-                                      textScaleFactor: 1.2,
-                                      style: blackTextFont,
-                                    ),
-                                  )
-                                ]
-                              : getChildrenWidgets(
-                                  data[index].children, searchText));
-                    },
-                    itemCount: data.length,
-                  ),
-                ],
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return ExpansionTile(
+                      title: Text(data[index].title),
+                      children: (data[index].children.isEmpty)
+                          ? <Widget>[
+                              Container(
+                                margin:
+                                    EdgeInsets.only(left: 16, right: 16),
+                                child: SelectableText.rich(
+                                  searchFromText(
+                                      data[index].content, searchText),
+                                  textScaleFactor: 1.2,
+                                  style: blackTextFont,
+                                ),
+                              )
+                            ]
+                          : getChildrenWidgets(
+                              data[index].children, searchText));
+                },
+                itemCount: data.length,
               ),
             )
           ],

@@ -110,7 +110,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                         ),
                         color: colorDarkGrey,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriThaharahTayamumPage());
                         }),
                   ),
                   // BUTTON MANDI BESAR
