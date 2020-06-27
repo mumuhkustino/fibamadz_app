@@ -28,4 +28,5 @@ part 'materi_zakat_page.dart';
 part 'materi_jenazah_page.dart';
 
 part 'quiz_thaharah_page.dart';
+part 'quiz_thaharah_score.dart';
 

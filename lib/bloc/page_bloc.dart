@@ -28,7 +28,9 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMuqoddimahImamHanafiPage();
     } else if (event is GoToMuqoddimahImamAhmadPage) {
       yield OnMuqoddimahImamAhmadPage();
-    } else if (event is GoToQuizPage) {
+    } 
+    
+    else if (event is GoToQuizPage) {
       yield OnQuizPage();
     } else if (event is GoToQuizThaharahPage) {
       yield OnQuizThaharahPage();
@@ -40,11 +42,23 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnQuizZakatPage();
     } else if (event is GoToQuizJenazahPage) {
       yield OnQuizJenazahPage();
-    } 
+    } else if (event is GoToQuizThaharahResult) {
+      yield OnQuizThaharahResult();
+    } else if (event is GoToQuizSholatResult) {
+      yield OnQuizSholatResult();
+    } else if (event is GoToQuizPuasaResult) {
+      yield OnQuizPuasaResult();
+    } else if (event is GoToQuizZakatResult) {
+      yield OnQuizZakatResult();
+    } else if (event is GoToQuizJenazahResult) {
+      yield OnQuizJenazahResult();
+    }
     
     else if (event is GoToVideoPage) {
       yield OnVideoPage();
-    } else if (event is GoToMateriPage) {
+    } 
+    
+    else if (event is GoToMateriPage) {
       yield OnMateriPage();
     } else if (event is GoToMateriThaharahPage) {
       yield OnMateriThaharahPage();

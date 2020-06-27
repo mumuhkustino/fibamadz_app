@@ -36,7 +36,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
             children: <Widget>[
               Column(
                 children: [
-                  // BUTTON SEARCH DAN PREVIOUS
+                  // BUTTON PREVIOUS
                   Container(
                     margin: EdgeInsets.only(top: 20),
                     height: 56,
@@ -49,15 +49,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                               if (!isClickedSearch) {
                                 context.bloc<PageBloc>().add(GoToQuizPage());
                               } else {
-                                setState(() {
-                                  // if (searchController.text.compareTo("") ==
-                                  //     0) {
-                                  //   isClickedSearch = false;
-                                  // } else {
-                                  //   searchController.text = "";
-                                  //   searchText = searchController.text;
-                                  // }
-                                });
+                                setState(() {});
                               }
                             },
                             child: Container(
@@ -69,49 +61,10 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                     color: Colors.black.withOpacity(0.54))),
                           ),
                         ),
-                        Center(
-                            child: (isClickedSearch)
-                                ? Container(
-                                    width: MediaQuery.of(context).size.width *
-                                        6 /
-                                        8,
-                                    child: TextField(
-                                      // autofocus: (searchController.text
-                                      //         .compareTo("") ==
-                                      //     0),
-                                      // controller: searchController,
-                                      decoration:
-                                          InputDecoration(hintText: "Search"),
-                                    ),
-                                  )
-                                : Container(
-                                    width: MediaQuery.of(context).size.width *
-                                        6 /
-                                        8,
-                                  )),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                // if (!isClickedSearch) {
-                                //   isClickedSearch = true;
-                                //   isFocusSearch = true;
-                                // } else {
-                                //   searchText = searchController.text;
-                                //   isFocusSearch = false;
-                                // }
-                              });
-                            },
-                            child: Container(
-                                width: MediaQuery.of(context).size.width / 8,
-                                child: Icon(Icons.search,
-                                    color: Colors.black.withOpacity(0.54))),
-                          ),
-                        ),
                       ],
                     ),
                   ),
+                  // END OF BUTTON PREVIOUS
 
                   // TITLE DAN SUBTITLE
                   Column(
@@ -201,7 +154,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 
                                     // BUTTON CONFIRMATION YES
                                     Container(
-                                      color: colorBluePastel,
+                                      // color: colorBluePastel,
                                       width: 200,
                                       height: 36,
                                       margin: EdgeInsets.only(top: 24),
@@ -221,14 +174,16 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                             ),
                                           ],
                                         ),
-                                        color: colorPink,
-                                        onPressed: null,
+                                        color: colorBluePastel,
+                                        onPressed: (){
+                                          context.bloc<PageBloc>().add(GoToQuizThaharahResult());
+                                        },
                                       ),
                                     ),
 
                                     // BUTTON CONFIRMATION NO
                                     Container(
-                                      color: colorTextWhite,
+                                      // color: colorTextWhite,
                                       width: 200,
                                       height: 36,
                                       margin: EdgeInsets.only(top: 24),
@@ -248,52 +203,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                                             ),
                                           ],
                                         ),
-                                        color: colorBluePastel,
+                                        color: colorTextWhite,
                                         onPressed: null,
                                       ),
                                     ),
                                   ],
-                                )
-                                // child: Container(
-                                //   // height: 200,
-                                //   child: Padding(
-                                //     padding: EdgeInsets.all(10),
-                                //     child: Column(
-                                //       crossAxisAlignment:
-                                //           CrossAxisAlignment.start,
-                                //       mainAxisAlignment: MainAxisAlignment.center,
-                                //       children: <Widget>[
-                                //         TextField(
-                                //           decoration: InputDecoration(
-                                //             border: InputBorder.none,
-                                //             hintText: "Are you sure ?",
-                                //             hintStyle: blackTextFont.copyWith(
-                                //                 fontSize: 26,
-                                //                 ),
-                                //           ),
-                                //         ),
-                                //         // SizedBox(
-                                //           // width: 200,
-                                //           child: Container(
-                                //             // color: Color(0xFF69DAC6),
-                                //             child: RaisedButton(
-                                //               elevation: 4,
-                                //               shape: RoundedRectangleBorder(
-                                //                   borderRadius:
-                                //                       BorderRadius.circular(6)),
-                                //               child: Text(
-                                //                 "Yes",
-                                //                 style: whiteTextFont.copyWith(
-                                //                     fontSize: 14),
-                                //               ),
-                                //             ),
-                                //           ),
-                                //         // )
-                                //       ],
-                                //     ),
-                                //   ),
-                                // ),
-                                );
+                                ));
                           },
                         );
                       },
