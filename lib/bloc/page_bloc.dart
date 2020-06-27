@@ -39,8 +39,8 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMateriThaharahWuduPage();
     } else if (event is GoToMateriThaharahTayamumPage) {
       yield OnMateriThaharahTayamumPage();
-    } else if (event is GoToMateriThaharahMandiPage) {
-      yield OnMateriThaharahMandiPage();
+    } else if (event is GoToMateriThaharahMandiBesarPage) {
+      yield OnMateriThaharahMandiBesarPage();
     } else if (event is GoToMateriThaharahMenghilangkanNajisPage) {
       yield OnMateriThaharahMenghilangkanNajisPage();
     } else if (event is GoToMateriSholatPage) {

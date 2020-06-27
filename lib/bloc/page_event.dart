@@ -75,7 +75,7 @@ class GoToMateriThaharahTayamumPage extends PageEvent {
   List<Object> get props => [];
 }
 
-class GoToMateriThaharahMandiPage extends PageEvent {
+class GoToMateriThaharahMandiBesarPage extends PageEvent {
   @override
   List<Object> get props => [];
 }

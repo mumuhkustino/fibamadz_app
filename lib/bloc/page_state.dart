@@ -79,7 +79,7 @@ class OnMateriThaharahTayamumPage extends PageState {
   List<Object> get props => [];
 }
 
-class OnMateriThaharahMandiPage extends PageState {
+class OnMateriThaharahMandiBesarPage extends PageState {
   @override
   List<Object> get props => [];
 }
