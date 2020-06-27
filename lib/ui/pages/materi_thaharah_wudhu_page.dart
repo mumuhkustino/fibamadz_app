@@ -147,6 +147,10 @@ Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya 
                               } else {
                                 searchController.text = "";
                                 searchText = searchController.text;
+                                var entries =
+                                    filterSearchResults(text, searchText);
+                                data.clear();
+                                data.addAll(entries);
                               }
                             });
                           }
