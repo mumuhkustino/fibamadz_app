@@ -107,41 +107,44 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
   List<Entry> dummySearchList = List<Entry>();
   dummySearchList.addAll(entries);
   Entry entry;
-  Entry childEntry;
-  Entry childChildEntry;
+  List<Entry> childs;
+  List<Entry> childChilds;
   if (searchText != null && searchText.isNotEmpty) {
     List<Entry> dummyListData = List<Entry>();
     //1
     dummySearchList.forEach((element) {
-      childEntry = null;
-      childChildEntry = null;
+      childs = List<Entry>();
+      childChilds = List<Entry>();
       entry = null;
       if (element.title != null && element.title.isNotEmpty) {
         if (element.title.toLowerCase().contains(searchText.toLowerCase())) {
           entry = element;
+          print("title 1 " + entry.title);
         } else if (element.content != null && element.content.isNotEmpty) {
           if (element.content
               .toLowerCase()
               .contains(searchText.toLowerCase())) {
             entry = element;
+            print("content 1 " + entry.title);
           }
         } else if (element.children.isNotEmpty && element.children != null) {
           //2
+          childs.clear();
           element.children.forEach((child) {
             if (child.title != null && child.title.isNotEmpty) {
               if (child.title
                   .toLowerCase()
                   .contains(searchText.toLowerCase())) {
                 entry = element;
-                childEntry = Entry(child.title,
-                    content: child.content, children: child.children);
+                childs.add(child);
+                print("title 2 " + child.title);
               } else if (child.content != null && child.content.isNotEmpty) {
                 if (child.content
                     .toLowerCase()
                     .contains(searchText.toLowerCase())) {
                   entry = element;
-                  childEntry = Entry(child.title,
-                      content: child.content, children: child.children);
+                  childs.add(child);
+                  print("content 2 " + child.title);
                 }
               } else if (child.children.isNotEmpty && child.children != null) {
                 //3
@@ -151,20 +154,17 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
                         .toLowerCase()
                         .contains(searchText.toLowerCase())) {
                       entry = element;
-                      childEntry = Entry(child.title,
-                          content: child.content, children: child.children);
-                      childChildEntry = Entry(child2.title,
-                          content: child2.content, children: child2.children);
+                      childs.add(child);
+                      childChilds.add(child2);
+                      print("title 3 " + child2.title);
                     } else if (child2.content != null &&
                         child2.content.isNotEmpty) {
                       if (child2.content
                           .toLowerCase()
                           .contains(searchText.toLowerCase())) {
                         entry = element;
-                        childEntry = Entry(child.title,
-                            content: child.content, children: child.children);
-                        childChildEntry = Entry(child2.title,
-                            content: child2.content, children: child2.children);
+                        childs.add(child);
+                        childChilds.add(child2);
                       }
                     }
                   }
@@ -174,15 +174,18 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
           });
         }
       }
-      if (childChildEntry != null && childEntry.children != null) {
-        childEntry.children = List<Entry>();
-        childEntry.children.add(childChildEntry);
-      }
-      if (childEntry != null && entry.children != null) {
-        entry.children = List<Entry>();
-        entry.children.add(childEntry);
-      }
+
       if (entry != null) {
+        if (childs != null && childs.length > 0) {
+          entry.children = List<Entry>();
+          entry.children.addAll(childs);
+        }
+        if (childChilds != null && childChilds.length > 0) {
+          childs.clear();
+          childs.addAll(childChilds);
+          entry.children = List<Entry>();
+          entry.children.addAll(childs);
+        }
         dummyListData.add(entry);
       }
     });
