@@ -85,140 +85,146 @@ class _VideoPageState extends State<VideoPage> {
                 ),
               ),
             ),
-            // TITLE VIDEO PRAKTIK
-            Center(
-              child: Text(
-                "Video Praktik",
-                style: blackTextFont.copyWith(
-                    fontSize: 24, fontWeight: FontWeight.w700),
-              ),
-            ),
-            // SUBTITLE PILIH KATEGORI VIDEO
-            Container(
-              alignment: Alignment.center,
-              child: Text("Pilih Kategori Video",
-                  style: blackTextFont.copyWith(
-                      fontSize: 14, fontWeight: FontWeight.w700)),
-            ),
-            // ICON MUSLIM MAN
-            Container(
-              height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
-            ),
-            // BUTTON THAHARAH
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Thaharah",
-                      style: whiteTextFont.copyWith(fontSize: 22),
+            Expanded(
+              child: Column(
+                children: [
+                  // TITLE VIDEO PRAKTIK
+                  Center(
+                    child: Text(
+                      "Video Praktik",
+                      style: blackTextFont.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w700),
                     ),
-                  ],
-                ),
-                color: colorLightBlue,
-                onPressed: _launchVidThaharah,
-              ),
-            ),
-            // BUTTON SHOLAT
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Sholat",
-                      style: whiteTextFont.copyWith(fontSize: 22),
+                  ),
+                  // SUBTITLE PILIH KATEGORI VIDEO
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text("Pilih Kategori Video",
+                        style: blackTextFont.copyWith(
+                            fontSize: 14, fontWeight: FontWeight.w700)),
+                  ),
+                  // ICON MUSLIM MAN
+                  Container(
+                    height: 70,
+                    margin: EdgeInsets.only(bottom: 48, top: 36),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
+                  ),
+                  // BUTTON THAHARAH
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Thaharah",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorLightBlue,
+                      onPressed: _launchVidThaharah,
                     ),
-                  ],
-                ),
-                color: colorLightBlue,
-                onPressed: _launchVidSholat,
-              ),
-            ),
-            // BUTTON PUASA
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Puasa",
-                      style: whiteTextFont.copyWith(fontSize: 22),
+                  ),
+                  // BUTTON SHOLAT
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Sholat",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorLightBlue,
+                      onPressed: _launchVidSholat,
                     ),
-                  ],
-                ),
-                color: colorLightBlue,
-                onPressed: _launchVidPuasa,
-              ),
-            ),
-            // BUTTON ZAKAT
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Zakat",
-                      style: whiteTextFont.copyWith(fontSize: 22),
+                  ),
+                  // BUTTON PUASA
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Puasa",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorLightBlue,
+                      onPressed: _launchVidPuasa,
                     ),
-                  ],
-                ),
-                color: colorLightBlue,
-                onPressed: _launchVidZakat,
-              ),
-            ),
-            // Button Jenazah
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Jenazah",
-                      style: whiteTextFont.copyWith(fontSize: 22),
+                  ),
+                  // BUTTON ZAKAT
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Zakat",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorLightBlue,
+                      onPressed: _launchVidZakat,
                     ),
-                  ],
-                ),
-                color: colorLightBlue,
-                onPressed: _launchVidJenazah,
+                  ),
+                  // BUTTON JENAZAH
+                  Container(
+                    width: 300,
+                    height: 46,
+                    margin: EdgeInsets.only(bottom: 24),
+                    child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Jenazah",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorLightBlue,
+                      onPressed: _launchVidJenazah,
+                    ),
+                  ),
+                ],
               ),
-            ),
+            )
           ],
         ),
       ),
