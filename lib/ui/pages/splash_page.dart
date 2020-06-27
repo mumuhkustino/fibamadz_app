@@ -14,6 +14,10 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return Scaffold(
         backgroundColor: colorYellow,
         body: Stack(
@@ -23,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  //Gambar Logo
+                  //GAMBAR LOGO
                   Container(
                     height: 110,
                     margin: EdgeInsets.only(top: 77),
@@ -32,7 +36,7 @@ class _SplashPageState extends State<SplashPage> {
                             image: AssetImage(
                                 "assets/icons/ramadhan-mubarak/png/star-and-crescent-moon.png"))),
                   ),
-                  //Text nama aplikasi
+                  //TITLE NAMA APLIKASI
                   Container(
                     margin: EdgeInsets.only(top: 57, bottom: 18),
                     child: Text(
@@ -41,7 +45,7 @@ class _SplashPageState extends State<SplashPage> {
                           fontSize: 24, fontWeight: FontWeight.w700),
                     ),
                   ),
-                  //Text penjelasan singkat aplikasi
+                  //TEXT PENJELASAN SINGKAT APLIKASI
                   Text(
                     "Platform asik dan lengkap\nuntuk belajar Islam",
                     style: blackTextFont.copyWith(
@@ -52,7 +56,7 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
-            //Small Cloud
+            //GAMBAR AWAN KECIL
             Positioned(
               right: -MediaQuery.of(context).size.width / 4,
               child: Container(
@@ -63,7 +67,7 @@ class _SplashPageState extends State<SplashPage> {
                           image: AssetImage("assets/icons/cloud.png")))
                   ),
             ),
-            //Big Cloud
+            //GAMBAR AWAN BESAR
             Positioned(
               left: -MediaQuery.of(context).size.width * 4 / 9,
               child: Container(
@@ -74,7 +78,7 @@ class _SplashPageState extends State<SplashPage> {
                           image: AssetImage("assets/icons/cloud.png")))
                   ),
             ),
-            //Button Bottom
+            //BUTTON BAWAH
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
