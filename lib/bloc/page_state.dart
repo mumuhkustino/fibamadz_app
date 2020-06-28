@@ -129,4 +129,24 @@ class OnMateriJenazahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMateriJenazahMemandikanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriJenazahMenyolatkanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriJenazahMengkafaniPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+class OnMateriJenazahMenguburkanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+
 //mumuh kasih comment ini apa
