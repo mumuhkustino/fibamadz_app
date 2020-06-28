@@ -110,6 +110,16 @@ class GoToMateriZakatPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMateriZakatFitrahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriZakatMalPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriJenazahPage extends PageEvent {
   @override
   List<Object> get props => [];
