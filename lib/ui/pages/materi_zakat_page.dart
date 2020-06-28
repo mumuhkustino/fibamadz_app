@@ -81,7 +81,7 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
                         ),
                         color: colorDarkGrey,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriZakatFitrahPage());
                         }),
                   ),
                   // BUTTON ZAKAT MAL
@@ -104,7 +104,7 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
                         ),
                         color: colorDarkGrey,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriZakatMalPage());
                         }),
                   ),
                 ],
