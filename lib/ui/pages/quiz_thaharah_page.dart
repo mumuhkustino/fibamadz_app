@@ -108,7 +108,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     ),
                   ),
 
-                  // RADIO BUTTON
+                  // ANSWER BUTTON Q2
                   Center(
                     child: RadioGroup(2),
                   ),
@@ -275,7 +275,7 @@ class RadioGroupState extends State<RadioGroup> {
                               value: data.index,
                               onChanged: (value) {
                                 setState(() {
-                                  // default_choice = data.choice;
+                                  default_choice = data.choice;
                                   default_index = data.index;
                                 });
                               },
