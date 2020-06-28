@@ -80,7 +80,9 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                         ),
                         color: colorDarkGrey,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMateriSholatFarduPage());
                         }),
                   ),
                   // BUTTON SHOLAT SUNAT
@@ -103,7 +105,9 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                         ),
                         color: colorDarkGrey,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToMateriSholatSunatPage());
                         }),
                   ),
                 ],
