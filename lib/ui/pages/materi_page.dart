@@ -129,7 +129,7 @@ class _MateriPageState extends State<MateriPage> {
                         ),
                         color: colorLightBlue,
                         onPressed: () {
-                          //  context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriPuasaPage());
                         }),
                   ),
                   // BUTTON ZAKAT
