@@ -59,6 +59,14 @@ class Wrapper extends StatelessWidget {
             ? MateriZakatFitrahPage()
             : (pageState is OnMateriZakatMalPage)
             ? MateriZakatMalPage()
+            : (pageState is OnMateriJenazahMemandikanPage)
+            ? MateriJenazahMemandikanPage()
+            : (pageState is OnMateriJenazahMengkafaniPage)
+            ? MateriJenazahMengkafaniPage()
+            : (pageState is OnMateriJenazahMenyolatkanPage)
+            ? MateriJenazahMenyolatkanPage()
+            : (pageState is OnMateriJenazahMenguburkanPage)
+            ? MateriJenazahMenguburkanPage()
             : MateriJenazahPage());
   }
 }
