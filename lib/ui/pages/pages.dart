@@ -31,5 +31,9 @@ part 'materi_sholat_fardu_page.dart';
 part 'materi_sholat_sunat_page.dart';
 
 part 'materi_puasa_page.dart';
+
 part 'materi_zakat_page.dart';
+part 'materi_zakat_fitrah_page.dart';
+part 'materi_zakat_mal_page.dart';
+
 part 'materi_jenazah_page.dart';
