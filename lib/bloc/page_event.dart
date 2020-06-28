@@ -90,6 +90,16 @@ class GoToMateriSholatPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMateriSholatFarduPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriSholatSunatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriZakatPage extends PageEvent {
   @override
   List<Object> get props => [];
