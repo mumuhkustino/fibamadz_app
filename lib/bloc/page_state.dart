@@ -104,6 +104,11 @@ class OnMateriSholatSunatPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMateriPuasaPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnMateriZakatPage extends PageState {
   @override
   List<Object> get props => [];

@@ -51,6 +51,8 @@ class Wrapper extends StatelessWidget {
             ? MateriSholatFarduPage()
             : (pageState is OnMateriSholatSunatPage)
             ? MateriSholatSunatPage()
+            : (pageState is OnMateriPuasaPage)
+            ? MateriPuasaPage()
             : (pageState is OnMateriZakatPage)
             ? MateriZakatPage()
             : MateriJenazahPage());
