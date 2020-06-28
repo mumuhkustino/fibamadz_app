@@ -80,30 +80,7 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                       ),
                       color: colorDarkGrey,
                       onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
-                      }),
-                ),
-                // BUTTON MENYOLATKAN
-                Container(
-                  width: 300,
-                  height: 46,
-                  margin: EdgeInsets.only(bottom: 24),
-                  child: RaisedButton(
-                      elevation: 4,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "2. Menyolatkan",
-                            style: whiteTextFont.copyWith(fontSize: 22),
-                          ),
-                        ],
-                      ),
-                      color: colorDarkGrey,
-                      onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriJenazahMemandikanPage());
                       }),
                 ),
                 // BUTTON MENGKAFANI
@@ -119,14 +96,37 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "3. Mengkafani",
+                            "2. Mengkafani",
                             style: whiteTextFont.copyWith(fontSize: 22),
                           ),
                         ],
                       ),
                       color: colorDarkGrey,
                       onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriJenazahMengkafaniPage());
+                      }),
+                ),
+                // BUTTON MENYOLATKAN
+                Container(
+                  width: 300,
+                  height: 46,
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: RaisedButton(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "3. Menyolatkan",
+                            style: whiteTextFont.copyWith(fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      color: colorDarkGrey,
+                      onPressed: () {
+                            context.bloc<PageBloc>().add(GoToMateriJenazahMenyolatkanPage());
                       }),
                 ),
                 // BUTTON MENGUBURKAN
@@ -149,7 +149,7 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                       ),
                       color: colorDarkGrey,
                       onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                            context.bloc<PageBloc>().add(GoToMateriJenazahMenguburkanPage());
                       }),
                 ),
               ],

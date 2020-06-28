@@ -37,3 +37,7 @@ part 'materi_zakat_fitrah_page.dart';
 part 'materi_zakat_mal_page.dart';
 
 part 'materi_jenazah_page.dart';
+part 'materi_jenazah_memandikan_page.dart';
+part 'materi_jenazah_mengkafani_page.dart';
+part 'materi_jenazah_menyolatkan_page.dart';
+part 'materi_jenazah_menguburkan_page.dart';

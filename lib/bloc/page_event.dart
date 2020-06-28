@@ -124,3 +124,23 @@ class GoToMateriJenazahPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToMateriJenazahMemandikanPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMenyolatkanPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMengkafaniPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMenguburkanPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}

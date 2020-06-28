@@ -59,6 +59,14 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMateriZakatMalPage();
     } else if (event is GoToMateriJenazahPage) {
       yield OnMateriJenazahPage();
+    } else if (event is GoToMateriJenazahMemandikanPage) {
+      yield OnMateriJenazahMemandikanPage();
+    } else if (event is GoToMateriJenazahMenyolatkanPage) {
+      yield OnMateriJenazahMenyolatkanPage();
+    } else if (event is GoToMateriJenazahMengkafaniPage) {
+      yield OnMateriJenazahMengkafaniPage();
+    } else if (event is GoToMateriJenazahMenguburkanPage) {
+      yield OnMateriJenazahMenguburkanPage();
     }
   }
 
