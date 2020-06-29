@@ -29,6 +29,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
               height: 56,
               child: Row(
                 children: <Widget>[
+                  
                   // BUTTON BACK TO MUQODDIMAH PAGE
                   Align(
                     alignment: Alignment.centerLeft,
@@ -59,6 +60,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                               color: Colors.black.withOpacity(0.54))),
                     ),
                   ),
+                  
                   // TEXT FIELD SEARCH TEXT
                   Center(
                       child: (isClickedSearch)

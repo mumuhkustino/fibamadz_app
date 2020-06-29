@@ -39,7 +39,16 @@ part 'materi_zakat_mal_page.dart';
 part 'materi_jenazah_page.dart';
 
 part 'quiz_thaharah_page.dart';
+part 'quiz_sholat_page.dart';
+part 'quiz_puasa_page.dart';
+part 'quiz_zakat_page.dart';
+part 'quiz_jenazah_page.dart';
 part 'quiz_thaharah_score.dart';
+part 'quiz_sholat_score.dart';
+part 'quiz_puasa_score.dart';
+part 'quiz_zakat_score.dart';
+part 'quiz_jenazah_score.dart';
+part 'quiz_my_choice.dart';
 
 part 'materi_jenazah_memandikan_page.dart';
 part 'materi_jenazah_mengkafani_page.dart';
@@ -47,8 +56,4 @@ part 'materi_jenazah_menyolatkan_page.dart';
 part 'materi_jenazah_menguburkan_page.dart';
 
 var score = 0;
-var scoreThaharah = 0;
-var scoreSholat = 0;
-var scorePuasa = 0;
-var scoreZakat = 0;
-var scoreJenazah = 0;
+var verdict = [false, false];
