@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-// Data class
+// DIGUNAKAN SEBAGAI DATA RADIO BUTTON
 class MyChoice {
   String choice;
   int index;
@@ -9,12 +9,6 @@ class MyChoice {
   MyChoice({this.index, this.choice, this.verdict, this.questionN});
 }
 
-class Result {
-  int questionNo;
-  int verdict;
-}
-
-// List<bool> verdict = [false, false];
 var verdict = [false, false];
 // int value = 0;
 // var score = 0;
@@ -26,7 +20,6 @@ class QuizThaharahPage extends StatefulWidget {
 
 class _QuizThaharahPageState extends State<QuizThaharahPage> {
   bool isClickedSearch = false;
-  // int score = 0;
 
   final q1 = '''
   Q1 :
@@ -167,7 +160,6 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
       builder: (context) {
         return Dialog(
           insetPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-          // shape: MediaQuery.of(context).size.width,
           backgroundColor: colorTextWhite.withOpacity(0.1),
           child: Container(
             width: MediaQuery.of(context).size.width,
@@ -179,7 +171,6 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
               children: <Widget>[
                 // TEXT ARE YOU SURE
                 Container(
-                  // margin: EdgeInsets.only(top: 200),
                   child: Text(
                     "Are you sure ?",
                     style: whiteTextFont.copyWith(fontSize: 24),
@@ -188,7 +179,6 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 
                 // BUTTON CONFIRMATION YES
                 Container(
-                  // color: colorBluePastel,
                   width: 200,
                   height: 36,
                   margin: EdgeInsets.only(top: 24),
@@ -212,17 +202,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                       setState(() {
                         Navigator.pop(context);
                       });
-                      // Navigator.of(context).push(MaterialPageRoute(
-                      // builder: (context) => QuizThaharahScore(score: score),
-                      // ));
-                      // countScore();
                     },
                   ),
                 ),
 
                 // BUTTON CONFIRMATION NO
                 Container(
-                  // color: colorTextWhite,
                   width: 200,
                   height: 36,
                   margin: EdgeInsets.only(top: 24),
@@ -254,13 +239,6 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
       },
     );
   }
-
-  // countScore() {
-  //   var scorePerQ = 100 / verdict.length;
-  //   verdict.forEach((element) {
-  //     score += element ? scorePerQ : 0;
-  //   });
-  // }
 }
 
 class RadioGroup extends StatefulWidget {
@@ -279,8 +257,7 @@ class RadioGroup extends StatefulWidget {
 class RadioGroupState extends State<RadioGroup> {
   List<MyChoice> choices = [];
 
-  // ANSWER BUTTON UNTUK SETIAP QUESTION BERBEDA2
-  // JADI PAKAI INI
+  // TERDAPAT 2 PERTANYAAN MAKA KITA BUTUH 2 SET RADIO BUTTON
   RadioGroupState(int qN) {
     if (qN == 0) {
       this.choices = [
@@ -297,6 +274,7 @@ class RadioGroupState extends State<RadioGroup> {
       ];
     }
   }
+
   String defaultChoice = "";
   int defaultIndex = -1;
   int defaulQuestionN = -1;
@@ -310,6 +288,8 @@ class RadioGroupState extends State<RadioGroup> {
           children: <Widget>[
             Container(
                 child: Column(
+
+                  // PEMBENTUKAN RADIO LIST TILE
                     children: choices
                         .map(
                           (data) => RadioListTile(
@@ -321,7 +301,7 @@ class RadioGroupState extends State<RadioGroup> {
                             onChanged: (value) {
                               setState(() {
                                 defaultChoice = data.choice;
-                                defaultIndex = data.index;
+                                defaultIndex = data.index; 
                                 defaulVerdict = data.verdict;
                                 defaulQuestionN = data.questionN;
                               });

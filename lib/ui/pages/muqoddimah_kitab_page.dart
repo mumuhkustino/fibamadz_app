@@ -11,14 +11,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
   bool isFocusSearch = false;
   String searchText;
   final text =
-      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. 
-      dasfsssssssssssssssssssssssssssssssssssssssssss
-      dasfsdfsfdasfdsdfasfdasfdasfd
-      dsafdsafasfddddddddddddddddddassssssssssssssssssssssssssssssssss
-      daksfjhaskdfhakfkjadshfkjlashfdlkajshfkladsjhflkasjf
-      daskfjhaslkfjhsdalkfhasklfjhdsakfljashklfhalfkjahfljads
-      dsfakjhfdlkajhfdlkjahfljakshfj
-      Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
+      '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +29,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
               height: 56,
               child: Row(
                 children: <Widget>[
+                  
                   // BUTTON BACK TO MUQODDIMAH PAGE
                   Align(
                     alignment: Alignment.centerLeft,
@@ -66,6 +60,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                               color: Colors.black.withOpacity(0.54))),
                     ),
                   ),
+                  
                   // TEXT FIELD SEARCH TEXT
                   Center(
                       child: (isClickedSearch)
