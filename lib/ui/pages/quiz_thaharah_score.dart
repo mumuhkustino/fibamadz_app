@@ -1,16 +1,12 @@
 part of 'pages.dart';
-// import 'package:flutter/material.dart';
 
 class QuizThaharahScore extends StatefulWidget {
-  // int score;
-  // QuizThaharahScore({this.score});
 
   @override
   _QuizThaharahScoreState createState() => _QuizThaharahScoreState();
 }
 
 class _QuizThaharahScoreState extends State<QuizThaharahScore> {
-  // int score;
   _QuizThaharahScoreState();
   bool isClickedSearch = false;
 
@@ -88,21 +84,36 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                     ],
                   ),
 
-                  //
-                  Container(
-                    margin: EdgeInsets.only(top: 60),
-                    child: Text(
-                      '$score',
-                      style: blackTextFont.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w700),
-                    ),
+                  //TULISAN SCORE DAN LINGKARAN HIJAU
+                  Stack(
+                    children: <Widget>[
+                      Container(
+                        height: 160,
+                        margin: EdgeInsets.only(top: 40),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image:
+                                AssetImage("assets/icons/Ellipse-$score.png"),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        margin: EdgeInsets.only(top: 100),
+                        child: Text(
+                          '$score',
+                          style: blackTextFont.copyWith(
+                              fontSize: 24, fontWeight: FontWeight.w700),
+                        ),
+                      )
+                    ],
                   ),
-
+                  
                   // BUTTON BACK TO MENU
                   Container(
                     width: 200,
                     height: 36,
-                    margin: EdgeInsets.only(top: 220),
+                    margin: EdgeInsets.only(top: 150),
                     child: RaisedButton(
                       elevation: 4,
                       shape: RoundedRectangleBorder(
@@ -118,14 +129,14 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                       ),
                       color: colorDarkGrey,
                       onPressed: () {
-                        // Navigator.of(context).push(MaterialPageRoute(
-                          // builder: (context) => MainPage(),
-                        // ));
                         context.bloc<PageBloc>().add(GoToMainPage());
                       },
                     ),
                   ),
                 ],
+              ),
+              Column(
+                children: <Widget>[],
               )
             ],
           ),
