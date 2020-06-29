@@ -105,7 +105,7 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                         color: colorLightBlue,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizSholatPage());
                         }),
                   ),
                   // BUTTON PUASA
@@ -128,7 +128,7 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                         color: colorLightBlue,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizPuasaPage());
                         }),
                   ),
 
@@ -152,7 +152,7 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                         color: colorLightBlue,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizZakatPage());
                         }),
                   ),
                   // BUTTON JENAZAH
@@ -175,7 +175,7 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                         color: colorLightBlue,
                         onPressed: () {
-//                            context.bloc<PageBloc>().add(GoToMainPage());
+                           context.bloc<PageBloc>().add(GoToQuizJenazahPage());
                         }),
                   ),
                 ],

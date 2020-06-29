@@ -1,29 +1,21 @@
 part of 'pages.dart';
 
-// DIGUNAKAN SEBAGAI DATA RADIO BUTTON
-// class MyChoiceThaharah {
-  // String choice;
-  // int index;
-  // bool verdict;
-  // int questionN;
-  // MyChoiceThaharah({this.index, this.choice, this.verdict, this.questionN});
-// }
-
-class QuizThaharahPage extends StatefulWidget {
+class QuizJenazahPage extends StatefulWidget {
   @override
-  _QuizThaharahPageState createState() => _QuizThaharahPageState();
+  _QuizJenazahPageState createState() => _QuizJenazahPageState();
 }
 
-class _QuizThaharahPageState extends State<QuizThaharahPage> {
+class _QuizJenazahPageState extends State<QuizJenazahPage> {
   bool isClickedSearch = false;
 
   final q1 = '''
   Q1 :
-  Rukun Wudu ada berapa?
+  Hukum sholat jenazah ?
   ''';
   final q2 = '''
   Q2 :
-  Najis terbagi menjadi ? 
+  Berapa minimal umur janin yang apabila 
+  keguguran wajib disholatkan ? 
   ''';
 
   @override
@@ -77,7 +69,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                 )),
             Center(
                 child: Text(
-                  "Thaharah",
+                  "Jenazah",
                   style: blackTextFont.copyWith(fontSize: 14),
                 )),
             // TITLE DAN SUBTITLE
@@ -98,7 +90,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 
                       // ANSWER BUTTON Q1
                       Center(
-                        child: RadioGroupThaharah(1 - 1),
+                        child: RadioGroupJenazah(1 - 1),
                       ),
 
                       // QUESTION 2
@@ -113,7 +105,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 
                       // ANSWER BUTTON Q2
                       Center(
-                        child: RadioGroupThaharah(2 - 1),
+                        child: RadioGroupJenazah(2 - 1),
                       ),
 
                       // BUTTON SUBMIT
@@ -193,7 +185,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     color: colorBluePastel,
                     onPressed: () {
                       // countScore();
-                      context.bloc<PageBloc>().add(GoToQuizThaharahScore());
+                      context.bloc<PageBloc>().add(GoToQuizJenazahScore());
                       setState(() {
                         Navigator.pop(context);
                       });
@@ -236,36 +228,36 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
   }
 }
 
-class RadioGroupThaharah extends StatefulWidget {
+class RadioGroupJenazah extends StatefulWidget {
   int qN;
 
-  RadioGroupThaharah(int qNInput) {
+  RadioGroupJenazah(int qNInput) {
     qN = qNInput;
   }
 
   @override
   State<StatefulWidget> createState() {
-    return new RadioGroupStateThaharah(qN);
+    return new RadioGroupStateJenazah(qN);
   }
 }
 
-class RadioGroupStateThaharah extends State<RadioGroupThaharah> {
+class RadioGroupStateJenazah extends State<RadioGroupJenazah> {
   List<MyChoice> choices = [];
 
   // TERDAPAT 2 PERTANYAAN MAKA KITA BUTUH 2 SET RADIO BUTTON
-  RadioGroupStateThaharah(int qN) {
+  RadioGroupStateJenazah(int qN) {
     if (qN == 0) {
       this.choices = [
-        MyChoice(index: 0, choice: "2", verdict: false, questionN: 0),
-        MyChoice(index: 1, choice: "3", verdict: false, questionN: 0),
-        MyChoice(index: 2, choice: "4", verdict: true, questionN: 0),
-        MyChoice(index: 3, choice: "5", verdict: false, questionN: 0),
+        MyChoice(index: 0, choice: "Sunnah", verdict: false, questionN: 0),
+        MyChoice(index: 1, choice: "Fardu 'Ain", verdict: false, questionN: 0),
+        MyChoice(index: 2, choice: "Fardu Kifayah", verdict: true, questionN: 0),
+        MyChoice(index: 3, choice: "Mubah", verdict: false, questionN: 0),
       ];
     } else {
       this.choices = [
-        MyChoice(index: 0, choice: "1", verdict: false, questionN: 1),
-        MyChoice(index: 1, choice: "2", verdict: false, questionN: 1),
-        MyChoice(index: 2, choice: "3", verdict: true, questionN: 1),
+        MyChoice(index: 0, choice: "6 bulan", verdict: false, questionN: 1),
+        MyChoice(index: 1, choice: "5 bulan", verdict: false, questionN: 1),
+        MyChoice(index: 2, choice: "4 bulan", verdict: true, questionN: 1),
       ];
     }
   }

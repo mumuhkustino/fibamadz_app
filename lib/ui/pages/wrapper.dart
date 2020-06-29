@@ -75,7 +75,24 @@ class Wrapper extends StatelessWidget {
             ? QuizPage()
             : (pageState is OnQuizThaharahPage)
             ? QuizThaharahPage()
-            : QuizThaharahScore()
+            : (pageState is OnQuizThaharahScore)
+            ? QuizThaharahScore()
+            : (pageState is OnQuizSholatPage)
+            ? QuizSholatPage()
+            : (pageState is OnQuizSholatScore)
+            ? QuizSholatScore()
+            : (pageState is OnQuizPuasaPage)
+            ? QuizPuasaPage()
+            : (pageState is OnQuizPuasaScore)
+            ? QuizPuasaScore()
+            : (pageState is OnQuizJenazahPage)
+            ? QuizJenazahPage()
+            : (pageState is OnQuizJenazahScore)
+            ? QuizJenazahScore()
+            : (pageState is OnQuizZakatPage)
+            ? QuizZakatPage()
+            : QuizZakatScore()
+            
             );
   }
 }
