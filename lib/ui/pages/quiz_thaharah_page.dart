@@ -52,6 +52,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
             children: <Widget>[
               Column(
                 children: [
+
                   // BUTTON PREVIOUS
                   Container(
                     margin: EdgeInsets.only(top: 20),
@@ -165,81 +166,89 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
       context: context,
       builder: (context) {
         return Dialog(
+          insetPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+          // shape: MediaQuery.of(context).size.width,
           backgroundColor: colorTextWhite.withOpacity(0.1),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              // TEXT ARE YOU SURE
-              Container(
-                margin: EdgeInsets.only(top: 200),
-                child: Text(
-                  "Are you sure ?",
-                  style: whiteTextFont.copyWith(fontSize: 24),
-                ),
-              ),
-
-              // BUTTON CONFIRMATION YES
-              Container(
-                // color: colorBluePastel,
-                width: 200,
-                height: 36,
-                margin: EdgeInsets.only(top: 24),
-                child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Yes",
-                        style: whiteTextFont.copyWith(fontSize: 14),
-                      ),
-                    ],
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // TEXT ARE YOU SURE
+                Container(
+                  // margin: EdgeInsets.only(top: 200),
+                  child: Text(
+                    "Are you sure ?",
+                    style: whiteTextFont.copyWith(fontSize: 24),
                   ),
-                  color: colorBluePastel,
-                  onPressed: () {
-                    // countScore();
-                    context.bloc<PageBloc>().add(GoToQuizThaharahScore());
-                    setState(() {
-                      Navigator.pop(context);
-                    });
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    // builder: (context) => QuizThaharahScore(score: score),
-                    // ));
-                    // countScore();
-                  },
                 ),
-              ),
 
-              // BUTTON CONFIRMATION NO
-              Container(
-                // color: colorTextWhite,
-                width: 200,
-                height: 36,
-                margin: EdgeInsets.only(top: 24),
-                child: RaisedButton(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "No",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      ),
-                    ],
+                // BUTTON CONFIRMATION YES
+                Container(
+                  // color: colorBluePastel,
+                  width: 200,
+                  height: 36,
+                  margin: EdgeInsets.only(top: 24),
+                  child: RaisedButton(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Yes",
+                          style: whiteTextFont.copyWith(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    color: colorBluePastel,
+                    onPressed: () {
+                      // countScore();
+                      context.bloc<PageBloc>().add(GoToQuizThaharahScore());
+                      setState(() {
+                        Navigator.pop(context);
+                      });
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      // builder: (context) => QuizThaharahScore(score: score),
+                      // ));
+                      // countScore();
+                    },
                   ),
-                  color: colorTextWhite,
-                  onPressed: (){
-                    setState(() {
-                      Navigator.pop(context);
-                    });
-                  },
                 ),
-              ),
-            ],
+
+                // BUTTON CONFIRMATION NO
+                Container(
+                  // color: colorTextWhite,
+                  width: 200,
+                  height: 36,
+                  margin: EdgeInsets.only(top: 24),
+                  child: RaisedButton(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "No",
+                          style: blackTextFont.copyWith(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    color: colorTextWhite,
+                    onPressed: (){
+                      setState(() {
+                        Navigator.pop(context);
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
