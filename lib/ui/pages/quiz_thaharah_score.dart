@@ -1,11 +1,17 @@
 part of 'pages.dart';
+// import 'package:flutter/material.dart';
 
 class QuizThaharahScore extends StatefulWidget {
+  int score;
+  QuizThaharahScore({this.score});
+
   @override
-  _QuizThaharahScoreState createState() => _QuizThaharahScoreState();
+  _QuizThaharahScoreState createState() => _QuizThaharahScoreState(score);
 }
 
 class _QuizThaharahScoreState extends State<QuizThaharahScore> {
+  int score;
+  _QuizThaharahScoreState(this.score);
   bool isClickedSearch = false;
 
   @override
@@ -22,7 +28,6 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
             children: <Widget>[
               Column(
                 children: [
-                  
                   // BUTTON PREVIOUS
                   Container(
                     margin: EdgeInsets.only(top: 20),
@@ -69,7 +74,7 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                           style: blackTextFont.copyWith(fontSize: 14),
                         ),
                       ),
-                      
+
                       // SCORE TEXT
                       Container(
                         margin: EdgeInsets.only(top: 72),
@@ -83,11 +88,21 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                     ],
                   ),
 
-                  // BUTTON SUBMIT
+                  //
+                  Container(
+                    margin: EdgeInsets.only(top: 60),
+                    child: Text(
+                      '$score',
+                      style: blackTextFont.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+
+                  // BUTTON BACK TO MENU
                   Container(
                     width: 200,
                     height: 36,
-                    margin: EdgeInsets.only(top: 360),
+                    margin: EdgeInsets.only(top: 220),
                     child: RaisedButton(
                       elevation: 4,
                       shape: RoundedRectangleBorder(
@@ -103,11 +118,13 @@ class _QuizThaharahScoreState extends State<QuizThaharahScore> {
                       ),
                       color: colorDarkGrey,
                       onPressed: () {
+                        // Navigator.of(context).push(MaterialPageRoute(
+                          // builder: (context) => MainPage(),
+                        // ));
                         context.bloc<PageBloc>().add(GoToMainPage());
                       },
                     ),
                   ),
-                
                 ],
               )
             ],

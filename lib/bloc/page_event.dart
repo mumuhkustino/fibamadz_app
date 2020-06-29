@@ -76,6 +76,11 @@ class GoToQuizJenazahPage extends PageEvent {
 }
 
 class GoToQuizThaharahScore extends PageEvent {
+  int score;
+  GoToQuizThaharahPage(int score){
+    this.score = score;
+  }
+
   @override
   List<Object> get props => [];
 }
