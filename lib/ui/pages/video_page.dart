@@ -85,49 +85,6 @@ class _VideoPageState extends State<VideoPage> {
                 ),
               ),
             ),
-<<<<<<< HEAD
-            // TITLE VIDEO PRAKTIK
-            Center(
-              child: Text(
-                "Video Praktik",
-                style: blackTextFont.copyWith(
-                    fontSize: 24, fontWeight: FontWeight.w700),
-              ),
-            ),
-            // SUBTITLE PILIH KATEGORI VIDEO
-            Container(
-              alignment: Alignment.center,
-              child: Text("Pilih Kategori Video",
-                  style: blackTextFont.copyWith(
-                      fontSize: 14, fontWeight: FontWeight.w700)),
-            ),
-            
-            // ICON MUSLIM MAN
-            Container(
-              height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          "assets/icons/ramadhan-mubarak/png/muslim-man.png"))),
-            ),
-            
-            // BUTTON THAHARAH
-            Container(
-              width: 300,
-              height: 46,
-              margin: EdgeInsets.only(bottom: 24),
-              child: RaisedButton(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Thaharah",
-                      style: whiteTextFont.copyWith(fontSize: 22),
-=======
             Expanded(
               child: Column(
                 children: [
@@ -137,7 +94,6 @@ class _VideoPageState extends State<VideoPage> {
                       "Video Praktik",
                       style: blackTextFont.copyWith(
                           fontSize: 24, fontWeight: FontWeight.w700),
->>>>>>> master
                     ),
                   ),
                   // SUBTITLE PILIH KATEGORI VIDEO
