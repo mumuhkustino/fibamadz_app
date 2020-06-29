@@ -30,3 +30,10 @@ part 'materi_jenazah_page.dart';
 part 'quiz_thaharah_page.dart';
 part 'quiz_thaharah_score.dart';
 
+
+var score = 0;
+var scoreThaharah = 0;
+var scoreSholat = 0;
+var scorePuasa = 0;
+var scoreZakat = 0;
+var scoreJenazah = 0;

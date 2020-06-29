@@ -17,7 +17,7 @@ class Result {
 // List<bool> verdict = [false, false];
 var verdict = [false, false];
 // int value = 0;
-var score = 0;
+// var score = 0;
 
 class QuizThaharahPage extends StatefulWidget {
   @override
@@ -199,15 +199,15 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                   ),
                   color: colorBluePastel,
                   onPressed: () {
-                    countScore();
+                    // countScore();
+                    context.bloc<PageBloc>().add(GoToQuizThaharahScore());
                     setState(() {
                       Navigator.pop(context);
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => QuizThaharahScore(score: score),
-                      ));
                     });
+                    // Navigator.of(context).push(MaterialPageRoute(
+                    // builder: (context) => QuizThaharahScore(score: score),
+                    // ));
                     // countScore();
-                    // context.bloc<PageBloc>().add(GoToQuizThaharahScore());
                   },
                 ),
               ),
@@ -232,7 +232,11 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
                     ],
                   ),
                   color: colorTextWhite,
-                  onPressed: null,
+                  onPressed: (){
+                    setState(() {
+                      Navigator.pop(context);
+                    });
+                  },
                 ),
               ),
             ],
@@ -242,12 +246,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
     );
   }
 
-  countScore() {
-    var scorePerQ = 100 / verdict.length;
-    verdict.forEach((element) {
-      score += element ? scorePerQ : 0;
-    });
-  }
+  // countScore() {
+  //   var scorePerQ = 100 / verdict.length;
+  //   verdict.forEach((element) {
+  //     score += element ? scorePerQ : 0;
+  //   });
+  // }
 }
 
 class RadioGroup extends StatefulWidget {
@@ -328,6 +332,10 @@ class RadioGroupState extends State<RadioGroup> {
   }
 
   saveVerdictState() {
+    score = 0;
     verdict[default_questionN] = default_verdict ? true : false;
+    verdict.forEach((element) {
+      score += element ? 50 : 0;
+    });
   }
 }

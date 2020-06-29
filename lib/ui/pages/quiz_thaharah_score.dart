@@ -2,16 +2,16 @@ part of 'pages.dart';
 // import 'package:flutter/material.dart';
 
 class QuizThaharahScore extends StatefulWidget {
-  int score;
-  QuizThaharahScore({this.score});
+  // int score;
+  // QuizThaharahScore({this.score});
 
   @override
-  _QuizThaharahScoreState createState() => _QuizThaharahScoreState(score);
+  _QuizThaharahScoreState createState() => _QuizThaharahScoreState();
 }
 
 class _QuizThaharahScoreState extends State<QuizThaharahScore> {
-  int score;
-  _QuizThaharahScoreState(this.score);
+  // int score;
+  _QuizThaharahScoreState();
   bool isClickedSearch = false;
 
   @override
