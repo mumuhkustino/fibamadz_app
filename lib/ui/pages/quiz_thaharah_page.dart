@@ -10,8 +10,6 @@ class MyChoice {
 }
 
 var verdict = [false, false];
-// int value = 0;
-// var score = 0;
 
 class QuizThaharahPage extends StatefulWidget {
   @override
@@ -23,10 +21,12 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 
   final q1 = '''
   Q1 :
-  Rukun Wudu ada berapa?''';
+  Rukun Wudu ada berapa?
+  ''';
   final q2 = '''
   Q2 :
-  Najis terbagi menjadi ? ''';
+  Najis terbagi menjadi ? 
+  ''';
 
   @override
   Widget build(BuildContext context) {
@@ -40,115 +40,112 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
       },
       child: Scaffold(
         backgroundColor: colorCream,
-        body: Container(
-          child: ListView(
-            children: <Widget>[
-              Column(
-                children: [
-
-                  // BUTTON PREVIOUS
-                  Container(
-                    margin: EdgeInsets.only(top: 20),
-                    height: 56,
-                    child: Row(
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: GestureDetector(
-                            onTap: () {
-                              if (!isClickedSearch) {
-                                context.bloc<PageBloc>().add(GoToQuizPage());
-                              } else {
-                                setState(() {});
-                              }
-                            },
-                            child: Container(
-                                width: MediaQuery.of(context).size.width / 8,
-                                child: Icon(
-                                    (!isClickedSearch)
-                                        ? Icons.arrow_back_ios
-                                        : Icons.clear,
-                                    color: Colors.black.withOpacity(0.54))),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  // END OF BUTTON PREVIOUS
-
-                  // TITLE DAN SUBTITLE
-                  Column(
-                    children: [
-                      Center(
-                          child: Text(
-                        "Quiz",
-                        style: blackTextFont.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w700),
-                      )),
-                      Center(
-                          child: Text(
-                        "Thaharah",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      )),
-                    ],
-                  ),
-
-                  // QUESTION 1
-                  Container(
-                    margin: EdgeInsets.only(top: 24, left: 12),
-                    child: Row(
-                      children: <Widget>[
-                        Text(q1, style: blackTextFont.copyWith(fontSize: 14))
-                      ],
-                    ),
-                  ),
-
-                  // ANSWER BUTTON Q1
-                  Center(
-                    child: RadioGroup(1 - 1),
-                  ),
-
-                  // QUESTION 2
-                  Container(
-                    margin: EdgeInsets.only(top: 24, left: 12),
-                    child: Row(
-                      children: <Widget>[
-                        Text(q2, style: blackTextFont.copyWith(fontSize: 14))
-                      ],
-                    ),
-                  ),
-
-                  // ANSWER BUTTON Q2
-                  Center(
-                    child: RadioGroup(2 - 1),
-                  ),
-
-                  // BUTTON SUBMIT
-                  Container(
-                    width: 200,
-                    height: 36,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                      elevation: 4,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Submit",
-                            style: whiteTextFont.copyWith(fontSize: 14),
-                          ),
-                        ],
-                      ),
-                      color: colorPink,
-                      onPressed: buildConfirmationDialog,
+        body: Column(
+          children: [
+            // BUTTON PREVIOUS
+            Container(
+              margin: EdgeInsets.only(top: 20, bottom: 22),
+              height: 56,
+              child: Row(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: GestureDetector(
+                      onTap: () {
+                        if (!isClickedSearch) {
+                          context.bloc<PageBloc>().add(GoToQuizPage());
+                        } else {
+                          setState(() {});
+                        }
+                      },
+                      child: Container(
+                          width: MediaQuery.of(context).size.width / 8,
+                          child: Icon(
+                              (!isClickedSearch)
+                                  ? Icons.arrow_back_ios
+                                  : Icons.clear,
+                              color: Colors.black.withOpacity(0.54))),
                     ),
                   ),
                 ],
-              )
-            ],
-          ),
+              ),
+            ),
+            // END OF BUTTON PREVIOUS
+            Center(
+                child: Text(
+                  "Quiz",
+                  style: blackTextFont.copyWith(
+                      fontSize: 24, fontWeight: FontWeight.w700),
+                )),
+            Center(
+                child: Text(
+                  "Thaharah",
+                  style: blackTextFont.copyWith(fontSize: 14),
+                )),
+            // TITLE DAN SUBTITLE
+            Expanded(
+              child: ListView(
+                children: [
+                  Column(
+                    children: [
+                      // QUESTION 1
+                      Container(
+                        margin: EdgeInsets.only(top: 24, left: 12),
+                        child: Row(
+                          children: <Widget>[
+                            Text(q1, style: blackTextFont.copyWith(fontSize: 14))
+                          ],
+                        ),
+                      ),
+
+                      // ANSWER BUTTON Q1
+                      Center(
+                        child: RadioGroup(1 - 1),
+                      ),
+
+                      // QUESTION 2
+                      Container(
+                        margin: EdgeInsets.only(top: 24, left: 12),
+                        child: Row(
+                          children: <Widget>[
+                            Text(q2, style: blackTextFont.copyWith(fontSize: 14))
+                          ],
+                        ),
+                      ),
+
+                      // ANSWER BUTTON Q2
+                      Center(
+                        child: RadioGroup(2 - 1),
+                      ),
+
+                      // BUTTON SUBMIT
+                      Container(
+                        width: 200,
+                        height: 36,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Submit",
+                                style: whiteTextFont.copyWith(fontSize: 14),
+                              ),
+                            ],
+                          ),
+                          color: colorPink,
+                          onPressed: buildConfirmationDialog,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -313,9 +310,6 @@ class RadioGroupState extends State<RadioGroup> {
           ],
         ),
         Padding(padding: EdgeInsets.all(2)),
-        // Text('choice : $default_choice'),
-        // Text('verdict : $defaulVerdict'),
-        // Text('score : $score'),
       ],
     );
   }
