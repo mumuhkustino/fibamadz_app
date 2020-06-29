@@ -9,6 +9,7 @@ Color colorYellow = Color(0xFFF9C22E);
 Color colorLightYellow = Color(0xFFFFFACD);
 Color colorPink = Color(0xFFE01A4F);
 Color colorLightBlue = Color(0xFF56CCF2);
+Color colorBluePastel = Color(0xFF69DAC6);
 Color colorDarkGrey = Color(0xFF4F4F4F);
 Color colorCream = Color(0xFFFFFAEB);
 

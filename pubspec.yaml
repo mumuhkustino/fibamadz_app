@@ -45,8 +45,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/icons/ramadhan-mubarak/png/star-and-crescent-moon.png
     - assets/icons/cloud.png
+    - assets/icons/Ellipse-0.png
+    - assets/icons/Ellipse-25.png
+    - assets/icons/Ellipse-50.png
+    - assets/icons/Ellipse-75.png
+    - assets/icons/Ellipse-100.png
+    - assets/icons/ramadhan-mubarak/png/star-and-crescent-moon.png
     - assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png
     - assets/icons/ramadhan-mubarak/png/quran-book.png
     - assets/icons/ramadhan-mubarak/png/qibla.png

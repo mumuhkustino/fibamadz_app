@@ -37,7 +37,18 @@ part 'materi_zakat_fitrah_page.dart';
 part 'materi_zakat_mal_page.dart';
 
 part 'materi_jenazah_page.dart';
+
+part 'quiz_thaharah_page.dart';
+part 'quiz_thaharah_score.dart';
+
 part 'materi_jenazah_memandikan_page.dart';
 part 'materi_jenazah_mengkafani_page.dart';
 part 'materi_jenazah_menyolatkan_page.dart';
 part 'materi_jenazah_menguburkan_page.dart';
+
+var score = 0;
+var scoreThaharah = 0;
+var scoreSholat = 0;
+var scorePuasa = 0;
+var scoreZakat = 0;
+var scoreJenazah = 0;
