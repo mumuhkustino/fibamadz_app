@@ -79,7 +79,7 @@ class OnMateriThaharahTayamumPage extends PageState {
   List<Object> get props => [];
 }
 
-class OnMateriThaharahMandiPage extends PageState {
+class OnMateriThaharahMandiBesarPage extends PageState {
   @override
   List<Object> get props => [];
 }
@@ -94,7 +94,32 @@ class OnMateriSholatPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMateriSholatFarduPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriSholatSunatPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriPuasaPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnMateriZakatPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriZakatFitrahPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriZakatMalPage extends PageState {
   @override
   List<Object> get props => [];
 }
@@ -103,5 +128,25 @@ class OnMateriJenazahPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnMateriJenazahMemandikanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriJenazahMenyolatkanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMateriJenazahMengkafaniPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+class OnMateriJenazahMenguburkanPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 
 //mumuh kasih comment ini apa
