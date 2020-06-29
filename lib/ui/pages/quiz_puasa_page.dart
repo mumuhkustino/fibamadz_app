@@ -254,9 +254,9 @@ class RadioGroupStatePuasa extends State<RadioGroupPuasa> {
       ];
     } else {
       this.choices = [
-        MyChoice(index: 0, choice: "Makan", verdict: false, questionN: 1),
+        MyChoice(index: 0, choice: "Makan", verdict: true, questionN: 1),
         MyChoice(index: 1, choice: "Kentut", verdict: false, questionN: 1),
-        MyChoice(index: 2, choice: "Tidur", verdict: true, questionN: 1),
+        MyChoice(index: 2, choice: "Tidur", verdict: false, questionN: 1),
       ];
     }
   }
