@@ -255,15 +255,15 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 }
 
 class RadioGroup extends StatefulWidget {
-  int Qn;
+  int qN;
 
-  RadioGroup(int QnInput) {
-    Qn = QnInput;
+  RadioGroup(int qNInput) {
+    qN = qNInput;
   }
 
   @override
   State<StatefulWidget> createState() {
-    return new RadioGroupState(Qn);
+    return new RadioGroupState(qN);
   }
 }
 
@@ -272,8 +272,8 @@ class RadioGroupState extends State<RadioGroup> {
 
   // ANSWER BUTTON UNTUK SETIAP QUESTION BERBEDA2
   // JADI PAKAI INI
-  RadioGroupState(int Qn) {
-    if (Qn == 0) {
+  RadioGroupState(int qN) {
+    if (qN == 0) {
       this.choices = [
         MyChoice(index: 0, choice: "2", verdict: false, questionN: 0),
         MyChoice(index: 1, choice: "3", verdict: false, questionN: 0),
@@ -288,10 +288,10 @@ class RadioGroupState extends State<RadioGroup> {
       ];
     }
   }
-  String default_choice = "";
-  int default_index = -1;
-  int default_questionN = -1;
-  bool default_verdict = false;
+  String defaultChoice = "";
+  int defaultIndex = -1;
+  int defaulQuestionN = -1;
+  bool defaulVerdict = false;
 
   @override
   Widget build(BuildContext context) {
@@ -307,14 +307,14 @@ class RadioGroupState extends State<RadioGroup> {
                             title: Text(
                               '${data.choice}',
                             ),
-                            groupValue: default_index,
+                            groupValue: defaultIndex,
                             value: data.index,
                             onChanged: (value) {
                               setState(() {
-                                default_choice = data.choice;
-                                default_index = data.index;
-                                default_verdict = data.verdict;
-                                default_questionN = data.questionN;
+                                defaultChoice = data.choice;
+                                defaultIndex = data.index;
+                                defaulVerdict = data.verdict;
+                                defaulQuestionN = data.questionN;
                               });
                               saveVerdictState();
                             },
@@ -325,7 +325,7 @@ class RadioGroupState extends State<RadioGroup> {
         ),
         Padding(padding: EdgeInsets.all(2)),
         // Text('choice : $default_choice'),
-        // Text('verdict : $default_verdict'),
+        // Text('verdict : $defaulVerdict'),
         // Text('score : $score'),
       ],
     );
@@ -333,7 +333,7 @@ class RadioGroupState extends State<RadioGroup> {
 
   saveVerdictState() {
     score = 0;
-    verdict[default_questionN] = default_verdict ? true : false;
+    verdict[defaulQuestionN] = defaulVerdict ? true : false;
     verdict.forEach((element) {
       score += element ? 50 : 0;
     });

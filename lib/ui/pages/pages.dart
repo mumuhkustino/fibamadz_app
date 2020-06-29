@@ -22,14 +22,29 @@ part 'quiz_page.dart';
 part 'materi_page.dart';
 part 'materi_thaharah_page.dart';
 part 'materi_thaharah_wudhu_page.dart';
+part 'materi_thaharah_tayamum_page.dart';
+part 'materi_thaharah_mandi_besar_page.dart';
+part 'materi_thaharah_menghilangkan_najis_page.dart';
+
 part 'materi_sholat_page.dart';
+part 'materi_sholat_fardu_page.dart';
+part 'materi_sholat_sunat_page.dart';
+
 part 'materi_puasa_page.dart';
+
 part 'materi_zakat_page.dart';
+part 'materi_zakat_fitrah_page.dart';
+part 'materi_zakat_mal_page.dart';
+
 part 'materi_jenazah_page.dart';
 
 part 'quiz_thaharah_page.dart';
 part 'quiz_thaharah_score.dart';
 
+part 'materi_jenazah_memandikan_page.dart';
+part 'materi_jenazah_mengkafani_page.dart';
+part 'materi_jenazah_menyolatkan_page.dart';
+part 'materi_jenazah_menguburkan_page.dart';
 
 var score = 0;
 var scoreThaharah = 0;

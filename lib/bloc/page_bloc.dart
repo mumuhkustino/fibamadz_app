@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:bloc/bloc.dart';
-import 'package:fibamadz_app/bloc/blocs.dart';
 
 part 'page_event.dart';
 part 'page_state.dart';
@@ -66,16 +65,34 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnMateriThaharahWuduPage();
     } else if (event is GoToMateriThaharahTayamumPage) {
       yield OnMateriThaharahTayamumPage();
-    } else if (event is GoToMateriThaharahMandiPage) {
-      yield OnMateriThaharahMandiPage();
+    } else if (event is GoToMateriThaharahMandiBesarPage) {
+      yield OnMateriThaharahMandiBesarPage();
     } else if (event is GoToMateriThaharahMenghilangkanNajisPage) {
       yield OnMateriThaharahMenghilangkanNajisPage();
     } else if (event is GoToMateriSholatPage) {
       yield OnMateriSholatPage();
+    } else if (event is GoToMateriSholatFarduPage) {
+      yield OnMateriSholatFarduPage();
+    } else if (event is GoToMateriSholatSunatPage) {
+      yield OnMateriSholatSunatPage();
+    } else if (event is GoToMateriPuasaPage) {
+      yield OnMateriPuasaPage();
     } else if (event is GoToMateriZakatPage) {
       yield OnMateriZakatPage();
+    } else if (event is GoToMateriZakatFitrahPage) {
+      yield OnMateriZakatFitrahPage();
+    } else if (event is GoToMateriZakatMalPage) {
+      yield OnMateriZakatMalPage();
     } else if (event is GoToMateriJenazahPage) {
       yield OnMateriJenazahPage();
+    } else if (event is GoToMateriJenazahMemandikanPage) {
+      yield OnMateriJenazahMemandikanPage();
+    } else if (event is GoToMateriJenazahMenyolatkanPage) {
+      yield OnMateriJenazahMenyolatkanPage();
+    } else if (event is GoToMateriJenazahMengkafaniPage) {
+      yield OnMateriJenazahMengkafaniPage();
+    } else if (event is GoToMateriJenazahMenguburkanPage) {
+      yield OnMateriJenazahMenguburkanPage();
     }
   }
 

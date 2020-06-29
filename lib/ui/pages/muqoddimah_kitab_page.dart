@@ -102,27 +102,33 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                 ],
               ),
             ),
-            // TITLE MUQODDIMAH
-            Center(
-                child: Text(
-              "Muqoddimah",
-              style: blackTextFont.copyWith(
-                  fontSize: 24, fontWeight: FontWeight.w700),
-            )),
-            // TITLE KITAB
-            Center(
-                child: Text(
-              "Kitab",
-              style: blackTextFont.copyWith(fontSize: 14),
-            )),
-            // TEXT MUQODDIMAH KITAB
-            Container(
-              margin: EdgeInsets.only(top: 44, left: 24, right: 24),
-              child: SelectableText.rich(
-                searchFromText(text, searchText),
-                textAlign: TextAlign.center,
-                textScaleFactor: 1.2,
-                style: blackTextFont,
+            Expanded(
+              child: ListView(
+                children: [
+                  // TITLE MUQODDIMAH
+                  Center(
+                      child: Text(
+                        "Muqoddimah",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  // TITLE KITAB
+                  Center(
+                      child: Text(
+                        "Kitab",
+                        style: blackTextFont.copyWith(fontSize: 14),
+                      )),
+                  // TEXT MUQODDIMAH KITAB
+                  Container(
+                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    child: SelectableText.rich(
+                      searchFromText(text, searchText),
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.2,
+                      style: blackTextFont,
+                    ),
+                  ),
+                ],
               ),
             )
           ],

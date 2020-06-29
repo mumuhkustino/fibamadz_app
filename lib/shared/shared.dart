@@ -20,8 +20,10 @@ TextStyle whiteTextFont = TextStyle(
     color: colorTextWhite, fontFamily: "Raleway", fontWeight: FontWeight.w500);
 
 TextStyle blackTextFont = TextStyle(
-  backgroundColor: Colors.transparent,
-    color: colorTextBlack, fontFamily: "Raleway", fontWeight: FontWeight.w500);
+    backgroundColor: Colors.transparent,
+    color: colorTextBlack,
+    fontFamily: "Raleway",
+    fontWeight: FontWeight.w500);
 
 TextSpan searchFromText(String fullText, String searchText) {
   if (searchText == null || searchText == "")
@@ -40,7 +42,9 @@ TextSpan searchFromText(String fullText, String searchText) {
         ],
       );
     } else if (refinedFullText.length == refinedSearchText.length) {
-      return TextSpan(text: fullText, style: blackTextFont.copyWith(backgroundColor: colorYellow));
+      return TextSpan(
+          text: fullText,
+          style: blackTextFont.copyWith(backgroundColor: colorYellow));
     } else {
       return TextSpan(
         style: blackTextFont,
@@ -71,10 +75,122 @@ TextSpan searchFromText(String fullText, String searchText) {
 }
 
 class Entry {
-  Entry(this.title, this.content);
+  Entry(this.title, {this.content, this.children = const <Entry>[]});
 
   final String title;
-  final String content;
+  String content;
+  List<Entry> children;
+}
+
+List<Widget> getChildrenWidgets(List<Entry> entries, String searchText) {
+  List<Widget> listWidget = <Widget>[];
+  for (var entry in entries) {
+    listWidget.add(ExpansionTile(
+      title: Text(entry.title),
+      children: (entry.children.isEmpty)
+          ? <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: SelectableText.rich(
+                  searchFromText(entry.content, searchText),
+                  textScaleFactor: 1.2,
+                  style: blackTextFont,
+                ),
+              )
+            ]
+          : getChildrenWidgets(entry.children, searchText),
+    ));
+  }
+  return listWidget;
+}
+
+List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
+  List<Entry> dummySearchList = List<Entry>();
+  dummySearchList.addAll(entries);
+  Entry entry;
+  List<Entry> childs;
+  List<Entry> childChilds;
+  if (searchText != null && searchText.isNotEmpty) {
+    List<Entry> dummyListData = List<Entry>();
+    //1
+    dummySearchList.forEach((element) {
+      childs = List<Entry>();
+      childChilds = List<Entry>();
+      entry = null;
+      if (element.title != null && element.title.isNotEmpty) {
+        if (element.title.toLowerCase().contains(searchText.toLowerCase())) {
+          entry = element;
+        } else if (element.content != null && element.content.isNotEmpty) {
+          if (element.content
+              .toLowerCase()
+              .contains(searchText.toLowerCase())) {
+            entry = element;
+          }
+        } else if (element.children.isNotEmpty && element.children != null) {
+          //2
+          childs.clear();
+          element.children.forEach((child) {
+            if (child.title != null && child.title.isNotEmpty) {
+              if (child.title
+                  .toLowerCase()
+                  .contains(searchText.toLowerCase())) {
+                entry = element;
+                childs.add(child);
+              } else if (child.content != null && child.content.isNotEmpty) {
+                if (child.content
+                    .toLowerCase()
+                    .contains(searchText.toLowerCase())) {
+                  entry = element;
+                  childs.add(child);
+                }
+              } else if (child.children.isNotEmpty && child.children != null) {
+                //3
+                child.children.forEach((child2) {
+                  if (child2.title != null && child2.title.isNotEmpty) {
+                    if (child2.title
+                        .toLowerCase()
+                        .contains(searchText.toLowerCase())) {
+                      entry = element;
+                      childs.add(child);
+                      childChilds.add(child2);
+                    } else if (child2.content != null &&
+                        child2.content.isNotEmpty) {
+                      if (child2.content
+                          .toLowerCase()
+                          .contains(searchText.toLowerCase())) {
+                        entry = element;
+                        childs.add(child);
+                        childChilds.add(child2);
+                      }
+                    }
+                  }
+                });
+              }
+            }
+          });
+        }
+      }
+
+      if (entry != null) {
+        if (childs != null && childs.length > 0) {
+          entry.children.clear();
+          entry.children.addAll(childs);
+        }
+        if (childChilds != null && childChilds.length > 0) {
+          childs.forEach((element) {
+            element.children.clear();
+            element.children.addAll(childChilds);
+          });
+          entry.children.clear();
+          entry.children.addAll(childs);
+        }
+        dummyListData.add(entry);
+      }
+    });
+    return dummyListData;
+  } else {
+    return entries;
+  }
 }
 
 //file ini berisikan objek2 yang menyimpan data

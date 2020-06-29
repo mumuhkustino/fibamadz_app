@@ -130,7 +130,7 @@ class GoToMateriThaharahTayamumPage extends PageEvent {
   List<Object> get props => [];
 }
 
-class GoToMateriThaharahMandiPage extends PageEvent {
+class GoToMateriThaharahMandiBesarPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
@@ -145,12 +145,57 @@ class GoToMateriSholatPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMateriSholatFarduPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriSholatSunatPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriPuasaPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriZakatPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
 
+class GoToMateriZakatFitrahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriZakatMalPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriJenazahPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMemandikanPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMenyolatkanPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMengkafaniPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMateriJenazahMenguburkanPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
