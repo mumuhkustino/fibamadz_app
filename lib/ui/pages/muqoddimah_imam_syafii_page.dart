@@ -106,22 +106,22 @@ Beliau belajar kepada Imam Malik yang dikenal dengan madzhabul hadits, kemudian 
                 ],
               ),
             ),
+            // TITLE SEJARAH IMAM
+            Center(
+                child: Text(
+                  "Sejarah Imam",
+                  style: blackTextFont.copyWith(
+                      fontSize: 24, fontWeight: FontWeight.w700),
+                )),
+            // TITLE SYAFII
+            Center(
+                child: Text(
+                  "Syafii",
+                  style: blackTextFont.copyWith(fontSize: 14),
+                )),
             Expanded(
               child: ListView(
                 children: [
-                  // TITLE SEJARAH IMAM
-                  Center(
-                      child: Text(
-                        "Sejarah Imam",
-                        style: blackTextFont.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w700),
-                      )),
-                  // TITLE SYAFII
-                  Center(
-                      child: Text(
-                        "Syafii",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      )),
                   // TEXT SEJARAH IMAM SYAFII
                   Container(
                     margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
