@@ -34,132 +34,136 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              // TITLE PILIH KATEGORI
+              Center(
+                child: Text(
+                  "Pilih Kategori",
+                  style: blackTextFont.copyWith(
+                      fontSize: 24, fontWeight: FontWeight.w700),
+                ),
+              ),
               Expanded(
                 child:
-                    Column(
+                    ListView(
                       children: [
-                        // TITLE PILIH KATEGORI
-                        Center(
-                          child: Text(
-                            "Pilih Kategori",
-                            style: blackTextFont.copyWith(
-                                fontSize: 24, fontWeight: FontWeight.w700),
-                          ),
-                        ),
-                        // BUTTON MUQODDIMAH
-                        Container(
-                          width: 300,
-                          height: 46,
-                          margin: EdgeInsets.only(top: 164, bottom: 24),
-                          child: RaisedButton(
-                              elevation: 4,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                      'assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png'),
-                                  SizedBox(
-                                    width: 12,
+                        Column(
+                          children: [
+                            // BUTTON MUQODDIMAH
+                            Container(
+                              width: 300,
+                              height: 46,
+                              margin: EdgeInsets.only(top: 164, bottom: 24),
+                              child: RaisedButton(
+                                  elevation: 4,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png'),
+                                      SizedBox(
+                                        width: 12,
+                                      ),
+                                      Text(
+                                        "Muqoddimah",
+                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "Muqoddimah",
-                                    style: whiteTextFont.copyWith(fontSize: 24),
-                                  ),
-                                ],
-                              ),
-                              color: colorLightBlue,
-                              onPressed: () {
-                                context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-                              }),
-                        ),
+                                  color: colorLightBlue,
+                                  onPressed: () {
+                                    context.bloc<PageBloc>().add(GoToMuqoddimahPage());
+                                  }),
+                            ),
 
-                        // BUTTON MATERI
-                        Container(
-                          width: 300,
-                          height: 46,
-                          margin: EdgeInsets.only(bottom: 24),
-                          child: RaisedButton(
-                              elevation: 4,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    "Materi",
-                                    style: whiteTextFont.copyWith(fontSize: 24),
+                            // BUTTON MATERI
+                            Container(
+                              width: 300,
+                              height: 46,
+                              margin: EdgeInsets.only(bottom: 24),
+                              child: RaisedButton(
+                                  elevation: 4,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        "Materi",
+                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                      ),
+                                      SizedBox(
+                                        width: 56,
+                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/quran-book.png'),
+                                    ],
                                   ),
-                                  SizedBox(
-                                    width: 56,
-                                  ),
-                                  Image.asset(
-                                      'assets/icons/ramadhan-mubarak/png/quran-book.png'),
-                                ],
-                              ),
-                              color: colorLightBlue,
-                              onPressed: () {
-                                context.bloc<PageBloc>().add(GoToMateriPage());
-                              }),
-                        ),
+                                  color: colorLightBlue,
+                                  onPressed: () {
+                                    context.bloc<PageBloc>().add(GoToMateriPage());
+                                  }),
+                            ),
 
-                        // BUTTON QUIZ
-                        Container(
-                          width: 300,
-                          height: 46,
-                          margin: EdgeInsets.only(bottom: 24),
-                          child: RaisedButton(
-                              elevation: 4,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                      'assets/icons/ramadhan-mubarak/png/qibla.png'),
-                                  SizedBox(
-                                    width: 56,
+                            // BUTTON QUIZ
+                            Container(
+                              width: 300,
+                              height: 46,
+                              margin: EdgeInsets.only(bottom: 24),
+                              child: RaisedButton(
+                                  elevation: 4,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/qibla.png'),
+                                      SizedBox(
+                                        width: 56,
+                                      ),
+                                      Text(
+                                        "Quiz",
+                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "Quiz",
-                                    style: whiteTextFont.copyWith(fontSize: 24),
-                                  ),
-                                ],
-                              ),
-                              color: colorLightBlue,
-                              onPressed: () {
-                                context.bloc<PageBloc>().add(GoToQuizPage());
-                              }),
-                        ),
+                                  color: colorLightBlue,
+                                  onPressed: () {
+                                    context.bloc<PageBloc>().add(GoToQuizPage());
+                                  }),
+                            ),
 
-                        // BUTTON VIDEO PRAKTIK
-                        Container(
-                          width: 300,
-                          height: 46,
-                          margin: EdgeInsets.only(bottom: 72),
-                          child: RaisedButton(
-                              elevation: 4,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    "Video Praktik",
-                                    style: whiteTextFont.copyWith(fontSize: 24),
+                            // BUTTON VIDEO PRAKTIK
+                            Container(
+                              width: 300,
+                              height: 46,
+                              margin: EdgeInsets.only(bottom: 72),
+                              child: RaisedButton(
+                                  elevation: 4,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        "Video Praktik",
+                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                      ),
+                                      SizedBox(
+                                        width: 12,
+                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/muslim-man.png'),
+                                    ],
                                   ),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Image.asset(
-                                      'assets/icons/ramadhan-mubarak/png/muslim-man.png'),
-                                ],
-                              ),
-                              color: colorLightBlue,
-                              onPressed: () {
-                                context.bloc<PageBloc>().add(GoToVideoPage());
-                              }),
+                                  color: colorLightBlue,
+                                  onPressed: () {
+                                    context.bloc<PageBloc>().add(GoToVideoPage());
+                                  }),
+                            ),
+                          ],
                         ),
                       ],
                     )

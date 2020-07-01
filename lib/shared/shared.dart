@@ -152,4 +152,13 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
   }
 }
 
+// DIGUNAKAN SEBAGAI DATA RADIO BUTTON
+class MyChoice {
+  String choice;
+  int index;
+  bool verdict;
+  int questionN;
+  MyChoice({this.index, this.choice, this.verdict, this.questionN});
+}
+
 //file ini berisikan objek2 yang menyimpan data

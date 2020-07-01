@@ -33,150 +33,154 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
             ),
+            // TITLE QUIZ
+            Center(
+              child: Text(
+                "Quiz",
+                style: blackTextFont.copyWith(
+                    fontSize: 24, fontWeight: FontWeight.w700),
+              ),
+            ),
+            // SUBTITLE PILIH QUIZ
+            Container(
+              // height: 50,
+              // margin: EdgeInsets.only(top: 5),
+              alignment: Alignment.center,
+              child: Text("Pilih Quiz",
+                  style: blackTextFont.copyWith(
+                      fontSize: 14, fontWeight: FontWeight.w700)),
+            ),
+            // ICON UTAMA
+            Container(
+              height: 70,
+              margin: EdgeInsets.only(bottom: 48, top: 36),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                          "assets/icons/ramadhan-mubarak/png/qibla.png"))),
+            ),
             Expanded(
-              child: Column(
+              child: ListView(
                 children: [
-                  // TITLE QUIZ
-                  Center(
-                    child: Text(
-                      "Quiz",
-                      style: blackTextFont.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  // SUBTITLE PILIH QUIZ
-                  Container(
-                    // height: 50,
-                    // margin: EdgeInsets.only(top: 5),
-                    alignment: Alignment.center,
-                    child: Text("Pilih Quiz",
-                        style: blackTextFont.copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700)),
-                  ),
-                  // ICON UTAMA
-                  Container(
-                    height: 70,
-                    margin: EdgeInsets.only(bottom: 48, top: 36),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/icons/ramadhan-mubarak/png/qibla.png"))),
-                  ),
-                  // BUTTON THAHARAH
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Thaharah",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                  Column(
+                    children: [
+                      // BUTTON THAHARAH
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Thaharah",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorLightBlue,
-                        onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizThaharahPage());
-                        }),
-                  ),
-                  // BUTTON SHOLAT
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Sholat",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                            color: colorLightBlue,
+                            onPressed: () {
+                               context.bloc<PageBloc>().add(GoToQuizThaharahPage());
+                            }),
+                      ),
+                      // BUTTON SHOLAT
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Sholat",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorLightBlue,
-                        onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizSholatPage());
-                        }),
-                  ),
-                  // BUTTON PUASA
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Puasa",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                            color: colorLightBlue,
+                            onPressed: () {
+                               context.bloc<PageBloc>().add(GoToQuizSholatPage());
+                            }),
+                      ),
+                      // BUTTON PUASA
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Puasa",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorLightBlue,
-                        onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizPuasaPage());
-                        }),
-                  ),
+                            color: colorLightBlue,
+                            onPressed: () {
+                               context.bloc<PageBloc>().add(GoToQuizPuasaPage());
+                            }),
+                      ),
 
-                  // BUTTON ZAKAT
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Zakat",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                      // BUTTON ZAKAT
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Zakat",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorLightBlue,
-                        onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizZakatPage());
-                        }),
-                  ),
-                  // BUTTON JENAZAH
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Jenazah",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                            color: colorLightBlue,
+                            onPressed: () {
+                               context.bloc<PageBloc>().add(GoToQuizZakatPage());
+                            }),
+                      ),
+                      // BUTTON JENAZAH
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Jenazah",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorLightBlue,
-                        onPressed: () {
-                           context.bloc<PageBloc>().add(GoToQuizJenazahPage());
-                        }),
+                            color: colorLightBlue,
+                            onPressed: () {
+                               context.bloc<PageBloc>().add(GoToQuizJenazahPage());
+                            }),
+                      ),
+                    ],
                   ),
                 ],
               ),

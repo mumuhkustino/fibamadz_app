@@ -29,20 +29,16 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
               height: 56,
               child: Row(
                 children: <Widget>[
-                  
                   // BUTTON BACK TO MUQODDIMAH PAGE
                   Align(
                     alignment: Alignment.centerLeft,
                     child: GestureDetector(
                       onTap: () {
                         if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMuqoddimahPage());
+                          context.bloc<PageBloc>().add(GoToMuqoddimahPage());
                         } else {
                           setState(() {
-                            if (searchController.text.compareTo("") ==
-                                0) {
+                            if (searchController.text.compareTo("") == 0) {
                               isClickedSearch = false;
                             } else {
                               searchController.text = "";
@@ -60,25 +56,21 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                               color: Colors.black.withOpacity(0.54))),
                     ),
                   ),
-                  
+
                   // TEXT FIELD SEARCH TEXT
                   Center(
                       child: (isClickedSearch)
                           ? Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
+                              width: MediaQuery.of(context).size.width * 6 / 8,
                               child: TextField(
-                                autofocus: (searchController.text.compareTo("") == 0),
+                                autofocus:
+                                    (searchController.text.compareTo("") == 0),
                                 controller: searchController,
-                                decoration:
-                                    InputDecoration(hintText: "Search"),
+                                decoration: InputDecoration(hintText: "Search"),
                               ),
                             )
                           : Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
+                              width: MediaQuery.of(context).size.width * 6 / 8,
                             )),
                   // BUTTON SEARCH
                   Align(
@@ -104,25 +96,26 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
                 ],
               ),
             ),
+            // TITLE MUQODDIMAH
+            Center(
+                child: Text(
+              "Muqoddimah",
+              style: blackTextFont.copyWith(
+                  fontSize: 24, fontWeight: FontWeight.w700),
+            )),
+            // TITLE KITAB
+            Center(
+                child: Text(
+              "Kitab",
+              style: blackTextFont.copyWith(fontSize: 14),
+            )),
             Expanded(
               child: ListView(
                 children: [
-                  // TITLE MUQODDIMAH
-                  Center(
-                      child: Text(
-                        "Muqoddimah",
-                        style: blackTextFont.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w700),
-                      )),
-                  // TITLE KITAB
-                  Center(
-                      child: Text(
-                        "Kitab",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      )),
                   // TEXT MUQODDIMAH KITAB
                   Container(
-                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    margin: EdgeInsets.only(
+                        top: 44, left: 24, right: 24, bottom: 24),
                     child: SelectableText.rich(
                       searchFromText(text, searchText),
                       textAlign: TextAlign.center,

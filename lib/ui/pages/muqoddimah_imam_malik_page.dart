@@ -36,13 +36,10 @@ class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
                     child: GestureDetector(
                       onTap: () {
                         if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMuqoddimahPage());
+                          context.bloc<PageBloc>().add(GoToMuqoddimahPage());
                         } else {
                           setState(() {
-                            if (searchController.text.compareTo("") ==
-                                0) {
+                            if (searchController.text.compareTo("") == 0) {
                               isClickedSearch = false;
                             } else {
                               searchController.text = "";
@@ -64,22 +61,16 @@ class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
                   Center(
                       child: (isClickedSearch)
                           ? Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
+                              width: MediaQuery.of(context).size.width * 6 / 8,
                               child: TextField(
-                                autofocus: (searchController.text
-                                        .compareTo("") ==
-                                    0),
+                                autofocus:
+                                    (searchController.text.compareTo("") == 0),
                                 controller: searchController,
-                                decoration:
-                                    InputDecoration(hintText: "Search"),
+                                decoration: InputDecoration(hintText: "Search"),
                               ),
                             )
                           : Container(
-                              width: MediaQuery.of(context).size.width *
-                                  6 /
-                                  8,
+                              width: MediaQuery.of(context).size.width * 6 / 8,
                             )),
                   // BUTTON SEARCH
                   Align(
@@ -105,25 +96,26 @@ class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
                 ],
               ),
             ),
+            // TITLE SEJARAH IMAM
+            Center(
+                child: Text(
+              "Sejarah Imam",
+              style: blackTextFont.copyWith(
+                  fontSize: 24, fontWeight: FontWeight.w700),
+            )),
+            // TITLE MALIK
+            Center(
+                child: Text(
+              "Malik",
+              style: blackTextFont.copyWith(fontSize: 14),
+            )),
             Expanded(
               child: ListView(
                 children: [
-                  // TITLE SEJARAH IMAM
-                  Center(
-                      child: Text(
-                        "Sejarah Imam",
-                        style: blackTextFont.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w700),
-                      )),
-                  // TITLE MALIK
-                  Center(
-                      child: Text(
-                        "Malik",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      )),
                   // TEXT SEJARAH IMAM MALIK
                   Container(
-                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    margin: EdgeInsets.only(
+                        top: 44, left: 24, right: 24, bottom: 24),
                     child: SelectableText.rich(
                       searchFromText(text, searchText),
                       textAlign: TextAlign.center,

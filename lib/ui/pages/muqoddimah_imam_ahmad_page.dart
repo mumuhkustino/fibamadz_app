@@ -2,7 +2,8 @@ part of 'pages.dart';
 
 class MuqoddimahImamAhmadPage extends StatefulWidget {
   @override
-  _MuqoddimahImamAhmadPageState createState() => _MuqoddimahImamAhmadPageState();
+  _MuqoddimahImamAhmadPageState createState() =>
+      _MuqoddimahImamAhmadPageState();
 }
 
 class _MuqoddimahImamAhmadPageState extends State<MuqoddimahImamAhmadPage> {
@@ -11,7 +12,7 @@ class _MuqoddimahImamAhmadPageState extends State<MuqoddimahImamAhmadPage> {
   bool isFocusSearch = false;
   String searchText;
   final text =
-  '''Dinamakan Hanbali, karena pendirinya Al-Imam Ahmad bin Hanbal As-Syaebani, lahir di Baghdad Th 164 H dan wafat Th 248 H. Beliau adalah murid Imam Syafi’i yang paling istimewa dan tidak pernah pisah sampai Imam Syafi’i pergi ke Mesir.
+      '''Dinamakan Hanbali, karena pendirinya Al-Imam Ahmad bin Hanbal As-Syaebani, lahir di Baghdad Th 164 H dan wafat Th 248 H. Beliau adalah murid Imam Syafi’i yang paling istimewa dan tidak pernah pisah sampai Imam Syafi’i pergi ke Mesir.
 
 Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang afdal (fadlailul a'mal) bukan untuk menentukan hukum. Beliau tidak mengaku adanya Ijma’ setelah sahabat karena ulama sangat banyak dan tersebar luas.
 ''';
@@ -38,13 +39,10 @@ Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang
                     child: GestureDetector(
                       onTap: () {
                         if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMuqoddimahPage());
+                          context.bloc<PageBloc>().add(GoToMuqoddimahPage());
                         } else {
                           setState(() {
-                            if (searchController.text.compareTo("") ==
-                                0) {
+                            if (searchController.text.compareTo("") == 0) {
                               isClickedSearch = false;
                             } else {
                               searchController.text = "";
@@ -66,23 +64,17 @@ Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang
                   Center(
                       child: (isClickedSearch)
                           ? Container(
-                        width: MediaQuery.of(context).size.width *
-                            6 /
-                            8,
-                        child: TextField(
-                          autofocus: (searchController.text
-                              .compareTo("") ==
-                              0),
-                          controller: searchController,
-                          decoration:
-                          InputDecoration(hintText: "Search"),
-                        ),
-                      )
+                              width: MediaQuery.of(context).size.width * 6 / 8,
+                              child: TextField(
+                                autofocus:
+                                    (searchController.text.compareTo("") == 0),
+                                controller: searchController,
+                                decoration: InputDecoration(hintText: "Search"),
+                              ),
+                            )
                           : Container(
-                        width: MediaQuery.of(context).size.width *
-                            6 /
-                            8,
-                      )),
+                              width: MediaQuery.of(context).size.width * 6 / 8,
+                            )),
                   // BUTTON SEARCH
                   Align(
                     alignment: Alignment.centerRight,
@@ -107,25 +99,26 @@ Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang
                 ],
               ),
             ),
+            // TITLE SEJARAH IMAM
+            Center(
+                child: Text(
+              "Sejarah Imam",
+              style: blackTextFont.copyWith(
+                  fontSize: 24, fontWeight: FontWeight.w700),
+            )),
+            // TITLE AHMAD
+            Center(
+                child: Text(
+              "Ahmad",
+              style: blackTextFont.copyWith(fontSize: 14),
+            )),
             Expanded(
               child: ListView(
                 children: [
-                  // TITLE SEJARAH IMAM
-                  Center(
-                      child: Text(
-                        "Sejarah Imam",
-                        style: blackTextFont.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w700),
-                      )),
-                  // TITLE AHMAD
-                  Center(
-                      child: Text(
-                        "Ahmad",
-                        style: blackTextFont.copyWith(fontSize: 14),
-                      )),
                   // TEXT SEJARAH IMAM AHMAD
                   Container(
-                    margin: EdgeInsets.only(top: 44, left: 24, right: 24, bottom: 24),
+                    margin: EdgeInsets.only(
+                        top: 44, left: 24, right: 24, bottom: 24),
                     child: SelectableText.rich(
                       searchFromText(text, searchText),
                       textAlign: TextAlign.center,

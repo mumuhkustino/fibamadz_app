@@ -33,82 +33,86 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
                 ),
               ),
             ),
+            // TITLE MATERI
+            Center(
+              child: Text(
+                "Materi",
+                style: blackTextFont.copyWith(
+                    fontSize: 24, fontWeight: FontWeight.w700),
+              ),
+            ),
+            // SUBTITLE
+            Container(
+              alignment: Alignment.center,
+              child: Text("Sholat",
+                  style: blackTextFont.copyWith(
+                      fontSize: 14, fontWeight: FontWeight.w700)),
+            ),
+            // ICON UTAMA
+            Container(
+              height: 70,
+              margin: EdgeInsets.only(bottom: 48, top: 36),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                          "assets/icons/ramadhan-mubarak/png/islamic-friday-prayer.png"))),
+            ),
             Expanded(
-              child: Column(
+              child: ListView(
                 children: [
-                  // TITLE MATERI
-                  Center(
-                    child: Text(
-                      "Materi",
-                      style: blackTextFont.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  // SUBTITLE
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text("Sholat",
-                        style: blackTextFont.copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700)),
-                  ),
-                  // ICON UTAMA
-                  Container(
-                    height: 70,
-                    margin: EdgeInsets.only(bottom: 48, top: 36),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/icons/ramadhan-mubarak/png/islamic-friday-prayer.png"))),
-                  ),
-                  // BUTTON SHOLAT FARDU
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "1. Sholat Fardu",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                  Column(
+                    children: [
+                      // BUTTON SHOLAT FARDU
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "1. Sholat Fardu",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorDarkGrey,
-                        onPressed: () {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMateriSholatFarduPage());
-                        }),
-                  ),
-                  // BUTTON SHOLAT SUNAT
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "2. Sholat Sunat",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                            color: colorDarkGrey,
+                            onPressed: () {
+                              context
+                                  .bloc<PageBloc>()
+                                  .add(GoToMateriSholatFarduPage());
+                            }),
+                      ),
+                      // BUTTON SHOLAT SUNAT
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "2. Sholat Sunat",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorDarkGrey,
-                        onPressed: () {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMateriSholatSunatPage());
-                        }),
+                            color: colorDarkGrey,
+                            onPressed: () {
+                              context
+                                  .bloc<PageBloc>()
+                                  .add(GoToMateriSholatSunatPage());
+                            }),
+                      ),
+                    ],
                   ),
                 ],
               ),

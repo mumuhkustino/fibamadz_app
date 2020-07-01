@@ -48,7 +48,6 @@ part 'quiz_sholat_score.dart';
 part 'quiz_puasa_score.dart';
 part 'quiz_zakat_score.dart';
 part 'quiz_jenazah_score.dart';
-part 'quiz_my_choice.dart';
 
 part 'materi_jenazah_memandikan_page.dart';
 part 'materi_jenazah_mengkafani_page.dart';
