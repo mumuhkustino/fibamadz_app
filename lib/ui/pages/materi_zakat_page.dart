@@ -34,78 +34,82 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
                 ),
               ),
             ),
+            // TITLE MATERI
+            Center(
+              child: Text(
+                "Materi",
+                style: blackTextFont.copyWith(
+                    fontSize: 24, fontWeight: FontWeight.w700),
+              ),
+            ),
+            // SUBTITLE
+            Container(
+              alignment: Alignment.center,
+              child: Text("Zakat",
+                  style: blackTextFont.copyWith(
+                      fontSize: 14, fontWeight: FontWeight.w700)),
+            ),
+            // ICON UTAMA
+            Container(
+              height: 70,
+              margin: EdgeInsets.only(bottom: 48, top: 36),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                          "assets/icons/ramadhan-mubarak/png/sadaqah.png"))),
+            ),
             Expanded(
-              child: Column(
+              child: ListView(
                 children: [
-                  // TITLE MATERI
-                  Center(
-                    child: Text(
-                      "Materi",
-                      style: blackTextFont.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  // SUBTITLE
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text("Zakat",
-                        style: blackTextFont.copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700)),
-                  ),
-                  // ICON UTAMA
-                  Container(
-                    height: 70,
-                    margin: EdgeInsets.only(bottom: 48, top: 36),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/icons/ramadhan-mubarak/png/sadaqah.png"))),
-                  ),
-                  // BUTTON ZAKAT FITRAH
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "1. Zakat Fitrah",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                  Column(
+                    children: [
+                      // BUTTON ZAKAT FITRAH
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "1. Zakat Fitrah",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorDarkGrey,
-                        onPressed: () {
-                            context.bloc<PageBloc>().add(GoToMateriZakatFitrahPage());
-                        }),
-                  ),
-                  // BUTTON ZAKAT MAL
-                  Container(
-                    width: 300,
-                    height: 46,
-                    margin: EdgeInsets.only(bottom: 24),
-                    child: RaisedButton(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "2. Zakat Mal",
-                              style: whiteTextFont.copyWith(fontSize: 22),
+                            color: colorDarkGrey,
+                            onPressed: () {
+                                context.bloc<PageBloc>().add(GoToMateriZakatFitrahPage());
+                            }),
+                      ),
+                      // BUTTON ZAKAT MAL
+                      Container(
+                        width: 300,
+                        height: 46,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: RaisedButton(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "2. Zakat Mal",
+                                  style: whiteTextFont.copyWith(fontSize: 22),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        color: colorDarkGrey,
-                        onPressed: () {
-                            context.bloc<PageBloc>().add(GoToMateriZakatMalPage());
-                        }),
+                            color: colorDarkGrey,
+                            onPressed: () {
+                                context.bloc<PageBloc>().add(GoToMateriZakatMalPage());
+                            }),
+                      ),
+                    ],
                   ),
                 ],
               ),
