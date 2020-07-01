@@ -161,4 +161,6 @@ class MyChoice {
   MyChoice({this.index, this.choice, this.verdict, this.questionN});
 }
 
+var score = 0;
+var verdict = [false, false];
 //file ini berisikan objek2 yang menyimpan data

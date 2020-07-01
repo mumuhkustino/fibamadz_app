@@ -53,6 +53,3 @@ part 'materi_jenazah_memandikan_page.dart';
 part 'materi_jenazah_mengkafani_page.dart';
 part 'materi_jenazah_menyolatkan_page.dart';
 part 'materi_jenazah_menguburkan_page.dart';
-
-var score = 0;
-var verdict = [false, false];
