@@ -22,6 +22,28 @@ class _SplashPageState extends State<SplashPage> {
         backgroundColor: colorYellow,
         body: Stack(
           children: [
+            //GAMBAR AWAN KECIL
+            Positioned(
+              right: -MediaQuery.of(context).size.width / 4,
+              child: Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: MediaQuery.of(context).size.height * 6 / 9,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/icons/cloud.png")))
+                  ),
+            ),
+            //GAMBAR AWAN BESAR
+            Positioned(
+              left: -MediaQuery.of(context).size.width * 4 / 9,
+              child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 10 / 9,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/icons/cloud.png")))
+                  ),
+            ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: defaultMargin),
               child: Column(
@@ -56,35 +78,13 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
-            //GAMBAR AWAN KECIL
-            Positioned(
-              right: -MediaQuery.of(context).size.width / 4,
-              child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.height * 6 / 9,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/icons/cloud.png")))
-                  ),
-            ),
-            //GAMBAR AWAN BESAR
-            Positioned(
-              left: -MediaQuery.of(context).size.width * 4 / 9,
-              child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 10 / 9,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/icons/cloud.png")))
-                  ),
-            ),
             //BUTTON BAWAH
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: 250,
                 height: 46,
-                margin: EdgeInsets.only(top: 70, bottom: 72),
+                margin: EdgeInsets.only(bottom: 72),
                 child: RaisedButton(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
