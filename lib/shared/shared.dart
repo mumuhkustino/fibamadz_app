@@ -5,13 +5,16 @@ PageEvent prevPageEvent;
 
 const double defaultMargin = 24;
 
-Color colorYellow = Color(0xFFF9C22E);
+//Color colorYellow = Color(0xFFF9C22E);
+Color colorLightGreen = Color(0xFF81EE96);
 Color colorLightYellow = Color(0xFFFFFACD);
 Color colorPink = Color(0xFFE01A4F);
-Color colorLightBlue = Color(0xFF56CCF2);
+//Color colorLightBlue = Color(0xFF56CCF2);
+Color colorGreen = Color(0xFF019000);
 Color colorBluePastel = Color(0xFF69DAC6);
 Color colorDarkGrey = Color(0xFF4F4F4F);
-Color colorCream = Color(0xFFFFFAEB);
+//Color colorCream = Color(0xFFFFFAEB);
+Color colorGreenCream = Color(0xFF9FF19A);
 
 Color colorTextWhite = Color(0xFFFFFBFB);
 Color colorTextBlack = Color(0xFF000000);
@@ -34,7 +37,7 @@ TextSpan searchFromText(String fullText, String searchText) {
     if (refinedFullText.substring(0, refinedSearchText.length) ==
         refinedSearchText) {
       return TextSpan(
-        style: blackTextFont.copyWith(backgroundColor: colorYellow),
+        style: blackTextFont.copyWith(backgroundColor: colorLightGreen),
         text: fullText.substring(0, refinedSearchText.length),
         children: [
           searchFromText(
@@ -44,7 +47,7 @@ TextSpan searchFromText(String fullText, String searchText) {
     } else if (refinedFullText.length == refinedSearchText.length) {
       return TextSpan(
           text: fullText,
-          style: blackTextFont.copyWith(backgroundColor: colorYellow));
+          style: blackTextFont.copyWith(backgroundColor: colorLightGreen));
     } else {
       return TextSpan(
         style: blackTextFont,
@@ -85,21 +88,7 @@ class Entry {
 List<Widget> getChildrenWidgets(List<Entry> entries, String searchText) {
   List<Widget> listWidget = <Widget>[];
   for (var entry in entries) {
-    listWidget.add(ExpansionTile(
-      title: Text(entry.title),
-      children: (entry.children.isEmpty)
-          ? <Widget>[
-              Container(
-                margin: EdgeInsets.only(left: 16, right: 16),
-                child: SelectableText.rich(
-                  searchFromText(entry.content, searchText),
-                  textScaleFactor: 1.2,
-                  style: blackTextFont,
-                ),
-              )
-            ]
-          : getChildrenWidgets(entry.children, searchText),
-    ));
+    listWidget.add(addWidgets(entry, searchText));
   }
   return listWidget;
 }
@@ -150,6 +139,53 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
   } else {
     return entries;
   }
+}
+
+Widget addWidgets(Entry entry, String searchText) {
+  return entry.title.length > 0 && entry.title != ''
+      ? Theme(
+      data: ThemeData(accentColor: colorGreen),
+      child: ExpansionTile(
+          title: Text(entry.title),
+          children: (entry.children.isEmpty)
+              ? <Widget>[
+            Container(
+              margin: EdgeInsets.only(
+                  left: 16, right: 16),
+              child: SelectableText.rich(
+                searchFromText(
+                    entry.content,
+                    searchText),
+                textScaleFactor: 1.2,
+                style: blackTextFont,
+              ),
+            )
+          ]
+              : getChildrenWidgets(
+              entry.children,
+              searchText)))
+      : Container(
+    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    child: SelectableText.rich(
+      searchFromText(
+          entry.content, searchText),
+      textScaleFactor: 1.2,
+      style: blackTextFont,
+    ),
+  );
+}
+
+Expanded buildList(List<Entry> entries, String searcText) {
+  List<Widget> widgets = [];
+  for(int i = 0; i < entries.length; i++) {
+    widgets.add(addWidgets(entries[i], searcText));
+  }
+  return Expanded(
+    child: ListView(
+      padding: EdgeInsets.only(top: 0),
+      children: widgets,
+    ),
+  );
 }
 
 // DIGUNAKAN SEBAGAI DATA RADIO BUTTON
