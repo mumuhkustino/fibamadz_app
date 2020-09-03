@@ -14,7 +14,7 @@ class _MateriPageState extends State<MateriPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             // BUTTON KEMBALI KE MAIN PAGE
@@ -52,7 +52,7 @@ class _MateriPageState extends State<MateriPage> {
             // ICON UTAMA
             Container(
               height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
+              margin: EdgeInsets.only(top: 24, bottom: 24),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -81,7 +81,7 @@ class _MateriPageState extends State<MateriPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -106,11 +106,11 @@ class _MateriPageState extends State<MateriPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
-                                  .add(GoToMateriSholatPage());
+                                  .add(GoToMateriSholatFarduPage());
                             }),
                       ),
                       // BUTTON PUASA
@@ -131,7 +131,7 @@ class _MateriPageState extends State<MateriPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -156,11 +156,11 @@ class _MateriPageState extends State<MateriPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
-                                  .add(GoToMateriZakatPage());
+                                  .add(GoToMateriZakatFitrahPage());
                             }),
                       ),
                       // BUTTON JENAZAH
@@ -181,7 +181,7 @@ class _MateriPageState extends State<MateriPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()

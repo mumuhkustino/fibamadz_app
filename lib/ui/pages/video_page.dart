@@ -64,7 +64,7 @@ class _VideoPageState extends State<VideoPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             // BUTTON KEMBALI KE MAIN PAGE
@@ -103,7 +103,7 @@ class _VideoPageState extends State<VideoPage> {
             // ICON MUSLIM MAN
             Container(
               height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
+              margin: EdgeInsets.only(bottom: 24, top: 24),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -132,7 +132,7 @@ class _VideoPageState extends State<VideoPage> {
                               ),
                             ],
                           ),
-                          color: colorLightBlue,
+                          color: colorGreen,
                           onPressed: _launchVidThaharah,
                         ),
                       ),
@@ -154,7 +154,7 @@ class _VideoPageState extends State<VideoPage> {
                               ),
                             ],
                           ),
-                          color: colorLightBlue,
+                          color: colorGreen,
                           onPressed: _launchVidSholat,
                         ),
                       ),
@@ -176,7 +176,7 @@ class _VideoPageState extends State<VideoPage> {
                               ),
                             ],
                           ),
-                          color: colorLightBlue,
+                          color: colorGreen,
                           onPressed: _launchVidPuasa,
                         ),
                       ),
@@ -198,7 +198,7 @@ class _VideoPageState extends State<VideoPage> {
                               ),
                             ],
                           ),
-                          color: colorLightBlue,
+                          color: colorGreen,
                           onPressed: _launchVidZakat,
                         ),
                       ),
@@ -220,7 +220,7 @@ class _VideoPageState extends State<VideoPage> {
                               ),
                             ],
                           ),
-                          color: colorLightBlue,
+                          color: colorGreen,
                           onPressed: _launchVidJenazah,
                         ),
                       ),

@@ -17,29 +17,39 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
-            // BUTTON PREVIOUS
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 22),
-              height: 56,
-            ),
-            // END OF BUTTON PREVIOUS
-            Center(
-              child: Text(
-                "Quiz",
-                style: blackTextFont.copyWith(
-                    fontSize: 24, fontWeight: FontWeight.w700),
+              color: colorGreenCream,
+              child: Column(
+                children: [
+                  // BUTTON PREVIOUS
+                  Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 22),
+                    height: 56,
+                  ),
+                  // END OF BUTTON PREVIOUS
+                  Center(
+                    child: Text(
+                      "Kuis",
+                      style: blackTextFont.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Center(
+                      child: Text(
+                        "Zakat",
+                        style: blackTextFont.copyWith(fontSize: 14),
+                      ),
+                    ),
+                  ),
+                  // TITLE DAN SUBTITLE
+                ],
               ),
             ),
-            Center(
-              child: Text(
-                "Zakat",
-                style: blackTextFont.copyWith(fontSize: 14),
-              ),
-            ),
-            // TITLE DAN SUBTITLE
             Expanded(
               child: ListView(
                 children: [
@@ -47,7 +57,6 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
                     children: [
                       // SCORE TEXT
                       Container(
-                        margin: EdgeInsets.only(top: 72),
                         child: Center(
                           child: Text(
                             "Score",
@@ -64,7 +73,7 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                 image:
-                                    AssetImage("assets/icons/Ellipse-$score.png"),
+                                AssetImage("assets/icons/Ellipse-$score.png"),
                               ),
                             ),
                           ),
@@ -84,7 +93,7 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
                       Container(
                         width: 200,
                         height: 36,
-                        margin: EdgeInsets.only(top: 150),
+                        margin: EdgeInsets.only(top:40, bottom: 40),
                         child: RaisedButton(
                           elevation: 4,
                           shape: RoundedRectangleBorder(
@@ -93,12 +102,12 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Back to Menu",
+                                "Kembali Ke Menu Awal",
                                 style: whiteTextFont.copyWith(fontSize: 14),
                               ),
                             ],
                           ),
-                          color: colorDarkGrey,
+                          color: colorGreen,
                           onPressed: () {
                             context.bloc<PageBloc>().add(GoToMainPage());
                           },

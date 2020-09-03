@@ -19,31 +19,31 @@ class _SplashPageState extends State<SplashPage> {
     ]);
 
     return Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Stack(
           children: [
-            //GAMBAR AWAN KECIL
-            Positioned(
-              right: -MediaQuery.of(context).size.width / 4,
-              child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.height * 6 / 9,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/icons/cloud.png")))
-                  ),
-            ),
-            //GAMBAR AWAN BESAR
-            Positioned(
-              left: -MediaQuery.of(context).size.width * 4 / 9,
-              child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 10 / 9,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/icons/cloud.png")))
-                  ),
-            ),
+//            //GAMBAR AWAN KECIL
+//            Positioned(
+//              right: -MediaQuery.of(context).size.width / 4,
+//              child: Container(
+//                  width: MediaQuery.of(context).size.width / 2,
+//                  height: MediaQuery.of(context).size.height * 6 / 9,
+//                  decoration: BoxDecoration(
+//                      image: DecorationImage(
+//                          image: AssetImage("assets/icons/cloud.png")))
+//                  ),
+//            ),
+//            //GAMBAR AWAN BESAR
+//            Positioned(
+//              left: -MediaQuery.of(context).size.width * 4 / 9,
+//              child: Container(
+//                  width: MediaQuery.of(context).size.width,
+//                  height: MediaQuery.of(context).size.height * 10 / 9,
+//                  decoration: BoxDecoration(
+//                      image: DecorationImage(
+//                          image: AssetImage("assets/icons/cloud.png")))
+//                  ),
+//            ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: defaultMargin),
               child: Column(
@@ -88,12 +88,12 @@ class _SplashPageState extends State<SplashPage> {
                 child: RaisedButton(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(12)),
                     child: Text(
                       "Mulai",
-                      style: whiteTextFont.copyWith(fontSize: 24),
+                      style: whiteTextFont.copyWith(fontSize: 22),
                     ),
-                    color: colorPink,
+                    color: colorGreen,
                     onPressed: () {
                       context.bloc<PageBloc>().add(GoToMainPage());
                     }),

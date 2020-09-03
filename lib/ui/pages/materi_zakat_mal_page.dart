@@ -103,7 +103,7 @@ https://id.wikipedia.org/wiki/Zakat_harta
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: colorGreenCream,
         body: Column(
           children: [
             Container(

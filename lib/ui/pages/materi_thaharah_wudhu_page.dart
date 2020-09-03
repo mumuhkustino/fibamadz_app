@@ -14,203 +14,253 @@ class _MateriThaharahWudhuPageState extends State<MateriThaharahWudhuPage> {
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
-    Entry('Pengertian Wudu', content: '''
-Wudu adalah salah satu cara menyucikan anggota tubuh dengan air. Seorang muslim diwajibkan bersuci setiap akan melaksanakan salat. Berwudu bisa pula menggunakan debu yang disebut dengan tayammum.
-'''),
-    Entry('Penggunaan air', children: <Entry>[
-      Entry('Jenis air yang diperkenankan', content: '''
-- Air hujan,
-- Air sumur,
-- Air terjun, laut atau sungai,
-- Air dari lelehan salju atau es batu,
-- Air dari tangki besar atau kolam.                                  
-'''),
-      Entry('Jenis air yang tidak diperkenankan', content: '''
-- Air yang tidak bersih atau ada najis,
-- Air sari buah atau pohon,
-- Air yang telah berubah warna, rasa dan bau dan menjadi pekat karena sesuatu telah direndam di dalamnya,
-- Air dengan jumlah sedikit (kurang dari 1000 liter) yang terkena sesuatu yang tidak bersih seperti urin, darah atau minuman anggur atau ada seekor binatang mati di dalamnya,
-- Air bekas wudu
-- Air yang tersisa setelah binatang haram meminumnya seperti anjing, babi atau binatang mangsa,
-- Air yang tersisa oleh seseorang yang telah mabuk karena khamr (minuman keras).
-'''),
+    Entry('Rukun', children: [
+      Entry('', content: '''Para ulama berrbeda pendapat ketika menyebutkan rukun wudhu. Ada yang menyebutkan 4 saja sebagaimana yang tercantum dalam ayat Quran, namun ada juga yang menambahinya dengan berdasarkan dalil dari Sunnah.'''),
+      Entry('Menurut Al-Hanafiyah', content: '''
+4 (empat) rukun menurut Al-Hanafiyah mengatakan bahwa rukun wudhu itu hanya ada 4 sebagaimana yang disebutkan dalam nash Quran.
+      '''),
+      Entry('Menurut Al-Malikiyah', content: '''
+7 (tujuh) rukun menurut Al-Malikiyah menambahkan dengan keharusan niat, ad-dalk yaitu menggosok anggota wudhu`. Sebab menurut beliau sekedar mengguyur anggota wudhu` dengan air masih belum bermakna mencuci atau membasuh. Juga beliau menambahkan kewajiban muwalat.
+      '''),
+      Entry('Menurut As-Syafi`iyah', content: '''
+6 (enam) rukun menurut As-Syafi`iyah menambahinya dengan niat dan tertib yaitu kewajiban untuk melakukannya pembasuhan dan usapan dengan urut, tidak boleh terbolak balik. Istilah yang beliau gunakan adalah harus tertib
+      '''),
+      Entry('Menurut Al-Hanabilah', content: '''
+7 (tujuh) rukun menurut Al-Hanabilah mengatakan bahwa harus niat, tertib dan muwalat, yaitu berkesinambungan. Maka tidak boleh terjadi jeda antara satu anggota dengan anggota yang lain yang sampai membuatnya kering dari basahnya air bekas wudhu`.
+      '''),
+      Entry('1. Niat', content: '''
+Niat wudhu` adalah ketetapan di dalam hati seseorang untuk melakukan serangkaian ritual yang bernama wudhu.
+      '''),
+      Entry('2. Membasuh Wajah', content: '''
+Para ulama menetapkan bahwa batasan wajah seseorang itu adalah tempat tumbuhnya rambut (manabit asy-sya`ri) hingga ke dagu dan dari batas telinga kanan hingga batas telinga kiri.
+      '''),
+      Entry('3. Membasuh kedua tangan hingga siku', content: '''
+Secara jelas disebutkan tentang keharusan membasuh tangan hingga ke siku. Dan para ulama mengatakan bahwa yang dimaksud adalah bahwa siku harus ikut dibasahi.
+      '''),
+      Entry('4. Mengusap kepala', content: '''
+Yang dimaksud dengan mengusap adalah meraba atau menjalankan tangan ke bagian yang diusap dengan membasahi tangan sebelumnya dengan air.
+
+- Al-Hanafiyah mengatakan bahwa yang wajib untuk diusap tidak semua bagian kepala, melainkan sekadar dari kepala. Yaitu mulai ubun-ubun dan di atas telinga.
+
+- Al-Malikiyah dan Al-Hanabilah mengatakan bahwa yang diwajib diusap pada bagian kepala adalah seluruh bagian kepala. Bahkan Al-Hanabilah mewajibkan untuk membasuh juga kedua telinga baik belakang maupun depannya.
+
+- Asy-syafi`iyyah mengatakan bahwa yang wajib diusap dengan air hanyalah sebagian dari kepala, meskipun hanya satu rambut saja. Dalil yang digunakan beliau adalah hadits Al-Mughirah : Bahwa Rasulullah SAW ketika berwudhu` mengusap ubun-ubunnya dan imamahnya (sorban yang melingkari kepala).
+      '''),
+      Entry('5. Mencuci kaki hingga mata kaki.', content: '''
+Menurut jumhur ulama, yang dimaksud dengan hingga mata kaki adalah membasahi mata kakinya itu juga.
+      '''),
+      Entry('6. Tartib', content: '''
+Yang dimaksud dengan tartib adalah mensucikan anggota wudhu secara berurutan dari yang awal hingga yang akhir.
+
+Al-Hanafiyah dan Al-Malikiyah tidak merupakan bagian dari fardhu wudhu`, melainkan hanya sunnah muakkadah. Akan halnya urutan yang disebutan di dalam Al-Quran, bagi mereka tidaklah mengisyaratkan kewajiban urut-urutan. bersikeras mengatakan bahwa tertib urutan anggota yang dibasuh merupakan bagian dari fardhu dalamwudhu`. Sebab demikianlah selalu datangnya perintah dan contoh praktek wudhu`nya Rasulullah SAW. Tidak pernah diriwayatkan bahwa beliau berwudhu` dengan terbalik-balik urutannya. Dan membasuh anggota dengan cara sekaligus semua dibasahi tidak dianggap syah.
+      '''),
+      Entry('7. Al-Muwalat / Tidak Terputus', content: '''
+Maksudnya adalah tidak adanya jeda yang lama ketika berpindah dari membasuh satu anggota wudhu` ke anggota wudhu` yang lainnya. Ukurannya menurut para ulama adalah selama belum sampai mengering air wudhu`nya itu.
+      '''),
+      Entry('8. Ad-Dalk', content: '''
+Yang dimaksud dengan ad-dalk adalah mengosokkan tangan ke atas anggota wudhu setelah dibasahi dengan air dan sebelum sempat kering. Hal ini tidak menjadi kewajiban menurut jumhur ulama, namun khusus Al-Malikiyah mewajibkannya. Sebab sekedar menguyurkan air ke atas anggota tubuh tidak bisa dikatakan membasuh seperti yang dimaksud dalam Al-Quran.
+      '''),
     ]),
-    Entry('Hukum Wudu', children: <Entry>[
-      Entry('Wajib', content: '''
-Pelaksanaan wudu wajib dilakukan oleh umat Muslim, ketika hendak melakukan ibadah salat, thawaf di Ka'bah, dan menyentuh al-Qur'an. Berwudu untuk menyentuh al-Qur'an menurut pendapat para ulama empat madzhab adalah wajib, berdasarkan salah satu surah dalam al-Qu'ran, yang berbunyi:
+    Entry('HAL-HAL YANG MEMBATALKAN WUDHU', children: [
+      Entry('1. Keluarnya sesuatu lewat dua lubang qubul atau dubur', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal jika kelua sesuatu yang lazim juga dari lubang yang lazim
+- As-Syafi`i Batal
+- Al-hanabalah Batal
 
-"Sesungguhnya Al-Qur'an ini adalah bacaan yang sangat mulia, pada kitab yang terpelihara (Lauhul Mahfuzh), tidak menyentuhnya kecuali orang-orang yang disucikan. (Al Waaqi'ah 56:77-79)"
+Menurut al-Malikiyah keluar sesuatu yang tidak lazim seperti batu, darah atau nanah tidak membatalkan wudhu’ jika sesuatu tersebut terbentuk didalam usus (bukan karena menelan batu).
+      '''),
+      Entry('2. Tidur yang bukan dalam posisi tamakkun di atas bumi (tidak memungkinkan keluar sesuatu dari dubur)', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal jika pulas
+- As-Syafi`i Batal
+- Al-hanabalah Batal walaupun dalam posisi tamakkun
 
-Sedangkan menurut pendapat kedua mengatakan bahwa yang dimaksud oleh surat Al Waaqi'ah di atas ialah: "Tidak ada yang dapat menyentuh Al-Qur'an yang ada di Lauhul Mahfudz sebagaimana ditegaskan oleh ayat yang sebelumnya (ayat 78) kecuali para malaikat yang telah disucikan oleh Allah." Pendapat ini adalah tafsir dari Ibnu Abbas dan lain-lain sebagaimana telah diterangkan oleh Al-Hafidzh Ibnu Katsir di tafsirnya. Bukanlah yang dimaksud bahwa tidak boleh menyentuh atau memegang Al-Qur'an kecuali orang yang bersih dari hadats besar dan hadats kecil.
+Menurut al-Hanabalah tidur membatalkan wudhu’ secara mutlaq.
 
-Pendapat kedua ini menyatakan bahwa jikalau memang benar demikian maksudnya tentang firman Allah di atas, maka artinya akan menjadi: Tidak ada yang menyentuh Al-Qur'an kecuali mereka yang suci (bersih), yakni dengan bentuk faa'il (subjek/pelaku) bukan maf'ul (objek). Kenyataannya Allah berfirman: "Tidak ada yang menyentuhnya (Al-Qur'an) kecuali mereka yang telah disucikan", yakni dengan bentuk maf'ul (objek) bukan sebagai faa'il (subjek).
+Menurut al-Malikiyah tidur pulas dapat membatalkan wudhu’ baik tamakkun aatau tidak, sementara tidur tidur ringan tidak membatalkan wudu’
+      '''),
+      Entry('3. Hilang Akal Karena Mabuk, Tidur Atau Sakit', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal
+- As-Syafi`i Batal
+- Al-hanabalah Batal
+      '''),
+      Entry('4. Menyentuh Kemaluan dengan telalapak tangan', content: '''
+- Al-Hanafiyah Tidak Batal
+- Al-Malikiyah Batal
+- As-Syafi`i Batal
+- Al-hanabalah Batal
 
-"Tidak ada yang menyentuh Al-Qur'an kecuali orang yang suci." Yang dimaksud oleh hadits di atas ialah: Tidak ada yang menyentuh Al-Qur'an kecuali orang mu'min, karena orang mu'min itu suci tidak najis sebagaimana sabda Muhammad. "Sesungguhnya orang mu'min itu tidak najis."
-'''),
-      Entry('Sunnah', children: <Entry>[
-        Entry(
-            'Wudu bersifat sunnah adalah bila akan mengerjakan hal-hal berikut ini:',
-            content: '''
-1. Mengulangi wudu untuk tiap salat
-2. Bagi setiap Muslim untuk selalu tampil dengan wudu
-3. Ketika hendak tidur, dalam keadaan junub
-4. Sebelum mandi wajib
-5. Ketika hendak mengulangi hubungan badan
-6. Ketika marah
-7. Ketika membaca al-Qur'an,
-8. Ketika Melantunkan azan dan iqamat,
-9. Ziarah ke makam Nabi Muhammad,
-10. Menyentuh kitab-kitab syar'i.
-'''),
-        Entry(
-            'Berikut sunah-sunah wudu yang biasa dilakukan oleh Nabi Muhammad:',
-            content: '''
-1. Bersiwak
-2. Mencuci kedua tangan sampai pergelangan tangan sebelum berwudu
-3. Mencuci anggota-anggota wudu sebanyak tiga kali, kecuali kepala hanya sekali
-4. Menyela-nyela jenggot yang tebal
-5. Menyela-nyela jari-jari kaki dan jari-jari tangan
-6. Menyeka (dalk)
-7. Mendahulukan tangan kanan daripada yang kiri dan kaki kanan daripada kaki kiri.
-8. Berdoa setelah berwudu.
-9. Menggunakan air wudu dengan hemat.
-''')
-      ])
+Menurut Madzhab Hanafi menyentuh kemaluan dengan tangan tidak batal wudu’.
+      '''),
+      Entry('5. Menyentuh kulit lawan jenis yang bukan mahram', content: '''
+- Al-Hanafiyah Tidak Batal
+- Al-Malikiyah Batal jika merasa lezat
+- As-Syafi`i Batal
+- Al-hanabalah Batal dengan syahwat
+
+Menurut as-Syafi’i membatalkan wudu’ tampa lapis selain rambut, kuku dan gigi.
+
+Menurut al-Hanafiyah tidak batal wudu’ samasekali.
+
+Menurut al-Malikiyah membatalkan wudhu’ apabila dengan kelezatan atau bermaksud kelezatan walaupun dengan lapis tipis, baik kulit, rambut. Juga Menyentuh amrod aljamil hukumnya sama.
+
+Menurut al-Hanabalah membatalkan wudhu’ dengan syahwat, Ajnabi atau Muhrim. Tidak batal wudu’ bagi yang di sentuh.
+      '''),
+      Entry('6. Keluarnya Sesuatu dari badan, seperti darah, nanah dan semacamnya, akibat luka atau lainnya', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Tidak Batal
+- As-Syafi`i Batal Tidak Batal
+- Al-hanabalah Tidak Batal
+      '''),
+      Entry('', content: '''
+Catatan :
+
+Mereka sepakat bahwa Murtad juga menyebabkan batalnya wudu’ kecuali al Hanafiyah.
+
+Namun al Hanafiyah berpendapat Ketawa dalam solat juga menyebabkan batal wudu’.
+
+Makan daging kambing atau unta menurut al-Hanabalah termasuk yang membatalkan wudu’, dan juga memandikan jenazah.
+
+Ragu terhadap hadats membatalkan wudu’ menurut al-Malikiyah.'''),
     ]),
-    Entry('Rukun Wudu', children: <Entry>[
-      Entry('Rukun berwudu yang disepakati ada empat:', content: '''
-1. Mencuci wajah,
-2. Mencuci tangan,
-3. Mengusap kepala,
-4. Mencuci kedua kaki.                                                 
-'''),
-      Entry('Rukun-rukun yang diperselisihkan adalah sebagai berikut:',
-          content: '''
-1. Tertib,
-2. Bersambungan (Muwalah).                                                 
-'''),
-    ]),
-    Entry('Pembatal Wudu', children: <Entry>[
-      Entry('Disepakati', content: '''
-Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya adalah:
+    Entry('AIR MUSTA’MAL : ', content: '''
+Pada dasarnya Madahibil Arba’ah berpandangan sama tentang Air Musta’mal yaitu air yang berpisah/ menites dari  tubuh yang digunakan untuk mengangkat hadats, atau untuk menghilangkan najis selama sifat-sifat air tidak berubah.
 
-1. Keluar sesuatu dari lubang kelamin dan anus, berupa tinja, kencing, kentut, dan semua hadats besar seperti keluarnya air mani, madzi, jima', haid, nifas,
-2. Tidur lelap (dalam keadaan tidak sadar),
-3. Hilangnya akal karena mabuk, pingsan dan gila,
-4. Memakan daging unta,
-5. Menyentuh kawasan sekitar anus (dubur).
-'''),
-      Entry('Diperselisihkan', content: '''
-1. Sentuhan laki-laki pada wanita yang mahram atau bukan tanpa penghalang, kemudian ada hadits yang menjelaskan bahwa bersentuhan tidak membatalkan wudu,
-2. Menyentuh kemaluan manusia dengan telapak tangan bagian dalam,
-3. Keluarnya darah istihadhah,
-4. Mimisan dan muntah,
-5. Mengangkat dan memandikan jenazah.
-''')
-    ]),
-    Entry('Sumber', content: '''
-https://id.wikipedia.org/wiki/Wudu
-''')
+Bersuci dengan cara memesukkan anggota tubuh ke dalam air sedikit (kurang dari 2 Qullah =190 Liter/ wadah berukuran 85 cm2 [syafi’i] ) maka air tersebut dihukumi Musta’mal setelah diangkatnya anggota tubuh.
+
+Air Musta’mal ini hukumnya suci tapi tidak bisa mensucikan. Artinya air itu suci tidak najis, bias digunaka dalam memasal dsb. tapi tidak bisa digunakan lagi m,ensucikan, Demikian menurut al-Madahib kecuali Malikiyah.
+
+Menurut al-Malikiyah Air musta’mal hukumnya suci dan mensucikan, Artinya, bisa dan sah digunakan lagi untuk berwudu` atau mandi bersuci, tetapi makruh apabila masih ada air yang tidak musta’mal
+
+Menurut as-Syafi’I Air musta’mal yang mencapai dua Qullah dengan sendirinya menjadi air suci dan mensucikan.
+      '''),
   ];
   // DATA YANG BERUBAH
   final List<Entry> dataText = <Entry>[
-    Entry('Pengertian Wudu', content: '''
-Wudu adalah salah satu cara menyucikan anggota tubuh dengan air. Seorang muslim diwajibkan bersuci setiap akan melaksanakan salat. Berwudu bisa pula menggunakan debu yang disebut dengan tayammum.
-'''),
-    Entry('Penggunaan air', children: <Entry>[
-      Entry('Jenis air yang diperkenankan', content: '''
-- Air hujan,
-- Air sumur,
-- Air terjun, laut atau sungai,
-- Air dari lelehan salju atau es batu,
-- Air dari tangki besar atau kolam.                                  
-'''),
-      Entry('Jenis air yang tidak diperkenankan', content: '''
-- Air yang tidak bersih atau ada najis,
-- Air sari buah atau pohon,
-- Air yang telah berubah warna, rasa dan bau dan menjadi pekat karena sesuatu telah direndam di dalamnya,
-- Air dengan jumlah sedikit (kurang dari 1000 liter) yang terkena sesuatu yang tidak bersih seperti urin, darah atau minuman anggur atau ada seekor binatang mati di dalamnya,
-- Air bekas wudu
-- Air yang tersisa setelah binatang haram meminumnya seperti anjing, babi atau binatang mangsa,
-- Air yang tersisa oleh seseorang yang telah mabuk karena khamr (minuman keras).
-'''),
+    Entry('Rukun', children: [
+      Entry('', content: '''Para ulama berrbeda pendapat ketika menyebutkan rukun wudhu. Ada yang menyebutkan 4 saja sebagaimana yang tercantum dalam ayat Quran, namun ada juga yang menambahinya dengan berdasarkan dalil dari Sunnah.'''),
+      Entry('Menurut Al-Hanafiyah', content: '''
+4 (empat) rukun menurut Al-Hanafiyah mengatakan bahwa rukun wudhu itu hanya ada 4 sebagaimana yang disebutkan dalam nash Quran.
+      '''),
+      Entry('Menurut Al-Malikiyah', content: '''
+7 (tujuh) rukun menurut Al-Malikiyah menambahkan dengan keharusan niat, ad-dalk yaitu menggosok anggota wudhu`. Sebab menurut beliau sekedar mengguyur anggota wudhu` dengan air masih belum bermakna mencuci atau membasuh. Juga beliau menambahkan kewajiban muwalat.
+      '''),
+      Entry('Menurut As-Syafi`iyah', content: '''
+6 (enam) rukun menurut As-Syafi`iyah menambahinya dengan niat dan tertib yaitu kewajiban untuk melakukannya pembasuhan dan usapan dengan urut, tidak boleh terbolak balik. Istilah yang beliau gunakan adalah harus tertib
+      '''),
+      Entry('Menurut Al-Hanabilah', content: '''
+7 (tujuh) rukun menurut Al-Hanabilah mengatakan bahwa harus niat, tertib dan muwalat, yaitu berkesinambungan. Maka tidak boleh terjadi jeda antara satu anggota dengan anggota yang lain yang sampai membuatnya kering dari basahnya air bekas wudhu`.
+      '''),
+      Entry('1. Niat', content: '''
+Niat wudhu` adalah ketetapan di dalam hati seseorang untuk melakukan serangkaian ritual yang bernama wudhu.
+      '''),
+      Entry('2. Membasuh Wajah', content: '''
+Para ulama menetapkan bahwa batasan wajah seseorang itu adalah tempat tumbuhnya rambut (manabit asy-sya`ri) hingga ke dagu dan dari batas telinga kanan hingga batas telinga kiri.
+      '''),
+      Entry('3. Membasuh kedua tangan hingga siku', content: '''
+Secara jelas disebutkan tentang keharusan membasuh tangan hingga ke siku. Dan para ulama mengatakan bahwa yang dimaksud adalah bahwa siku harus ikut dibasahi.
+      '''),
+      Entry('4. Mengusap kepala', content: '''
+Yang dimaksud dengan mengusap adalah meraba atau menjalankan tangan ke bagian yang diusap dengan membasahi tangan sebelumnya dengan air.
+
+- Al-Hanafiyah mengatakan bahwa yang wajib untuk diusap tidak semua bagian kepala, melainkan sekadar dari kepala. Yaitu mulai ubun-ubun dan di atas telinga.
+
+- Al-Malikiyah dan Al-Hanabilah mengatakan bahwa yang diwajib diusap pada bagian kepala adalah seluruh bagian kepala. Bahkan Al-Hanabilah mewajibkan untuk membasuh juga kedua telinga baik belakang maupun depannya.
+
+- Asy-syafi`iyyah mengatakan bahwa yang wajib diusap dengan air hanyalah sebagian dari kepala, meskipun hanya satu rambut saja. Dalil yang digunakan beliau adalah hadits Al-Mughirah : Bahwa Rasulullah SAW ketika berwudhu` mengusap ubun-ubunnya dan imamahnya (sorban yang melingkari kepala).
+      '''),
+      Entry('5. Mencuci kaki hingga mata kaki.', content: '''
+Menurut jumhur ulama, yang dimaksud dengan hingga mata kaki adalah membasahi mata kakinya itu juga.
+      '''),
+      Entry('6. Tartib', content: '''
+Yang dimaksud dengan tartib adalah mensucikan anggota wudhu secara berurutan dari yang awal hingga yang akhir.
+
+Al-Hanafiyah dan Al-Malikiyah tidak merupakan bagian dari fardhu wudhu`, melainkan hanya sunnah muakkadah. Akan halnya urutan yang disebutan di dalam Al-Quran, bagi mereka tidaklah mengisyaratkan kewajiban urut-urutan. bersikeras mengatakan bahwa tertib urutan anggota yang dibasuh merupakan bagian dari fardhu dalamwudhu`. Sebab demikianlah selalu datangnya perintah dan contoh praktek wudhu`nya Rasulullah SAW. Tidak pernah diriwayatkan bahwa beliau berwudhu` dengan terbalik-balik urutannya. Dan membasuh anggota dengan cara sekaligus semua dibasahi tidak dianggap syah.
+      '''),
+      Entry('7. Al-Muwalat / Tidak Terputus', content: '''
+Maksudnya adalah tidak adanya jeda yang lama ketika berpindah dari membasuh satu anggota wudhu` ke anggota wudhu` yang lainnya. Ukurannya menurut para ulama adalah selama belum sampai mengering air wudhu`nya itu.
+      '''),
+      Entry('8. Ad-Dalk', content: '''
+Yang dimaksud dengan ad-dalk adalah mengosokkan tangan ke atas anggota wudhu setelah dibasahi dengan air dan sebelum sempat kering. Hal ini tidak menjadi kewajiban menurut jumhur ulama, namun khusus Al-Malikiyah mewajibkannya. Sebab sekedar menguyurkan air ke atas anggota tubuh tidak bisa dikatakan membasuh seperti yang dimaksud dalam Al-Quran.
+      '''),
     ]),
-    Entry('Hukum Wudu', children: <Entry>[
-      Entry('Wajib', content: '''
-Pelaksanaan wudu wajib dilakukan oleh umat Muslim, ketika hendak melakukan ibadah salat, thawaf di Ka'bah, dan menyentuh al-Qur'an. Berwudu untuk menyentuh al-Qur'an menurut pendapat para ulama empat madzhab adalah wajib, berdasarkan salah satu surah dalam al-Qu'ran, yang berbunyi:
+    Entry('HAL-HAL YANG MEMBATALKAN WUDHU', children: [
+      Entry('1. Keluarnya sesuatu lewat dua lubang qubul atau dubur', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal jika kelua sesuatu yang lazim juga dari lubang yang lazim
+- As-Syafi`i Batal
+- Al-hanabalah Batal
 
-"Sesungguhnya Al-Qur'an ini adalah bacaan yang sangat mulia, pada kitab yang terpelihara (Lauhul Mahfuzh), tidak menyentuhnya kecuali orang-orang yang disucikan. (Al Waaqi'ah 56:77-79)"
+Menurut al-Malikiyah keluar sesuatu yang tidak lazim seperti batu, darah atau nanah tidak membatalkan wudhu’ jika sesuatu tersebut terbentuk didalam usus (bukan karena menelan batu).
+      '''),
+      Entry('2. Tidur yang bukan dalam posisi tamakkun di atas bumi (tidak memungkinkan keluar sesuatu dari dubur)', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal jika pulas
+- As-Syafi`i Batal
+- Al-hanabalah Batal walaupun dalam posisi tamakkun
 
-Sedangkan menurut pendapat kedua mengatakan bahwa yang dimaksud oleh surat Al Waaqi'ah di atas ialah: "Tidak ada yang dapat menyentuh Al-Qur'an yang ada di Lauhul Mahfudz sebagaimana ditegaskan oleh ayat yang sebelumnya (ayat 78) kecuali para malaikat yang telah disucikan oleh Allah." Pendapat ini adalah tafsir dari Ibnu Abbas dan lain-lain sebagaimana telah diterangkan oleh Al-Hafidzh Ibnu Katsir di tafsirnya. Bukanlah yang dimaksud bahwa tidak boleh menyentuh atau memegang Al-Qur'an kecuali orang yang bersih dari hadats besar dan hadats kecil.
+Menurut al-Hanabalah tidur membatalkan wudhu’ secara mutlaq.
 
-Pendapat kedua ini menyatakan bahwa jikalau memang benar demikian maksudnya tentang firman Allah di atas, maka artinya akan menjadi: Tidak ada yang menyentuh Al-Qur'an kecuali mereka yang suci (bersih), yakni dengan bentuk faa'il (subjek/pelaku) bukan maf'ul (objek). Kenyataannya Allah berfirman: "Tidak ada yang menyentuhnya (Al-Qur'an) kecuali mereka yang telah disucikan", yakni dengan bentuk maf'ul (objek) bukan sebagai faa'il (subjek).
+Menurut al-Malikiyah tidur pulas dapat membatalkan wudhu’ baik tamakkun aatau tidak, sementara tidur tidur ringan tidak membatalkan wudu’
+      '''),
+      Entry('3. Hilang Akal Karena Mabuk, Tidur Atau Sakit', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Batal
+- As-Syafi`i Batal
+- Al-hanabalah Batal
+      '''),
+      Entry('4. Menyentuh Kemaluan dengan telalapak tangan', content: '''
+- Al-Hanafiyah Tidak Batal
+- Al-Malikiyah Batal
+- As-Syafi`i Batal
+- Al-hanabalah Batal
 
-"Tidak ada yang menyentuh Al-Qur'an kecuali orang yang suci." Yang dimaksud oleh hadits di atas ialah: Tidak ada yang menyentuh Al-Qur'an kecuali orang mu'min, karena orang mu'min itu suci tidak najis sebagaimana sabda Muhammad. "Sesungguhnya orang mu'min itu tidak najis."
-'''),
-      Entry('Sunnah', children: <Entry>[
-        Entry(
-            'Wudu bersifat sunnah adalah bila akan mengerjakan hal-hal berikut ini:',
-            content: '''
-1. Mengulangi wudu untuk tiap salat
-2. Bagi setiap Muslim untuk selalu tampil dengan wudu
-3. Ketika hendak tidur, dalam keadaan junub
-4. Sebelum mandi wajib
-5. Ketika hendak mengulangi hubungan badan
-6. Ketika marah
-7. Ketika membaca al-Qur'an,
-8. Ketika Melantunkan azan dan iqamat,
-9. Ziarah ke makam Nabi Muhammad,
-10. Menyentuh kitab-kitab syar'i.
-'''),
-        Entry(
-            'Berikut sunah-sunah wudu yang biasa dilakukan oleh Nabi Muhammad:',
-            content: '''
-1. Bersiwak
-2. Mencuci kedua tangan sampai pergelangan tangan sebelum berwudu
-3. Mencuci anggota-anggota wudu sebanyak tiga kali, kecuali kepala hanya sekali
-4. Menyela-nyela jenggot yang tebal
-5. Menyela-nyela jari-jari kaki dan jari-jari tangan
-6. Menyeka (dalk)
-7. Mendahulukan tangan kanan daripada yang kiri dan kaki kanan daripada kaki kiri.
-8. Berdoa setelah berwudu.
-9. Menggunakan air wudu dengan hemat.
-''')
-      ])
+Menurut Madzhab Hanafi menyentuh kemaluan dengan tangan tidak batal wudu’.
+      '''),
+      Entry('5. Menyentuh kulit lawan jenis yang bukan mahram', content: '''
+- Al-Hanafiyah Tidak Batal
+- Al-Malikiyah Batal jika merasa lezat
+- As-Syafi`i Batal
+- Al-hanabalah Batal dengan syahwat
+
+Menurut as-Syafi’i membatalkan wudu’ tampa lapis selain rambut, kuku dan gigi.
+
+Menurut al-Hanafiyah tidak batal wudu’ samasekali.
+
+Menurut al-Malikiyah membatalkan wudhu’ apabila dengan kelezatan atau bermaksud kelezatan walaupun dengan lapis tipis, baik kulit, rambut. Juga Menyentuh amrod aljamil hukumnya sama.
+
+Menurut al-Hanabalah membatalkan wudhu’ dengan syahwat, Ajnabi atau Muhrim. Tidak batal wudu’ bagi yang di sentuh.
+      '''),
+      Entry('6. Keluarnya Sesuatu dari badan, seperti darah, nanah dan semacamnya, akibat luka atau lainnya', content: '''
+- Al-Hanafiyah Batal
+- Al-Malikiyah Tidak Batal
+- As-Syafi`i Batal Tidak Batal
+- Al-hanabalah Tidak Batal
+      '''),
+      Entry('', content: '''
+Catatan :
+
+Mereka sepakat bahwa Murtad juga menyebabkan batalnya wudu’ kecuali al Hanafiyah.
+
+Namun al Hanafiyah berpendapat Ketawa dalam solat juga menyebabkan batal wudu’.
+
+Makan daging kambing atau unta menurut al-Hanabalah termasuk yang membatalkan wudu’, dan juga memandikan jenazah.
+
+Ragu terhadap hadats membatalkan wudu’ menurut al-Malikiyah.'''),
     ]),
-    Entry('Rukun Wudu', children: <Entry>[
-      Entry('Rukun berwudu yang disepakati ada empat:', content: '''
-1. Mencuci wajah,
-2. Mencuci tangan,
-3. Mengusap kepala,
-4. Mencuci kedua kaki.                                                 
-'''),
-      Entry('Rukun-rukun yang diperselisihkan adalah sebagai berikut:',
-          content: '''
-1. Tertib,
-2. Bersambungan (Muwalah).                                                 
-'''),
-    ]),
-    Entry('Pembatal Wudu', children: <Entry>[
-      Entry('Disepakati', content: '''
-Ada beberapa perkara atau hal yang dapat membatalkan syahnya wudu, di antaranya adalah:
+    Entry('AIR MUSTA’MAL : ', content: '''
+Pada dasarnya Madahibil Arba’ah berpandangan sama tentang Air Musta’mal yaitu air yang berpisah/ menites dari  tubuh yang digunakan untuk mengangkat hadats, atau untuk menghilangkan najis selama sifat-sifat air tidak berubah.
 
-1. Keluar sesuatu dari lubang kelamin dan anus, berupa tinja, kencing, kentut, dan semua hadats besar seperti keluarnya air mani, madzi, jima', haid, nifas,
-2. Tidur lelap (dalam keadaan tidak sadar),
-3. Hilangnya akal karena mabuk, pingsan dan gila,
-4. Memakan daging unta,
-5. Menyentuh kawasan sekitar anus (dubur).
-'''),
-      Entry('Diperselisihkan', content: '''
-1. Sentuhan laki-laki pada wanita yang mahram atau bukan tanpa penghalang, kemudian ada hadits yang menjelaskan bahwa bersentuhan tidak membatalkan wudu,
-2. Menyentuh kemaluan manusia dengan telapak tangan bagian dalam,
-3. Keluarnya darah istihadhah,
-4. Mimisan dan muntah,
-5. Mengangkat dan memandikan jenazah.
-''')
-    ]),
-    Entry('Sumber', content: '''
-https://id.wikipedia.org/wiki/Wudu
-''')
+Bersuci dengan cara memesukkan anggota tubuh ke dalam air sedikit (kurang dari 2 Qullah =190 Liter/ wadah berukuran 85 cm2 [syafi’i] ) maka air tersebut dihukumi Musta’mal setelah diangkatnya anggota tubuh.
+
+Air Musta’mal ini hukumnya suci tapi tidak bisa mensucikan. Artinya air itu suci tidak najis, bias digunaka dalam memasal dsb. tapi tidak bisa digunakan lagi m,ensucikan, Demikian menurut al-Madahib kecuali Malikiyah.
+
+Menurut al-Malikiyah Air musta’mal hukumnya suci dan mensucikan, Artinya, bisa dan sah digunakan lagi untuk berwudu` atau mandi bersuci, tetapi makruh apabila masih ada air yang tidak musta’mal
+
+Menurut as-Syafi’I Air musta’mal yang mencapai dua Qullah dengan sendirinya menjadi air suci dan mensucikan.
+      '''),
   ];
 
   @override
@@ -227,121 +277,108 @@ https://id.wikipedia.org/wiki/Wudu
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 22),
-              height: 56,
-              child: Row(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMateriThaharahPage());
-                        } else {
-                          setState(() {
-                            if (searchController.text.compareTo("") == 0) {
-                              isClickedSearch = false;
-                            } else {
-                              searchController.text = "";
-                              searchText = searchController.text;
-                              data.clear();
-                              data.addAll(text);
-                            }
-                          });
-                        }
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(
-                              (!isClickedSearch)
-                                  ? Icons.arrow_back_ios
-                                  : Icons.clear,
-                              color: Colors.black.withOpacity(0.54))),
+              color: colorGreenCream,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 22),
+                    height: 56,
+                    child: Row(
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: GestureDetector(
+                            onTap: () {
+                              if (!isClickedSearch) {
+                                context
+                                    .bloc<PageBloc>()
+                                    .add(GoToMateriThaharahPage());
+                              } else {
+                                setState(() {
+                                  if (searchController.text.compareTo("") == 0) {
+                                    isClickedSearch = false;
+                                  } else {
+                                    searchController.text = "";
+                                    searchText = searchController.text;
+                                    data.clear();
+                                    data.addAll(text);
+                                  }
+                                });
+                              }
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(
+                                    (!isClickedSearch)
+                                        ? Icons.arrow_back_ios
+                                        : Icons.clear,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                        Center(
+                            child: (isClickedSearch)
+                                ? Container(
+                                    width: MediaQuery.of(context).size.width * 6 / 8,
+                                    child: TextField(
+                                      autofocus:
+                                          (searchController.text.compareTo("") == 0),
+                                      controller: searchController,
+                                      decoration: InputDecoration(hintText: "Search"),
+                                    ),
+                                  )
+                                : Container(
+                                    width: MediaQuery.of(context).size.width * 6 / 8,
+                                  )),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                if (!isClickedSearch) {
+                                  isClickedSearch = true;
+                                  isFocusSearch = true;
+                                } else {
+                                  searchText = searchController.text;
+                                  isFocusSearch = false;
+                                  var entries = filterSearchResults(dataText, searchText);
+                                  data.clear();
+                                  data.addAll(entries);
+                                }
+                              });
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(Icons.search,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  // TITLE THAHARAH
                   Center(
-                      child: (isClickedSearch)
-                          ? Container(
-                              width: MediaQuery.of(context).size.width * 6 / 8,
-                              child: TextField(
-                                autofocus:
-                                    (searchController.text.compareTo("") == 0),
-                                controller: searchController,
-                                decoration: InputDecoration(hintText: "Search"),
-                              ),
-                            )
-                          : Container(
-                              width: MediaQuery.of(context).size.width * 6 / 8,
-                            )),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          if (!isClickedSearch) {
-                            isClickedSearch = true;
-                            isFocusSearch = true;
-                          } else {
-                            searchText = searchController.text;
-                            isFocusSearch = false;
-                            var entries = filterSearchResults(dataText, searchText);
-                            data.clear();
-                            data.addAll(entries);
-                          }
-                        });
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(Icons.search,
-                              color: Colors.black.withOpacity(0.54))),
-                    ),
+                      child: Text(
+                        "Thaharah",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  // SUBTITLE WUDU
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Center(
+                        child: Text(
+                          "Wudu",
+                          style: blackTextFont.copyWith(fontSize: 14),
+                        )),
                   ),
                 ],
               ),
             ),
-            // TITLE THAHARAH
-            Center(
-                child: Text(
-                  "Thaharah",
-                  style: blackTextFont.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.w700),
-                )),
-            // SUBTITLE WUDU
-            Center(
-                child: Text(
-                  "Wudu",
-                  style: blackTextFont.copyWith(fontSize: 14),
-                )),
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return ExpansionTile(
-                      title: Text(data[index].title),
-                      children: (data[index].children.isEmpty)
-                          ? <Widget>[
-                              Container(
-                                margin:
-                                    EdgeInsets.only(left: 16, right: 16),
-                                child: SelectableText.rich(
-                                  searchFromText(
-                                      data[index].content, searchText),
-                                  textScaleFactor: 1.2,
-                                  style: blackTextFont,
-                                ),
-                              )
-                            ]
-                          : getChildrenWidgets(
-                              data[index].children, searchText));
-                },
-                itemCount: data.length,
-              ),
-            )
+            buildList(data, searchText),
           ],
         ),
       ),

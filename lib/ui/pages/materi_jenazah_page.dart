@@ -14,7 +14,7 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             Container(
@@ -51,7 +51,7 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
             // ICON UTAMA
             Container(
               height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
+              margin: EdgeInsets.only(bottom: 24, top: 24),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -62,6 +62,31 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
               children: [
                 Column(
                   children: [
+                    // BUTTON MATERI UMUM
+                    Container(
+                      width: 300,
+                      height: 46,
+                      margin: EdgeInsets.only(bottom: 24),
+                      child: RaisedButton(
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Materi Umum",
+                                style: whiteTextFont.copyWith(fontSize: 22),
+                              ),
+                            ],
+                          ),
+                          color: colorGreen,
+                          onPressed: () {
+                            context
+                                .bloc<PageBloc>()
+                                .add(GoToMateriJenazahUmumPage());
+                          }),
+                    ),
                     // BUTTON MEMANDIKAN
                     Container(
                       width: 300,
@@ -75,12 +100,12 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "1. Memandikan",
+                                "Memandikan",
                                 style: whiteTextFont.copyWith(fontSize: 22),
                               ),
                             ],
                           ),
-                          color: colorDarkGrey,
+                          color: colorGreen,
                           onPressed: () {
                             context
                                 .bloc<PageBloc>()
@@ -100,12 +125,12 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "2. Mengkafani",
+                                "Mengkafani",
                                 style: whiteTextFont.copyWith(fontSize: 22),
                               ),
                             ],
                           ),
-                          color: colorDarkGrey,
+                          color: colorGreen,
                           onPressed: () {
                             context
                                 .bloc<PageBloc>()
@@ -125,12 +150,12 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "3. Menyolatkan",
+                                "Menyolatkan",
                                 style: whiteTextFont.copyWith(fontSize: 22),
                               ),
                             ],
                           ),
-                          color: colorDarkGrey,
+                          color: colorGreen,
                           onPressed: () {
                             context
                                 .bloc<PageBloc>()
@@ -150,12 +175,12 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "4. Menguburkan",
+                                "Menguburkan",
                                 style: whiteTextFont.copyWith(fontSize: 22),
                               ),
                             ],
                           ),
-                          color: colorDarkGrey,
+                          color: colorGreen,
                           onPressed: () {
                             context
                                 .bloc<PageBloc>()

@@ -14,7 +14,7 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             // BUTTON KEMBALI KE MATERI PAGE
@@ -81,7 +81,7 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                                 context.bloc<PageBloc>().add(GoToMateriZakatFitrahPage());
                             }),
@@ -104,7 +104,7 @@ class _MateriZakatPageState extends State<MateriZakatPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                                 context.bloc<PageBloc>().add(GoToMateriZakatMalPage());
                             }),

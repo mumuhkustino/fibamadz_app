@@ -14,7 +14,7 @@ class _MainPageState extends State<MainPage> {
           return;
         },
         child: Scaffold(
-          backgroundColor: colorYellow,
+          backgroundColor: colorLightGreen,
           body: Column(
             children: [
               // BUTTON KEMBALI KE SPLASH PAGE
@@ -42,6 +42,11 @@ class _MainPageState extends State<MainPage> {
                       fontSize: 24, fontWeight: FontWeight.w700),
                 ),
               ),
+              // ICON MUQODDIMAH PAGE
+              Container(
+                height: 70,
+                margin: EdgeInsets.only(top: 24, bottom: 40),
+              ),
               Expanded(
                 child:
                     ListView(
@@ -52,26 +57,26 @@ class _MainPageState extends State<MainPage> {
                             Container(
                               width: 300,
                               height: 46,
-                              margin: EdgeInsets.only(top: 164, bottom: 24),
+                              margin: EdgeInsets.only(bottom: 24),
                               child: RaisedButton(
                                   elevation: 4,
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(12)),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                          'assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png'),
-                                      SizedBox(
-                                        width: 12,
-                                      ),
+//                                      Image.asset(
+//                                          'assets/icons/ramadhan-mubarak/png/ramadan-sunrise-white.png'),
+//                                      SizedBox(
+//                                        width: 12,
+//                                      ),
                                       Text(
                                         "Muqoddimah",
-                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                        style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
                                     ],
                                   ),
-                                  color: colorLightBlue,
+                                  color: colorGreen,
                                   onPressed: () {
                                     context.bloc<PageBloc>().add(GoToMuqoddimahPage());
                                   }),
@@ -85,28 +90,28 @@ class _MainPageState extends State<MainPage> {
                               child: RaisedButton(
                                   elevation: 4,
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(12)),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         "Materi",
-                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                        style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
-                                      SizedBox(
-                                        width: 56,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/ramadhan-mubarak/png/quran-book.png'),
+//                                      SizedBox(
+//                                        width: 56,
+//                                      ),
+//                                      Image.asset(
+//                                          'assets/icons/ramadhan-mubarak/png/quran-book-white.png'),
                                     ],
                                   ),
-                                  color: colorLightBlue,
+                                  color: colorGreen,
                                   onPressed: () {
                                     context.bloc<PageBloc>().add(GoToMateriPage());
                                   }),
                             ),
 
-                            // BUTTON QUIZ
+                            // BUTTON KUIS
                             Container(
                               width: 300,
                               height: 46,
@@ -114,22 +119,22 @@ class _MainPageState extends State<MainPage> {
                               child: RaisedButton(
                                   elevation: 4,
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(12)),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                          'assets/icons/ramadhan-mubarak/png/qibla.png'),
-                                      SizedBox(
-                                        width: 56,
-                                      ),
+//                                      Image.asset(
+//                                          'assets/icons/ramadhan-mubarak/png/qibla-white.png'),
+//                                      SizedBox(
+//                                        width: 56,
+//                                      ),
                                       Text(
-                                        "Quiz",
-                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                        "Kuis",
+                                        style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
                                     ],
                                   ),
-                                  color: colorLightBlue,
+                                  color: colorGreen,
                                   onPressed: () {
                                     context.bloc<PageBloc>().add(GoToQuizPage());
                                   }),
@@ -143,22 +148,22 @@ class _MainPageState extends State<MainPage> {
                               child: RaisedButton(
                                   elevation: 4,
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(12)),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         "Video Praktik",
-                                        style: whiteTextFont.copyWith(fontSize: 24),
+                                        style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
-                                      SizedBox(
-                                        width: 12,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/ramadhan-mubarak/png/muslim-man.png'),
+//                                      SizedBox(
+//                                        width: 12,
+//                                      ),
+//                                      Image.asset(
+//                                          'assets/icons/ramadhan-mubarak/png/muslim-man-white.png'),
                                     ],
                                   ),
-                                  color: colorLightBlue,
+                                  color: colorGreen,
                                   onPressed: () {
                                     context.bloc<PageBloc>().add(GoToVideoPage());
                                   }),

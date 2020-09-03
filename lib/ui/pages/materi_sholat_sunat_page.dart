@@ -109,7 +109,7 @@ https://id.wikipedia.org/wiki/Salat_sunah
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: colorGreenCream,
         body: Column(
           children: [
             Container(

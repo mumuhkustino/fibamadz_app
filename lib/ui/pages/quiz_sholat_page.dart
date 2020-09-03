@@ -28,50 +28,60 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
-            // BUTTON PREVIOUS
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 22),
-              height: 56,
-              child: Row(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        if (!isClickedSearch) {
-                          context.bloc<PageBloc>().add(GoToQuizPage());
-                        } else {
-                          setState(() {});
-                        }
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(
-                              (!isClickedSearch)
-                                  ? Icons.arrow_back_ios
-                                  : Icons.clear,
-                              color: Colors.black.withOpacity(0.54))),
+              color: colorGreenCream,
+              child: Column(
+                children: [
+                  // BUTTON PREVIOUS
+                  Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 22),
+                    height: 56,
+                    child: Row(
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: GestureDetector(
+                            onTap: () {
+                              if (!isClickedSearch) {
+                                context.bloc<PageBloc>().add(GoToQuizPage());
+                              } else {
+                                setState(() {});
+                              }
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(
+                                    (!isClickedSearch)
+                                        ? Icons.arrow_back_ios
+                                        : Icons.clear,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                      ],
                     ),
+                  ),
+                  // TITLE DAN SUBTITLE
+                  Center(
+                      child: Text(
+                        "Kuis",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Center(
+                        child: Text(
+                          "Sholat",
+                          style: blackTextFont.copyWith(fontSize: 14),
+                        )),
                   ),
                 ],
               ),
             ),
             // END OF BUTTON PREVIOUS
-            Center(
-                child: Text(
-                  "Quiz",
-                  style: blackTextFont.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.w700),
-                )),
-            Center(
-                child: Text(
-                  "Sholat",
-                  style: blackTextFont.copyWith(fontSize: 14),
-                )),
-            // TITLE DAN SUBTITLE
             Expanded(
               child: ListView(
                 children: [
@@ -79,7 +89,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
                     children: [
                       // QUESTION 1
                       Container(
-                        margin: EdgeInsets.only(top: 24, left: 12),
+                        margin: EdgeInsets.only(left: 12),
                         child: Row(
                           children: <Widget>[
                             Text(q1, style: blackTextFont.copyWith(fontSize: 14))
@@ -125,7 +135,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
                               ),
                             ],
                           ),
-                          color: colorPink,
+                          color: colorGreen,
                           onPressed: buildConfirmationDialog,
                         ),
                       ),
@@ -158,7 +168,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
                 // TEXT ARE YOU SURE
                 Container(
                   child: Text(
-                    "Are you sure ?",
+                    "Apakah anda yakin ?",
                     style: whiteTextFont.copyWith(fontSize: 24),
                   ),
                 ),
@@ -176,12 +186,12 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Yes",
+                          "Tidak",
                           style: whiteTextFont.copyWith(fontSize: 14),
                         ),
                       ],
                     ),
-                    color: colorBluePastel,
+                    color: colorGreen,
                     onPressed: () {
                       // countScore();
                       context.bloc<PageBloc>().add(GoToQuizSholatScore());
@@ -205,7 +215,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "No",
+                          "Tidak",
                           style: blackTextFont.copyWith(fontSize: 14),
                         ),
                       ],
@@ -280,10 +290,10 @@ class RadioGroupStateSholat extends State<RadioGroupSholat> {
                         .map(
                           (data) => RadioListTile(
                             title: Text(
-                              '${data.choice}',
-                            ),
+                              '${data.choice}',style: blackTextFont.copyWith(fontSize: 14),),
                             groupValue: defaultIndex,
                             value: data.index,
+                            activeColor: colorGreen,
                             onChanged: (value) {
                               setState(() {
                                 defaultChoice = data.choice;

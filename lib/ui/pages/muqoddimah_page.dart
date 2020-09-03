@@ -14,7 +14,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             // BUTTON KEMBALI KE MAIN PAGE
@@ -45,7 +45,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
             // ICON MUQODDIMAH PAGE
             Container(
               height: 70,
-              margin: EdgeInsets.only(top: 24, bottom: 48),
+              margin: EdgeInsets.only(top: 24, bottom: 40),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -74,7 +74,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -99,7 +99,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -124,7 +124,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -149,7 +149,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -174,7 +174,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()

@@ -15,253 +15,33 @@ class _MateriThaharahMenghilangkanNajisPageState
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
-    Entry('Pengertian Najis', content: '''
-Najasah atau najis secara bahasa artinya kotoran. Najasah atau najis dalam istilah syariat adalah segala sesuatu yang dianggap kotor oleh syariat. Dalam Ar Raudhatun Nadiyyah disebutkan,
+    Entry('', content: '''
+Najis adalah hal yang tak lepas dari keseharian kita. Ia terkait dengan keabsahan ibadah shalat. Tidak hanya dalam ibadah, najis juga menjadi sebab keharaman suatu makanan atau minuman. Nah, dalam persoalan najis ini, ulama memiliki keragaman pendapat yang akan berdampak pada penetapan status halal dan haram dalam pangan, obat maupun kosmetika.
 
-النجاسات جمع نجاسة, و هي كل شيئ يستقذره أهل الطبائع السليمة و يتحفظون عنه و يغسلون الثياب إذا أصابهم كالعذرة و البول
+Secara bahasa, najis merupakan turunan dari kata najisa – yanjisu – najsan. Ia semakna dengan al-qadzarah, yakni sesuatu yang kotor. Dalam Lisanul Arab, Ibnu Manzhur menyebutkan bahwa makna najis mencakup tinja manusia dan hewan serta hal-hal lain yang membuat jijik. Di samping makna kebahasaan tersebut, para ulama fiqih memberikan definisi tersendiri seputar najis.   Salah satu bahasan seputar najis adalah dari Imam al-Jashshash, seorang ulama bermazhab Hanafiyah, dalam kitabnya Ahkamul Quran. Beliau menafsirkan ayat berikut:   يَا أَيُّهَا الَّذِينَ آمَنُوا إِنَّمَا الْمُشْرِكُونَ نَجَسٌ…   “Sesungguhnya orang-orang musyrik itu najis...” (QS At Taubah: 28)
 
-“Najasat adalah bentuk jamak dari najasah, ia adalah segala sesuatu yang dianggap kotor oleh orang-orang yang memiliki fitrah yang bersih dan mereka akan berusaha menjauhinya dan membersihkan pakaiannya jika terkena olehnya semisal kotoran manusia dan air seni”.
+Imam al-Jashshash menyebutkan bahwa najis ada dalam benda dan perbuatan – karena di ayat itu terkait dengan perilaku syirik. Perbuatan syirik adalah sesuatu yang buruk sehingga disebut najs, kembali ke arti literernya. Namun ulama yang wafat tahun 370 H ini tidak menjelaskan perihal najis benda secara spesifik.   Menurut KH. Ali Mustafa Yaqub, benda najis tidak dijelaskan oleh beliau karena masyarakat kala itu sudah paham dan tahu benda apa yang najis dan tidak. Tanpa diberikan definisi, masyarakat tahu: ini najis, itu tidak najis. Sebagian ulama dari generasi awal memang kerap tidak menyajikan pengertian definitif karena sudah dikenalnya barang-barang yang dianggap najis.
 
-Dalam Al Fiqhul Muyassar disebutkan,
+Kalangan ulama mazhab Hanafi yang lebih kiwari, seperti Imam al-Kasani menyebutkan bahwa najis adalah sebutan untuk benda yang dianggap jijik. Penjelasan ini dilengkapi ulama mazhab Hanafi lainnya yang menyebutkan bahwa najis ada yang hakiki dan berwujud, ada yang hukmi. Namun secara umum yang dipahami sebagai najis adalah hal ada wujud bendanya saja.   Imam Ibnu Abidin dari kalangan Hanafiyah, menyebutkan bahwa dari najis yang hakiki dan hukmi tersebut, meniscayakan pemahaman bahwa najis hakiki adalah sesuatu yang kotor, atau al-khabats; serta najis yang hukmi adalah al-hadats. Keduanya sama-sama “sesuatu yang kotor” namun yang satu berwujud, yang satu sifatnya tidak.
 
-النجاسة: هي كل عين مستقذرة أمر الشارع باجتنابها
+Dalam mazhab Maliki, sebagaimana dicatat oleh KH. Ali Mustafa Yaqub, agaknya tidak banyak membahas terkait definisi najis. Imam Malik dalam al-Mudawwanah al-Kubra disebutkan tidak mencatat secara detail tentang najis. Sebagaimana pada kalangan Hanafiyah, pemahaman masyarakat tentang benda najis dan tidak sudah maklum, kendati tanpa definisi.
 
-“Najasah adalah setiap hal yang dianggap kotor yang diperintahkan oleh syariat untuk menjauhinya”.
-
-Dari penyataan “dianggap kotor oleh syariat” dalam definisi-definisi yang disebutkan para ulama menunjukkan bahwa tidak semua yang kotor menurut manusia itu adalah najis dalam istilah syar’i, dan juga menunjukkan bahwa menentukan najis atau tidaknya sesuatu itu harus dilandasi dalil. Jika tidak ada dalil yang menunjukkan najisnya sesuatu tersebut, maka ia suci. Syaikh Abdurrahman bin Nashir As Sa’di mengatakan:
-
-يجب أن يعلم أن الأصل في جميع الأشياء الطهارة فلا تنجس و لا ينجس منها إلا ما دل عليه الشرع
-
-“wajib diketahui bahwa hukum asal dari segala sesuatu itu suci, maka tidak boleh mengatakan ia sesuatu itu najis atau menajiskan kecuali ada dalil dari syariat”.
-
-Maka najis tidak bisa ditentukan dengan akal atau perasaan seseorang bahwa sesuatu itu najis, melainkan harus berdasarkan dalil. Dan yang dituntut dari kita terhadap najis adalah kita diperintahkan untuk menjauhinya dan membersihkan diri darinya jika terkena najis.
-
-Kemudian, najis berbeda dengan pembatal wudhu. Dan jika seseorang terkena najis, wudhunya tidak menjadi batal, namun ia wajib membersihkan najis tersebut
-'''),
-    Entry('Perintah Membersihkan Najis', content: '''
-Syariat memerintahkan kita untuk membersihkan diri dari najis dalam banyak dalil dari Al Qur’an dan As Sunnah. Diantaranya firman Allah Ta’ala:
-
-وَثِيَابَكَ فَطَهِّرْ
-
-“dan pakaianmu sucikanlah” (QS. Al Mudatsir: 4).
-
-Allah Ta’ala juga berfirman:
-
-وَعَهِدْنَا إِلَى إِبْرَاهِيمَ وَإِسْمَاعِيلَ أَن طَهِّرَا بَيْتِيَ لِلطَّائِفِينَ وَالْعَاكِفِينَ وَالرُّكَّعِ السُّجُودِ
-
-“Dan kami perintahkan kepada Ibrahim dan Ismail untuk mensucikan rumah-Ku bagi orang-orang yang ber-thawaf, ber-i’tikaf dan orang-orang yang rukuk dan sujud” (QS. Al Baqarah: 125).
-
-Dari Ibnu Abbas radhiallahu’anhu, Nabi Shallallahu’alaihi Wasallam bersabda:
-
-مَرَّ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى قَبْرَيْنِ فَقَالَ أَمَا إِنَّهُمَا لَيُعَذَّبَانِ وَمَا يُعَذَّبَانِ فِي كَبِيرٍ أَمَّا أَحَدُهُمَا فَكَانَ يَمْشِي بِالنَّمِيمَةِ وَأَمَّا الآخَرُ فَكَانَ لا يَسْتَتِرُ مِنْ بَوْلِهِ
-
-“Rasulullah Shallallahu’alaihi Wasallam melewati dua kuburan. Lalu beliau bersabda: “kedua orang ini sedang diadzab, dan mereka diazab bukan karena dosa besar. Orang yang pertama diadzab karena berbuat namimah (adu domba). Adapun yang kedua, ia diadzab karena tidak membersihkan diri dari sisa kencingnya”” (HR. Muslim no. 292).
-
-Dan dalil-dalil yang lainnya.
-'''),
-    Entry('Cara membersihkan najis', children: <Entry>[
-      Entry('Para ulama membagi najis dibagi menjadi tiga:', content: '''
-1. Najasah mughallazhah (berat) atau najasah tsaqilah
-2. Najasah mukhaffafah (ringan)
-3. Najasah mutawashitah (pertengahan)
-'''),
-      Entry('1. Cara membersihkan najasah tsaqilah', content: '''
-Misalnya najis dari anjing dan babi, maka membersihkannya dengan tujuh kali cucian, dan cucian yang pertama menggunakan tanah atau semacamnya. Syaikh As Sa’di menyatakan: “Najis dari anjing dan semua yang berasal dari babi cara mencucinya harus dengan tujuh kali cucian, dan cucian yang pertama menggunakan tanah atau semacamnya”.
-
-Dalilnya, Nabi Shallallahu’alaihi Wasallam bersabda:
-
-طَهُورُ إِنَاءِ أَحَدِكُمْ إِذَا وَلَغَ فِيهِ الْكَلْبُ، أَنْ يَغْسِلَهُ سَبْعَ مَرَّاتٍ أُولَاهُنَّ بِالتُّرَابِ
-
-“cara mensucikan bejana dari seseorang di antara kalian jika dijilat anjing adalah dengan mencucinya tujuh kali, cucian yang pertama menggunakan tanah” (HR. Al Bukhari no. 182, Muslim no. 279).
-
-Dan babi juga demikian, berdasarkan qiyas min baabil aula. Karena babi lebih buruk dari pada anjing.
-'''),
-      Entry('2. Cara membersihkan najasah mukhaffafah', children: <Entry>[
-        Entry(
-          'Najasah yang mukhaffah ada 3 macam di lihat dari cara membersihkannya:',
-          children: <Entry>[
-            Entry('a. Dengan cara memercikkan air sekali percikan', content: '''
-Syaikh As Sa’di menyatakan: “air kencing anak laki-laki yang belum memakan makanan karena syahwat (untuk makan) maka ini semua cukup dipercikkan air sekali saja, ini merupakan salah satu pendapat dari madzhab (Hambali), sebagaimana terdapat dalam hadits-hadits shahih. Demikian juga muntahnya anak-anak, itu statusnya lebih ringan daripada air kencingnya. Demikian juga madzi, menurut pendapat yang shahih, ia juga cukup dipercikkan air saja, sebagaimana terdapat dalam hadits, dan ini semua selaras dengan hikmah keringanan dalam masyaqqah”.
-
-Berikut perincian dalilnya:
-
-Air kencing anak laki-laki yang belum memakan makanan
-Hadits dari Abu Samh Malik radhiallahu’anhu, ia berkata:
-يُغْسَلُ مِنْ بَوْلِ الْجَارِيَةِ وَيُرَشُّ مِنْ بَوْلِ الْغُلاَمِ
-
-“Air kencing anak perempuan itu dicuci, sedangkan air kencing anak laki-laki itu dipercikkan” (HR. Abu Daud 377, An Nasa’i 303, dishahihkan Al Albani dalam Shahih An Nasa’i).
-
-Muntahnya anak laki-laki yang belum memakan makanan, diqiyaskan dengan air kencing.
-Madzi
-Berdasarkan hadits Ali bin Abi Thalib radhiallahu’anhu, ia berkata:
-أرسَلْنا المِقْدَّادَ بنَ الأسودٍ إلى رسولِ اللهِ صلى الله عليه وسلم ،فسألَه عن المَذْيِ يَخْرُجُ مِنَ الإنسانِ كيفَ يَفْعَلُ به ؟ فقال رسولُ اللهِ صلى الله عليه وسلم : تَوَضَّأْ ،وانْضَّحْ فَرْجَكَ
-
-“Miqdad bin Al Aswad mengutusku kepada Rasulullah Shallallahu’alaihi Wasallam. Lalu aku bertanya mengenai madzi yang keluar dari seseorang, bagaimana menyikapinya? Lalu Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘berwudhulah dan percikkan kemaluanmu dengan air‘” (HR. Muslim 303).
-'''),
-            Entry(
-                'b. Dengan menyiramnya sekali siram atau secukupnya hingga hilang inti objeknya',
-                content: '''
-Ini berlaku pada semua najis yang ada di atas permukaan lantai atau tanah. Syaikh As Sa’di menyatakan: “Najis jika berada di atas permukaan tanah atau lantai maka cukup disiram dengan sekali siraman yang membuat ‘ainun najasah (inti dari objek najis) hilang, sebagaimana perintah Nabi Shallallahu’alaihi Wasallam untuk menyiram air kencing orang badwi dengan seember air”.
-
-Dalilnya hadits Anas bin Malik radhiallahu’anhu, beliau berkata:
-
-جَاءَ أَعْرَابِيٌّ فَبَالَ فِي طَائِفَةِ المَسْجِدِ، فَزَجَرَهُ النَّاسُ، «فَنَهَاهُمُ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فَلَمَّا قَضَى بَوْلَهُ أَمَرَ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بِذَنُوبٍ مِنْ مَاءٍ فَأُهْرِيقَ عَلَيْهِ»
-
-“Seorang arab badwi kencing di satu bagian masjid, maka orang-orang pun hendak memarahinya. Namun Nabi Shallallahu’alaihi Wasallam mereka. Ketika ia selesai kencing, Nabi Shallallahu’alaihi Wasallam memerintahkan untuk menyiram air kencingnya dengan seember air” (HR. Bukhari no. 221, Muslim no. 284).
-
-Dari hadits ini jelas bahwa najis yang ada di permukaan lantai atau tanah maka cukup hingga hilang  ‘ainun najasah (inti dari objek najis), tidak harus hilang 100%. Karena Nabi Shallallahu’alaihi Wasallam hanya memerintahkan untuk menyiram air kencing orang badwi tersebut dengan air seember yang tentu belum menghilangkan semua najisnya 100%.
-'''),
-            Entry('c. Dengan menyentuhkan pada debu atau tanah', content: '''
-Yaitu najis yang ada pada bagian bawah sepatu dan alas kaki lainnya, juga pada bagian bawah pakaian wanita yang terkena tanah. Syaikh As Sa’di menjelaskan: “Najis yang ada pada bagian bawah sepatu dan alas kaki lainnya, cukup disentuhkan pada permukaan tanah atau pada debu, sebagaimana terdapat dalam hadits shahih. Dan ini yang sesuai dengan hikmah syar’iyyah”.
-
-Dalilnya hadits Abu Sa’id Al Khudri radhiallahu’anhu:
-
-بَيْنَمَا رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يُصَلِّي بِأَصْحَابِهِ إِذْ خَلَعَ نَعْلَيْهِ فَوَضَعَهُمَا عَنْ يَسَارِهِ، فَلَمَّا رَأَى ذَلِكَ الْقَوْمُ أَلْقَوْا نِعَالَهُمْ، فَلَمَّا قَضَى رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ صَلَاتَهُ، قَالَ: «مَا حَمَلَكُمْ عَلَى إِلْقَاءِ نِعَالِكُمْ»، قَالُوا: رَأَيْنَاكَ أَلْقَيْتَ نَعْلَيْكَ فَأَلْقَيْنَا نِعَالَنَا، فَقَالَ رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: ” إِنَّ جِبْرِيلَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَتَانِي فَأَخْبَرَنِي أَنَّ فِيهِمَا قَذَرًا – أَوْ قَالَ: أَذًى – ” وَقَالَ: ” إِذَا جَاءَ أَحَدُكُمْ إِلَى الْمَسْجِدِ فَلْيَنْظُرْ: فَإِنْ رَأَى فِي نَعْلَيْهِ قَذَرًا أَوْ أَذًى فَلْيَمْسَحْهُ وَلْيُصَلِّ فِيهِمَا “
-
-“Ketika Rasulullah Shallallahu’alaihi Wasallam shalat bersama para sahabatnya, beliau melepaskan kedua sandalnya dan meletakannya di sebelah kirinya. Ketika para sahabat (yang bermakmum) melihat hal itu, mereka pun melemparkan sandal-sandal mereka. Ketika Rasulullah Shallallahu’alaihi Wasallam selesai shalat beliau bertanya: ‘Mengapa kalian melemparkan sandal-sandal kalian?’. Para sahabat menjawab: ‘Kami melihat anda melemparkan sandal anda, maka kami pun melemparkan sandal kami’. Lalu Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘Sesungguhnya aku melihat Jibril ‘alaihissalam mendatangiku dan mengabarkanku bahwa pada kedua sandalku ada najis (dalam riwayat lain: kotoran)’. Lalu beliau bersabda: ‘Jika salah seorang dari kalian datang ke masjid maka perhatikanlah kedua sandalnya, jika ia melihat ada najis atau kotoran maka sentuhkanlah (ke tanah) lalu shalatlah dengan keduanya‘” (HR. Abu Daud no. 650, dishahihkan Al Albani dalam Shahih Abi Daud).
-
-Juga hadits dari Ummu Salamah radhiallahu’anha. Dari jalan Ummu Walad (disebut juga: Hamidah), ia berkata:
-
-قُلْتُ لأُمِّ سَلَمَةَ: إِنِّي امْرَأَةٌ أُطِيلُ ذَيْلِي وَأَمْشِي فِي الْمَكَانِ القَذِرِ؟ فَقَالَتْ: قَالَ رَسُولُ اللهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: يُطَهِّرُهُ مَا بَعْدَهُ
-
-“Aku bertanya kepada Ummu Salamah: ‘saya ini wanita yang panjang gaunnya dan saya biasa berjalan di tempat yang kotor’. Ummu Salamah berkata: ‘Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘tanah yang setelahnya sudah membersihkannya””(HR. Tirmidzi 143, ia berkata: “hadits ini shahih”).
-'''),
-          ],
-        ),
-      ]),
-      Entry('3. Cara membersihkan najasah mutawashitah', content: '''
-Yaitu yang bukan termasuk kedua jenis di atas, misalnya air kencing secara umum, kotoran manusia (feces), bangkai, darah haid, dll. Maka cara membersihkannya bisa dengan berbagai cara yang bisa menghilangkan semua najisnya hingga tidak tersisa warna, bau dan rasanya. Bisa dengan menyiramnya, atau membasuhnya, atau mencucinya, atau menyikatnya, atau menggunakan sabun, atau menggunakan alat-alat kebersihan.
-
-Syaikh As Sa’di menjelaskan: “Najasah (mutawashitah) ketika ia bisa hilang dengan cara apapun, dengan alat apapun, maka itu sudah cukup untuk mensucikannya. Tanpa disyaratkan adanya jumlah bilangan dan tidak harus menggunakan air. Ini yang ditunjukkan oleh zhahir nash dalil-dalil. Karena syariat dalam hal ini hanya memerintahkan untuk menghilangkan najis. Dan najis itu terkadang hilang dengan menggunakan air, kadang dengan membasuhnya, kadang dengan istijmar (menggunakan batu, kayu atau semisalnya), dan terkadang dengan cara yang lain. Dan syariat tidak memerintahkan untuk menghilangkan najis sebanyak tujuh kali, kecuali najis anjing. Sebagaimana juga pendapat ini juga merupakan kelaziman dari nash dalil-dalil syar’i, karena pendapat ini memiliki kesesuaian yang tinggi dengan nash. Karena penghilangan najis itu adalah penghilangan sesuatu yang mahsuusah (bisa diindera)”.
-'''),
-    ]),
-    Entry('Sumber', content: '''
-https://muslim.or.id/29297-cara-membersihkan-najis.html ''')
+Kalangan ulama mazhab Syafii dan Hanbali agaknya mulai memaparkan definisi najis secara lebih spesifik dan gamblang. Salah satu definisi najis yang kerap dirujuk sebagaimana dicatat oleh Imam Zakariya al-Anshari, penulis kitab Asnal Mathalib. Dalam kitab tersebut, najis adalah:   بِكُلِّ عَيْنٍ حَرُمَ تَنَاوُلُهَا مُطْلَقًا فِي حَالَةِ الِاخْتِيَارِ مَعَ سُهُولَةِ تَمْيِيزِهَا، وَإِمْكَانِ تَنَاوُلِهَا لَا لِحُرْمَتِهَا، وَلَا لِاسْتِقْذَارِهَا، وَلَا لِضَرَرِهَا فِي بَدَنٍ أَوْ عَقْلٍ   “Setiap benda yang haram dikonsumsi secara mutlak dalam keadaan ikhtiyar (tidak terdesak dan bebas), mudah dibedakan wujudnya, dapat dipergunakan, tidak dimuliakan, tidak dianggap jiji, serta bukan karena sebab berbahaya bagi tubuh dan pikiran.” (Imam Zakariya al-Anshari. Asnal Mathalib. Beirut: Dar al-Kutub al-Ilmiyyah. Juz I/Hal 25)   Lewat definisi di atas banyak pemahaman yang bisa diambil. Najis mesti ‘ain, yaitu ada wujudnya – karena itu angin kentut tidak najis. Kemudian ia haram dikonsumsi, maka segala yang boleh dimakan atau diminum adalah barang yang suci. Statusnya pun mutlak, yakni tidak dapat digunakan banyak atau sedikit kecuali ada indikasi atau darurat. Lalu najis ini mesti mudah dibedakan dan diidentifikasi wujudnya jika bercampur dengan zat lain. Selain itu, sebab keharamannya bukan karena ia dimuliakan, menjijikkan, atau dinilai membahayakan diri.   Penjelasan di atas cukup rinci. Ada juga ulama Syafiiyah mendefinisikan najis lebih ringkas:   النَّجَاسَةُ لُغَةً مَا يُسْتَقْذَرُ وَشَرْعًا بِالْحَدِّ مُسْتَقْذَرٌ يَمْنَعُ صِحَّةَ الصَّلَاةِ حَيْثُ لَا مُرَخِّصَ   Artinya: “Secara bahasa, najis adalah sesuatu yang dipandang jijik. Sedangkan secara istilah (selain kotor dan menjijikkan) ia menyebabkan shalat tidak sah – selama tidak ada sebab yang meringankan.” (Sulaiman bin Umar Al-Ujaili. Hasyiyah al-Jamal. Beirut: Ihya Turats al-Arabi. Juz II/ Hal 105)   KH. Ali Mustafa Yaqub dalam bukunya Kriteria Halal-Haram untuk Pangan, Obat dan Kosmetika Menurut Al-Quran dan Hadis mengutip salah satu pendapat dari kalangan mazhab Hanbali, yaitu Imam Ibnu Muflih. Konon kalangan mazhab Hanbali tidak jauh berbeda dengan definisi dan pemahaman najis dengan kalangan mazhab Syafii.   Dalam diskursus ulama fiqih, perbedaan banyak terjadi dalam pembahasan soal wujud najis. Pembahasan di atas banyak terkait dengan najis yang tampak wujudnya – yang memiliki ‘ain atau berwujud benda.   Sebagaimana sebagian kalangan ulama mazhab Hanafi, ulama bermazhab Syafii maupun Hanbali juga memiliki pemahaman soal najis berwujud benda dan “abstrak”. Syekh Salim bin Sumair al-Hadrami menjelaskan dalam kitab fiqih Safinatun Naja, bahwa najis dibagi dua, yaitu yang tampak wujudnya atau najis ‘ainiyyah, serta ada pula najis yang tidak tampak wujudnya secara nyata atau najis hukmiyyah.   Dari ragam pendapat seputar najis di atas, dapat dijadikan acuan bahwa secara umum najis adalah barang yang dipandang kotor atau menjijikkan, serta menyebabkan shalat tidak sah. Definisi najis yang lebih lengkap seperti diungkap Imam Zakariya al-Anshari dapat digunakan di kemudianhari untuk memberi batasan pada barang dan produk yang belum ditemui di masa itu.   Definisi yang spesifik, seperti disajikan ulama dari kalangan Syafiiyah, akan berdampak pada penentuan status najis suatu benda. Kasus yang bisa ditemui misalnya bagi sementara kalangan Hanafiyah, badan anjing tidak najis – berbeda dengan Syafiiyah yang memandang seluruh tubuh anjing itu najis. Begitupun misalnya dalam masalah khamar, kalangan Hanafiyah membuat klasifikasi tentang hasil fermentasi anggur yang dinilai najis dan haram. Berbeda dengan kalangan Syafiiyah yang dikarenakan minuman fermentasi anggur (wine) itu memabukkan dan mencakup keseluruhan definisi, seluruhnya dipandang najis dan haram.   Beda pendapat seputar najis ini juga berimbas pada masalah ketercampuran serta perubahan wujud najis dan benda suci, seperti dalam kasus istihalah. Ragam pendapat ulama seputar najis ini sedikit banyak akan menentukan status halal dan haram produk, lalu disadari atau tidak juga menentukan pola serta model konsumsi pangan dan obat masyarakat. Wallahu a’lam.'''),
   ];
   // DATA YANG DAPAT BERUBAH
   final List<Entry> dataText = <Entry>[
-    Entry('Pengertian Najis', content: '''
-Najasah atau najis secara bahasa artinya kotoran. Najasah atau najis dalam istilah syariat adalah segala sesuatu yang dianggap kotor oleh syariat. Dalam Ar Raudhatun Nadiyyah disebutkan,
+    Entry('', content: '''
+Najis adalah hal yang tak lepas dari keseharian kita. Ia terkait dengan keabsahan ibadah shalat. Tidak hanya dalam ibadah, najis juga menjadi sebab keharaman suatu makanan atau minuman. Nah, dalam persoalan najis ini, ulama memiliki keragaman pendapat yang akan berdampak pada penetapan status halal dan haram dalam pangan, obat maupun kosmetika.
 
-النجاسات جمع نجاسة, و هي كل شيئ يستقذره أهل الطبائع السليمة و يتحفظون عنه و يغسلون الثياب إذا أصابهم كالعذرة و البول
+Secara bahasa, najis merupakan turunan dari kata najisa – yanjisu – najsan. Ia semakna dengan al-qadzarah, yakni sesuatu yang kotor. Dalam Lisanul Arab, Ibnu Manzhur menyebutkan bahwa makna najis mencakup tinja manusia dan hewan serta hal-hal lain yang membuat jijik. Di samping makna kebahasaan tersebut, para ulama fiqih memberikan definisi tersendiri seputar najis.   Salah satu bahasan seputar najis adalah dari Imam al-Jashshash, seorang ulama bermazhab Hanafiyah, dalam kitabnya Ahkamul Quran. Beliau menafsirkan ayat berikut:   يَا أَيُّهَا الَّذِينَ آمَنُوا إِنَّمَا الْمُشْرِكُونَ نَجَسٌ…   “Sesungguhnya orang-orang musyrik itu najis...” (QS At Taubah: 28)
 
-“Najasat adalah bentuk jamak dari najasah, ia adalah segala sesuatu yang dianggap kotor oleh orang-orang yang memiliki fitrah yang bersih dan mereka akan berusaha menjauhinya dan membersihkan pakaiannya jika terkena olehnya semisal kotoran manusia dan air seni”.
+Imam al-Jashshash menyebutkan bahwa najis ada dalam benda dan perbuatan – karena di ayat itu terkait dengan perilaku syirik. Perbuatan syirik adalah sesuatu yang buruk sehingga disebut najs, kembali ke arti literernya. Namun ulama yang wafat tahun 370 H ini tidak menjelaskan perihal najis benda secara spesifik.   Menurut KH. Ali Mustafa Yaqub, benda najis tidak dijelaskan oleh beliau karena masyarakat kala itu sudah paham dan tahu benda apa yang najis dan tidak. Tanpa diberikan definisi, masyarakat tahu: ini najis, itu tidak najis. Sebagian ulama dari generasi awal memang kerap tidak menyajikan pengertian definitif karena sudah dikenalnya barang-barang yang dianggap najis.
 
-Dalam Al Fiqhul Muyassar disebutkan,
+Kalangan ulama mazhab Hanafi yang lebih kiwari, seperti Imam al-Kasani menyebutkan bahwa najis adalah sebutan untuk benda yang dianggap jijik. Penjelasan ini dilengkapi ulama mazhab Hanafi lainnya yang menyebutkan bahwa najis ada yang hakiki dan berwujud, ada yang hukmi. Namun secara umum yang dipahami sebagai najis adalah hal ada wujud bendanya saja.   Imam Ibnu Abidin dari kalangan Hanafiyah, menyebutkan bahwa dari najis yang hakiki dan hukmi tersebut, meniscayakan pemahaman bahwa najis hakiki adalah sesuatu yang kotor, atau al-khabats; serta najis yang hukmi adalah al-hadats. Keduanya sama-sama “sesuatu yang kotor” namun yang satu berwujud, yang satu sifatnya tidak.
 
-النجاسة: هي كل عين مستقذرة أمر الشارع باجتنابها
+Dalam mazhab Maliki, sebagaimana dicatat oleh KH. Ali Mustafa Yaqub, agaknya tidak banyak membahas terkait definisi najis. Imam Malik dalam al-Mudawwanah al-Kubra disebutkan tidak mencatat secara detail tentang najis. Sebagaimana pada kalangan Hanafiyah, pemahaman masyarakat tentang benda najis dan tidak sudah maklum, kendati tanpa definisi.
 
-“Najasah adalah setiap hal yang dianggap kotor yang diperintahkan oleh syariat untuk menjauhinya”.
-
-Dari penyataan “dianggap kotor oleh syariat” dalam definisi-definisi yang disebutkan para ulama menunjukkan bahwa tidak semua yang kotor menurut manusia itu adalah najis dalam istilah syar’i, dan juga menunjukkan bahwa menentukan najis atau tidaknya sesuatu itu harus dilandasi dalil. Jika tidak ada dalil yang menunjukkan najisnya sesuatu tersebut, maka ia suci. Syaikh Abdurrahman bin Nashir As Sa’di mengatakan:
-
-يجب أن يعلم أن الأصل في جميع الأشياء الطهارة فلا تنجس و لا ينجس منها إلا ما دل عليه الشرع
-
-“wajib diketahui bahwa hukum asal dari segala sesuatu itu suci, maka tidak boleh mengatakan ia sesuatu itu najis atau menajiskan kecuali ada dalil dari syariat”.
-
-Maka najis tidak bisa ditentukan dengan akal atau perasaan seseorang bahwa sesuatu itu najis, melainkan harus berdasarkan dalil. Dan yang dituntut dari kita terhadap najis adalah kita diperintahkan untuk menjauhinya dan membersihkan diri darinya jika terkena najis.
-
-Kemudian, najis berbeda dengan pembatal wudhu. Dan jika seseorang terkena najis, wudhunya tidak menjadi batal, namun ia wajib membersihkan najis tersebut
-'''),
-    Entry('Perintah Membersihkan Najis', content: '''
-Syariat memerintahkan kita untuk membersihkan diri dari najis dalam banyak dalil dari Al Qur’an dan As Sunnah. Diantaranya firman Allah Ta’ala:
-
-وَثِيَابَكَ فَطَهِّرْ
-
-“dan pakaianmu sucikanlah” (QS. Al Mudatsir: 4).
-
-Allah Ta’ala juga berfirman:
-
-وَعَهِدْنَا إِلَى إِبْرَاهِيمَ وَإِسْمَاعِيلَ أَن طَهِّرَا بَيْتِيَ لِلطَّائِفِينَ وَالْعَاكِفِينَ وَالرُّكَّعِ السُّجُودِ
-
-“Dan kami perintahkan kepada Ibrahim dan Ismail untuk mensucikan rumah-Ku bagi orang-orang yang ber-thawaf, ber-i’tikaf dan orang-orang yang rukuk dan sujud” (QS. Al Baqarah: 125).
-
-Dari Ibnu Abbas radhiallahu’anhu, Nabi Shallallahu’alaihi Wasallam bersabda:
-
-مَرَّ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى قَبْرَيْنِ فَقَالَ أَمَا إِنَّهُمَا لَيُعَذَّبَانِ وَمَا يُعَذَّبَانِ فِي كَبِيرٍ أَمَّا أَحَدُهُمَا فَكَانَ يَمْشِي بِالنَّمِيمَةِ وَأَمَّا الآخَرُ فَكَانَ لا يَسْتَتِرُ مِنْ بَوْلِهِ
-
-“Rasulullah Shallallahu’alaihi Wasallam melewati dua kuburan. Lalu beliau bersabda: “kedua orang ini sedang diadzab, dan mereka diazab bukan karena dosa besar. Orang yang pertama diadzab karena berbuat namimah (adu domba). Adapun yang kedua, ia diadzab karena tidak membersihkan diri dari sisa kencingnya”” (HR. Muslim no. 292).
-
-Dan dalil-dalil yang lainnya.
-'''),
-    Entry('Cara membersihkan najis', children: <Entry>[
-      Entry('Para ulama membagi najis dibagi menjadi tiga:', content: '''
-1. Najasah mughallazhah (berat) atau najasah tsaqilah
-2. Najasah mukhaffafah (ringan)
-3. Najasah mutawashitah (pertengahan)
-'''),
-      Entry('1. Cara membersihkan najasah tsaqilah', content: '''
-Misalnya najis dari anjing dan babi, maka membersihkannya dengan tujuh kali cucian, dan cucian yang pertama menggunakan tanah atau semacamnya. Syaikh As Sa’di menyatakan: “Najis dari anjing dan semua yang berasal dari babi cara mencucinya harus dengan tujuh kali cucian, dan cucian yang pertama menggunakan tanah atau semacamnya”.
-
-Dalilnya, Nabi Shallallahu’alaihi Wasallam bersabda:
-
-طَهُورُ إِنَاءِ أَحَدِكُمْ إِذَا وَلَغَ فِيهِ الْكَلْبُ، أَنْ يَغْسِلَهُ سَبْعَ مَرَّاتٍ أُولَاهُنَّ بِالتُّرَابِ
-
-“cara mensucikan bejana dari seseorang di antara kalian jika dijilat anjing adalah dengan mencucinya tujuh kali, cucian yang pertama menggunakan tanah” (HR. Al Bukhari no. 182, Muslim no. 279).
-
-Dan babi juga demikian, berdasarkan qiyas min baabil aula. Karena babi lebih buruk dari pada anjing.
-'''),
-      Entry('2. Cara membersihkan najasah mukhaffafah', children: <Entry>[
-        Entry(
-          'Najasah yang mukhaffah ada 3 macam di lihat dari cara membersihkannya:',
-          children: <Entry>[
-            Entry('a. Dengan cara memercikkan air sekali percikan', content: '''
-Syaikh As Sa’di menyatakan: “air kencing anak laki-laki yang belum memakan makanan karena syahwat (untuk makan) maka ini semua cukup dipercikkan air sekali saja, ini merupakan salah satu pendapat dari madzhab (Hambali), sebagaimana terdapat dalam hadits-hadits shahih. Demikian juga muntahnya anak-anak, itu statusnya lebih ringan daripada air kencingnya. Demikian juga madzi, menurut pendapat yang shahih, ia juga cukup dipercikkan air saja, sebagaimana terdapat dalam hadits, dan ini semua selaras dengan hikmah keringanan dalam masyaqqah”.
-
-Berikut perincian dalilnya:
-
-Air kencing anak laki-laki yang belum memakan makanan
-Hadits dari Abu Samh Malik radhiallahu’anhu, ia berkata:
-يُغْسَلُ مِنْ بَوْلِ الْجَارِيَةِ وَيُرَشُّ مِنْ بَوْلِ الْغُلاَمِ
-
-“Air kencing anak perempuan itu dicuci, sedangkan air kencing anak laki-laki itu dipercikkan” (HR. Abu Daud 377, An Nasa’i 303, dishahihkan Al Albani dalam Shahih An Nasa’i).
-
-Muntahnya anak laki-laki yang belum memakan makanan, diqiyaskan dengan air kencing.
-Madzi
-Berdasarkan hadits Ali bin Abi Thalib radhiallahu’anhu, ia berkata:
-أرسَلْنا المِقْدَّادَ بنَ الأسودٍ إلى رسولِ اللهِ صلى الله عليه وسلم ،فسألَه عن المَذْيِ يَخْرُجُ مِنَ الإنسانِ كيفَ يَفْعَلُ به ؟ فقال رسولُ اللهِ صلى الله عليه وسلم : تَوَضَّأْ ،وانْضَّحْ فَرْجَكَ
-
-“Miqdad bin Al Aswad mengutusku kepada Rasulullah Shallallahu’alaihi Wasallam. Lalu aku bertanya mengenai madzi yang keluar dari seseorang, bagaimana menyikapinya? Lalu Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘berwudhulah dan percikkan kemaluanmu dengan air‘” (HR. Muslim 303).
-'''),
-            Entry(
-                'b. Dengan menyiramnya sekali siram atau secukupnya hingga hilang inti objeknya',
-                content: '''
-Ini berlaku pada semua najis yang ada di atas permukaan lantai atau tanah. Syaikh As Sa’di menyatakan: “Najis jika berada di atas permukaan tanah atau lantai maka cukup disiram dengan sekali siraman yang membuat ‘ainun najasah (inti dari objek najis) hilang, sebagaimana perintah Nabi Shallallahu’alaihi Wasallam untuk menyiram air kencing orang badwi dengan seember air”.
-
-Dalilnya hadits Anas bin Malik radhiallahu’anhu, beliau berkata:
-
-جَاءَ أَعْرَابِيٌّ فَبَالَ فِي طَائِفَةِ المَسْجِدِ، فَزَجَرَهُ النَّاسُ، «فَنَهَاهُمُ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فَلَمَّا قَضَى بَوْلَهُ أَمَرَ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بِذَنُوبٍ مِنْ مَاءٍ فَأُهْرِيقَ عَلَيْهِ»
-
-“Seorang arab badwi kencing di satu bagian masjid, maka orang-orang pun hendak memarahinya. Namun Nabi Shallallahu’alaihi Wasallam mereka. Ketika ia selesai kencing, Nabi Shallallahu’alaihi Wasallam memerintahkan untuk menyiram air kencingnya dengan seember air” (HR. Bukhari no. 221, Muslim no. 284).
-
-Dari hadits ini jelas bahwa najis yang ada di permukaan lantai atau tanah maka cukup hingga hilang  ‘ainun najasah (inti dari objek najis), tidak harus hilang 100%. Karena Nabi Shallallahu’alaihi Wasallam hanya memerintahkan untuk menyiram air kencing orang badwi tersebut dengan air seember yang tentu belum menghilangkan semua najisnya 100%.
-'''),
-            Entry('c. Dengan menyentuhkan pada debu atau tanah', content: '''
-Yaitu najis yang ada pada bagian bawah sepatu dan alas kaki lainnya, juga pada bagian bawah pakaian wanita yang terkena tanah. Syaikh As Sa’di menjelaskan: “Najis yang ada pada bagian bawah sepatu dan alas kaki lainnya, cukup disentuhkan pada permukaan tanah atau pada debu, sebagaimana terdapat dalam hadits shahih. Dan ini yang sesuai dengan hikmah syar’iyyah”.
-
-Dalilnya hadits Abu Sa’id Al Khudri radhiallahu’anhu:
-
-بَيْنَمَا رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يُصَلِّي بِأَصْحَابِهِ إِذْ خَلَعَ نَعْلَيْهِ فَوَضَعَهُمَا عَنْ يَسَارِهِ، فَلَمَّا رَأَى ذَلِكَ الْقَوْمُ أَلْقَوْا نِعَالَهُمْ، فَلَمَّا قَضَى رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ صَلَاتَهُ، قَالَ: «مَا حَمَلَكُمْ عَلَى إِلْقَاءِ نِعَالِكُمْ»، قَالُوا: رَأَيْنَاكَ أَلْقَيْتَ نَعْلَيْكَ فَأَلْقَيْنَا نِعَالَنَا، فَقَالَ رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: ” إِنَّ جِبْرِيلَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَتَانِي فَأَخْبَرَنِي أَنَّ فِيهِمَا قَذَرًا – أَوْ قَالَ: أَذًى – ” وَقَالَ: ” إِذَا جَاءَ أَحَدُكُمْ إِلَى الْمَسْجِدِ فَلْيَنْظُرْ: فَإِنْ رَأَى فِي نَعْلَيْهِ قَذَرًا أَوْ أَذًى فَلْيَمْسَحْهُ وَلْيُصَلِّ فِيهِمَا “
-
-“Ketika Rasulullah Shallallahu’alaihi Wasallam shalat bersama para sahabatnya, beliau melepaskan kedua sandalnya dan meletakannya di sebelah kirinya. Ketika para sahabat (yang bermakmum) melihat hal itu, mereka pun melemparkan sandal-sandal mereka. Ketika Rasulullah Shallallahu’alaihi Wasallam selesai shalat beliau bertanya: ‘Mengapa kalian melemparkan sandal-sandal kalian?’. Para sahabat menjawab: ‘Kami melihat anda melemparkan sandal anda, maka kami pun melemparkan sandal kami’. Lalu Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘Sesungguhnya aku melihat Jibril ‘alaihissalam mendatangiku dan mengabarkanku bahwa pada kedua sandalku ada najis (dalam riwayat lain: kotoran)’. Lalu beliau bersabda: ‘Jika salah seorang dari kalian datang ke masjid maka perhatikanlah kedua sandalnya, jika ia melihat ada najis atau kotoran maka sentuhkanlah (ke tanah) lalu shalatlah dengan keduanya‘” (HR. Abu Daud no. 650, dishahihkan Al Albani dalam Shahih Abi Daud).
-
-Juga hadits dari Ummu Salamah radhiallahu’anha. Dari jalan Ummu Walad (disebut juga: Hamidah), ia berkata:
-
-قُلْتُ لأُمِّ سَلَمَةَ: إِنِّي امْرَأَةٌ أُطِيلُ ذَيْلِي وَأَمْشِي فِي الْمَكَانِ القَذِرِ؟ فَقَالَتْ: قَالَ رَسُولُ اللهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: يُطَهِّرُهُ مَا بَعْدَهُ
-
-“Aku bertanya kepada Ummu Salamah: ‘saya ini wanita yang panjang gaunnya dan saya biasa berjalan di tempat yang kotor’. Ummu Salamah berkata: ‘Rasulullah Shallallahu’alaihi Wasallam bersabda: ‘tanah yang setelahnya sudah membersihkannya””(HR. Tirmidzi 143, ia berkata: “hadits ini shahih”).
-'''),
-          ],
-        ),
-      ]),
-      Entry('3. Cara membersihkan najasah mutawashitah', content: '''
-Yaitu yang bukan termasuk kedua jenis di atas, misalnya air kencing secara umum, kotoran manusia (feces), bangkai, darah haid, dll. Maka cara membersihkannya bisa dengan berbagai cara yang bisa menghilangkan semua najisnya hingga tidak tersisa warna, bau dan rasanya. Bisa dengan menyiramnya, atau membasuhnya, atau mencucinya, atau menyikatnya, atau menggunakan sabun, atau menggunakan alat-alat kebersihan.
-
-Syaikh As Sa’di menjelaskan: “Najasah (mutawashitah) ketika ia bisa hilang dengan cara apapun, dengan alat apapun, maka itu sudah cukup untuk mensucikannya. Tanpa disyaratkan adanya jumlah bilangan dan tidak harus menggunakan air. Ini yang ditunjukkan oleh zhahir nash dalil-dalil. Karena syariat dalam hal ini hanya memerintahkan untuk menghilangkan najis. Dan najis itu terkadang hilang dengan menggunakan air, kadang dengan membasuhnya, kadang dengan istijmar (menggunakan batu, kayu atau semisalnya), dan terkadang dengan cara yang lain. Dan syariat tidak memerintahkan untuk menghilangkan najis sebanyak tujuh kali, kecuali najis anjing. Sebagaimana juga pendapat ini juga merupakan kelaziman dari nash dalil-dalil syar’i, karena pendapat ini memiliki kesesuaian yang tinggi dengan nash. Karena penghilangan najis itu adalah penghilangan sesuatu yang mahsuusah (bisa diindera)”.
-'''),
-    ]),
-    Entry('Sumber', content: '''
-https://muslim.or.id/29297-cara-membersihkan-najis.html ''')
+Kalangan ulama mazhab Syafii dan Hanbali agaknya mulai memaparkan definisi najis secara lebih spesifik dan gamblang. Salah satu definisi najis yang kerap dirujuk sebagaimana dicatat oleh Imam Zakariya al-Anshari, penulis kitab Asnal Mathalib. Dalam kitab tersebut, najis adalah:   بِكُلِّ عَيْنٍ حَرُمَ تَنَاوُلُهَا مُطْلَقًا فِي حَالَةِ الِاخْتِيَارِ مَعَ سُهُولَةِ تَمْيِيزِهَا، وَإِمْكَانِ تَنَاوُلِهَا لَا لِحُرْمَتِهَا، وَلَا لِاسْتِقْذَارِهَا، وَلَا لِضَرَرِهَا فِي بَدَنٍ أَوْ عَقْلٍ   “Setiap benda yang haram dikonsumsi secara mutlak dalam keadaan ikhtiyar (tidak terdesak dan bebas), mudah dibedakan wujudnya, dapat dipergunakan, tidak dimuliakan, tidak dianggap jiji, serta bukan karena sebab berbahaya bagi tubuh dan pikiran.” (Imam Zakariya al-Anshari. Asnal Mathalib. Beirut: Dar al-Kutub al-Ilmiyyah. Juz I/Hal 25)   Lewat definisi di atas banyak pemahaman yang bisa diambil. Najis mesti ‘ain, yaitu ada wujudnya – karena itu angin kentut tidak najis. Kemudian ia haram dikonsumsi, maka segala yang boleh dimakan atau diminum adalah barang yang suci. Statusnya pun mutlak, yakni tidak dapat digunakan banyak atau sedikit kecuali ada indikasi atau darurat. Lalu najis ini mesti mudah dibedakan dan diidentifikasi wujudnya jika bercampur dengan zat lain. Selain itu, sebab keharamannya bukan karena ia dimuliakan, menjijikkan, atau dinilai membahayakan diri.   Penjelasan di atas cukup rinci. Ada juga ulama Syafiiyah mendefinisikan najis lebih ringkas:   النَّجَاسَةُ لُغَةً مَا يُسْتَقْذَرُ وَشَرْعًا بِالْحَدِّ مُسْتَقْذَرٌ يَمْنَعُ صِحَّةَ الصَّلَاةِ حَيْثُ لَا مُرَخِّصَ   Artinya: “Secara bahasa, najis adalah sesuatu yang dipandang jijik. Sedangkan secara istilah (selain kotor dan menjijikkan) ia menyebabkan shalat tidak sah – selama tidak ada sebab yang meringankan.” (Sulaiman bin Umar Al-Ujaili. Hasyiyah al-Jamal. Beirut: Ihya Turats al-Arabi. Juz II/ Hal 105)   KH. Ali Mustafa Yaqub dalam bukunya Kriteria Halal-Haram untuk Pangan, Obat dan Kosmetika Menurut Al-Quran dan Hadis mengutip salah satu pendapat dari kalangan mazhab Hanbali, yaitu Imam Ibnu Muflih. Konon kalangan mazhab Hanbali tidak jauh berbeda dengan definisi dan pemahaman najis dengan kalangan mazhab Syafii.   Dalam diskursus ulama fiqih, perbedaan banyak terjadi dalam pembahasan soal wujud najis. Pembahasan di atas banyak terkait dengan najis yang tampak wujudnya – yang memiliki ‘ain atau berwujud benda.   Sebagaimana sebagian kalangan ulama mazhab Hanafi, ulama bermazhab Syafii maupun Hanbali juga memiliki pemahaman soal najis berwujud benda dan “abstrak”. Syekh Salim bin Sumair al-Hadrami menjelaskan dalam kitab fiqih Safinatun Naja, bahwa najis dibagi dua, yaitu yang tampak wujudnya atau najis ‘ainiyyah, serta ada pula najis yang tidak tampak wujudnya secara nyata atau najis hukmiyyah.   Dari ragam pendapat seputar najis di atas, dapat dijadikan acuan bahwa secara umum najis adalah barang yang dipandang kotor atau menjijikkan, serta menyebabkan shalat tidak sah. Definisi najis yang lebih lengkap seperti diungkap Imam Zakariya al-Anshari dapat digunakan di kemudianhari untuk memberi batasan pada barang dan produk yang belum ditemui di masa itu.   Definisi yang spesifik, seperti disajikan ulama dari kalangan Syafiiyah, akan berdampak pada penentuan status najis suatu benda. Kasus yang bisa ditemui misalnya bagi sementara kalangan Hanafiyah, badan anjing tidak najis – berbeda dengan Syafiiyah yang memandang seluruh tubuh anjing itu najis. Begitupun misalnya dalam masalah khamar, kalangan Hanafiyah membuat klasifikasi tentang hasil fermentasi anggur yang dinilai najis dan haram. Berbeda dengan kalangan Syafiiyah yang dikarenakan minuman fermentasi anggur (wine) itu memabukkan dan mencakup keseluruhan definisi, seluruhnya dipandang najis dan haram.   Beda pendapat seputar najis ini juga berimbas pada masalah ketercampuran serta perubahan wujud najis dan benda suci, seperti dalam kasus istihalah. Ragam pendapat ulama seputar najis ini sedikit banyak akan menentukan status halal dan haram produk, lalu disadari atau tidak juga menentukan pola serta model konsumsi pangan dan obat masyarakat. Wallahu a’lam.'''),
   ];
 
   @override
@@ -278,121 +58,109 @@ https://muslim.or.id/29297-cara-membersihkan-najis.html ''')
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 22),
-              height: 56,
-              child: Row(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMateriThaharahPage());
-                        } else {
-                          setState(() {
-                            if (searchController.text.compareTo("") == 0) {
-                              isClickedSearch = false;
-                            } else {
-                              searchController.text = "";
-                              searchText = searchController.text;
-                              data.clear();
-                              data.addAll(text);
-                            }
-                          });
-                        }
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(
-                              (!isClickedSearch)
-                                  ? Icons.arrow_back_ios
-                                  : Icons.clear,
-                              color: Colors.black.withOpacity(0.54))),
+              color: colorGreenCream,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 22),
+                    height: 56,
+                    child: Row(
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: GestureDetector(
+                            onTap: () {
+                              if (!isClickedSearch) {
+                                context
+                                    .bloc<PageBloc>()
+                                    .add(GoToMateriThaharahPage());
+                              } else {
+                                setState(() {
+                                  if (searchController.text.compareTo("") == 0) {
+                                    isClickedSearch = false;
+                                  } else {
+                                    searchController.text = "";
+                                    searchText = searchController.text;
+                                    data.clear();
+                                    data.addAll(text);
+                                  }
+                                });
+                              }
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(
+                                    (!isClickedSearch)
+                                        ? Icons.arrow_back_ios
+                                        : Icons.clear,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                        Center(
+                            child: (isClickedSearch)
+                                ? Container(
+                                    width: MediaQuery.of(context).size.width * 6 / 8,
+                                    child: TextField(
+                                      autofocus:
+                                          (searchController.text.compareTo("") == 0),
+                                      controller: searchController,
+                                      decoration: InputDecoration(hintText: "Search"),
+                                    ),
+                                  )
+                                : Container(
+                                    width: MediaQuery.of(context).size.width * 6 / 8,
+                                  )),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                if (!isClickedSearch) {
+                                  isClickedSearch = true;
+                                  isFocusSearch = true;
+                                } else {
+                                  searchText = searchController.text;
+                                  isFocusSearch = false;
+                                  var entries =
+                                      filterSearchResults(dataText, searchText);
+                                  data.clear();
+                                  data.addAll(entries);
+                                }
+                              });
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(Icons.search,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  // TITLE THAHARAH
                   Center(
-                      child: (isClickedSearch)
-                          ? Container(
-                              width: MediaQuery.of(context).size.width * 6 / 8,
-                              child: TextField(
-                                autofocus:
-                                    (searchController.text.compareTo("") == 0),
-                                controller: searchController,
-                                decoration: InputDecoration(hintText: "Search"),
-                              ),
-                            )
-                          : Container(
-                              width: MediaQuery.of(context).size.width * 6 / 8,
-                            )),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          if (!isClickedSearch) {
-                            isClickedSearch = true;
-                            isFocusSearch = true;
-                          } else {
-                            searchText = searchController.text;
-                            isFocusSearch = false;
-                            var entries =
-                                filterSearchResults(dataText, searchText);
-                            data.clear();
-                            data.addAll(entries);
-                          }
-                        });
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(Icons.search,
-                              color: Colors.black.withOpacity(0.54))),
-                    ),
+                      child: Text(
+                        "Thaharah",
+                        style: blackTextFont.copyWith(
+                            fontSize: 24, fontWeight: FontWeight.w700),
+                      )),
+                  // SUBTITLE WUDU
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Center(
+                        child: Text(
+                          "Menghilangkan Najis",
+                          style: blackTextFont.copyWith(fontSize: 14),
+                        )),
                   ),
                 ],
               ),
             ),
-            // TITLE THAHARAH
-            Center(
-                child: Text(
-              "Thaharah",
-              style: blackTextFont.copyWith(
-                  fontSize: 24, fontWeight: FontWeight.w700),
-            )),
-            // SUBTITLE WUDU
-            Center(
-                child: Text(
-              "Menghilangkan Najis",
-              style: blackTextFont.copyWith(fontSize: 14),
-            )),
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return ExpansionTile(
-                      title: Text(data[index].title),
-                      children: (data[index].children.isEmpty)
-                          ? <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(left: 16, right: 16),
-                                child: SelectableText.rich(
-                                  searchFromText(
-                                      data[index].content, searchText),
-                                  textScaleFactor: 1.2,
-                                  style: blackTextFont,
-                                ),
-                              )
-                            ]
-                          : getChildrenWidgets(
-                              data[index].children, searchText));
-                },
-                itemCount: data.length,
-              ),
-            )
+            buildList(data, searchText),
           ],
         ),
       ),

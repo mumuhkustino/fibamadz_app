@@ -14,7 +14,7 @@ class _MateriSholatPageState extends State<MateriSholatPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             Container(

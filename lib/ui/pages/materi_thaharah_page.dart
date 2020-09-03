@@ -14,7 +14,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             // BUTTON KEMBALI KE MATERI PAGE
@@ -56,7 +56,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
             // ICON UTAMA
             Container(
               height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
+              margin: EdgeInsets.only(top: 24, bottom: 24),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -85,7 +85,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                               context
                                   .bloc<PageBloc>()
@@ -110,7 +110,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                                 context.bloc<PageBloc>().add(GoToMateriThaharahTayamumPage());
                             }),
@@ -133,7 +133,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                                 context.bloc<PageBloc>().add(GoToMateriThaharahMandiBesarPage());
                             }),
@@ -156,7 +156,7 @@ class _MateriThaharahPageState extends State<MateriThaharahPage> {
                                 ),
                               ],
                             ),
-                            color: colorDarkGrey,
+                            color: colorGreen,
                             onPressed: () {
                                 context.bloc<PageBloc>().add(GoToMateriThaharahMenghilangkanNajisPage());
                             }),

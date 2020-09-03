@@ -68,7 +68,9 @@ class Wrapper extends StatelessWidget {
             ? MateriJenazahMenyolatkanPage()
             : (pageState is OnMateriJenazahMenguburkanPage)
             ? MateriJenazahMenguburkanPage()
-            : (pageState is OnMateriJenazahPage) 
+            : (pageState is OnMateriJenazahUmumPage)
+            ? MateriJenazahUmumPage()
+            : (pageState is OnMateriJenazahPage)
             ? MateriJenazahPage()
             
             : (pageState is OnQuizPage)

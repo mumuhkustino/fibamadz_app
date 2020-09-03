@@ -13,366 +13,306 @@ class _MateriPuasaPageState extends State<MateriPuasaPage> {
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
-    Entry('Makna puasa', content: '''
-Puasa dalam bahasa Arab disebut dengan Ash Shiyaam (الصيام) atau Ash Shaum (الصوم). Secara bahasa Ash Shiyam artinya adalah al imsaak (الإمساك) yaitu menahan diri. Sedangkan secara istilah, ash shiyaam artinya: beribadah kepada Allah Ta’ala dengan menahan diri dari makan, minum dan pembatal puasa lainnya, dari terbitnya fajar hingga terbenamnya matahari.
-'''),
-    Entry('Hukum puasa Ramadhan', content: '''
-Puasa Ramadhan hukumnya wajib berdasarkan firman Allah Ta’ala:
+    Entry('', content: '''Puasa adalah menahan dari segala sesuatu yang membatalkan puasa'''),
+    Entry('Syarat Wajib Puasa', children: [
+      Entry('', content: '''Syarat Wajib Puasa adalah harus islam, aqil baligh, mampu dan menetap. Selanjutnya kita simak yuk pembahasan berikut ini:'''),
+      Entry('1. Islam', content: '''
+Dengan demikian orang kafir tidak wajib berpuasa dan tidak wajib mengqadha' (mengganti) begitulah menurut jumhur (mayoritas) ulama, bahkan kalaupun mereka melakukannya tetap dianggap tidak sah. Hanya saja ulama berbeda pendapat dalam menentukan apakah syarat islam ini syarat wajib atau syarat sahnya puasa? Dan yang melatar belakangi mereka dalam hal ini adalah karena adanya perbedaan mereka dalam memahami ayat kewajiban puasa, mengenai apakah orang kafir termasuk di dalamnya atau tidak.
 
-يا أيها الذين آمنوا كتب عليكم الصّيَام كما كُتب على الذين من قبلكم لعلّكم تتّقون
+Menurut Ulama Hanafiyah: orang kafir tidak termasuk dalam ketentuan wajib puasa. Sementara jumhur (mayoritas) ulama berpendapat bahwa mereka tetap termasuk dalam setiap firman Allah. Dengan demikian mereka dibebani untuk melakukan semua syariatNya (dalam hal ini mereka wajib memeluk agama Islam kemudian melakukan puasa). Jadi menurut pendapat pertama (Hanafiyah) mereka hanya menaggung dosa atas kekafirannya sementara menurut pendapat kedua (Jumhur Ulama) mereka menanggung dosa kekafiran dan meninggalkan syariat.
 
-“wahai orang-orang yang beriman, diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas orang-orang sebelum kamu agar kalian bertaqwa” (QS. Al Baqarah: 183).
+Maka jika ada seorang kafir masuk Islam pada bulan ramadhan dia wajib melaksanakan puasa sejak saat itu. Sebagaimana firman Allah "Katakanlah pada orang kafir bahwa jika mereka masuk islam akan diampuni dosanya yang telah lalu" (QS. Al Anfal:38).
+      '''),
+      Entry('2 & 3. Aqil dan Baligh (berakal dan melewati masa pubertas)', content: '''
+Tidak wajib puasa bagi anak kecil (belum baligh), orang gila (tidak berakal) dan orang mabuk, karena mereka tidak termasuk orang mukallaf (orang yang sudah masuk dalam konstitusi hukum), sebagaimana dalam hadist:
 
-Dan juga karena puasa ramadhan adalah salah dari rukun Islam yang lima. Nabi Shallallahu’alaihi Wasallam bersabda:
+"Seseorang tidak termasuk mukallaf pada saat sebelum baligh, hilang ingatan dan dalan keadaan tidur".
+      '''),
+      Entry('4 & 5, Mampu dan Menetap', content: '''
+Puasa tidak diwajibkan atas orang sakit (tidak mampu) dan sedang bepergian (tidak menetap), tetapi mereka wajib mengqadha'-nya.
 
-بُني الإِسلام على خمس: شهادة أن لا إِله إِلا الله وأنّ محمّداً رسول الله، وإقام الصلاة، وإِيتاء الزكاة، والحجّ، وصوم رمضان
+Syarat-syarat tersebut di atas mendapat tambahan satu syarat lagi dari Ulama Hanafiyah menjadi syarat yang ke-6 yaitu: Mengetahui kewajiban puasa (semisal bagi orang yang memeluk Islam di negara non muslim).
+      '''),
+    ]),
+    Entry('Syarat Sahnya Puasa', children: [
+      Entry('1.	Menurut ulama Hanafiyah ada 3 : ', content: '''
+o	Niat
+o	Tidak ada yang menghalanginya (seperti haid dan nifas)
+o	Tidak ada yang membatalkannya
+      '''),
+      Entry('2.	Menurut ulama Malikiyah ada 4 : ',  content: '''
+o	Niat
+o	Suci dari haid dan nifas
+o	Islam
+o	Pada waktunya dan juga disyaratkan orang yang berpuasa berakal.
+      '''),
+      Entry('3.	Menurut ulama Syafi\'iyah ada 4 : ', content: '''
+o	Islam
+o	Berakal
+o	Suci dari haid dan nifas sepanjang hari
+o	Dilaksanakan pada waktunya.
+(Sedangkan "niat", menurut Syafi'iyah, dimasukkan ke rukun puasa).
+      '''),
+      Entry('4.	Menurut ulama Hambaliyah ada 3:', content: '''
+o	Islam
+o	Niat
+o	Suci dari haid dan nifas
+      '''),
+      Entry('', content: '''
+Sebagai catatan lebih lanjut bahwa:
+Definisi Niat ; Keyakinan hati dan kehendak untuk melakukan suatu perbuatan tanpa keragu-raguan.'''),
+    ]),
+    Entry('Apakah niat itu termasuk syarat atau rukun?', content: '''
+Pada dasarnya ulama sepakat bahwa, niat wajib dilakukan dalam setiap ibadah, sebagaimana sabda Rasulullah saw. "Sesungguhnya setiap perbuatan itu tergantung pada niatnya". Dan dalam riwayat 'Aisyah, bahwasanya Rasul Saw. bersabda: "Barang siapa tidak berniat puasa pada malam hari maka puasanya dianggap tidak sah." Menurut mazhab selain Syafi'iyah: "Niat" adalah syarat, karena puasa dan ibadah lainnya merupakan perbuatan yang dilakukan oleh seorang hamba dengan ikhlas hanya karena Allah semata. Keikhalasn disini tidak bisa terwujud kecuali dengan niat. Adapun pelaksanaan "Niat" harus dilakukan di hati tidak cukup mengucapkan di mulut saja.
+      '''),
+    Entry('Syarat bersuci jinabah (mandi junub)', content: '''
+Ulama sepakat bahwa, orang yang hendak berpuasa tidak diwajibkan untuk bersuci jinabah pada malam hari, karena tidak menutup kemungkkinan hal-hal yang mewajibkan mandi junub (seperti bersenggama, mimpi basah, haidh dan nifas) terjadi pada pagi hari. Sebagaimana HR. Aisyah dan Ummu Salmah bahwa: Rasulullah saw. mandi junub (karena jima') pada pagi hari kemudian beliau berpuasa. Maka barang siapa mandi junub pada pagi hari atau seseorang wanita belum bersuci dari haid (atau nifas) dipagi harinya tetap boleh berpuasa dan dianggap sah.
+      '''),
+    Entry('Kapan Niat Puasa Dilakukan?', children: [
+      Entry('', content: '''
+Dalam hal niat puasa wajib (jenis apa saja), para ulama berbagai mazhab sepakat bahwa niat harus dilaksanakan pada malam hari. Pendapat ini didasarkan pada hadis Rasul saw. yang diriwayatkan oleh Sayidah 'Aisyah: "Barangsiapa yang tidak berniat puasa pada malam hari sebelum terbit fajar, maka tidak sah puasanya".
 
-“Islam dibangun di atas lima rukun: syahadat laa ilaaha illallah muhammadur rasulullah, menegakkan shalat, membayar zakat, haji dan puasa Ramadhan” (HR. Bukhari – Muslim).
-'''),
-    Entry('Keutamaan puasa', content: '''
-Puasa adalah ibadah yang tidak ada tandingannya. Rasulullah Shallallahu’alaihi Wasallam bersabda kepada Abu Umamah Al Bahili:
-عليك بالصيام فإنه لا مثل له
+Lain halnya puasa sunnat, waktu berniat tidak harus malam hari, tapi bisa dilakukan setelah terbit fajar sampai sebelum tergelincirnya matahari (waktu Dzuhur) dengan syarat ia belum makan/minum sedikitpun sejak Subuh. Bahkan ulama mazhab Hambali, untuk puasa sunat, membolehkan berniat setelah waktu Dzuhur.
 
-“hendaknya engkau berpuasa karena puasa itu ibadah yang tidak ada tandingannya” (HR. Ahmad, An Nasa-i. Dishahihkan Al Albani dalam Shahih An Nasa-i)
+Kembali ke persoalan, seandainya lupa berniat pada malam hari atau tertidur, bolehkah melakukan niat setelah terbit fajar atau pagi harinya?
 
-Allah Ta’ala menyandarkan puasa kepada diri-Nya.
-قال الله عز وجل: كل عمل ابن آدم له إلا الصوم، فإنه لي وأنا أجزي به
+Untuk lebih detailnya, marilah kita ikuti berbagai pendapat berikut ini:'''),
+      Entry('Pendapat mazhab Hanafiyah : ', content: '''
+Lebih baik bila niat puasa (apa saja) dilakukan bersamaan dengan terbitnya fajar, karena saat terbit fajar merupakan awal ibadah. Jika dilaksanakan setelah terbitnya fajar, untuk semua jenis puasa wajib yang sifatnya menjadi tanggungan/hutang (seperti puasa qadla, puasa kafarat, puasa karena telah melakukan haji tamattu' dan qiran sebagai gantinya denda/dam, dll) maka tidak sah puasanya.
+Karena, menurut mazhab ini, puasa-puasa jenis ini niatnya harus dilakukan pada malam hari. Tapi lain dengan puasa wajib yang hanya dilakukan pada waktu-waktu tertentu, seperti puasa Ramadhan, nadzar, dan pusa-puasa sunnah yang tidak dikerjakan dengan sempurna, maka boleh saja niatnya dilakukan setelah fajar sampai sebelum Dhuhur.
+      '''),
+      Entry('Mazhab Malikiyah : ', content: '''
+Niat dianggap sah, untuk semua jenis puasa, bila dilakukan pada malam hari atau bersamaan dengan terbitnya fajar. Adapun apabila seseorang berniat sebelum terbenamnya matahari pada hari sebelumnya atau berniat sebelum tergelincirnya matahari pada hari ia berpuasa maka puasanya tidak sah walaupun puasa sunnah.
+      '''),
+      Entry('Mazhab Syafi\'iyah : ', content: '''
+  Untuk semua jenis puasa wajib (baik yang dilakukan pada waktu-waktu tertentu seperti puasa Ramadlan; yang sifatnya menjadi tanggungan seperti qadla', nazar, kafarat, dll.) niat harus dilakukan pada malam hari. Adapun puasa sunnnah, niat bisa dilakukan sejak malam hari sampai sebelum tergelincirnya matahari. Karena Nabi saw. suatu hari berkata pada 'Aisyah: 'Apakah kamu mempunyai makanan?'. Jawab 'Aisyah: 'Tidak punya'. Terus Nabi bilang: 'Kalau begitu aku puasa'. Lantas 'Aisyah mengisahkan bahwa Nabi pada hari yang lain berkata kepadanya: 'Adakah sesuatu yang bisa dimakan?'. Jawab 'Aisyah: 'Ada'. Lantas Nabi berkata: 'Kalau begitu saya tak berpuasa, meskipun saya telah berniat puasa'.
+      '''),
+      Entry('Mazhab Hambaliyah : ', content: '''
+Tidak beda dari Syafi'iyah, mazhab ini mengharuskan niat dilakukan pada malam hari, untuk semupa jenis puasa wajib. Adapun puasa sunnah, berbeda dari Syafi'iyah, niat bisa dilakukan walaupun telah lewat waktu Dhuhur (dengan syarat belum makan/minum sedikitpun sejak fajar)
+      '''),
+    ]),
+    Entry('Hal-hal Yang Membatalkan Puasa Yang Hanya Mewajibkan Qadla', children: [
+      Entry('', content: '''Hal-hal yang membatalkan puasa ada dua macam: yang mewajibkan qadla' saja (tidak kafarat), dan ada yang mengharuskan qadla' dan kafarat. Kali ini, kita akan menampilkan yang pertama, yang mewajibkan qadla' saja, menurut 4 mazhab besar : Hanafiyah, Malikiyah, Syafi'iyah, dan Hanbaliyah.'''),
+      Entry('Madzhab Hanafiyah', content: '''
+Hal-hal yang membatalkan puasa, dalam mazhab Hanafiyah ini terbagi ke dalam 3 kelompok besar.
+Pertama, memakan/menelan/meminum sesuatu yang tidak selayaknya ia makan. Masuk dalam kelompok ini adalah hal-hal berikut:
 
-“Allah ‘azza wa jalla berfirman: setiap amalan manusia itu bagi dirinya, kecuali puasa. Karena puasa itu untuk-Ku dan Aku yang akan membalas pahalanya” (HR. Bukhari – Muslim).
+1.	Memakan beras mentah.
+2.	Makan adonan tepung yang tidak dimasak.
+3.	Menelan obat-obatan (tanpa maksud yang jelas).
+4.	Memakan buah yang belum masak.
+5.	Memakan sisa-sisa makanan di mulut sebesar kacang Arab (sama dengan setengahnya kacang tanah).
+6.	Memakan garam banyak dengan sekali telan juga mewajibkan qadla' (tidak kafarat), berbeda jika menelannya sedikit-sedikit, maka selain qadla' puasa ia juga wajib membayar kafarat.
+7.	Memakan biji-bijian.
+8.	Memakan/menelan kapas, kertas atau kulit, kerikil, besi, debu, batu, uang kertas/perak atau sejenisnya.
+9.	Memasukkan air atau obat ke dalam tubuh dengan cara menyuntukkan melalui lubang kemalvan, hidung, atau tenggorokan.
+10.	Meneteskan minyak ke dalam telinga (bukan air, karena air tidak bisa meresap lebih jauh ke dalam).
+11.	Masuknya air hujan atau salju ke dalam tenggorokan tanpa sengaja, dan dia tidak menelannya.
 
-Puasa menggabungkan 3 jenis kesabaran: sabar dalam melakukan ketaatan kepada Allah, sabar dalam menjauhi hal yang dilarang Allah dan sabar terhadap takdir Allah atas rasa lapar dan kesulitan yang ia rasakan selama puasa.
-Puasa akan memberikan syafaat di hari kiamat.
-الصيام والقرآن يشفعان للعبد
+Sengaja muntah-muntah, atau mengeluarkan muntah dengan paksa lantas ditelankannya kembali, jika muntahannya itu memenuhi mulut; atau walaupun tidak sampai memenuhi mulut namun yang kembali tertelan minimal menyamai biji kacang Arab, sementara dia sadar bahwa dia puasa. Namun jika muntahan itu terjadi dengan tanpa sengaja; atau kalaupun muntah secara disengaja namun muntahannya tidak memenuhi mulutnya; atau saat muntah dia lupa bahwa dia sedang puasa; atau muntahannya itu berupa lendir, tidak makanan; maka puasanya tidak batal. Ini berdasar hadis "Barang siapa muntah dengan tanpa sengaja maka dia tidak wajib mengqadla, namun jika sengaja muntah-muntah maka diwajibkan mengqadla'".
 
-“Puasa dan Al Qur’an, keduanya akan memberi syafaat kelak di hari kiamat” (HR. Ahmad, Thabrani, Al Hakim. Al Haitsami mengatakan: “semua perawinya dijadikan hujjah dalam Ash Shahih“).
+Jenis kedua adalah memakan/meminum/menelan makan-makanan atau obat-obatan karena ada udzur, baik itu berupa penyakit, dipaksa, memakan/meminum/menelan secara keliru, atau karena menyepelekan, atau karena samar. Masuk dalam kategori ini adalah hal-hal berikut ini:
 
-Orang yang berpuasa akan diganjar dengan ampunan dan pahala yang besar.
-Allah Ta’ala berfirman:
-إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْقَانِتِينَ وَالْقَانِتَاتِ وَالصَّادِقِينَ وَالصَّادِقَاتِ وَالصَّابِرِينَ وَالصَّابِرَاتِ وَالْخَاشِعِينَ وَالْخَاشِعَاتِ وَالْمُتَصَدِّقِينَ وَالْمُتَصَدِّقَاتِ وَالصَّائِمِينَ وَالصَّائِمَاتِ وَالْحَافِظِينَ فُرُوجَهُمْ وَالْحَافِظَاتِ وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ أَعَدَّ اللَّهُ لَهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًا
+1.	Masuknya air kumur ke dalam perut secara tak sengaja.
+2.	Berobat dengan cara membedah tubuh bagian kepala atau perut, lantas obat yang dimasukkan mencapai otak atau perut.
+3.	Orang tidur yang dimasuki air ke dalam tubuhnya dengan sengaja.
+4.	Orang perempuan yang membatalkan puasanya dengan alasan khawatir sakit karena melaksanakan suatu pekerjaan.
+5.	Makan atau bersenggama secara syubhat/samar, setelah ia melakukan hal itu (makan atau senggama) karena lupa.
+6.	Makan setelah ia berniat puasa pada siang hari.
+7.	Seorang musafir (orang yang bepergian) yang makan saat niat puasanya dilakukan pada malam hari setelah ia memutuskan untuk menetap (mukim) di tempat ia berada.
+8.	Makan/minum/senggama pada saat fajar telah terbit, namun ia ragu apakah fajar telah terbit.
+9.	Makan/minum/senggama pada saat matahari belum terbenam, namun ia menyangka bahwa matahari telah terbenam (telah maghrib)
+Catatan ; Seorang yang makan atau melakukan hubvngan badan sejak sebelum terbitnya fajar, kemudian fajar terbit, maka jika ia langsung menghentikannya atau memuntahkan makanan yang ada di mulutnya, maka hal tersebut tidak membatalkan puasanya.
 
-“Sesungguhnya laki-laki dan perempuan yang muslim, laki-laki dan perempuan yang mukmin, laki-laki dan perempuan yang tetap dalam ketaatannya, laki-laki dan perempuan yang benar, laki-laki dan perempuan yang sabar, laki-laki dan perempuan yang khusyu’, laki-laki dan perempuan yang bersedekah, laki-laki dan perempuan yang berpuasa, laki-laki dan perempuan yang memelihara kehormatannya, laki-laki dan perempuan yang banyak menyebut (nama) Allah, Allah telah menyediakan untuk mereka ampunan dan pahala yang besar” (QS. Al Ahzab: 35)
+Sebelum pindah madzhab baca dulu ATURANNYA
 
-Puasa adalah perisai dari api neraka.
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-الصيام جُنة
+Jenis ketiga adalah pelampiasan nafsu seks/birahi secara tak sempurna. Masuk dalam kategori ini adalah hal-hal berikut:
 
-“puasa adalah perisai” (HR. Bukhari – Muslim)
+1.	Keluarnya mani dikarenakan berhubvngan badan dengan mayat atau binatang atau anak kecil yang belum menimbulkan syahwat.
+2.	Keluarnya mani karena berpelukan atau adu paha.
+3.	Keluarnya mani karena civman atau rabaan.
+4.	Perempuan yang disetvbuh! saat ia tertidur.
+5.	Perempuan yang menetesi kemaluannya dengan minyak.
+6.	Memasukkan jari yang dibasahi dengan minyak atau air kedalam anus, lantas air atau minyak itu masuk ke dalam.
+7.	Bercebok sehingga ada air yang masuk ke dalam melalui anus.
+8.	Memasukkan sesuatu sampai tenggelam seluruhnya (kapas, kain, atau jarum suntik, dll) ke dalam anus.(Jika tidak tenggelam seluruhnya, maka tidak membatalkan puasa)
+9.	Perempuan yang memasukkan jarinya yang dibasahi dengan minyak atau air ke dalam vaginanya bagian dalam.
+      '''),
+      Entry('Madzhab Malikiyah', content: '''
+Dalam mazhab ini, hal-hal yang mewajibkan qadla' (tanpa kafarat) ada 3 kategori berikut ini:
 
-Puasa adalah sebab masuk ke dalam surga
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-في الجنة ثمانية أبواب، فيها باب يسمى الريان، لا يدخله إلا الصائمون
+Membatalkan puasa-puasa fardlu (seperti qadla' Ramadlan, puasa kafarat, puasa nadzar yang tidak tertentu, puasanya orang yang haji tamattu' dan qiraan yang tidak membayar denda). Adapun puasa nadzar yang ditentukan, semisal bernadzar puasa hari/beberapa hari/bulan tertentu, jika dia membatalkan puasanya itu karena udzur seperti haidl, nifas, ayan, gila, sakit, dll, maka ia tak wajib mengqadla'. Namun jika uzdurnya sudah hilang sementara apa yang dinadzarkannya masih tersisa, maka ia wajib melakukan puasa pada hari yang tersisa itu.
 
-“di surga ada delapan pintu, diantaranya ada pintu yang dinamakan Ar Rayyan. Tidak ada yang bisa memasukinya kecuali orang-orang yang berpuasa” (HR. Bukhari).
-'''),
-    Entry('Hikmah disyariatkannya puasa', content: '''
-- Puasa adalah wasilah untuk mengokohkan ketaqwaan kepada Allah
-- Puasa membuat orang merasakan nikmat dari Allah Ta’ala
-- Mendidik manusia dalam mengendalikan keinginan dan sabar dalam menahan diri
-- Puasa menahan laju godaan setan
-- Puasa menimbulkan rasa iba dan sayang kepada kaum miskin
-- Puasa membersihkan badan dari elemen-elemen yang tidak baik dan membuat badan sehat
-'''),
-    Entry('Rukun puasa', content: '''
-- Menahan diri dari hal-hal yang membatalkan puasa
-- Menepati rentang waktu puasa
-'''),
-    Entry('Awal dan akhir bulan Ramadhan (bulan puasa)', content: '''
-- Wajib menentukan awal bulan Ramadhan dengan ru’yatul hilal, bila hilal tidak terlihat maka bulan Sya’ban digenapkan menjadi 30 hari. Para ulama ijma akan hal ini, tidak ada khilaf di antara mereka.
-- Para ulama mensyaratkan minimal satu orang yang melihat hilal untuk bisa menetapkan terlihatnya hilal Ramadhan.
-- Jika ada seorang yang mengaku melihat hilal Ramadhan sendirian, ulama khilaf. Jumhur ulama mengatakan ia wajib berpuasa sendirian berdasarkan ru’yah-nya. Pendapat ini dikuatkan oleh Ibnu Al Utsaimin. Sebagian ulama berpendapat ia wajib berpuasa bersama jama’ah kaum Muslimin. Pendapat ini dikuatkan oleh Ibnu Taimiyah dan Ibnu Baz.
-- Rukyah hilal suatu negeri berlaku untuk seluruh negeri yang lain (ittifaqul mathali’), ataukah setiap negeri mengikuti rukyah hilal masing-masing di negerinya (ikhtilaful mathali’)? Para ulama khilaf dalam masalah ini. Jumhur ulama berpendapat rukyah hilal suatu negeri berlaku untuk seluruh negeri yang lain. Adapun Syafi’iyyah dan pendapat sebagian salaf, setiap negeri mengikuti rukyah hilal masing-masing. Pendapat kedua ini dikuatkan oleh Ash Shanani dan juga Ibnu Utsaimin.
-- Wajib menentukan akhir bulan Ramadhan dengan ru’yatul hilal, bila hilal tidak terlihat maka bulan Ramadhan digenapkan menjadi 30 hari. Para ulama ijma akan hal ini, tidak ada khilaf di antara mereka.
-- Jumhur ulama mensyaratkan minimal dua orang yang melihat hilal untuk bisa menetapkan terlihatnya hilal Syawal.
-- Jika ada seorang yang mengaku melihat hilal Syawal sendirian, maka ia wajib berbuka bersama jama’ah kaum Muslimin.
-- Jika hilal Syawal terlihat pada siang hari, maka kaum Muslimin ketika itu juga berbuka dan shalat Id, jika terjadi sebelum zawal (bergesernya mata hari dari garis tegak lurus).
-'''),
-    Entry('Rentang waktu puasa', content: '''
-Puasa dimulai ketika sudah terbit fajar shadiq atau fajar yang kedua. Allah Ta’ala berfirman:
+Membatalkan puasa dengan sengaja pada puasa Ramadhan, selama syarat-syarat wajibnya kafarat tak terpenuhi. Seperti batalnya puasa karena udzur seperti sakit; atau karena udzur yang menghilangkan dosa seperti lupa, kesalahan, keterpaksaan; batalnya puasa karena keluarnya madzi atau m@ni karena melamun/melihat/memikir-mikir (sesuatu yang menimbulkan syahwat), dengan tanpa berlebihan, namun kebiasaannya keluar m@ni pada saat berhenti dari tindakan itu. Singkatnya, semua puasa wajib yang dibatalkannya wajib baginya mengqadla, kecuali puasa nadzar tertentu yang dibatalkannya karena udzur.
 
-فَالآنَ بَاشِرُوهُنَّ وَابْتَغُواْ مَا كَتَبَ اللَّهُ لَكُمْ وَكُلُواْ وَاشْرَبُواْ حَتَّى يَتَبَيَّنَ لَكُمُ الْخَيْطُ الأَبْيَضُ مِنَ الْخَيْطِ الأَسْوَدِ مِنَ الْفَجْرِ
+Membatalkan puasa dengan sengaja pada puasa-puasa sunat. Karena menurut mazhab ini, melakukan suatu ibadah sunat, hukumnya wajib melakukannya sampai sempurna. Jika dibatalkan secara sengaja maka harus mengqadlanya, dan jika tanpa jika batalnya karena udzur tidak wajib mengqadlanya.
 
-“Maka sekarang campurilah mereka dan ikutilah apa yang telah ditetapkan Allah untukmu, dan makan minumlah hingga terang bagimu benang putih dari benang hitam, yaitu fajar” (QS. Al Baqarah: 187).
+Kesimpulannya, seseorang yang membatalkan puasa (semua jenis puasa) dengan sengaja maka ia wajib mengqadlanya, dan tidak wajib membayar kafarat kecuali pada puasa Ramadhan saja. Dan barang siapa yang batal puasanya (jenis apa saja) karena lupa, wajib baginya mengqadla (tidak kafarat), kecuali pada puasa sunat (tidak wajib qadla' tidak pula kafarat).
 
-Yang dimaksud dengan khaythul abyadh di sini adalah fajar shadiq atau fajar kedua karena berwarna putih dan melintang di ufuk seperti benang. Adapun fajar kadzib atau fajar pertama itu bentuknya seperti dzanabus sirhan (ekor serigala). Nabi Shallallahu’alaihi Wasallam bersabda:
+Adapun hal-hal yang bisa membatalkan puasa, dalam mazhab ini, ada 5 hal:
 
-الفجر فجران: فأما الفجر الذي يكون كذنب السرحان فلا يحل الصلاة ولا يحرم الطعام، وأما الفجر الذي يذهب مستطيلا في الأفق فإنه يحل الصلاة و يحرم الطعام
+1.	Bersenggama yang mewajibkan mandi.
+2.	Keluarnya mani atau madzi karena civman, belaian, dan melihat/memikir-mikir (sesuatu yang menimbulkan syahwat) dan itu dilakukannya dengan sengaja dan terus-terusan.
+3.	Muntah-muntah secara sengaja, baik muntahannya itu memenuhi mulut atau tidak. Namun jika muntah itu terjadi secara tak sengaja maka tak membatalkan puasanya, kecuali jika ada muntahannya yang kembali masuk ke perut walau tak sengaja (maka batal puasanya).
+4.	Sampainya sesuatu yang cair ke tenggorokan melalui mulut, hidung, atau telinga, baik itu secara sengaja, lupa, kesalahan, atau keterpaksaan. Seperti air kumur atau saat gosok gigi. Masuk dalam kategori hukum cairan ini juga, dupa dan kemenyan jika dihirup kuat-kuat sehingga masuk ke tenggorokan, asap yang diketahui (seperti rokok-pent), bercelak dan berminyak rambut pada siang hari jika rasanya sampai ke tenggorokan, jika tidak sampai ke tenggorokan tidak membatalkan puasa. Sebagaimana ia tak membatalkan puasa, jika hal itu dilakukannya pada malam hari).
+5.	Sampainya sesuatu ke pencernaan, baik zat cair atau tidak, melalui mulut, hidung, mata atau pangkal rambut, baik masuknya dengan disengaja, keliru, lupa atau terlanjur. Adapun suntikan pada lobang kelamin laki-laki tidak membatalkan puasa. Begitu juga halnya mengkorek-korek lubang telinga, juga menelan sisa-sisa makanan yang masih menempel di antara gigi-gigi tidak membatalkan puasa, meskipun itu dilakukan dengan sengaja.
 
-“Fajar itu ada dua: pertama, fajar yang bentuknya seperti ekor serigala, maka ini tidak menghalalkan shalat (shubuh) dan tidak mengharamkan makan. Kedua, fajar yang memanjang di ufuk, ia menghalalkan shalat (shubuh) dan mengharamkan makan (mulai puasa)” (HR. Al Hakim, Al Baihaqi, dishahihkan Al Albani dalam Shahih Al Jami’).
+Demikian pula masuknya segala sesuatu, baik berupa cairan atau tidak, ke dalam pencernaan melalui lubang-lubang (menuju dalam tubuh) yang berada di atas perut, baik lubang tersebut lebar atau sempit, membatalkan puasa dan wajib mengqadlanya. Beda dengan sesuatu yang masuk melalui lubang bawah (perut), ia baru dianggap membatalkan puasa jika lubang bawah itu lebar (seperti lubang anus dan kelamin perempuan), dan barang yang masuk itu berupa zat cair (tidak benda yang keras).
 
-Puasa berakhir ketika terbenam matahari. Allah Ta’ala berfirman:
-
-ثُمَّ أَتِمُّوا الصِّيَامَ إِلَى اللَّيْلِ
-
-“lalu sempurnakanlah puasa hingga malam” (QS. Al Baqarah: 187).
-
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-
-إذا أقبل الليل من هاهنا وأدبر النهار من هاهنا، وغربت الشمس، فقد أفطر الصائم
-
-“jika datang malam dari sini, dan telah pergi siang dari sini, dan terbenam matahari, maka orang yang berpuasa boleh berbuka” (HR. Bukhari – Muslim).
-'''),
-    Entry('Syarat sah puasa', content: '''
-- Islam
-- Baligh
-- Berakal
-- Muqim (tidak sedang safar)
-- Suci dari haid dan nifas
-- Mampu berpuasa
-- Niat                                                                                                  
-'''),
-    Entry('Sunnah-sunnah ketika puasa', content: '''
-Sunnah-sunnah terkait berbuka puasa
-Disunnahkan menyegerakan berbuka
-Berbuka puasa dengan beberapa butir ruthab (kurma segar), jika tidak ada maka denganbeberapa butir tamr (kurma kering), jika tidak ada maka dengan beberapa teguk air putih
-Berdoa ketika berbuka dengan doa yang diajarkan oleh Rasulullah Shallallahu’alaihi Wasallam:
-ذهب الظمأ وابتلت العروق وثبت الأجر إن شاء الله
-
-/dzahabazh zhomaa-u wabtallatil ‘uruuqu wa tsabatal ajru insyaa Allah/
-“telah hilang rasa haus, telah basah tenggorokan, dan telah diraih pahala, insya Allah” (HR. Abu Daud, An Nasa-i, dishahihkan Al Albani dalam Shahih Abi Daud)
-
-Sunnah-sunnah terkait makan sahur
-Makan sahur hukumnya sunnah muakkadah. Dianggap sudah makan sahur jika makan atau minum di waktu sahar, walaupun hanya sedikit. Dan di dalam makanan sahur itu terdapat keberkahan
-Disunnahkan mengakhirkan makan sahur mendekati waktu terbitnya fajar, pada waktu yang tidak dikhawatirkan datangnya waktu fajar ketika masih makan sahur.
-Disunnahkan makan sahur dengan tamr (kurma kering).
-Orang yang berpuasa wajib meninggalkan semua perbuatan yang diharamkan agama dan dianjurkan untuk memperbanyak melakukan ketaatan seperti: bersedekah, membaca Al Qur’an, shalat sunnah, berdzikir, membantu orang lain, i’tikaf, menuntut ilmu agama, dll
-Membaca Al Qur’an adalah amalan yang lebih dianjurkan untuk diperbanyak di bulan Ramadhan. Bahkan sebagian salaf tidak mengajarkan ilmu di bulan Ramadhan agar bisa fokus memperbanyak membaca Al Qur’an dan mentadabburinya.
-'''),
-    Entry('Orang-orang yang dibolehkan tidak berpuasa', content: '''
-- Orang sakit yang bisa membahayakan dirinya jika berpuasa.
-- Musafir.
-- Orang yang sudah tua renta
-- Wanita hamil dan menyusui
-- Orang yang memiliki sebab-sebab yang membolehkan tidak berpuasa, 
-'''),
-    Entry('Pembatal-pembatal puasa', content: '''
-- Makan dan minum dengan sengaja
-- Keluar mani dengan sengaja
-- Muntah dengan sengaja
-- Keluarnya darah haid dan nifas
-- Menjadi gila atau pingsan
-- Riddah (murtad)
-- Berniat untuk berbuka
-- Merokok
-- Jima (bersenggama) di tengah hari puasa. Selain membatalkan puasa dan wajib meng-qadha puasa, juga diwajibkan menunaikan kafarah membebaskan seorang budak, jika tidak ada maka puasa dua bulan berturut-turut, jika tidak mampu maka memberi makan 60 orang miskin.
-- Hijamah (bekam) diperselisihkan apakah dapat membatalkan puasa atau tidak. Pendapat jumhur ulama, hijamah tidak membatalkan puasa. Sedangkan pendapat Hanabilah bekam dapat membatalkan puasa. Pendapat kedua ini dikuatkan oleh Ibnu Taimiyah, Ibnu Baz dan Ibnu Al Utsaimin.
-- Masalah donor darah merupakan turunan dari masalah bekam. Maka donor darah tidak membatalkan puasa dengan men-takhrij pendapat jumhur ulama, dan bisa membatalkan puasa dengan men-takhrij pendapat Hanabilah.
-- Inhaler dan sejenisnya berupa aroma yang dimasukan melalui hidung, diperselisihkan apakah dapat membatalkan puasa atau tidak. Pendapat jumhur ulama ia dapat membatalkan puasa, sedangkan sebagian ulama Syafi’iyyah dan Malikiyyah mengatakan tidak membatalkan. Pendapat kedua ini juga dikuatkan oleh Ibnu Taimiyah.
-'''),
-    Entry('Yang bukan merupakan pembatal puasa sehingga dibolehkan melakukannya', content: '''
-- Mengakhirkan mandi hingga terbit fajar, bagi orang yang junub atau wanita yang sudah bersih dari haid dan nifas. Puasanya tetap sah.
-- Berkumur-kumur dan istinsyaq (menghirup air ke hidung)
-- Mandi di tengah hari puasa atau mendinginkan diri dengan air
-- Menyicipi makanan ketika ada kebutuhan, selama tidak masuk ke kerongkongan
-- Bercumbu dan mencium istri, bagi orang yang mampu mengendalikan birahinya
-- Memakai parfum dan wangi-wangian
-- Menggunakan siwak atau sikat gigi
-- Menggunakan celak
-- Menggunakan tetes mata
-- Menggunakan tetes telinga
-- Makan dan minum 5 menit sebelum terbit fajar yang ditandai dengan adzan shubuh, yang biasanya disebut dengan waktu imsak. Karena batas awal rentang waktu puasa adalah ketika terbit fajar yang ditandai dengan adzan shubuh.
-'''),
-    Entry('Yang dimakruhkan ketika puasa', content: '''
-- Terlalu dalam dan berlebihan dalam berkumur-kumur dan istinsyaq (menghirup air ke hidung)
-- Puasa wishal, yaitu menyambung puasa selama dua hari tanpa diselingi makan atau minum sama sekali.
-- Menyicipi makanan tanpa ada kebutuhan, walaupun tidak masuk ke kerongkongan
-- Bercumbu dan mencium istri, bagi orang yang tidak mampu mengendalikan birahinya
-- Bermalas-malasan dan terlalu banyak tidur tanpa ada kebutuhan
-- Berlebihan dan menghabiskan waktu dalam perkara mubah yang tidak bermanfaat
-'''),
-    Entry('Beberapa kesalah-pahaman dalam ibadah puasa', content: '''
-- Niat puasa tidak perlu dilafalkan, karena niat adalah amalan hati. Nabi Shallallahu’alaihi Wasallam juga tidak pernah mengajarkan lafal niat puasa. Menetapkan itikad di dalam hati bahwa esok hari akan berpuasa, ini sudah niat yang sah.
-- Berpuasa namun tidak melaksanakan shalat fardhu adalah kesalahan fatal. Diantara juga perilaku sebagian orang yang makan sahur untuk berpuasa namun tidak bangun shalat shubuh. Karena dinukil bahwa para sahabat berijma tentang kafirnya orang yang meninggalkan shalat dengan sengaja, sehingga tidak ada faedahnya jika ia berpuasa jika statusnya kafir. Sebagian ulama berpendapat orang yang meninggalkan shalat tidak sampai kafir namun termasuk dosa besar, yang juga bisa membatalkan pahala puasa.
-- Berbohong tidak membatalkan puasa, namun bisa jadi membatalkan atau mengurangi pahala puasa karena berbohong adalah perbuatan maksiat.
-- Sebagian orang menahan diri melakukan perbuatan maksiat hingga datang waktu berbuka puasa. Padahal perbuatan maksiat tidak hanya terlarang dilakukan ketika berpuasa, bahkan terlarang juga setelah berbuka puasa dan juga terlarang dilakukan di luar bulan Ramadhan. Namun jika dilakukan ketika berpuasa selain berdosa juga dapat membatalkan pahala puasa walaupun tidak membatalkan puasanya.
-- Hadits “Tidurnya orang yang berpuasa adalah ibadah” adalah hadits yang lemah. tidur adalah perkara mubah (boleh) dan bukan ritual ibadah. Maka, sebagaimana perkara mubah yang lain, tidur dapat bernilai ibadah jika diniatkan sebagai sarana penunjang ibadah. Misalnya, seseorang tidur karena khawatir tergoda untuk berbuka sebelum waktunya, atau tidur untuk mengistirahatkan tubuh agar kuat dalam beribadah. Sebaliknya, tidak setiap tidur orang berpuasa itu bernilai ibadah. Sebagai contoh, tidur karena malas, atau tidur karena kekenyangan setelah sahur. Keduanya, tentu tidak bernilai ibadah, bahkan bisa dinilai sebagai tidur yang tercela. Maka, hendaknya seseorang menjadikan bulan ramadhan sebagai kesempatan baik untuk memperbanyak amal kebaikan, bukan bermalas-malasan.
-- Tidak ada hadits “berbukalah dengan yang manis“. Pernyataan yang tersebar di tengah masyarakat dengan bunyi demikian, bukanlah hadits Nabi Shallallahu’alaihi Wasallam.
-- Tidak tepat mendahulukan berbuka dengan makanan manis ketika tidak ada kurma. Lebih salah lagi jika mendahulukan makanan manis padahal ada kurma. Yang sesuai sunnah Nabi adalah mendahulukan berbuka dengan kurma, jika tidak ada kurma maka dengan air minum. Adapun makanan manis sebagai tambahan saja, sehingga tetap didapatkan faidah makanan manis yaitu menguatkan fisik.
-'''),
-    Entry('Sumber', content: '''
-Diringkas dari Mausu’ah Fiqhiyyah Duraris Saniyyah, Kitab Ash Shiyam, ensiklopedi fikih yang disusun dibawah bimbingan Syaikh Alwi bin Abdil Qadir As Segaf, di alamat: http://www.dorar.net/enc/feqhia/1690, dengan beberapa tambahan dari penyusun.
-https://muslim.or.id/28133-ringkasan-fikih-puasa-ramadhan.html
-''')
+Singkatnya, qadla' itu wajib bagi orang yang membatalkan puasa-puasa wajib, baik itu dilakukannya dengan sengaja, lupa, keterpaksaan; baik pembatalannya itu haram, boleh, atau wajib seperti orang yang membatalkan puasanya karena kekhawatirannya akan sesuatu yang fatal (jika ia puasa); baik pembatalan itu juga mewajibkan kafarat atau tidak; baik puasa fardhu itu asli atau puasa nadzar.
+      '''),
+    ]),
   ];
   final List<Entry> dataText = <Entry>[
-    Entry('Makna puasa', content: '''
-Puasa dalam bahasa Arab disebut dengan Ash Shiyaam (الصيام) atau Ash Shaum (الصوم). Secara bahasa Ash Shiyam artinya adalah al imsaak (الإمساك) yaitu menahan diri. Sedangkan secara istilah, ash shiyaam artinya: beribadah kepada Allah Ta’ala dengan menahan diri dari makan, minum dan pembatal puasa lainnya, dari terbitnya fajar hingga terbenamnya matahari.
-'''),
-    Entry('Hukum puasa Ramadhan', content: '''
-Puasa Ramadhan hukumnya wajib berdasarkan firman Allah Ta’ala:
+    Entry('', content: '''Puasa adalah menahan dari segala sesuatu yang membatalkan puasa'''),
+    Entry('Syarat Wajib Puasa', children: [
+      Entry('', content: '''Syarat Wajib Puasa adalah harus islam, aqil baligh, mampu dan menetap. Selanjutnya kita simak yuk pembahasan berikut ini:'''),
+      Entry('1. Islam', content: '''
+Dengan demikian orang kafir tidak wajib berpuasa dan tidak wajib mengqadha' (mengganti) begitulah menurut jumhur (mayoritas) ulama, bahkan kalaupun mereka melakukannya tetap dianggap tidak sah. Hanya saja ulama berbeda pendapat dalam menentukan apakah syarat islam ini syarat wajib atau syarat sahnya puasa? Dan yang melatar belakangi mereka dalam hal ini adalah karena adanya perbedaan mereka dalam memahami ayat kewajiban puasa, mengenai apakah orang kafir termasuk di dalamnya atau tidak.
 
-يا أيها الذين آمنوا كتب عليكم الصّيَام كما كُتب على الذين من قبلكم لعلّكم تتّقون
+Menurut Ulama Hanafiyah: orang kafir tidak termasuk dalam ketentuan wajib puasa. Sementara jumhur (mayoritas) ulama berpendapat bahwa mereka tetap termasuk dalam setiap firman Allah. Dengan demikian mereka dibebani untuk melakukan semua syariatNya (dalam hal ini mereka wajib memeluk agama Islam kemudian melakukan puasa). Jadi menurut pendapat pertama (Hanafiyah) mereka hanya menaggung dosa atas kekafirannya sementara menurut pendapat kedua (Jumhur Ulama) mereka menanggung dosa kekafiran dan meninggalkan syariat.
 
-“wahai orang-orang yang beriman, diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas orang-orang sebelum kamu agar kalian bertaqwa” (QS. Al Baqarah: 183).
+Maka jika ada seorang kafir masuk Islam pada bulan ramadhan dia wajib melaksanakan puasa sejak saat itu. Sebagaimana firman Allah "Katakanlah pada orang kafir bahwa jika mereka masuk islam akan diampuni dosanya yang telah lalu" (QS. Al Anfal:38).
+      '''),
+      Entry('2 & 3. Aqil dan Baligh (berakal dan melewati masa pubertas)', content: '''
+Tidak wajib puasa bagi anak kecil (belum baligh), orang gila (tidak berakal) dan orang mabuk, karena mereka tidak termasuk orang mukallaf (orang yang sudah masuk dalam konstitusi hukum), sebagaimana dalam hadist:
 
-Dan juga karena puasa ramadhan adalah salah dari rukun Islam yang lima. Nabi Shallallahu’alaihi Wasallam bersabda:
+"Seseorang tidak termasuk mukallaf pada saat sebelum baligh, hilang ingatan dan dalan keadaan tidur".
+      '''),
+      Entry('4 & 5, Mampu dan Menetap', content: '''
+Puasa tidak diwajibkan atas orang sakit (tidak mampu) dan sedang bepergian (tidak menetap), tetapi mereka wajib mengqadha'-nya.
 
-بُني الإِسلام على خمس: شهادة أن لا إِله إِلا الله وأنّ محمّداً رسول الله، وإقام الصلاة، وإِيتاء الزكاة، والحجّ، وصوم رمضان
+Syarat-syarat tersebut di atas mendapat tambahan satu syarat lagi dari Ulama Hanafiyah menjadi syarat yang ke-6 yaitu: Mengetahui kewajiban puasa (semisal bagi orang yang memeluk Islam di negara non muslim).
+      '''),
+    ]),
+    Entry('Syarat Sahnya Puasa', children: [
+      Entry('1.	Menurut ulama Hanafiyah ada 3 : ', content: '''
+o	Niat
+o	Tidak ada yang menghalanginya (seperti haid dan nifas)
+o	Tidak ada yang membatalkannya
+      '''),
+      Entry('2.	Menurut ulama Malikiyah ada 4 : ',  content: '''
+o	Niat
+o	Suci dari haid dan nifas
+o	Islam
+o	Pada waktunya dan juga disyaratkan orang yang berpuasa berakal.
+      '''),
+      Entry('3.	Menurut ulama Syafi\'iyah ada 4 : ', content: '''
+o	Islam
+o	Berakal
+o	Suci dari haid dan nifas sepanjang hari
+o	Dilaksanakan pada waktunya.
+(Sedangkan "niat", menurut Syafi'iyah, dimasukkan ke rukun puasa).
+      '''),
+      Entry('4.	Menurut ulama Hambaliyah ada 3:', content: '''
+o	Islam
+o	Niat
+o	Suci dari haid dan nifas
+      '''),
+      Entry('', content: '''
+Sebagai catatan lebih lanjut bahwa:
+Definisi Niat ; Keyakinan hati dan kehendak untuk melakukan suatu perbuatan tanpa keragu-raguan.'''),
+    ]),
+    Entry('Apakah niat itu termasuk syarat atau rukun?', content: '''
+Pada dasarnya ulama sepakat bahwa, niat wajib dilakukan dalam setiap ibadah, sebagaimana sabda Rasulullah saw. "Sesungguhnya setiap perbuatan itu tergantung pada niatnya". Dan dalam riwayat 'Aisyah, bahwasanya Rasul Saw. bersabda: "Barang siapa tidak berniat puasa pada malam hari maka puasanya dianggap tidak sah." Menurut mazhab selain Syafi'iyah: "Niat" adalah syarat, karena puasa dan ibadah lainnya merupakan perbuatan yang dilakukan oleh seorang hamba dengan ikhlas hanya karena Allah semata. Keikhalasn disini tidak bisa terwujud kecuali dengan niat. Adapun pelaksanaan "Niat" harus dilakukan di hati tidak cukup mengucapkan di mulut saja.
+      '''),
+    Entry('Syarat bersuci jinabah (mandi junub)', content: '''
+Ulama sepakat bahwa, orang yang hendak berpuasa tidak diwajibkan untuk bersuci jinabah pada malam hari, karena tidak menutup kemungkkinan hal-hal yang mewajibkan mandi junub (seperti bersenggama, mimpi basah, haidh dan nifas) terjadi pada pagi hari. Sebagaimana HR. Aisyah dan Ummu Salmah bahwa: Rasulullah saw. mandi junub (karena jima') pada pagi hari kemudian beliau berpuasa. Maka barang siapa mandi junub pada pagi hari atau seseorang wanita belum bersuci dari haid (atau nifas) dipagi harinya tetap boleh berpuasa dan dianggap sah.
+      '''),
+    Entry('Kapan Niat Puasa Dilakukan?', children: [
+      Entry('', content: '''
+Dalam hal niat puasa wajib (jenis apa saja), para ulama berbagai mazhab sepakat bahwa niat harus dilaksanakan pada malam hari. Pendapat ini didasarkan pada hadis Rasul saw. yang diriwayatkan oleh Sayidah 'Aisyah: "Barangsiapa yang tidak berniat puasa pada malam hari sebelum terbit fajar, maka tidak sah puasanya".
 
-“Islam dibangun di atas lima rukun: syahadat laa ilaaha illallah muhammadur rasulullah, menegakkan shalat, membayar zakat, haji dan puasa Ramadhan” (HR. Bukhari – Muslim).
-'''),
-    Entry('Keutamaan puasa', content: '''
-Puasa adalah ibadah yang tidak ada tandingannya. Rasulullah Shallallahu’alaihi Wasallam bersabda kepada Abu Umamah Al Bahili:
-عليك بالصيام فإنه لا مثل له
+Lain halnya puasa sunnat, waktu berniat tidak harus malam hari, tapi bisa dilakukan setelah terbit fajar sampai sebelum tergelincirnya matahari (waktu Dzuhur) dengan syarat ia belum makan/minum sedikitpun sejak Subuh. Bahkan ulama mazhab Hambali, untuk puasa sunat, membolehkan berniat setelah waktu Dzuhur.
 
-“hendaknya engkau berpuasa karena puasa itu ibadah yang tidak ada tandingannya” (HR. Ahmad, An Nasa-i. Dishahihkan Al Albani dalam Shahih An Nasa-i)
+Kembali ke persoalan, seandainya lupa berniat pada malam hari atau tertidur, bolehkah melakukan niat setelah terbit fajar atau pagi harinya?
 
-Allah Ta’ala menyandarkan puasa kepada diri-Nya.
-قال الله عز وجل: كل عمل ابن آدم له إلا الصوم، فإنه لي وأنا أجزي به
+Untuk lebih detailnya, marilah kita ikuti berbagai pendapat berikut ini:'''),
+      Entry('Pendapat mazhab Hanafiyah : ', content: '''
+Lebih baik bila niat puasa (apa saja) dilakukan bersamaan dengan terbitnya fajar, karena saat terbit fajar merupakan awal ibadah. Jika dilaksanakan setelah terbitnya fajar, untuk semua jenis puasa wajib yang sifatnya menjadi tanggungan/hutang (seperti puasa qadla, puasa kafarat, puasa karena telah melakukan haji tamattu' dan qiran sebagai gantinya denda/dam, dll) maka tidak sah puasanya.
+Karena, menurut mazhab ini, puasa-puasa jenis ini niatnya harus dilakukan pada malam hari. Tapi lain dengan puasa wajib yang hanya dilakukan pada waktu-waktu tertentu, seperti puasa Ramadhan, nadzar, dan pusa-puasa sunnah yang tidak dikerjakan dengan sempurna, maka boleh saja niatnya dilakukan setelah fajar sampai sebelum Dhuhur.
+      '''),
+      Entry('Mazhab Malikiyah : ', content: '''
+Niat dianggap sah, untuk semua jenis puasa, bila dilakukan pada malam hari atau bersamaan dengan terbitnya fajar. Adapun apabila seseorang berniat sebelum terbenamnya matahari pada hari sebelumnya atau berniat sebelum tergelincirnya matahari pada hari ia berpuasa maka puasanya tidak sah walaupun puasa sunnah.
+      '''),
+      Entry('Mazhab Syafi\'iyah : ', content: '''
+  Untuk semua jenis puasa wajib (baik yang dilakukan pada waktu-waktu tertentu seperti puasa Ramadlan; yang sifatnya menjadi tanggungan seperti qadla', nazar, kafarat, dll.) niat harus dilakukan pada malam hari. Adapun puasa sunnnah, niat bisa dilakukan sejak malam hari sampai sebelum tergelincirnya matahari. Karena Nabi saw. suatu hari berkata pada 'Aisyah: 'Apakah kamu mempunyai makanan?'. Jawab 'Aisyah: 'Tidak punya'. Terus Nabi bilang: 'Kalau begitu aku puasa'. Lantas 'Aisyah mengisahkan bahwa Nabi pada hari yang lain berkata kepadanya: 'Adakah sesuatu yang bisa dimakan?'. Jawab 'Aisyah: 'Ada'. Lantas Nabi berkata: 'Kalau begitu saya tak berpuasa, meskipun saya telah berniat puasa'.
+      '''),
+      Entry('Mazhab Hambaliyah : ', content: '''
+Tidak beda dari Syafi'iyah, mazhab ini mengharuskan niat dilakukan pada malam hari, untuk semupa jenis puasa wajib. Adapun puasa sunnah, berbeda dari Syafi'iyah, niat bisa dilakukan walaupun telah lewat waktu Dhuhur (dengan syarat belum makan/minum sedikitpun sejak fajar)
+      '''),
+    ]),
+    Entry('Hal-hal Yang Membatalkan Puasa Yang Hanya Mewajibkan Qadla', children: [
+      Entry('', content: '''Hal-hal yang membatalkan puasa ada dua macam: yang mewajibkan qadla' saja (tidak kafarat), dan ada yang mengharuskan qadla' dan kafarat. Kali ini, kita akan menampilkan yang pertama, yang mewajibkan qadla' saja, menurut 4 mazhab besar : Hanafiyah, Malikiyah, Syafi'iyah, dan Hanbaliyah.'''),
+      Entry('Madzhab Hanafiyah', content: '''
+Hal-hal yang membatalkan puasa, dalam mazhab Hanafiyah ini terbagi ke dalam 3 kelompok besar.
+Pertama, memakan/menelan/meminum sesuatu yang tidak selayaknya ia makan. Masuk dalam kelompok ini adalah hal-hal berikut:
 
-“Allah ‘azza wa jalla berfirman: setiap amalan manusia itu bagi dirinya, kecuali puasa. Karena puasa itu untuk-Ku dan Aku yang akan membalas pahalanya” (HR. Bukhari – Muslim).
+1.	Memakan beras mentah.
+2.	Makan adonan tepung yang tidak dimasak.
+3.	Menelan obat-obatan (tanpa maksud yang jelas).
+4.	Memakan buah yang belum masak.
+5.	Memakan sisa-sisa makanan di mulut sebesar kacang Arab (sama dengan setengahnya kacang tanah).
+6.	Memakan garam banyak dengan sekali telan juga mewajibkan qadla' (tidak kafarat), berbeda jika menelannya sedikit-sedikit, maka selain qadla' puasa ia juga wajib membayar kafarat.
+7.	Memakan biji-bijian.
+8.	Memakan/menelan kapas, kertas atau kulit, kerikil, besi, debu, batu, uang kertas/perak atau sejenisnya.
+9.	Memasukkan air atau obat ke dalam tubuh dengan cara menyuntukkan melalui lubang kemalvan, hidung, atau tenggorokan.
+10.	Meneteskan minyak ke dalam telinga (bukan air, karena air tidak bisa meresap lebih jauh ke dalam).
+11.	Masuknya air hujan atau salju ke dalam tenggorokan tanpa sengaja, dan dia tidak menelannya.
 
-Puasa menggabungkan 3 jenis kesabaran: sabar dalam melakukan ketaatan kepada Allah, sabar dalam menjauhi hal yang dilarang Allah dan sabar terhadap takdir Allah atas rasa lapar dan kesulitan yang ia rasakan selama puasa.
-Puasa akan memberikan syafaat di hari kiamat.
-الصيام والقرآن يشفعان للعبد
+Sengaja muntah-muntah, atau mengeluarkan muntah dengan paksa lantas ditelankannya kembali, jika muntahannya itu memenuhi mulut; atau walaupun tidak sampai memenuhi mulut namun yang kembali tertelan minimal menyamai biji kacang Arab, sementara dia sadar bahwa dia puasa. Namun jika muntahan itu terjadi dengan tanpa sengaja; atau kalaupun muntah secara disengaja namun muntahannya tidak memenuhi mulutnya; atau saat muntah dia lupa bahwa dia sedang puasa; atau muntahannya itu berupa lendir, tidak makanan; maka puasanya tidak batal. Ini berdasar hadis "Barang siapa muntah dengan tanpa sengaja maka dia tidak wajib mengqadla, namun jika sengaja muntah-muntah maka diwajibkan mengqadla'".
 
-“Puasa dan Al Qur’an, keduanya akan memberi syafaat kelak di hari kiamat” (HR. Ahmad, Thabrani, Al Hakim. Al Haitsami mengatakan: “semua perawinya dijadikan hujjah dalam Ash Shahih“).
+Jenis kedua adalah memakan/meminum/menelan makan-makanan atau obat-obatan karena ada udzur, baik itu berupa penyakit, dipaksa, memakan/meminum/menelan secara keliru, atau karena menyepelekan, atau karena samar. Masuk dalam kategori ini adalah hal-hal berikut ini:
 
-Orang yang berpuasa akan diganjar dengan ampunan dan pahala yang besar.
-Allah Ta’ala berfirman:
-إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْقَانِتِينَ وَالْقَانِتَاتِ وَالصَّادِقِينَ وَالصَّادِقَاتِ وَالصَّابِرِينَ وَالصَّابِرَاتِ وَالْخَاشِعِينَ وَالْخَاشِعَاتِ وَالْمُتَصَدِّقِينَ وَالْمُتَصَدِّقَاتِ وَالصَّائِمِينَ وَالصَّائِمَاتِ وَالْحَافِظِينَ فُرُوجَهُمْ وَالْحَافِظَاتِ وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ أَعَدَّ اللَّهُ لَهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًا
+1.	Masuknya air kumur ke dalam perut secara tak sengaja.
+2.	Berobat dengan cara membedah tubuh bagian kepala atau perut, lantas obat yang dimasukkan mencapai otak atau perut.
+3.	Orang tidur yang dimasuki air ke dalam tubuhnya dengan sengaja.
+4.	Orang perempuan yang membatalkan puasanya dengan alasan khawatir sakit karena melaksanakan suatu pekerjaan.
+5.	Makan atau bersenggama secara syubhat/samar, setelah ia melakukan hal itu (makan atau senggama) karena lupa.
+6.	Makan setelah ia berniat puasa pada siang hari.
+7.	Seorang musafir (orang yang bepergian) yang makan saat niat puasanya dilakukan pada malam hari setelah ia memutuskan untuk menetap (mukim) di tempat ia berada.
+8.	Makan/minum/senggama pada saat fajar telah terbit, namun ia ragu apakah fajar telah terbit.
+9.	Makan/minum/senggama pada saat matahari belum terbenam, namun ia menyangka bahwa matahari telah terbenam (telah maghrib)
+Catatan ; Seorang yang makan atau melakukan hubvngan badan sejak sebelum terbitnya fajar, kemudian fajar terbit, maka jika ia langsung menghentikannya atau memuntahkan makanan yang ada di mulutnya, maka hal tersebut tidak membatalkan puasanya.
 
-“Sesungguhnya laki-laki dan perempuan yang muslim, laki-laki dan perempuan yang mukmin, laki-laki dan perempuan yang tetap dalam ketaatannya, laki-laki dan perempuan yang benar, laki-laki dan perempuan yang sabar, laki-laki dan perempuan yang khusyu’, laki-laki dan perempuan yang bersedekah, laki-laki dan perempuan yang berpuasa, laki-laki dan perempuan yang memelihara kehormatannya, laki-laki dan perempuan yang banyak menyebut (nama) Allah, Allah telah menyediakan untuk mereka ampunan dan pahala yang besar” (QS. Al Ahzab: 35)
+Sebelum pindah madzhab baca dulu ATURANNYA
 
-Puasa adalah perisai dari api neraka.
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-الصيام جُنة
+Jenis ketiga adalah pelampiasan nafsu seks/birahi secara tak sempurna. Masuk dalam kategori ini adalah hal-hal berikut:
 
-“puasa adalah perisai” (HR. Bukhari – Muslim)
+1.	Keluarnya mani dikarenakan berhubvngan badan dengan mayat atau binatang atau anak kecil yang belum menimbulkan syahwat.
+2.	Keluarnya mani karena berpelukan atau adu paha.
+3.	Keluarnya mani karena civman atau rabaan.
+4.	Perempuan yang disetvbuh! saat ia tertidur.
+5.	Perempuan yang menetesi kemaluannya dengan minyak.
+6.	Memasukkan jari yang dibasahi dengan minyak atau air kedalam anus, lantas air atau minyak itu masuk ke dalam.
+7.	Bercebok sehingga ada air yang masuk ke dalam melalui anus.
+8.	Memasukkan sesuatu sampai tenggelam seluruhnya (kapas, kain, atau jarum suntik, dll) ke dalam anus.(Jika tidak tenggelam seluruhnya, maka tidak membatalkan puasa)
+9.	Perempuan yang memasukkan jarinya yang dibasahi dengan minyak atau air ke dalam vaginanya bagian dalam.
+      '''),
+      Entry('Madzhab Malikiyah', content: '''
+Dalam mazhab ini, hal-hal yang mewajibkan qadla' (tanpa kafarat) ada 3 kategori berikut ini:
 
-Puasa adalah sebab masuk ke dalam surga
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-في الجنة ثمانية أبواب، فيها باب يسمى الريان، لا يدخله إلا الصائمون
+Membatalkan puasa-puasa fardlu (seperti qadla' Ramadlan, puasa kafarat, puasa nadzar yang tidak tertentu, puasanya orang yang haji tamattu' dan qiraan yang tidak membayar denda). Adapun puasa nadzar yang ditentukan, semisal bernadzar puasa hari/beberapa hari/bulan tertentu, jika dia membatalkan puasanya itu karena udzur seperti haidl, nifas, ayan, gila, sakit, dll, maka ia tak wajib mengqadla'. Namun jika uzdurnya sudah hilang sementara apa yang dinadzarkannya masih tersisa, maka ia wajib melakukan puasa pada hari yang tersisa itu.
 
-“di surga ada delapan pintu, diantaranya ada pintu yang dinamakan Ar Rayyan. Tidak ada yang bisa memasukinya kecuali orang-orang yang berpuasa” (HR. Bukhari).
-'''),
-    Entry('Hikmah disyariatkannya puasa', content: '''
-- Puasa adalah wasilah untuk mengokohkan ketaqwaan kepada Allah
-- Puasa membuat orang merasakan nikmat dari Allah Ta’ala
-- Mendidik manusia dalam mengendalikan keinginan dan sabar dalam menahan diri
-- Puasa menahan laju godaan setan
-- Puasa menimbulkan rasa iba dan sayang kepada kaum miskin
-- Puasa membersihkan badan dari elemen-elemen yang tidak baik dan membuat badan sehat
-'''),
-    Entry('Rukun puasa', content: '''
-- Menahan diri dari hal-hal yang membatalkan puasa
-- Menepati rentang waktu puasa
-'''),
-    Entry('Awal dan akhir bulan Ramadhan (bulan puasa)', content: '''
-- Wajib menentukan awal bulan Ramadhan dengan ru’yatul hilal, bila hilal tidak terlihat maka bulan Sya’ban digenapkan menjadi 30 hari. Para ulama ijma akan hal ini, tidak ada khilaf di antara mereka.
-- Para ulama mensyaratkan minimal satu orang yang melihat hilal untuk bisa menetapkan terlihatnya hilal Ramadhan.
-- Jika ada seorang yang mengaku melihat hilal Ramadhan sendirian, ulama khilaf. Jumhur ulama mengatakan ia wajib berpuasa sendirian berdasarkan ru’yah-nya. Pendapat ini dikuatkan oleh Ibnu Al Utsaimin. Sebagian ulama berpendapat ia wajib berpuasa bersama jama’ah kaum Muslimin. Pendapat ini dikuatkan oleh Ibnu Taimiyah dan Ibnu Baz.
-- Rukyah hilal suatu negeri berlaku untuk seluruh negeri yang lain (ittifaqul mathali’), ataukah setiap negeri mengikuti rukyah hilal masing-masing di negerinya (ikhtilaful mathali’)? Para ulama khilaf dalam masalah ini. Jumhur ulama berpendapat rukyah hilal suatu negeri berlaku untuk seluruh negeri yang lain. Adapun Syafi’iyyah dan pendapat sebagian salaf, setiap negeri mengikuti rukyah hilal masing-masing. Pendapat kedua ini dikuatkan oleh Ash Shanani dan juga Ibnu Utsaimin.
-- Wajib menentukan akhir bulan Ramadhan dengan ru’yatul hilal, bila hilal tidak terlihat maka bulan Ramadhan digenapkan menjadi 30 hari. Para ulama ijma akan hal ini, tidak ada khilaf di antara mereka.
-- Jumhur ulama mensyaratkan minimal dua orang yang melihat hilal untuk bisa menetapkan terlihatnya hilal Syawal.
-- Jika ada seorang yang mengaku melihat hilal Syawal sendirian, maka ia wajib berbuka bersama jama’ah kaum Muslimin.
-- Jika hilal Syawal terlihat pada siang hari, maka kaum Muslimin ketika itu juga berbuka dan shalat Id, jika terjadi sebelum zawal (bergesernya mata hari dari garis tegak lurus).
-'''),
-    Entry('Rentang waktu puasa', content: '''
-Puasa dimulai ketika sudah terbit fajar shadiq atau fajar yang kedua. Allah Ta’ala berfirman:
+Membatalkan puasa dengan sengaja pada puasa Ramadhan, selama syarat-syarat wajibnya kafarat tak terpenuhi. Seperti batalnya puasa karena udzur seperti sakit; atau karena udzur yang menghilangkan dosa seperti lupa, kesalahan, keterpaksaan; batalnya puasa karena keluarnya madzi atau m@ni karena melamun/melihat/memikir-mikir (sesuatu yang menimbulkan syahwat), dengan tanpa berlebihan, namun kebiasaannya keluar m@ni pada saat berhenti dari tindakan itu. Singkatnya, semua puasa wajib yang dibatalkannya wajib baginya mengqadla, kecuali puasa nadzar tertentu yang dibatalkannya karena udzur.
 
-فَالآنَ بَاشِرُوهُنَّ وَابْتَغُواْ مَا كَتَبَ اللَّهُ لَكُمْ وَكُلُواْ وَاشْرَبُواْ حَتَّى يَتَبَيَّنَ لَكُمُ الْخَيْطُ الأَبْيَضُ مِنَ الْخَيْطِ الأَسْوَدِ مِنَ الْفَجْرِ
+Membatalkan puasa dengan sengaja pada puasa-puasa sunat. Karena menurut mazhab ini, melakukan suatu ibadah sunat, hukumnya wajib melakukannya sampai sempurna. Jika dibatalkan secara sengaja maka harus mengqadlanya, dan jika tanpa jika batalnya karena udzur tidak wajib mengqadlanya.
 
-“Maka sekarang campurilah mereka dan ikutilah apa yang telah ditetapkan Allah untukmu, dan makan minumlah hingga terang bagimu benang putih dari benang hitam, yaitu fajar” (QS. Al Baqarah: 187).
+Kesimpulannya, seseorang yang membatalkan puasa (semua jenis puasa) dengan sengaja maka ia wajib mengqadlanya, dan tidak wajib membayar kafarat kecuali pada puasa Ramadhan saja. Dan barang siapa yang batal puasanya (jenis apa saja) karena lupa, wajib baginya mengqadla (tidak kafarat), kecuali pada puasa sunat (tidak wajib qadla' tidak pula kafarat).
 
-Yang dimaksud dengan khaythul abyadh di sini adalah fajar shadiq atau fajar kedua karena berwarna putih dan melintang di ufuk seperti benang. Adapun fajar kadzib atau fajar pertama itu bentuknya seperti dzanabus sirhan (ekor serigala). Nabi Shallallahu’alaihi Wasallam bersabda:
+Adapun hal-hal yang bisa membatalkan puasa, dalam mazhab ini, ada 5 hal:
 
-الفجر فجران: فأما الفجر الذي يكون كذنب السرحان فلا يحل الصلاة ولا يحرم الطعام، وأما الفجر الذي يذهب مستطيلا في الأفق فإنه يحل الصلاة و يحرم الطعام
+1.	Bersenggama yang mewajibkan mandi.
+2.	Keluarnya mani atau madzi karena civman, belaian, dan melihat/memikir-mikir (sesuatu yang menimbulkan syahwat) dan itu dilakukannya dengan sengaja dan terus-terusan.
+3.	Muntah-muntah secara sengaja, baik muntahannya itu memenuhi mulut atau tidak. Namun jika muntah itu terjadi secara tak sengaja maka tak membatalkan puasanya, kecuali jika ada muntahannya yang kembali masuk ke perut walau tak sengaja (maka batal puasanya).
+4.	Sampainya sesuatu yang cair ke tenggorokan melalui mulut, hidung, atau telinga, baik itu secara sengaja, lupa, kesalahan, atau keterpaksaan. Seperti air kumur atau saat gosok gigi. Masuk dalam kategori hukum cairan ini juga, dupa dan kemenyan jika dihirup kuat-kuat sehingga masuk ke tenggorokan, asap yang diketahui (seperti rokok-pent), bercelak dan berminyak rambut pada siang hari jika rasanya sampai ke tenggorokan, jika tidak sampai ke tenggorokan tidak membatalkan puasa. Sebagaimana ia tak membatalkan puasa, jika hal itu dilakukannya pada malam hari).
+5.	Sampainya sesuatu ke pencernaan, baik zat cair atau tidak, melalui mulut, hidung, mata atau pangkal rambut, baik masuknya dengan disengaja, keliru, lupa atau terlanjur. Adapun suntikan pada lobang kelamin laki-laki tidak membatalkan puasa. Begitu juga halnya mengkorek-korek lubang telinga, juga menelan sisa-sisa makanan yang masih menempel di antara gigi-gigi tidak membatalkan puasa, meskipun itu dilakukan dengan sengaja.
 
-“Fajar itu ada dua: pertama, fajar yang bentuknya seperti ekor serigala, maka ini tidak menghalalkan shalat (shubuh) dan tidak mengharamkan makan. Kedua, fajar yang memanjang di ufuk, ia menghalalkan shalat (shubuh) dan mengharamkan makan (mulai puasa)” (HR. Al Hakim, Al Baihaqi, dishahihkan Al Albani dalam Shahih Al Jami’).
+Demikian pula masuknya segala sesuatu, baik berupa cairan atau tidak, ke dalam pencernaan melalui lubang-lubang (menuju dalam tubuh) yang berada di atas perut, baik lubang tersebut lebar atau sempit, membatalkan puasa dan wajib mengqadlanya. Beda dengan sesuatu yang masuk melalui lubang bawah (perut), ia baru dianggap membatalkan puasa jika lubang bawah itu lebar (seperti lubang anus dan kelamin perempuan), dan barang yang masuk itu berupa zat cair (tidak benda yang keras).
 
-Puasa berakhir ketika terbenam matahari. Allah Ta’ala berfirman:
-
-ثُمَّ أَتِمُّوا الصِّيَامَ إِلَى اللَّيْلِ
-
-“lalu sempurnakanlah puasa hingga malam” (QS. Al Baqarah: 187).
-
-Rasulullah Shallallahu’alaihi Wasallam bersabda:
-
-إذا أقبل الليل من هاهنا وأدبر النهار من هاهنا، وغربت الشمس، فقد أفطر الصائم
-
-“jika datang malam dari sini, dan telah pergi siang dari sini, dan terbenam matahari, maka orang yang berpuasa boleh berbuka” (HR. Bukhari – Muslim).
-'''),
-    Entry('Syarat sah puasa', content: '''
-- Islam
-- Baligh
-- Berakal
-- Muqim (tidak sedang safar)
-- Suci dari haid dan nifas
-- Mampu berpuasa
-- Niat                                                                                                  
-'''),
-    Entry('Sunnah-sunnah ketika puasa', content: '''
-Sunnah-sunnah terkait berbuka puasa
-Disunnahkan menyegerakan berbuka
-Berbuka puasa dengan beberapa butir ruthab (kurma segar), jika tidak ada maka denganbeberapa butir tamr (kurma kering), jika tidak ada maka dengan beberapa teguk air putih
-Berdoa ketika berbuka dengan doa yang diajarkan oleh Rasulullah Shallallahu’alaihi Wasallam:
-ذهب الظمأ وابتلت العروق وثبت الأجر إن شاء الله
-
-/dzahabazh zhomaa-u wabtallatil ‘uruuqu wa tsabatal ajru insyaa Allah/
-“telah hilang rasa haus, telah basah tenggorokan, dan telah diraih pahala, insya Allah” (HR. Abu Daud, An Nasa-i, dishahihkan Al Albani dalam Shahih Abi Daud)
-
-Sunnah-sunnah terkait makan sahur
-Makan sahur hukumnya sunnah muakkadah. Dianggap sudah makan sahur jika makan atau minum di waktu sahar, walaupun hanya sedikit. Dan di dalam makanan sahur itu terdapat keberkahan
-Disunnahkan mengakhirkan makan sahur mendekati waktu terbitnya fajar, pada waktu yang tidak dikhawatirkan datangnya waktu fajar ketika masih makan sahur.
-Disunnahkan makan sahur dengan tamr (kurma kering).
-Orang yang berpuasa wajib meninggalkan semua perbuatan yang diharamkan agama dan dianjurkan untuk memperbanyak melakukan ketaatan seperti: bersedekah, membaca Al Qur’an, shalat sunnah, berdzikir, membantu orang lain, i’tikaf, menuntut ilmu agama, dll
-Membaca Al Qur’an adalah amalan yang lebih dianjurkan untuk diperbanyak di bulan Ramadhan. Bahkan sebagian salaf tidak mengajarkan ilmu di bulan Ramadhan agar bisa fokus memperbanyak membaca Al Qur’an dan mentadabburinya.
-'''),
-    Entry('Orang-orang yang dibolehkan tidak berpuasa', content: '''
-- Orang sakit yang bisa membahayakan dirinya jika berpuasa.
-- Musafir.
-- Orang yang sudah tua renta
-- Wanita hamil dan menyusui
-- Orang yang memiliki sebab-sebab yang membolehkan tidak berpuasa, 
-'''),
-    Entry('Pembatal-pembatal puasa', content: '''
-- Makan dan minum dengan sengaja
-- Keluar mani dengan sengaja
-- Muntah dengan sengaja
-- Keluarnya darah haid dan nifas
-- Menjadi gila atau pingsan
-- Riddah (murtad)
-- Berniat untuk berbuka
-- Merokok
-- Jima (bersenggama) di tengah hari puasa. Selain membatalkan puasa dan wajib meng-qadha puasa, juga diwajibkan menunaikan kafarah membebaskan seorang budak, jika tidak ada maka puasa dua bulan berturut-turut, jika tidak mampu maka memberi makan 60 orang miskin.
-- Hijamah (bekam) diperselisihkan apakah dapat membatalkan puasa atau tidak. Pendapat jumhur ulama, hijamah tidak membatalkan puasa. Sedangkan pendapat Hanabilah bekam dapat membatalkan puasa. Pendapat kedua ini dikuatkan oleh Ibnu Taimiyah, Ibnu Baz dan Ibnu Al Utsaimin.
-- Masalah donor darah merupakan turunan dari masalah bekam. Maka donor darah tidak membatalkan puasa dengan men-takhrij pendapat jumhur ulama, dan bisa membatalkan puasa dengan men-takhrij pendapat Hanabilah.
-- Inhaler dan sejenisnya berupa aroma yang dimasukan melalui hidung, diperselisihkan apakah dapat membatalkan puasa atau tidak. Pendapat jumhur ulama ia dapat membatalkan puasa, sedangkan sebagian ulama Syafi’iyyah dan Malikiyyah mengatakan tidak membatalkan. Pendapat kedua ini juga dikuatkan oleh Ibnu Taimiyah.
-'''),
-    Entry('Yang bukan merupakan pembatal puasa sehingga dibolehkan melakukannya', content: '''
-- Mengakhirkan mandi hingga terbit fajar, bagi orang yang junub atau wanita yang sudah bersih dari haid dan nifas. Puasanya tetap sah.
-- Berkumur-kumur dan istinsyaq (menghirup air ke hidung)
-- Mandi di tengah hari puasa atau mendinginkan diri dengan air
-- Menyicipi makanan ketika ada kebutuhan, selama tidak masuk ke kerongkongan
-- Bercumbu dan mencium istri, bagi orang yang mampu mengendalikan birahinya
-- Memakai parfum dan wangi-wangian
-- Menggunakan siwak atau sikat gigi
-- Menggunakan celak
-- Menggunakan tetes mata
-- Menggunakan tetes telinga
-- Makan dan minum 5 menit sebelum terbit fajar yang ditandai dengan adzan shubuh, yang biasanya disebut dengan waktu imsak. Karena batas awal rentang waktu puasa adalah ketika terbit fajar yang ditandai dengan adzan shubuh.
-'''),
-    Entry('Yang dimakruhkan ketika puasa', content: '''
-- Terlalu dalam dan berlebihan dalam berkumur-kumur dan istinsyaq (menghirup air ke hidung)
-- Puasa wishal, yaitu menyambung puasa selama dua hari tanpa diselingi makan atau minum sama sekali.
-- Menyicipi makanan tanpa ada kebutuhan, walaupun tidak masuk ke kerongkongan
-- Bercumbu dan mencium istri, bagi orang yang tidak mampu mengendalikan birahinya
-- Bermalas-malasan dan terlalu banyak tidur tanpa ada kebutuhan
-- Berlebihan dan menghabiskan waktu dalam perkara mubah yang tidak bermanfaat
-'''),
-    Entry('Beberapa kesalah-pahaman dalam ibadah puasa', content: '''
-- Niat puasa tidak perlu dilafalkan, karena niat adalah amalan hati. Nabi Shallallahu’alaihi Wasallam juga tidak pernah mengajarkan lafal niat puasa. Menetapkan itikad di dalam hati bahwa esok hari akan berpuasa, ini sudah niat yang sah.
-- Berpuasa namun tidak melaksanakan shalat fardhu adalah kesalahan fatal. Diantara juga perilaku sebagian orang yang makan sahur untuk berpuasa namun tidak bangun shalat shubuh. Karena dinukil bahwa para sahabat berijma tentang kafirnya orang yang meninggalkan shalat dengan sengaja, sehingga tidak ada faedahnya jika ia berpuasa jika statusnya kafir. Sebagian ulama berpendapat orang yang meninggalkan shalat tidak sampai kafir namun termasuk dosa besar, yang juga bisa membatalkan pahala puasa.
-- Berbohong tidak membatalkan puasa, namun bisa jadi membatalkan atau mengurangi pahala puasa karena berbohong adalah perbuatan maksiat.
-- Sebagian orang menahan diri melakukan perbuatan maksiat hingga datang waktu berbuka puasa. Padahal perbuatan maksiat tidak hanya terlarang dilakukan ketika berpuasa, bahkan terlarang juga setelah berbuka puasa dan juga terlarang dilakukan di luar bulan Ramadhan. Namun jika dilakukan ketika berpuasa selain berdosa juga dapat membatalkan pahala puasa walaupun tidak membatalkan puasanya.
-- Hadits “Tidurnya orang yang berpuasa adalah ibadah” adalah hadits yang lemah. tidur adalah perkara mubah (boleh) dan bukan ritual ibadah. Maka, sebagaimana perkara mubah yang lain, tidur dapat bernilai ibadah jika diniatkan sebagai sarana penunjang ibadah. Misalnya, seseorang tidur karena khawatir tergoda untuk berbuka sebelum waktunya, atau tidur untuk mengistirahatkan tubuh agar kuat dalam beribadah. Sebaliknya, tidak setiap tidur orang berpuasa itu bernilai ibadah. Sebagai contoh, tidur karena malas, atau tidur karena kekenyangan setelah sahur. Keduanya, tentu tidak bernilai ibadah, bahkan bisa dinilai sebagai tidur yang tercela. Maka, hendaknya seseorang menjadikan bulan ramadhan sebagai kesempatan baik untuk memperbanyak amal kebaikan, bukan bermalas-malasan.
-- Tidak ada hadits “berbukalah dengan yang manis“. Pernyataan yang tersebar di tengah masyarakat dengan bunyi demikian, bukanlah hadits Nabi Shallallahu’alaihi Wasallam.
-- Tidak tepat mendahulukan berbuka dengan makanan manis ketika tidak ada kurma. Lebih salah lagi jika mendahulukan makanan manis padahal ada kurma. Yang sesuai sunnah Nabi adalah mendahulukan berbuka dengan kurma, jika tidak ada kurma maka dengan air minum. Adapun makanan manis sebagai tambahan saja, sehingga tetap didapatkan faidah makanan manis yaitu menguatkan fisik.
-'''),
-    Entry('Sumber', content: '''
-Diringkas dari Mausu’ah Fiqhiyyah Duraris Saniyyah, Kitab Ash Shiyam, ensiklopedi fikih yang disusun dibawah bimbingan Syaikh Alwi bin Abdil Qadir As Segaf, di alamat: http://www.dorar.net/enc/feqhia/1690, dengan beberapa tambahan dari penyusun.
-https://muslim.or.id/28133-ringkasan-fikih-puasa-ramadhan.html
-''')
+Singkatnya, qadla' itu wajib bagi orang yang membatalkan puasa-puasa wajib, baik itu dilakukannya dengan sengaja, lupa, keterpaksaan; baik pembatalannya itu haram, boleh, atau wajib seperti orang yang membatalkan puasanya karena kekhawatirannya akan sesuatu yang fatal (jika ia puasa); baik pembatalan itu juga mewajibkan kafarat atau tidak; baik puasa fardhu itu asli atau puasa nadzar.
+      '''),
+    ]),
   ];
 
   @override
@@ -389,115 +329,108 @@ https://muslim.or.id/28133-ringkasan-fikih-puasa-ramadhan.html
         return;
       },
       child: Scaffold(
-        backgroundColor: colorCream,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 22),
-              height: 56,
-              child: Row(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        if (!isClickedSearch) {
-                          context
-                              .bloc<PageBloc>()
-                              .add(GoToMateriPage());
-                        } else {
-                          setState(() {
-                            if (searchController.text.compareTo("") == 0) {
-                              isClickedSearch = false;
-                            } else {
-                              searchController.text = "";
-                              searchText = searchController.text;
-                              data.clear();
-                              data.addAll(text);
-                            }
-                          });
-                        }
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(
-                              (!isClickedSearch)
-                                  ? Icons.arrow_back_ios
-                                  : Icons.clear,
-                              color: Colors.black.withOpacity(0.54))),
+              color: colorGreenCream,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 22),
+                    height: 56,
+                    child: Row(
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: GestureDetector(
+                            onTap: () {
+                              if (!isClickedSearch) {
+                                context.bloc<PageBloc>().add(GoToMateriPage());
+                              } else {
+                                setState(() {
+                                  if (searchController.text.compareTo("") ==
+                                      0) {
+                                    isClickedSearch = false;
+                                  } else {
+                                    searchController.text = "";
+                                    searchText = searchController.text;
+                                    data.clear();
+                                    data.addAll(text);
+                                  }
+                                });
+                              }
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(
+                                    (!isClickedSearch)
+                                        ? Icons.arrow_back_ios
+                                        : Icons.clear,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                        Center(
+                            child: (isClickedSearch)
+                                ? Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
+                                    child: TextField(
+                                      autofocus: (searchController.text
+                                              .compareTo("") ==
+                                          0),
+                                      controller: searchController,
+                                      decoration:
+                                          InputDecoration(hintText: "Search"),
+                                    ),
+                                  )
+                                : Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        6 /
+                                        8,
+                                  )),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                if (!isClickedSearch) {
+                                  isClickedSearch = true;
+                                  isFocusSearch = true;
+                                } else {
+                                  searchText = searchController.text;
+                                  isFocusSearch = false;
+                                  var entries =
+                                      filterSearchResults(dataText, searchText);
+                                  data.clear();
+                                  data.addAll(entries);
+                                }
+                              });
+                            },
+                            child: Container(
+                                width: MediaQuery.of(context).size.width / 8,
+                                child: Icon(Icons.search,
+                                    color: Colors.black.withOpacity(0.54))),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Center(
-                      child: (isClickedSearch)
-                          ? Container(
-                        width: MediaQuery.of(context).size.width * 6 / 8,
-                        child: TextField(
-                          autofocus:
-                          (searchController.text.compareTo("") == 0),
-                          controller: searchController,
-                          decoration: InputDecoration(hintText: "Search"),
-                        ),
-                      )
-                          : Container(
-                        width: MediaQuery.of(context).size.width * 6 / 8,
-                      )),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          if (!isClickedSearch) {
-                            isClickedSearch = true;
-                            isFocusSearch = true;
-                          } else {
-                            searchText = searchController.text;
-                            isFocusSearch = false;
-                            var entries =
-                            filterSearchResults(dataText, searchText);
-                            data.clear();
-                            data.addAll(entries);
-                          }
-                        });
-                      },
-                      child: Container(
-                          width: MediaQuery.of(context).size.width / 8,
-                          child: Icon(Icons.search,
-                              color: Colors.black.withOpacity(0.54))),
-                    ),
+                  // TITLE SHOLAT
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Center(
+                        child: Text(
+                      "Puasa",
+                      style: blackTextFont.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w700),
+                    )),
                   ),
                 ],
               ),
             ),
-            // TITLE SHOLAT
-            Center(
-                child: Text(
-                  "Puasa",
-                  style: blackTextFont.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.w700),
-                )),
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return ExpansionTile(
-                      title: Text(data[index].title),
-                      children: (data[index].children.isEmpty)
-                          ? <Widget>[
-                        Container(
-                          margin: EdgeInsets.only(left: 16, right: 16),
-                          child: SelectableText.rich(
-                            searchFromText(
-                                data[index].content, searchText),
-                            textScaleFactor: 1.2,
-                            style: blackTextFont,
-                          ),
-                        )
-                      ]
-                          : getChildrenWidgets(
-                          data[index].children, searchText));
-                },
-                itemCount: data.length,
-              ),
-            )
+            buildList(data, searchText),
           ],
         ),
       ),

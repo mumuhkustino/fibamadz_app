@@ -14,7 +14,7 @@ class _QuizPageState extends State<QuizPage> {
         return;
       },
       child: Scaffold(
-        backgroundColor: colorYellow,
+        backgroundColor: colorLightGreen,
         body: Column(
           children: [
             Container(
@@ -36,24 +36,24 @@ class _QuizPageState extends State<QuizPage> {
             // TITLE QUIZ
             Center(
               child: Text(
-                "Quiz",
+                "Kuis",
                 style: blackTextFont.copyWith(
                     fontSize: 24, fontWeight: FontWeight.w700),
               ),
             ),
-            // SUBTITLE PILIH QUIZ
+            // SUBTITLE PILIH KUIS
             Container(
               // height: 50,
               // margin: EdgeInsets.only(top: 5),
               alignment: Alignment.center,
-              child: Text("Pilih Quiz",
+              child: Text("Pilih Kuis",
                   style: blackTextFont.copyWith(
                       fontSize: 14, fontWeight: FontWeight.w700)),
             ),
             // ICON UTAMA
             Container(
               height: 70,
-              margin: EdgeInsets.only(bottom: 48, top: 36),
+              margin: EdgeInsets.only(bottom: 24, top: 24),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -82,7 +82,7 @@ class _QuizPageState extends State<QuizPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                                context.bloc<PageBloc>().add(GoToQuizThaharahPage());
                             }),
@@ -105,7 +105,7 @@ class _QuizPageState extends State<QuizPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                                context.bloc<PageBloc>().add(GoToQuizSholatPage());
                             }),
@@ -128,7 +128,7 @@ class _QuizPageState extends State<QuizPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                                context.bloc<PageBloc>().add(GoToQuizPuasaPage());
                             }),
@@ -152,7 +152,7 @@ class _QuizPageState extends State<QuizPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                                context.bloc<PageBloc>().add(GoToQuizZakatPage());
                             }),
@@ -175,7 +175,7 @@ class _QuizPageState extends State<QuizPage> {
                                 ),
                               ],
                             ),
-                            color: colorLightBlue,
+                            color: colorGreen,
                             onPressed: () {
                                context.bloc<PageBloc>().add(GoToQuizJenazahPage());
                             }),
