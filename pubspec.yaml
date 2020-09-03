@@ -51,6 +51,16 @@ flutter:
     - assets/icons/Ellipse-50.png
     - assets/icons/Ellipse-75.png
     - assets/icons/Ellipse-100.png
+    - assets/icons/ramadhan-mubarak/png/star-and-crescent-moon-white.png
+    - assets/icons/ramadhan-mubarak/png/ramadan-sunrise-white.png
+    - assets/icons/ramadhan-mubarak/png/quran-book-white.png
+    - assets/icons/ramadhan-mubarak/png/qibla-white.png
+    - assets/icons/ramadhan-mubarak/png/muslim-man-white.png
+    - assets/icons/ramadhan-mubarak/png/islamic-ghusl-white.png
+    - assets/icons/ramadhan-mubarak/png/islamic-friday-prayer-white.png
+    - assets/icons/ramadhan-mubarak/png/ramadan-fasting-white.png
+    - assets/icons/ramadhan-mubarak/png/islamic-prayer-white.png
+    - assets/icons/ramadhan-mubarak/png/sadaqah-white.png
     - assets/icons/ramadhan-mubarak/png/star-and-crescent-moon.png
     - assets/icons/ramadhan-mubarak/png/ramadan-sunrise.png
     - assets/icons/ramadhan-mubarak/png/quran-book.png
