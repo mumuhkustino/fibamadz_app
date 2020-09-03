@@ -179,6 +179,11 @@ class OnMateriJenazahPage extends PageState {
   List<Object> get props => [];
 }
 
+class OnMateriJenazahUmumPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 class OnMateriJenazahMemandikanPage extends PageState {
   @override
   List<Object> get props => [];

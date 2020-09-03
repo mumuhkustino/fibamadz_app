@@ -175,6 +175,11 @@ class GoToMateriJenazahPage extends PageEvent {
   List<Object> get props => [];
 }
 
+class GoToMateriJenazahUmumPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
 class GoToMateriJenazahMemandikanPage extends PageEvent {
   @override
   List<Object> get props => [];
