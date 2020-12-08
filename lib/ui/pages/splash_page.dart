@@ -69,7 +69,7 @@ class _SplashPageState extends State<SplashPage> {
                   ),
                   //TEXT PENJELASAN SINGKAT APLIKASI
                   Text(
-                    "Platform asik dan lengkap\nuntuk belajar Islam",
+                    "Fiqih Ibadah Empat Madzhab",
                     style: blackTextFont.copyWith(
                       fontSize: 13,
                     ),
