@@ -25,7 +25,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToQuizPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -238,7 +238,7 @@ class _QuizSholatPageState extends State<QuizSholatPage> {
 }
 
 class RadioGroupSholat extends StatefulWidget {
-  int qN;
+  int qN = -1;
 
   RadioGroupSholat(int qNInput) {
     qN = qNInput;

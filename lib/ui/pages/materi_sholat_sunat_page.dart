@@ -9,7 +9,7 @@ class _MateriSholatSunatPageState extends State<MateriSholatSunatPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
@@ -106,7 +106,7 @@ https://id.wikipedia.org/wiki/Salat_sunah
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriSholatPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: colorGreenCream,

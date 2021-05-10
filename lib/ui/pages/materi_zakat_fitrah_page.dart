@@ -9,7 +9,7 @@ class _MateriZakatFitrahPageState extends State<MateriZakatFitrahPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
@@ -107,7 +107,7 @@ Mazhab Hambali didirikan oleh Ahmad bin Muhammad bin Hilal. Lahir di Baghdad pad
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

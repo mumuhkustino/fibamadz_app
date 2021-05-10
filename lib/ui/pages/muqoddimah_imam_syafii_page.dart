@@ -10,7 +10,7 @@ class _MuqoddimahImamSyafiiPageState extends State<MuqoddimahImamSyafiiPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   final text =
       '''Tokoh utamanya adalah Al-Imam Muhammad bin Idris As-Syafi'i Al-Quraisyi. Beliau dilahirkan di Ghuzzah pada tahun 150 H dan wafat di Mesir pada tahun 204 H.
 
@@ -22,7 +22,7 @@ Beliau belajar kepada Imam Malik yang dikenal dengan madzhabul hadits, kemudian 
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

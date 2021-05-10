@@ -1,6 +1,5 @@
 part of 'page_bloc.dart';
 
-//mumuh jelasin ini apa
 abstract class PageEvent extends Equatable {
   const PageEvent();
 }

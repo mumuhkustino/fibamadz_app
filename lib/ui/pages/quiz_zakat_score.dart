@@ -14,7 +14,7 @@ class _QuizZakatScoreState extends State<QuizZakatScore> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToQuizPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

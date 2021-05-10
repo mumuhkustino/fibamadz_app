@@ -10,7 +10,7 @@ class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   final text =
       '''Pendirinya adalah Al-Imam Maliki bin Anas Al-Ashbahy. Ia dilahirkan di Madinah pada tahun 93 H dan wafat pada tahun 179 H. Beliau sebagai ahli hadits di Madinah dimana Rasulullah SAW hidup di kota tersebut. Madzhab ini dikenal dengan madzhab Ahli Hadits, bahkan beliau mengutamakan perbuatan ahli Madinah daripada Khabaril Wahid (Hadits yang diriwayatkan oleh perorangan). Karena bagi beliau mustahil ahli Madinah akan berbuat sesuatu yang bertentangan dengan perbuatan Rasul, beliau lebih banyak menitikberatkan kepada hadits, karena menurut beliau perbuatan ahli Madinah termasuk hadits mutawatir. Madzhab ini lahir di Madinah kemudian berkembang ke negara lain khususnya Maroko. Beliau sangat hormat kepada Rasulullah dan cinta, sehingga beliau tidak pernah naik unta di kota Madinah karena hormat kepada makam Rasul.''';
 
@@ -19,7 +19,7 @@ class _MuqoddimahImamMalikPageState extends State<MuqoddimahImamMalikPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

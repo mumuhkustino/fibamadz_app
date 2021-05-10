@@ -25,7 +25,7 @@ class _QuizZakatPageState extends State<QuizZakatPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToQuizPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -238,7 +238,7 @@ class _QuizZakatPageState extends State<QuizZakatPage> {
 }
 
 class RadioGroup extends StatefulWidget {
-  int qN;
+  int qN = -1;
 
   RadioGroup(int qNInput) {
     qN = qNInput;

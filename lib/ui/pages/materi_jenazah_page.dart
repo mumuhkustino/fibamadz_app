@@ -11,7 +11,7 @@ class _MateriJenazahPageState extends State<MateriJenazahPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: colorLightGreen,

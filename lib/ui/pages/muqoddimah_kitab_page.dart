@@ -9,7 +9,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   final text =
       '''Ahlussunnah wal Jama’ah berhaluan salah satu Madzhab yang empat. Seluruh ummat Islam di dunia dan para ulamanya telah mengakui bahwa Imam yang empat ialah Imam Hanafi, Imam Maliki, Imam Syafi’i dan Imam Ahmad Ibnu Hambal telah memenuhi persyaratan sebagai Mujtahid. Hal itu dikarenakan ilmu, amal dan akhlaq yang dimiliki oleh mereka. Maka ahli fiqih memfatwakan bagi umat Islam wajib mengikuti salah satu madzhab yang empat tersebut.''';
 
@@ -18,7 +18,7 @@ class _MuqoddimahKitabPageState extends State<MuqoddimahKitabPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

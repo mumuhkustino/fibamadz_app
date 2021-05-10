@@ -10,7 +10,7 @@ class _MuqoddimahImamAhmadPageState extends State<MuqoddimahImamAhmadPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   final text =
       '''Dinamakan Hanbali, karena pendirinya Al-Imam Ahmad bin Hanbal As-Syaebani, lahir di Baghdad Th 164 H dan wafat Th 248 H. Beliau adalah murid Imam Syafi’i yang paling istimewa dan tidak pernah pisah sampai Imam Syafi’i pergi ke Mesir.
 
@@ -21,7 +21,7 @@ Menurut beliau hadits dla’if dapat dipergunakan untuk perbuatan-perbuatan yang
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

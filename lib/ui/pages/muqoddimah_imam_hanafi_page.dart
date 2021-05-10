@@ -10,7 +10,7 @@ class _MuqoddimahImamHanafiPageState extends State<MuqoddimahImamHanafiPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   final text =
       '''Dinamakan Hanafi, karena pendirinya Imam Abu Hanifah An-Nu’man bin Tsabit. Beliau lahir pada tahun 80 H di Kufah dan wafat pada tahun 150 H. Madzhab ini dikenal madzhab Ahli Qiyas (akal) karena hadits yang sampai ke Irak sedikit, sehingga beliau banyak mempergunakan Qiyas. Beliau termasuk ulama yang cerdas, pengasih dan ahli tahajud dan fasih membaca Al-Qur’an. Beliau ditawari untuk menjadi hakim pada zaman bani Umayyah yang terakhir, tetapi beliau menolak.
       
@@ -21,7 +21,7 @@ Madzhab ini berkembang karena menjadi madzhab pemerintah pada saat Khalifah Haru
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMuqoddimahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

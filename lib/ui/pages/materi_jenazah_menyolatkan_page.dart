@@ -9,7 +9,7 @@ class _MateriJenazahMenyolatkanPageState extends State<MateriJenazahMenyolatkanP
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
@@ -486,7 +486,7 @@ Memindahkan jenazah dari daerah tempatnya meninggal hukumnya boleh secara mutlak
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriJenazahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

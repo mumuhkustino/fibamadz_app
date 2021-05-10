@@ -25,7 +25,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToQuizPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -238,7 +238,7 @@ class _QuizThaharahPageState extends State<QuizThaharahPage> {
 }
 
 class RadioGroupThaharah extends StatefulWidget {
-  int qN;
+  int qN = -1;
 
   RadioGroupThaharah(int qNInput) {
     qN = qNInput;

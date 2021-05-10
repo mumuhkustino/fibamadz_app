@@ -5,10 +5,10 @@ part 'page_event.dart';
 part 'page_state.dart';
 
 class PageBloc extends Bloc<PageEvent, PageState> {
+
   @override
   PageState get initialState => OnInitialPage();
 
-  // mumuh kasih komen ini apa
   @override
   Stream<PageState> mapEventToState(PageEvent event) async* {
     if (event is GoToSplashPage) {

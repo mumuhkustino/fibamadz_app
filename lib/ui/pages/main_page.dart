@@ -11,7 +11,7 @@ class _MainPageState extends State<MainPage> {
     return WillPopScope(
         onWillPop: () async {
           context.bloc<PageBloc>().add(GoToSplashPage());
-          return;
+          return Future.value(false);
         },
         child: Scaffold(
           backgroundColor: colorLightGreen,
@@ -65,11 +65,11 @@ class _MainPageState extends State<MainPage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-//                                      Image.asset(
-//                                          'assets/icons/ramadhan-mubarak/png/ramadan-sunrise-white.png'),
-//                                      SizedBox(
-//                                        width: 12,
-//                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/ramadan-sunrise-white.png'),
+                                      SizedBox(
+                                        width: 12,
+                                      ),
                                       Text(
                                         "Muqoddimah",
                                         style: whiteTextFont.copyWith(fontSize: 22),
@@ -98,11 +98,11 @@ class _MainPageState extends State<MainPage> {
                                         "Materi",
                                         style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
-//                                      SizedBox(
-//                                        width: 56,
-//                                      ),
-//                                      Image.asset(
-//                                          'assets/icons/ramadhan-mubarak/png/quran-book-white.png'),
+                                      SizedBox(
+                                        width: 56,
+                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/quran-book-white.png'),
                                     ],
                                   ),
                                   color: colorGreen,
@@ -123,11 +123,11 @@ class _MainPageState extends State<MainPage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-//                                      Image.asset(
-//                                          'assets/icons/ramadhan-mubarak/png/qibla-white.png'),
-//                                      SizedBox(
-//                                        width: 56,
-//                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/qibla-white.png'),
+                                      SizedBox(
+                                        width: 56,
+                                      ),
                                       Text(
                                         "Kuis",
                                         style: whiteTextFont.copyWith(fontSize: 22),
@@ -156,11 +156,11 @@ class _MainPageState extends State<MainPage> {
                                         "Video Praktik",
                                         style: whiteTextFont.copyWith(fontSize: 22),
                                       ),
-//                                      SizedBox(
-//                                        width: 12,
-//                                      ),
-//                                      Image.asset(
-//                                          'assets/icons/ramadhan-mubarak/png/muslim-man-white.png'),
+                                      SizedBox(
+                                        width: 12,
+                                      ),
+                                      Image.asset(
+                                          'assets/icons/ramadhan-mubarak/png/muslim-man-white.png'),
                                     ],
                                   ),
                                   color: colorGreen,

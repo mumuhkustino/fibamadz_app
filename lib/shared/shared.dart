@@ -5,15 +5,12 @@ PageEvent prevPageEvent;
 
 const double defaultMargin = 24;
 
-//Color colorYellow = Color(0xFFF9C22E);
 Color colorLightGreen = Color(0xFF81EE96);
 Color colorLightYellow = Color(0xFFFFFACD);
 Color colorPink = Color(0xFFE01A4F);
-//Color colorLightBlue = Color(0xFF56CCF2);
 Color colorGreen = Color(0xFF019000);
 Color colorBluePastel = Color(0xFF69DAC6);
 Color colorDarkGrey = Color(0xFF4F4F4F);
-//Color colorCream = Color(0xFFFFFAEB);
 Color colorGreenCream = Color(0xFF9FF19A);
 
 Color colorTextWhite = Color(0xFFFFFBFB);
@@ -108,21 +105,21 @@ List<Entry> filterSearchResults(List<Entry> entries, String searchText) {
         if (element.title.toLowerCase().contains(searchText.toLowerCase())) {
           entry = element;
           print("title 1 " + element.title);
-        } else if (element.content != null && element.content.isNotEmpty) {
+        } else if (element.content.isNotEmpty) {
           if (element.content
               .toLowerCase()
               .contains(searchText.toLowerCase())) {
             entry = element;
             print("child 1 " + element.title);
           }
-        } else if (element.children.isNotEmpty && element.children != null) {
+        } else if (element.children.isNotEmpty) {
           //2
           childs.clear();
           if(filterSearchResults(element.children, searchText).length > 0) {
             entry = element;
             childs.addAll(filterSearchResults(element.children, searchText));
           }
-          if (childs != null && childs.length > 0) {
+          if (childs.length > 0) {
             entry.children.clear();
             entry.children.addAll(childs);
             print("C ${childs.length}");
@@ -188,7 +185,6 @@ Expanded buildList(List<Entry> entries, String searcText) {
   );
 }
 
-// DIGUNAKAN SEBAGAI DATA RADIO BUTTON
 class MyChoice {
   String choice;
   int index;
@@ -199,4 +195,3 @@ class MyChoice {
 
 var score = 0;
 var verdict = [false, false];
-//file ini berisikan objek2 yang menyimpan data

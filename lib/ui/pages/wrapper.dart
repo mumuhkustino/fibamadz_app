@@ -1,9 +1,5 @@
 part of 'pages.dart';
 
-///Class ini digunakan untuk
-///
-///
-///
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -72,7 +68,7 @@ class Wrapper extends StatelessWidget {
             ? MateriJenazahUmumPage()
             : (pageState is OnMateriJenazahPage)
             ? MateriJenazahPage()
-            
+
             : (pageState is OnQuizPage)
             ? QuizPage()
             : (pageState is OnQuizThaharahPage)
@@ -98,21 +94,3 @@ class Wrapper extends StatelessWidget {
             );
   }
 }
-
-/*
-if pageState is OnsplashPage
-  Splash Page
-else if pageState is OnMainPage
-  MainPage
-else if pageState is OnMuqqodimahPage
-  MuqoddimahPage
-else if pageState is OnQuizPage
-  QuizPage
-else if pageState is OnVideoPage
-  VideoPage
-else if pageState is OnMateriPage
-  MateriPage
-else if pageState is OnMateriThaharahPage
-  MateriThaharah
-else if
-*/

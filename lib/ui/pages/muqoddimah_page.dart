@@ -11,7 +11,7 @@ class _MuqoddimahPageState extends State<MuqoddimahPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMainPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: colorLightGreen,

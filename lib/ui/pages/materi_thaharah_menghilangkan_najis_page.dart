@@ -11,7 +11,7 @@ class _MateriThaharahMenghilangkanNajisPageState
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
@@ -55,7 +55,7 @@ Kalangan ulama mazhab Syafii dan Hanbali agaknya mulai memaparkan definisi najis
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriThaharahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

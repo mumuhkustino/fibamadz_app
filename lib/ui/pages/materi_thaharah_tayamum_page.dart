@@ -10,7 +10,7 @@ class _MateriThaharahTayamumPageState extends State<MateriThaharahTayamumPage> {
   TextEditingController searchController = TextEditingController();
   bool isClickedSearch = false;
   bool isFocusSearch = false;
-  String searchText;
+  String searchText = '';
   List<Entry> data = <Entry>[];
   // DATA YANG TIDAK BERUBAH
   final List<Entry> text = <Entry>[
@@ -362,7 +362,7 @@ Artinya: Nabi bersabda  "Thawâf sama dengan shalat, hanya saja Allah memperbole
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMateriThaharahPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: Colors.white,

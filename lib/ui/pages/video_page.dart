@@ -8,7 +8,7 @@ class VideoPage extends StatefulWidget {
 class _VideoPageState extends State<VideoPage> {
   _launchVidThaharah() async {
     const url =
-        'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZ5NTq9EE7uK4bTDmUkdPON';
+        'https://www.youtube.com/playlist?list=PLpZWoHn9QMehmdhJ0qnSRWZeZFxwMFz1N';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -18,7 +18,7 @@ class _VideoPageState extends State<VideoPage> {
 
   _launchVidSholat() async {
     const url =
-        'https://www.youtube.com/playlist?list=PLk0nwjLBW6maEYw1idb9X7NDs54QqLWRN';
+        'https://www.youtube.com/playlist?list=PLpZWoHn9QMehCXzIYfZUv0sudtoscPu8g';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -28,7 +28,7 @@ class _VideoPageState extends State<VideoPage> {
 
   _launchVidPuasa() async {
     const url =
-        'https://www.youtube.com/playlist?list=PLk0nwjLBW6mY8NIdTVNy6QakPE4ApgipW';
+        'https://www.youtube.com/playlist?list=PLpZWoHn9QMeiOt8MMBUXRU_40aDvLxZc5';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -38,7 +38,7 @@ class _VideoPageState extends State<VideoPage> {
 
   _launchVidZakat() async {
     const url =
-        'https://www.youtube.com/playlist?list=PLk0nwjLBW6mYzCYYFgfrIidbjoCJdQeUQ';
+        'https://www.youtube.com/playlist?list=PLpZWoHn9QMeiaaiG4pTATh0jZZ8tmS95j';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -48,7 +48,7 @@ class _VideoPageState extends State<VideoPage> {
 
   _launchVidJenazah() async {
     const url =
-        'https://www.youtube.com/playlist?list=PLk0nwjLBW6mZLFFUVnwRbe6yK-UiXwRCw';
+        'https://www.youtube.com/playlist?list=PLpZWoHn9QMejYB8HWnaEfDEmclOsG6CEy';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -61,7 +61,7 @@ class _VideoPageState extends State<VideoPage> {
     return WillPopScope(
       onWillPop: () async {
         context.bloc<PageBloc>().add(GoToMainPage());
-        return;
+        return Future.value(false);
       },
       child: Scaffold(
         backgroundColor: colorLightGreen,
